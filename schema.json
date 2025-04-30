@@ -1,31 +1,18 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "title": "Amsterdam Housing Card Wrapper",
+    "title": "Wrapper for Amsterdam registration card",
     "type": "object",
     "properties": {
-      "record_id": {
-        "type": "string",
-        "description": "Scan identifier like WKAPL00003001175"
-      },
-      "_url": {
-        "type": "string",
-        "format": "uri",
-        "description": "Link to the scan image (Google Drive)"
-      },
-      "validated": {
-        "type": "boolean",
-        "description": "True if validated_json is correct and final"
-      },
+      "record_id": { "type": "string" },
+      "_url": { "type": "string", "format": "uri" },
+      "validated": { "type": "boolean" },
       "validated_json": {
-        "$ref": "#/definitions/CardData"
-      },
-      "raw_json": {
-        "$ref": "#/definitions/CardData"
+        "$ref": "#/definitions/CardContent"
       }
     },
-    "required": ["record_id", "_url"],
+    "required": ["record_id", "_url", "validated"],
     "definitions": {
-      "CardData": {
+      "CardContent": {
         "type": "object",
         "properties": {
           "main_entries": {
@@ -33,40 +20,11 @@
             "items": {
               "type": "object",
               "properties": {
-                "date": {
-                  "type": "string",
-                  "pattern": "^[0-9]{6}$",
-                  "description": "6-digit date"
-                },
+                "date": { "type": "string", "pattern": "^[0-9]{6}$" },
                 "address": { "type": "string" }
               },
               "required": ["date", "address"]
             }
-          },
-          "follow_up_entries": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "date": {
-                  "type": "string",
-                  "pattern": "^[0-9]{6}$"
-                },
-                "comment": {
-                  "type": "string"
-                }
-              },
-              "required": ["date"]
-            }
-          },
-          "name": { "type": "string" },
-          "birthdate": {
-            "type": "string",
-            "pattern": "^[0-9]{6}$"
-          },
-          "gender": {
-            "type": "string",
-            "enum": ["M", "V"]
           }
         },
         "required": ["main_entries"]
