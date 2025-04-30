@@ -1,35 +1,75 @@
 {
-    "header": {
-      "street": string,
-      "house_number": string,
-      "codenummer": integer,
-      "buurtletter": string,
-      "stemdistrict_nr": string
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Amsterdam Housing Card Wrapper",
+    "type": "object",
+    "properties": {
+      "record_id": {
+        "type": "string",
+        "description": "Scan identifier like WKAPL00003001175"
+      },
+      "_url": {
+        "type": "string",
+        "format": "uri",
+        "description": "Link to the scan image (Google Drive)"
+      },
+      "validated": {
+        "type": "boolean",
+        "description": "True if validated_json is correct and final"
+      },
+      "validated_json": {
+        "$ref": "#/definitions/CardData"
+      },
+      "raw_json": {
+        "$ref": "#/definitions/CardData"
+      }
     },
-    "main_entries": [
-      { "record_no": integer,
-        "datum_registration": string,
-        "gezinshoofd": string,
-        "year_of_birth": integer,
-        "M": integer,
-        "V": integer,
-        "datum_vertrek": string,
-        "waarheen": string,
-        "remarks": string
+    "required": ["record_id", "_url"],
+    "definitions": {
+      "CardData": {
+        "type": "object",
+        "properties": {
+          "main_entries": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "date": {
+                  "type": "string",
+                  "pattern": "^[0-9]{6}$",
+                  "description": "6-digit date"
+                },
+                "address": { "type": "string" }
+              },
+              "required": ["date", "address"]
+            }
+          },
+          "follow_up_entries": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "date": {
+                  "type": "string",
+                  "pattern": "^[0-9]{6}$"
+                },
+                "comment": {
+                  "type": "string"
+                }
+              },
+              "required": ["date"]
+            }
+          },
+          "name": { "type": "string" },
+          "birthdate": {
+            "type": "string",
+            "pattern": "^[0-9]{6}$"
+          },
+          "gender": {
+            "type": "string",
+            "enum": ["M", "V"]
+          }
+        },
+        "required": ["main_entries"]
       }
-    ],
-    "follow_up_entries": [
-      {
-        "volg_nr": integer,
-        "datum": string,
-        "inwonenden": string,
-        "year_of_birth": integer,
-        "M": integer,
-        "V": integer,
-        "datum_vertrek": string,
-        "waarheen": string,
-        "remarks": string
-      }
-    ],
-    "footer_notes": string
+    }
   }
