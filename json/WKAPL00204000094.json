@@ -1,0 +1,58 @@
+{
+  "filename": "WKAPL00204000094",
+  "validated_json": {
+    "header": {
+      "street": "Sassenheimstraat",
+      "house_number": "7 III hoog",
+      "codenummer": 1596,
+      "buurtletter": "SX 2",
+      "stemdistrict_nr": "03-608"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "200547",
+        "gezinshoofd": "Feldbusch, Johan B.",
+        "year_of_birth": 20,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "301258",
+        "waarheen": "Dam.de Langestr 19",
+        "remarks": "Tekstr 152 LII"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "280152",
+        "gezinshoofd": "van Schooneveld, Roelof",
+        "year_of_birth": 29,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "140685",
+        "waarheen": "Almere",
+        "remarks": "Sassenheimstr 2 III"
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "200585",
+        "inwonenden": "Willekes, Karla J.",
+        "year_of_birth": 62,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 352,
+    "total_cost_usd": 0.003691
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=1kr4uIyWF9wVaanNCALdyEOC6BV0tLZAW"
+}

@@ -1,0 +1,102 @@
+{
+  "filename": "WKAPL00079000885",
+  "validated_json": {
+    "header": {
+      "street": "Nieuwe Prinsengracht",
+      "house_number": "14",
+      "codenummer": 249981,
+      "buurtletter": "I",
+      "stemdistrict_nr": "02-055"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "291248",
+        "gezinshoofd": "Wognum, Joseph Th",
+        "year_of_birth": 94,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "151177",
+        "waarheen": "overleden",
+        "remarks": "van 1 hg"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "141175",
+        "gezinshoofd": "Ruwaard, Nicolaas G C",
+        "year_of_birth": 49,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "290184",
+        "waarheen": "Almere",
+        "remarks": ""
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "091184",
+        "gezinshoofd": "Schroth, Raymond P",
+        "year_of_birth": 51,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      },
+      {
+        "record_no": 4,
+        "datum_registration": "",
+        "gezinshoofd": "Roosma, Anita J",
+        "year_of_birth": 55,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "291248",
+        "inwonenden": "Mink, Alida W E",
+        "year_of_birth": 87,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "b2150768",
+        "waarheen": "Kerkstr. 70 III",
+        "remarks": "van 1 hg"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "",
+        "inwonenden": "echtg Verberkt, Wognum, Geertruida P M",
+        "year_of_birth": 27,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "dr061153",
+        "waarheen": "Den Texstr. 38 II+III",
+        "remarks": "zoz gezin 1"
+      },
+      {
+        "volg_nr": 3,
+        "datum": "250985",
+        "inwonenden": "Roosma, Anita J",
+        "year_of_birth": 55,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "zoz gezin 4",
+        "remarks": ""
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 686,
+    "total_cost_usd": 0.005361
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=1DNwzHMzg9AmIUp02pQJbxqpO8r_z20KL"
+}

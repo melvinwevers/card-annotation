@@ -1,0 +1,23 @@
+{
+  "filename": "WKAPL00175000087",
+  "validated_json": {
+    "header": {
+      "street": "Haarlemmer Houttuinen",
+      "house_number": "",
+      "codenummer": 613,
+      "buurtletter": "",
+      "stemdistrict_nr": ""
+    },
+    "main_entries": [],
+    "follow_up_entries": [],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 72,
+    "total_cost_usd": 0.002291
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=12n6FFhOapshvY015U-du-qMY1hv1sQXm"
+}

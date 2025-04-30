@@ -1,0 +1,58 @@
+{
+  "filename": "WKAPL00169000552",
+  "validated_json": {
+    "header": {
+      "street": "H.Cleynderweg",
+      "house_number": "",
+      "codenummer": 2448,
+      "buurtletter": "NC",
+      "stemdistrict_nr": ""
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "230474",
+        "gezinshoofd": "Ebeltjes, Aldert",
+        "year_of_birth": 51,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "011174",
+        "waarheen": "Idem 477",
+        "remarks": ""
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "270875",
+        "gezinshoofd": "Rijnoudt, Catharina H",
+        "year_of_birth": 19,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 2,
+        "datum": "220187",
+        "inwonenden": "Rijs, Helena J",
+        "year_of_birth": 52,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "010987",
+        "waarheen": "Van Helt Stocadestraat 20 I",
+        "remarks": ""
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 331,
+    "total_cost_usd": 0.003586
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=1Jl_udSY32j2-q383VnrfRt1Y6GL3dhTq"
+}

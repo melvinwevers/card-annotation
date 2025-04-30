@@ -1,0 +1,278 @@
+{
+  "filename": "WKAPL00318000182",
+  "validated_json": {
+    "header": {
+      "street": "1e van Swindenstraat",
+      "house_number": "1",
+      "codenummer": 116,
+      "buurtletter": "B",
+      "stemdistrict_nr": "03-131"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "080745",
+        "gezinshoofd": "Snabilie,Hendrik Chr",
+        "year_of_birth": 0,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "061254",
+        "waarheen": "Nic Beetsstr 67 hs",
+        "remarks": "Rijouwstr 55 hs"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "10955",
+        "gezinshoofd": "Zwiers,Jochem",
+        "year_of_birth": 0,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "Wenslauerstr 87 III",
+        "remarks": "leRinckdijkstr 39 hs"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "270756",
+        "gezinshoofd": "Kalwij,Wilhelmus P",
+        "year_of_birth": 0,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "191257",
+        "waarheen": "TenKatestr 78 II",
+        "remarks": "Transvaalkade 1 II"
+      },
+      {
+        "record_no": 4,
+        "datum_registration": "280960",
+        "gezinshoofd": "Peeters,Andreas J",
+        "year_of_birth": 0,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "060967",
+        "waarheen": "Chr de Wetstr 32",
+        "remarks": "NstJescenstr126hs Chr de Wetstr 32 III"
+      },
+      {
+        "record_no": 5,
+        "datum_registration": "150660",
+        "gezinshoofd": "Halenbeek,Cornelis P (Zevenbergen)",
+        "year_of_birth": 0,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "031264",
+        "waarheen": "Bussum",
+        "remarks": "Swammerdamstr 2 I Swammerdamstr 2 I"
+      },
+      {
+        "record_no": 6,
+        "datum_registration": "110862",
+        "gezinshoofd": "Wolkers,Gijsbert L",
+        "year_of_birth": 0,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "031268",
+        "waarheen": "H Kadijk 30 I",
+        "remarks": "Zaandam"
+      },
+      {
+        "record_no": 7,
+        "datum_registration": "90264",
+        "gezinshoofd": "Koperberg,Samuel",
+        "year_of_birth": 0,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "220564",
+        "waarheen": "Heringa-State 27",
+        "remarks": "H Kadijk 30 I"
+      },
+      {
+        "record_no": 8,
+        "datum_registration": "10964",
+        "gezinshoofd": "ter Heege,Cornelis",
+        "year_of_birth": 0,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "210266",
+        "waarheen": "Wildrijkstr 39 hs",
+        "remarks": "Benkoelenstr 8 III"
+      },
+      {
+        "record_no": 9,
+        "datum_registration": "",
+        "gezinshoofd": "Derks,Antonius Th A (van Bronswijk)",
+        "year_of_birth": 0,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      },
+      {
+        "record_no": 10,
+        "datum_registration": "",
+        "gezinshoofd": "Café in 't berucht bij H J A Jansen, woont 1e Oosterparkstraat 22 II achter",
+        "year_of_birth": 0,
+        "M": 0,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      },
+      {
+        "record_no": 11,
+        "datum_registration": "31262",
+        "gezinshoofd": "Luske,Hubertus J",
+        "year_of_birth": 0,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "020572",
+        "waarheen": "1e v Swindenstr 1 III",
+        "remarks": "Commelinstr 9 Ia"
+      },
+      {
+        "record_no": 12,
+        "datum_registration": "",
+        "gezinshoofd": "Café \"D'Oude Lantaern\" van J Luske woont 1 III hoog",
+        "year_of_birth": 0,
+        "M": 0,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "460957",
+        "inwonenden": "Schreijer,Pieternella J",
+        "year_of_birth": 34,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "061254",
+        "waarheen": "Nic Beetsstr 67 hs",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 2,
+        "datum": "",
+        "inwonenden": "Bouwman,Elisabeth B W (Gietermans)",
+        "year_of_birth": 40,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "150660",
+        "waarheen": "Chr de Wetstr 32 III",
+        "remarks": "1eJtesenstr 126hs"
+      },
+      {
+        "volg_nr": 3,
+        "datum": "",
+        "inwonenden": "Gietermans,Jacobus M",
+        "year_of_birth": 32,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "190658",
+        "waarheen": "Hoorn",
+        "remarks": "zie 2 regels hoger"
+      },
+      {
+        "volg_nr": 4,
+        "datum": "5",
+        "inwonenden": "de Wolff,Antonius R G",
+        "year_of_birth": 86,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "050762",
+        "waarheen": "Bussum",
+        "remarks": "Rt"
+      },
+      {
+        "volg_nr": 5,
+        "datum": "BB1261",
+        "inwonenden": "echtgStarck,Morgan,Lucy M Y",
+        "year_of_birth": 0,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "050562",
+        "waarheen": "GB",
+        "remarks": "2eOosterp str 99 III"
+      },
+      {
+        "volg_nr": 6,
+        "datum": "010063",
+        "inwonenden": "Schut,Petrus",
+        "year_of_birth": 71,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "171273",
+        "waarheen": "M H Trompstr 49 II",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 7,
+        "datum": "141032",
+        "inwonenden": "Blangèdijk,Lovett T",
+        "year_of_birth": 55,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "190985",
+        "waarheen": "Commelinstr 227",
+        "remarks": "Deventer"
+      },
+      {
+        "volg_nr": 8,
+        "datum": "1430928",
+        "inwonenden": "Langedijk,Sarah B E",
+        "year_of_birth": 55,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "011283",
+        "waarheen": "Hofgeest 217",
+        "remarks": "Deventer"
+      },
+      {
+        "volg_nr": 9,
+        "datum": "250888",
+        "inwonenden": "Langedijk,Karel N E",
+        "year_of_birth": 53,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "280183",
+        "waarheen": "Zambia",
+        "remarks": "Ndola Zambia"
+      },
+      {
+        "volg_nr": 10,
+        "datum": "020788",
+        "inwonenden": "Neijssel,Wilhelbordus J",
+        "year_of_birth": 57,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "190983",
+        "waarheen": "Commelinstr 227",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 11,
+        "datum": "200583",
+        "inwonenden": "Bosch,Jolanda H",
+        "year_of_birth": 60,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "240583",
+        "waarheen": "1e van Swindenstr 7",
+        "remarks": ""
+      }
+    ],
+    "footer_notes": "Gesloopt Besch. B & W Nr 116 d.d. 25/5/1984"
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 2236,
+    "total_cost_usd": 0.013111
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=1FilnEQSVeKuV4EsMnWP_XGuxYMLjcN8A"
+}

@@ -1,0 +1,91 @@
+{
+  "filename": "WKAPL00283000527",
+  "validated_json": {
+    "header": {
+      "street": "Woestduinstraat",
+      "house_number": "II hoog",
+      "codenummer": 2058,
+      "buurtletter": "SX",
+      "stemdistrict_nr": "02-604"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "120534",
+        "gezinshoofd": "Schemkes, Marinus",
+        "year_of_birth": 97,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "121258",
+        "waarheen": "overleden",
+        "remarks": "Valeriusstr 132 III"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "120534",
+        "gezinshoofd": "Schemkes, Alida M G",
+        "year_of_birth": 99,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "060629",
+        "waarheen": "Amstel 51",
+        "remarks": "zoz"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "20479",
+        "gezinshoofd": "Ferrari, Mauro",
+        "year_of_birth": 48,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      },
+      {
+        "record_no": 4,
+        "datum_registration": "20479",
+        "gezinshoofd": "Veltman, Josephina",
+        "year_of_birth": 53,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "050687",
+        "waarheen": "Akbarstraat 25 III",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "",
+        "inwonenden": "Schemkes, Alida M G",
+        "year_of_birth": 99,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "zoz gezin:2",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 3,
+        "datum": "020287",
+        "inwonenden": "Godani, Eugenia",
+        "year_of_birth": 48,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "290687",
+        "waarheen": "Madenhof 178",
+        "remarks": ""
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 592,
+    "total_cost_usd": 0.004891
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=1Tb0WyBDgJoSJe_CjXu_5CwYMAOzU0mVE"
+}

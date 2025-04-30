@@ -1,0 +1,13 @@
+{
+  "filename": "WKAPL00294000589",
+  "validated_json": null,
+  "error": "1 validation error for Woningkaart\nheader.codenummer\n  Input should be a valid integer [type=int_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/int_type",
+  "raw_json": "{\"header\": {\"street\": \"Westinghousestraat\", \"house_number\": \"\", \"codenummer\": null, \"buurtletter\": \"\", \"stemdistrict_nr\": \"\"}, \"main_entries\": [], \"follow_up_entries\": [], \"footer_notes\": \"zie: George Westinghousestraat\"}",
+  "tokens": {
+    "input": 1545,
+    "output": 78,
+    "total_cost_usd": 0.002321
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=1co1omBuVBHBkT9bn2XDjCfqgHU3zw3d1"
+}

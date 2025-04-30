@@ -1,0 +1,113 @@
+{
+  "filename": "WKAPL00136000939",
+  "validated_json": {
+    "header": {
+      "street": "Theophile de Bockstraat",
+      "house_number": "5 5 I hoog",
+      "codenummer": 1800,
+      "buurtletter": "SX",
+      "stemdistrict_nr": "04-602"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "031235",
+        "gezinshoofd": "Reede, Willem C.",
+        "year_of_birth": 1907,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "200358",
+        "waarheen": "Vossiusstr 37 hs",
+        "remarks": "Gv"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "031235",
+        "gezinshoofd": "echtg Reede-Bos, Adriana W.",
+        "year_of_birth": 1907,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "021177",
+        "waarheen": "Heerenveen",
+        "remarks": "zie gezin 1"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "311275",
+        "gezinshoofd": "Spoelstra, Daniel",
+        "year_of_birth": 1910,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "090362",
+        "inwonenden": "Bakker, Klaas",
+        "year_of_birth": 1937,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "241063",
+        "waarheen": "Rijnstr 53 II",
+        "remarks": "Sloterweg 38 III (hs)"
+      },
+      {
+        "volg_nr": 2,
+        "datum": "151264",
+        "inwonenden": "Versteeg, Wilhelmus Fr. J.",
+        "year_of_birth": 1927,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "090666",
+        "waarheen": "Diemen",
+        "remarks": "Thorn Prikkerstr 19"
+      },
+      {
+        "volg_nr": 2,
+        "datum": "280170",
+        "inwonenden": "Eter van Wissekerke, Robert",
+        "year_of_birth": 1947,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "291270",
+        "waarheen": "Hvs",
+        "remarks": "Hvs"
+      },
+      {
+        "volg_nr": 2,
+        "datum": "200471",
+        "inwonenden": "Eter van Wissekerke, Robert",
+        "year_of_birth": 1947,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "060771",
+        "waarheen": "Haag en Veld 48",
+        "remarks": "Hvs"
+      },
+      {
+        "volg_nr": 3,
+        "datum": "141283",
+        "inwonenden": "Spoelstra, Luske",
+        "year_of_birth": 1964,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "010383",
+        "waarheen": "Bernard Loderstraat 94 I",
+        "remarks": ""
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 814,
+    "total_cost_usd": 0.006001
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=1buVXkmx7CHwq4mhav0K_-rUgie9i5fPQ"
+}

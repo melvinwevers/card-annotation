@@ -1,0 +1,23 @@
+{
+  "filename": "WKAPL00126000522",
+  "validated_json": {
+    "header": {
+      "street": "Roméostraat",
+      "house_number": "",
+      "codenummer": 3973,
+      "buurtletter": "",
+      "stemdistrict_nr": ""
+    },
+    "main_entries": [],
+    "follow_up_entries": [],
+    "footer_notes": "Ligging: Middelveldse Akerpolder\nGenoemd naar: Oscar Romero (1917-1980), R.K. aartsbisschop in El Salvador.\nStadsdeelraad Osdorp\nRaadsbesluit van: 3.2.88\nS.D.O.\nOntbrekende nummers:\nOnderstreept betekent vervallen, zie archiefcollectie."
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 156,
+    "total_cost_usd": 0.002711
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=1J1TirL0NNNvsBRl0ONogNuEo7oZw0RJR"
+}

@@ -1,0 +1,47 @@
+{
+  "filename": "WKAPL00272000248",
+  "validated_json": {
+    "header": {
+      "street": "Valkhof",
+      "house_number": "147",
+      "codenummer": 4416,
+      "buurtletter": "Ar",
+      "stemdistrict_nr": "08-411"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "091263",
+        "gezinshoofd": "Vlaming, Dirk",
+        "year_of_birth": 24,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": "DanieTheronstr 30hs"
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "",
+        "inwonenden": "echtg Duvivier, Vlaming, Marja H",
+        "year_of_birth": 49,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "apr 31069",
+        "waarheen": "Haarlemmermeer",
+        "remarks": "zoz gezin 1"
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 262,
+    "total_cost_usd": 0.003241
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=14zGdUiT-nvqBf--SzZjZD7O1LynUsW3t"
+}

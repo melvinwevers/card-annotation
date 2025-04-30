@@ -1,0 +1,212 @@
+{
+  "filename": "WKAPL00090001120",
+  "validated_json": {
+    "header": {
+      "street": "Bloemgracht",
+      "house_number": "",
+      "codenummer": 205,
+      "buurtletter": "DD",
+      "stemdistrict_nr": "02-031"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "080151",
+        "gezinshoofd": "Rijnders, Edward B",
+        "year_of_birth": 13,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "251055",
+        "waarheen": "Bos en Lommerweg 25 hs",
+        "remarks": "Vorden"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "080151",
+        "gezinshoofd": "van Veen, Hubertus G",
+        "year_of_birth": 12,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "310764",
+        "waarheen": "Hengelo",
+        "remarks": "zie regel 4"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "310356",
+        "gezinshoofd": "Wegener Sleeswijk, Cornelis",
+        "year_of_birth": 25,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "050277",
+        "waarheen": "overleden",
+        "remarks": "Comeniusstr 451"
+      },
+      {
+        "record_no": 4,
+        "datum_registration": "",
+        "gezinshoofd": "wed. Wegener Sleeswijk, Bar-ras, Suzanne M",
+        "year_of_birth": 30,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "120278",
+        "waarheen": "Olympiaplein 44 A III",
+        "remarks": ""
+      },
+      {
+        "record_no": 5,
+        "datum_registration": "061028",
+        "gezinshoofd": "Zantkuijl, Hendrik J",
+        "year_of_birth": 25,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "081288",
+        "waarheen": "Hoorn",
+        "remarks": ""
+      },
+      {
+        "record_no": 6,
+        "datum_registration": "270189",
+        "gezinshoofd": "Egeler, Rudolph M",
+        "year_of_birth": 55,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      },
+      {
+        "record_no": 7,
+        "datum_registration": "270189",
+        "gezinshoofd": "Sanders, Amy",
+        "year_of_birth": 55,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "080151",
+        "inwonenden": "Schoemaker, Berendina J",
+        "year_of_birth": 27,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "230352",
+        "waarheen": "Warnsveld",
+        "remarks": "Vorden"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "190452",
+        "inwonenden": "Luitjes, Christina S",
+        "year_of_birth": 19,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "130952",
+        "waarheen": "Joos Banckersw. 5 I",
+        "remarks": "Gv"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "300153",
+        "inwonenden": "de Rijk, Willemina H",
+        "year_of_birth": 50,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "090353",
+        "waarheen": "Overtoom 283",
+        "remarks": "Haarl meer"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "051055",
+        "inwonenden": "van Veen, Hubertus G",
+        "year_of_birth": 12,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": "zie gezin 2"
+      },
+      {
+        "volg_nr": 2,
+        "datum": "060357",
+        "inwonenden": "Dužević, Lovre M",
+        "year_of_birth": 20,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "080158",
+        "waarheen": "Montreal (Can)",
+        "remarks": "Katwijk"
+      },
+      {
+        "volg_nr": 2,
+        "datum": "071259",
+        "inwonenden": "Sijardijn, Maria Chr",
+        "year_of_birth": 0,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "240261",
+        "waarheen": "Minervalaan 80 II",
+        "remarks": "Alberd Thijmstr 3640"
+      },
+      {
+        "volg_nr": 2,
+        "datum": "200760",
+        "inwonenden": "Jemo, Ante",
+        "year_of_birth": 0,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "260760",
+        "waarheen": "Rt",
+        "remarks": "Rt"
+      },
+      {
+        "volg_nr": 2,
+        "datum": "051160",
+        "inwonenden": "ter Maat, Harmke",
+        "year_of_birth": 43,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "230263",
+        "waarheen": "Hm",
+        "remarks": "PrHendrikln 28hs"
+      },
+      {
+        "volg_nr": 2,
+        "datum": "270662",
+        "inwonenden": "Kuilman, Geertje",
+        "year_of_birth": 0,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "030963",
+        "waarheen": "Rt",
+        "remarks": "Westerstr. 203 IR"
+      },
+      {
+        "volg_nr": 2,
+        "datum": "261179",
+        "inwonenden": "du Pont, Wilhelmus J",
+        "year_of_birth": 52,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "060584",
+        "waarheen": "Paulus-Potterstraat 36",
+        "remarks": ""
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 1571,
+    "total_cost_usd": 0.009786
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=1PLjkgUCMN8PU7NKs8wyeMNVnmT0Z8brG"
+}

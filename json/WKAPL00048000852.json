@@ -1,0 +1,90 @@
+{
+  "filename": "WKAPL00048000852",
+  "validated_json": {
+    "header": {
+      "street": "Hofgeest",
+      "house_number": "",
+      "codenummer": 2977,
+      "buurtletter": "DB",
+      "stemdistrict_nr": "06-902"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "031269",
+        "gezinshoofd": "Larivelt, André P",
+        "year_of_birth": 23,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "150171",
+        "waarheen": "Gibraltarstr 77 I",
+        "remarks": ""
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "201170",
+        "gezinshoofd": "Koch, Truus",
+        "year_of_birth": 25,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "121272",
+        "waarheen": "Baarsjesweg 271 II",
+        "remarks": ""
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "190273",
+        "gezinshoofd": "Dubach, Hanni G",
+        "year_of_birth": 51,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "150278",
+        "waarheen": "Hofgeest 54",
+        "remarks": ""
+      },
+      {
+        "record_no": 4,
+        "datum_registration": "190278",
+        "gezinshoofd": "Boer, Anthonie",
+        "year_of_birth": 51,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "27078",
+        "waarheen": "Wageningen",
+        "remarks": ""
+      },
+      {
+        "record_no": 5,
+        "datum_registration": "200781",
+        "gezinshoofd": "Dekker, Johannes M",
+        "year_of_birth": 51,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "31284",
+        "waarheen": "Korte Blekerstraat 20 Wageningen",
+        "remarks": ""
+      },
+      {
+        "record_no": 6,
+        "datum_registration": "090585",
+        "gezinshoofd": "Held, Mavis A",
+        "year_of_birth": 56,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 588,
+    "total_cost_usd": 0.004871
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=1_GmPs12NgIcIz7uVs4FJaRxd4tdaycrg"
+}

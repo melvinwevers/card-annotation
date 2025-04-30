@@ -1,0 +1,57 @@
+{
+  "filename": "WKAPL00119001113",
+  "validated_json": {
+    "header": {
+      "street": "Kromme-Mijdrechtstraat",
+      "house_number": "24 II hoog",
+      "codenummer": 971,
+      "buurtletter": "AR 12",
+      "stemdistrict_nr": "01-328"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "40549",
+        "gezinshoofd": "van den Heuvel, Carel G",
+        "year_of_birth": 1852,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "193070",
+        "waarheen": "Hunzestr 123 II",
+        "remarks": "J Catsk 31 II"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "260271",
+        "gezinshoofd": "van der Kroon, Elbertus T",
+        "year_of_birth": 1936,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "040972",
+        "waarheen": "Kelbergen 128",
+        "remarks": "Lekstr 2 hs"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "61172",
+        "gezinshoofd": "Singerling, Hans J",
+        "year_of_birth": 1931,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 356,
+    "total_cost_usd": 0.003711
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=1pPV0xqCoFS1tN7e73PX_qgKoqP3lVWgv"
+}

@@ -1,0 +1,124 @@
+{
+  "filename": "WKAPL00041001029",
+  "validated_json": {
+    "header": {
+      "street": "2e Helmersstraat",
+      "house_number": "12 III hoog",
+      "codenummer": 663,
+      "buurtletter": "SH",
+      "stemdistrict_nr": "03-503"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "070784",
+        "gezinshoofd": "Tamer, Johanna H (van den Bergh)",
+        "year_of_birth": 2,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "070784",
+        "waarheen": "overleden",
+        "remarks": ""
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "421084",
+        "gezinshoofd": "Alfredjo, Ronald S",
+        "year_of_birth": 58,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "421084",
+        "gezinshoofd": "Parmjeet Kaur",
+        "year_of_birth": 56,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "231084",
+        "waarheen": "Hakfort 27",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "180450",
+        "inwonenden": "Kroone, Nelly G",
+        "year_of_birth": 8,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "180165",
+        "waarheen": "Pres Kennedyln 405",
+        "remarks": "2eHelmerstr 57 hs"
+      },
+      {
+        "volg_nr": 2,
+        "datum": "010256",
+        "inwonenden": "de Wilde de Ligny, Emma B",
+        "year_of_birth": 11,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "250456",
+        "waarheen": "Roemer Visscherstr 25",
+        "remarks": "Gr Florisstr 5 II"
+      },
+      {
+        "volg_nr": 3,
+        "datum": "072165",
+        "inwonenden": "van der Velden, Anna M A",
+        "year_of_birth": 39,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "100870",
+        "waarheen": "Comeniusstr 425 I",
+        "remarks": "Zocherstr 62 I"
+      },
+      {
+        "volg_nr": 4,
+        "datum": "150947",
+        "inwonenden": "Timmerman, Angelique H M",
+        "year_of_birth": 41,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "110973",
+        "waarheen": "Nmg",
+        "remarks": "Ut"
+      },
+      {
+        "volg_nr": 5,
+        "datum": "120876",
+        "inwonenden": "Croes, Adella G",
+        "year_of_birth": 7,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "170279",
+        "waarheen": "Hygiëaplein 2 III",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 6,
+        "datum": "060685",
+        "inwonenden": "Kruyt, Liliane N",
+        "year_of_birth": 56,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "020885",
+        "waarheen": "Kinkerstraat 34 I",
+        "remarks": ""
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 881,
+    "total_cost_usd": 0.006336
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=1jpMqczv1-eBhcMr2xjMEcTzwZCF905IT"
+}

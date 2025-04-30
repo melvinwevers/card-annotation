@@ -1,0 +1,124 @@
+{
+  "filename": "WKAPL00239000232",
+  "validated_json": {
+    "header": {
+      "street": "Merwedeplein",
+      "house_number": "47",
+      "codenummer": 1163,
+      "buurtletter": "AR",
+      "stemdistrict_nr": "01-350"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "231047",
+        "gezinshoofd": "Soester,Louis",
+        "year_of_birth": 0,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "150364",
+        "waarheen": "overleden",
+        "remarks": "Kribbestr 57 hs"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "231047",
+        "gezinshoofd": "wed Soester,Pallix,Yvonne",
+        "year_of_birth": 1907,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "040187",
+        "waarheen": "overleden",
+        "remarks": "zie gezin 1"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "231047",
+        "gezinshoofd": "Fava,Luigi",
+        "year_of_birth": 1932,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "281088",
+        "waarheen": "Reguliersbreestraat 27",
+        "remarks": ""
+      },
+      {
+        "record_no": 4,
+        "datum_registration": "160389",
+        "gezinshoofd": "Plasse,Jan H",
+        "year_of_birth": 1958,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      },
+      {
+        "record_no": 5,
+        "datum_registration": "160389",
+        "gezinshoofd": "Kampman,Johanna M",
+        "year_of_birth": 1957,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "291051",
+        "inwonenden": "Stork,Ievie",
+        "year_of_birth": 1895,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "280157",
+        "waarheen": "Rembrandtsplein 26/36",
+        "remarks": "Minervah 38 hs"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "291051",
+        "inwonenden": "van Klaveren,Albert S. K",
+        "year_of_birth": 1934,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "011052",
+        "waarheen": "Santiago Chili",
+        "remarks": "Minervah 38 hs"
+      },
+      {
+        "volg_nr": 2,
+        "datum": "240267",
+        "inwonenden": "echg Fava,Soester,Jeanine",
+        "year_of_birth": 1939,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "zie 1 regel lager",
+        "remarks": "zie gezin 2"
+      },
+      {
+        "volg_nr": 2,
+        "datum": "240267",
+        "inwonenden": "Fava,Luigi",
+        "year_of_birth": 1932,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "zoz gez 3",
+        "remarks": "Pomponesco (It)"
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 876,
+    "total_cost_usd": 0.006311
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=19nFXv_SDr8x0BJc408Rb5AGvtcuezCsA"
+}

@@ -1,0 +1,69 @@
+{
+  "filename": "WKAPL00303000556",
+  "validated_json": {
+    "header": {
+      "street": "Jachthavenweg",
+      "house_number": "4 B a/d",
+      "codenummer": 6103,
+      "buurtletter": "X",
+      "stemdistrict_nr": "390"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "010475",
+        "gezinshoofd": "Treu, Ingrid C",
+        "year_of_birth": 50,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "111185",
+        "waarheen": "Weesp",
+        "remarks": ""
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "111185",
+        "gezinshoofd": "Timmermans, Eeuwe J",
+        "year_of_birth": 41,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "210987",
+        "inwonenden": "Pereira, Cedric A",
+        "year_of_birth": 65,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "280289",
+        "waarheen": "Florijn 621 B",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 2,
+        "datum": "",
+        "inwonenden": "Geijtenbeek, Johanna J M",
+        "year_of_birth": 59,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "footer_notes": "ws Jachthavenweg 4 B a/d ws Jachthavenweg ligplaats 4B"
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 426,
+    "total_cost_usd": 0.004061
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=1GY2ZeMlM-RWgJZhdiFQVCYqO3BFd9-Ox"
+}

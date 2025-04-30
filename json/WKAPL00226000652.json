@@ -1,0 +1,69 @@
+{
+  "filename": "WKAPL00226000652",
+  "validated_json": {
+    "header": {
+      "street": "Lucellestraat",
+      "house_number": "29 I hoog",
+      "codenummer": 1075,
+      "buurtletter": "R",
+      "stemdistrict_nr": "02-534"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "151247",
+        "gezinshoofd": "Sierink, Arnoldus L",
+        "year_of_birth": 1891,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "030666",
+        "waarheen": "Jan Tooropstr 4",
+        "remarks": "Alblasstr 21 II"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "170764",
+        "gezinshoofd": "Mooiman, Dirk A",
+        "year_of_birth": 1916,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "040869",
+        "waarheen": "overleden",
+        "remarks": "van 9 II"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "",
+        "gezinshoofd": "wed Mooiman, Timmer, Dirksje",
+        "year_of_birth": 1919,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": "zie gezin 2"
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 3,
+        "datum": "011276",
+        "inwonenden": "van der Eng, Jantje G",
+        "year_of_birth": 1856,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "290578",
+        "waarheen": "Ledn",
+        "remarks": ""
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 439,
+    "total_cost_usd": 0.004126
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=1nvRtZg8nyRIcSoL8_7PxRBwyekFWvHkM"
+}

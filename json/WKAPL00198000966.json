@@ -1,0 +1,300 @@
+{
+  "filename": "WKAPL00198000966",
+  "validated_json": {
+    "header": {
+      "street": "Graaf Florisstraat",
+      "house_number": "11",
+      "codenummer": 579,
+      "buurtletter": "WG",
+      "stemdistrict_nr": "01-165"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "120946",
+        "gezinshoofd": "Meneveld, Sjoerd",
+        "year_of_birth": 91,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "131164",
+        "waarheen": "overleden",
+        "remarks": ""
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "101265",
+        "gezinshoofd": "wed. Tak, Bennik, Antje",
+        "year_of_birth": 88,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "220675",
+        "waarheen": "overleden",
+        "remarks": "2e J v Heydenstr 38 hs"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "091073",
+        "gezinshoofd": "Niemeijer, Jantina",
+        "year_of_birth": 53,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "zie gezin 4",
+        "remarks": ""
+      },
+      {
+        "record_no": 4,
+        "datum_registration": "",
+        "gezinshoofd": "Klapper, Gerardus",
+        "year_of_birth": 52,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "230580",
+        "waarheen": "VOW",
+        "remarks": "(Niemeijer)"
+      },
+      {
+        "record_no": 5,
+        "datum_registration": "",
+        "gezinshoofd": "ter Haar, Catharina",
+        "year_of_birth": 60,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "150686",
+        "waarheen": "1e Oosterparkstraat 46 I",
+        "remarks": ""
+      },
+      {
+        "record_no": 6,
+        "datum_registration": "150986",
+        "gezinshoofd": "de Hek, Simon",
+        "year_of_birth": 58,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "260686",
+        "waarheen": "Almere",
+        "remarks": "Pres Kennedyln. 242"
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "090748",
+        "inwonenden": "Bergen, Cornelis",
+        "year_of_birth": 36,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "070257",
+        "waarheen": "Oostenbinnendstr 14",
+        "remarks": "Stadh kd 84 III"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "251048",
+        "inwonenden": "de Vroome, Gijsbertus N",
+        "year_of_birth": 32,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "260857",
+        "waarheen": "Hoornsestraat 23 hs",
+        "remarks": "3e Oosterstr 165 I"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "170649",
+        "inwonenden": "van Daalen, Hendrik",
+        "year_of_birth": 34,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "160959",
+        "waarheen": "J. Evertsenstr 81 II",
+        "remarks": "Pl Middenln 58 hs"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "260951",
+        "inwonenden": "van Golberdinge, Johannes",
+        "year_of_birth": 32,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "280155",
+        "waarheen": "Maritzstr 25 III",
+        "remarks": "Maritzstr 25 III"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "180152",
+        "inwonenden": "Corper, Mozes",
+        "year_of_birth": 54,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "300353",
+        "waarheen": "Haarlemmerstr 56 L",
+        "remarks": "Hilversum"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "260252",
+        "inwonenden": "Tabak, Geert",
+        "year_of_birth": 33,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "080353",
+        "waarheen": "Eibergen",
+        "remarks": "Breda"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "270949",
+        "inwonenden": "van der Wal, Menrines J",
+        "year_of_birth": 33,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "270957",
+        "waarheen": "J M Kemperstr 90 I",
+        "remarks": "Pl Middenln 58 hs"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "170452",
+        "inwonenden": "Onsia, Hendrik",
+        "year_of_birth": 33,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "Maarn",
+        "remarks": "Maarn"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "040952",
+        "inwonenden": "Ouwersloot, Cornelis",
+        "year_of_birth": 33,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "290952",
+        "waarheen": "v. Ostadestr 196 III",
+        "remarks": "Alphen a/d R"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "",
+        "inwonenden": "de Jong, Johan",
+        "year_of_birth": 33,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "Vrolikstr 48 hs",
+        "remarks": "Nijdercht"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "",
+        "inwonenden": "Scholte, Willem",
+        "year_of_birth": 33,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "200254",
+        "waarheen": "Huizen NH",
+        "remarks": "Nwe Prinsenstr 104 III"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "",
+        "inwonenden": "Arpels, Maurits",
+        "year_of_birth": 33,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "280256",
+        "waarheen": "Oosterstr 104 II",
+        "remarks": "Rt"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "",
+        "inwonenden": "Koster, Albertus",
+        "year_of_birth": 34,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "200456",
+        "waarheen": "Rt",
+        "remarks": "Maarn"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "140555",
+        "inwonenden": "Buchly, Willem",
+        "year_of_birth": 33,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "Javastr 37 III",
+        "remarks": "Apeldoorn"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "140555",
+        "inwonenden": "Maneveld, Willem",
+        "year_of_birth": 33,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "170757",
+        "waarheen": "Edmonton Can",
+        "remarks": "Swindenstr 16 hs"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "090157",
+        "inwonenden": "Paauw, Johan",
+        "year_of_birth": 47,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "270757",
+        "waarheen": "Edmonton Can",
+        "remarks": "Lucellestr 46"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "170857",
+        "inwonenden": "echtg. Frank, Tielen, Franci",
+        "year_of_birth": 30,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "zie 2 regels lager",
+        "remarks": "Leidringdijkstr 19 hs"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "190957",
+        "inwonenden": "Frank, Dirk",
+        "year_of_birth": 30,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "160858",
+        "waarheen": "Weesp karsp",
+        "remarks": "Weesperkarspel"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "181158",
+        "inwonenden": "Scholte, Willem",
+        "year_of_birth": 88,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "260656",
+        "waarheen": "Wolbrantskerweg 12",
+        "remarks": "Huizen NH"
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 2312,
+    "total_cost_usd": 0.013491
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=1NvvLqePeJWWRiyOSwgaaZ8fxUR5KlrJ7"
+}

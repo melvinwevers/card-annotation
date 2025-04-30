@@ -1,0 +1,146 @@
+{
+  "filename": "WKAPL00042000625",
+  "validated_json": {
+    "header": {
+      "street": "2e van der Helststraat",
+      "house_number": "3 II hoog",
+      "codenummer": 668,
+      "buurtletter": "AF 1",
+      "stemdistrict_nr": "01-285"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "041244",
+        "gezinshoofd": "van Lookeren, Johannes",
+        "year_of_birth": 32,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "070953",
+        "waarheen": "Zoomstr. 29 hs",
+        "remarks": "Gv"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "070953",
+        "gezinshoofd": "Strobel, Karl H",
+        "year_of_birth": 87,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "071055",
+        "waarheen": "Elst",
+        "remarks": "Zoomstr 29 hs"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "220154",
+        "gezinshoofd": "Broerse, Jacobus",
+        "year_of_birth": 23,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "100270",
+        "waarheen": "Weesperzijde 170 II",
+        "remarks": "Rosmarijnstr 10 I"
+      },
+      {
+        "record_no": 4,
+        "datum_registration": "220154",
+        "gezinshoofd": "Adriao, Arnaldo J (Peralta Adriao)",
+        "year_of_birth": 42,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": "zoz regel 2"
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 3,
+        "datum": "150969",
+        "inwonenden": "wed Walstra, Vriend, Maria J",
+        "year_of_birth": 81,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "100270",
+        "waarheen": "Weesperzijde 170 II",
+        "remarks": "Lijnbaansgr 178f I, Lomanstr. 84 III"
+      },
+      {
+        "volg_nr": 3,
+        "datum": "011269",
+        "inwonenden": "Adriao, Arnaldo J",
+        "year_of_birth": 42,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": "zoz gezin 4"
+      },
+      {
+        "volg_nr": 4,
+        "datum": "210372",
+        "inwonenden": "dos Santos Marques, Elisete",
+        "year_of_birth": 73,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "020874",
+        "waarheen": "Timorplein 8 I",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 4,
+        "datum": "160181",
+        "inwonenden": "dos Santos Peralta, Antonio",
+        "year_of_birth": 37,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "240584",
+        "waarheen": "Portugal",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 4,
+        "datum": "210681",
+        "inwonenden": "dos Santos Peralta, Antonio",
+        "year_of_birth": 37,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "280688",
+        "waarheen": "VOW",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 4,
+        "datum": "020387",
+        "inwonenden": "Amoroso Garcia, Agostinho",
+        "year_of_birth": 7,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 4,
+        "datum": "160387",
+        "inwonenden": "Cabanas Cortes, Sonia S",
+        "year_of_birth": 47,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 1047,
+    "total_cost_usd": 0.007166
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=1oDDKemNMRZsUrGCNNfKyUkZXqMpz0iZk"
+}

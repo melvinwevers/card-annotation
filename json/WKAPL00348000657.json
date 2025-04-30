@@ -1,0 +1,113 @@
+{
+  "filename": "WKAPL00348000657",
+  "validated_json": {
+    "header": {
+      "street": "Govert Flinckstraat",
+      "house_number": "45",
+      "codenummer": 0,
+      "buurtletter": "O",
+      "stemdistrict_nr": "01-257"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "161035",
+        "gezinshoofd": "wed. Wams, Seinen, Jentje (de Groot)",
+        "year_of_birth": 89,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "150969",
+        "waarheen": "overleden",
+        "remarks": "van 1 hoog"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "",
+        "gezinshoofd": "de Groot, Egberta",
+        "year_of_birth": 16,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "301274",
+        "waarheen": "overleden",
+        "remarks": "zie gezin 1"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "110725",
+        "gezinshoofd": "van Koningsveld, Riemer W",
+        "year_of_birth": 54,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "220278",
+        "waarheen": "Z IJ Polders",
+        "remarks": ""
+      },
+      {
+        "record_no": 4,
+        "datum_registration": "251078",
+        "gezinshoofd": "Smits, Ludolfina D",
+        "year_of_birth": 57,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "020982",
+        "waarheen": "F Bolstraat 33 II",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "160353",
+        "inwonenden": "echtg Scholten, Wams, Pieterdina",
+        "year_of_birth": 24,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "zie 3 regels lager",
+        "remarks": "Landsmeer"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "220753",
+        "inwonenden": "Ouwendijk, Adrianus",
+        "year_of_birth": null,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "260354",
+        "waarheen": "Rt",
+        "remarks": "Bandoeng (Indon)"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "",
+        "inwonenden": "Wams, Pieterdina",
+        "year_of_birth": 24,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "200856",
+        "waarheen": "Rt",
+        "remarks": "van 3-regels-hoger"
+      },
+      {
+        "volg_nr": 5,
+        "datum": "010482",
+        "inwonenden": "Kager, Hendricus J",
+        "year_of_birth": 53,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "090482",
+        "waarheen": "R Feithstr 13 III",
+        "remarks": "Texel"
+      }
+    ],
+    "footer_notes": "Gestopt Bes. B & Wt Nr. 274 d.d. 16/8/1982"
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 817,
+    "total_cost_usd": 0.006016
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=1MUq9-MTTy0cHuK47P-cmN8u8pHGFTDbC"
+}

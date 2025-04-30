@@ -1,0 +1,58 @@
+{
+  "filename": "WKAPL00343001347",
+  "validated_json": {
+    "header": {
+      "street": "Bijmerringkade",
+      "house_number": "10",
+      "codenummer": 238,
+      "buurtletter": "Dc2",
+      "stemdistrict_nr": "05-901"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "0530",
+        "gezinshoofd": "van Dijk, Johannes",
+        "year_of_birth": 1903,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "300170",
+        "waarheen": "Huismanhof 19 hs",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "031268",
+        "inwonenden": "van Dijk, Peter H",
+        "year_of_birth": 1946,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "031268",
+        "waarheen": "Amstelveen",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 2,
+        "datum": "270667",
+        "inwonenden": "Talsma, Pieter",
+        "year_of_birth": 1948,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "270368",
+        "waarheen": "Westd deel",
+        "remarks": "Westdongeradeel"
+      }
+    ],
+    "footer_notes": "Gesloopt Op g.v.H.Dec70V.T."
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 356,
+    "total_cost_usd": 0.003711
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=14d42JewlydpuBtv3imTYI-i15JeYTnxp"
+}

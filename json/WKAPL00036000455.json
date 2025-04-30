@@ -1,0 +1,47 @@
+{
+  "filename": "WKAPL00036000455",
+  "validated_json": {
+    "header": {
+      "street": "Bestevâerstraat",
+      "house_number": "90 III hoog",
+      "codenummer": 165,
+      "buurtletter": "SU",
+      "stemdistrict_nr": "01-545"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "120548",
+        "gezinshoofd": "Kroon, Willem A (Ieeseman)",
+        "year_of_birth": 22,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "Baarsjesweg 255 I",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "190572",
+        "inwonenden": "Kogenhop, Johannes",
+        "year_of_birth": 48,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "280772",
+        "waarheen": "Polanenstraat 43 II",
+        "remarks": "G. Brandtstr. 6 II"
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 267,
+    "total_cost_usd": 0.003266
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=18TQYQSv8GAJpHX1wsSVZDZkXBt0SiG__"
+}

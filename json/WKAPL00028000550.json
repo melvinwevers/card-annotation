@@ -1,0 +1,102 @@
+{
+  "filename": "WKAPL00028000550",
+  "validated_json": {
+    "header": {
+      "street": "Bachstraat",
+      "house_number": "",
+      "codenummer": 108,
+      "buurtletter": "Q",
+      "stemdistrict_nr": "03-361"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "230632",
+        "gezinshoofd": "van Gulick, Vincentius H J",
+        "year_of_birth": 94,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "190162",
+        "waarheen": "Zeist",
+        "remarks": "Oosteinde 16 hs"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "270961",
+        "gezinshoofd": "Woerdeman, Martinus J",
+        "year_of_birth": 21,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "280973",
+        "waarheen": "Apollolaan 9 hs",
+        "remarks": "Olympiaplein 12 hs"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "031073",
+        "gezinshoofd": "Tellegen, Antonius O H",
+        "year_of_birth": 44,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "Kenia",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "050551",
+        "inwonenden": "van Tiggele, Cornelia A",
+        "year_of_birth": 30,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "ab 60454",
+        "waarheen": "2e JvHeijdenstr 59 III",
+        "remarks": "2e JvHeijdenstr 59 III"
+      },
+      {
+        "volg_nr": 2,
+        "datum": "020957",
+        "inwonenden": "Gebhard, Marie",
+        "year_of_birth": 29,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "ab 051157",
+        "waarheen": "Sassenheimstr 10 hg",
+        "remarks": "de Lairessestraat 102"
+      },
+      {
+        "volg_nr": 3,
+        "datum": "111157",
+        "inwonenden": "echtg Vielers, Bos, Maaike",
+        "year_of_birth": 67,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "ab 131158",
+        "waarheen": "Karel Doormanstr 30 II",
+        "remarks": "Sneek"
+      },
+      {
+        "volg_nr": 4,
+        "datum": "260162",
+        "inwonenden": "Evenhuis, Jeanne D",
+        "year_of_birth": 24,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "zoa gezin 4",
+        "remarks": "Zaandam"
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 728,
+    "total_cost_usd": 0.005571
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=1c1CbNKS5tOURuecaWoOLloB15QhMu78W"
+}

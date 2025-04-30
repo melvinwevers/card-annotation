@@ -1,0 +1,35 @@
+{
+  "filename": "WKAPL00248000732",
+  "validated_json": {
+    "header": {
+      "street": "1e Jan Steenstraat",
+      "house_number": "",
+      "codenummer": 798,
+      "buurtletter": "AD",
+      "stemdistrict_nr": "1"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "250864",
+        "gezinshoofd": "Blanken, Willem P",
+        "year_of_birth": 23,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 152,
+    "total_cost_usd": 0.002691
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=1F3lgZnCQgIQ2SLXIBFNm-7PLWVi54GYQ"
+}

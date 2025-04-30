@@ -1,0 +1,91 @@
+{
+  "filename": "WKAPL00047000010",
+  "validated_json": {
+    "header": {
+      "street": "Hertspieghelweg",
+      "house_number": "",
+      "codenummer": 695,
+      "buurtletter": "T",
+      "stemdistrict_nr": "02-533"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "210254",
+        "gezinshoofd": "Visser, Rokus",
+        "year_of_birth": 10,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "010254",
+        "waarheen": "Josephus Jittastr 2 hs Dordrecht",
+        "remarks": ""
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "290155",
+        "gezinshoofd": "de Haan, Jacobus J",
+        "year_of_birth": 7,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "080677",
+        "waarheen": "overl te Bade-Baden",
+        "remarks": "Hudsonstr-20-II"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "290155",
+        "gezinshoofd": "wed de Haan, Vingerhoed, Neeltje",
+        "year_of_birth": 13,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "250383",
+        "waarheen": "Z IJ-Polders",
+        "remarks": ""
+      },
+      {
+        "record_no": 5,
+        "datum_registration": "020583",
+        "gezinshoofd": "Kuiper, Dirk J",
+        "year_of_birth": 7,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "240386",
+        "waarheen": "Dirk Sonoystr 147",
+        "remarks": ""
+      },
+      {
+        "record_no": 6,
+        "datum_registration": "020583",
+        "gezinshoofd": "Pullen, Gesina W",
+        "year_of_birth": 54,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 2,
+        "datum": "",
+        "inwonenden": "de Haan, Hans P",
+        "year_of_birth": 44,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "zn 020568",
+        "waarheen": "Krugerstr 28 III",
+        "remarks": "zoz. gezin 2"
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 613,
+    "total_cost_usd": 0.004996
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=1tOBa-IwPlIO6jM1sz3qq0kooo-SFBEfd"
+}

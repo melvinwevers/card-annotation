@@ -1,9 +1,17 @@
 {
     "json.schemas": [
       {
+<<<<<<< HEAD
         "fileMatch": ["json_results/*.json"],
         "url": "./schema/registration-schema.json"
       }
     ]
+=======
+        "fileMatch": ["json/*.json"],
+        "url": "./schema.json"
+      }
+    ],
+    "files.trimTrailingWhitespace": true
+>>>>>>> d2a3e02 (added data)
   }
   

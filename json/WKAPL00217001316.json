@@ -1,0 +1,35 @@
+{
+  "filename": "WKAPL00217001316",
+  "validated_json": {
+    "header": {
+      "street": "Spuistraat",
+      "house_number": "257 B",
+      "codenummer": 1735,
+      "buurtletter": "F",
+      "stemdistrict_nr": ""
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "20.3.84",
+        "gezinshoofd": "Kneepkens, Maarten FFM",
+        "year_of_birth": 57,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [],
+    "footer_notes": "Voorheen Rosmarijnsteeg 12 I + Zie afgedane collectie. Besch. B. & W. Nr. 452 dd. 22-12-1982."
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 198,
+    "total_cost_usd": 0.002921
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=172qg2s1yrJlpTRl7dklzDaREKvjHjk4P"
+}

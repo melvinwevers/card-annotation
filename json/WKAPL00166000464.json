@@ -1,0 +1,179 @@
+{
+  "filename": "WKAPL00166000464",
+  "validated_json": {
+    "header": {
+      "street": "1e Ceramstraat",
+      "house_number": "13",
+      "codenummer": 296,
+      "buurtletter": "WA",
+      "stemdistrict_nr": "02-121"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "020358",
+        "gezinshoofd": "van Nesch, Franciscus H C",
+        "year_of_birth": 1907,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "270966",
+        "waarheen": "Alkmaarstr 13",
+        "remarks": "Lijnbaansgrt 382 III"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "010267",
+        "gezinshoofd": "Vogel, Paul H",
+        "year_of_birth": 1932,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "021027",
+        "waarheen": "Rozengracht 12 II",
+        "remarks": "Prinsengrt 298 hs"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "010272",
+        "gezinshoofd": "ten Cate, Jan",
+        "year_of_birth": 1934,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "281282",
+        "waarheen": "Tjasker 71",
+        "remarks": "Rozengracht 12 II"
+      },
+      {
+        "record_no": 4,
+        "datum_registration": "231283",
+        "gezinshoofd": "Kaynar, Mustafa",
+        "year_of_birth": 1948,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "111084",
+        "waarheen": "1e Ceramstr 13 I",
+        "remarks": ""
+      },
+      {
+        "record_no": 5,
+        "datum_registration": "230185",
+        "gezinshoofd": "Chin-A-Lin, Mildred I-S",
+        "year_of_birth": 1947,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "100454",
+        "inwonenden": "Reijnders, Johannes P-M",
+        "year_of_birth": 1931,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "bl180855",
+        "waarheen": "Geleen",
+        "remarks": "Tugelaweg 114 III"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "100454",
+        "inwonenden": "echtg Reijnders, van Nesch, Theodora C C",
+        "year_of_birth": 1934,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "Ar021255",
+        "waarheen": "Shackletonstr 11 II",
+        "remarks": "1 regel hoger"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "100454",
+        "inwonenden": "echtg Snoek, van Nesch, Carolina C H",
+        "year_of_birth": 1938,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "dd20762",
+        "waarheen": "Geleen",
+        "remarks": "zoz gezin 1"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "221162",
+        "inwonenden": "echtg Snoek, van Nesch, Carolina C H",
+        "year_of_birth": 1942,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "drd40363",
+        "waarheen": "Doorn",
+        "remarks": "Geleen"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "100454",
+        "inwonenden": "van Nesch, Franciscus H C",
+        "year_of_birth": 1930,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "220164",
+        "waarheen": "Geleen lager",
+        "remarks": "zoz gezin 1"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "100454",
+        "inwonenden": "van Nesch, Franciscus H C",
+        "year_of_birth": 1930,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "020964",
+        "waarheen": "De Wittenkade 11 IIa",
+        "remarks": "zie 1 regel hoger"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "171265",
+        "inwonenden": "Reijnders, Johannes P M",
+        "year_of_birth": 1931,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "bk050466",
+        "waarheen": "Dirk Sonoystr 25 II",
+        "remarks": "Geleen"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "190766",
+        "inwonenden": "Smis, Maria A E",
+        "year_of_birth": 1946,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "250567",
+        "waarheen": "Oploo ca",
+        "remarks": "NwPasserderstr 2"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "101083",
+        "inwonenden": "Acar, Muammer",
+        "year_of_birth": 1955,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "110484",
+        "waarheen": "Robert Scottstr 4",
+        "remarks": ""
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 1394,
+    "total_cost_usd": 0.008901
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=1MPiYUFAhcO-L2BqnSAG7iURpTPte8V1j"
+}

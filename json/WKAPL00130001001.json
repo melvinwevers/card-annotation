@@ -1,0 +1,91 @@
+{
+  "filename": "WKAPL00130001001",
+  "validated_json": {
+    "header": {
+      "street": "Steelvlietstraat",
+      "house_number": "38 III hoog",
+      "codenummer": 4046,
+      "buurtletter": "HD 8",
+      "stemdistrict_nr": "03-719"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "210962",
+        "gezinshoofd": "Schouten, Jacob",
+        "year_of_birth": 29,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "Palmstr 51 I",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "",
+        "inwonenden": "Echt Primowees, Schouten, Hendrika J",
+        "year_of_birth": 52,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "280870",
+        "waarheen": "Epe",
+        "remarks": "zoz gezin 1"
+      },
+      {
+        "volg_nr": 2,
+        "datum": "",
+        "inwonenden": "echtg Tol, Schouten, Casperiena",
+        "year_of_birth": 51,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "zie 2 regels lager",
+        "remarks": "zoz gezin 1"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "070972",
+        "inwonenden": "Tol, Johannes C M",
+        "year_of_birth": 52,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "250473",
+        "waarheen": "Edam",
+        "remarks": "Edam"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "211173",
+        "inwonenden": "Frinsel, Theodora J",
+        "year_of_birth": 58,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "280181",
+        "waarheen": "Kromme-Mijdrechtstr. 22 I",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 1,
+        "datum": "270281",
+        "inwonenden": "Roelvink, Yolanda M H",
+        "year_of_birth": 62,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "111082",
+        "waarheen": "Schoonboomstr. 46-III",
+        "remarks": ""
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 616,
+    "total_cost_usd": 0.005011
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=1dKtLW_CgyNY4wPo0U5QPKlLYvqn86A12"
+}

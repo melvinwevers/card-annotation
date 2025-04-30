@@ -1,0 +1,91 @@
+{
+  "filename": "WKAPL00283000653",
+  "validated_json": {
+    "header": {
+      "street": "Woestduinstraat",
+      "house_number": "62 I",
+      "codenummer": 2058,
+      "buurtletter": "SX",
+      "stemdistrict_nr": "02-604"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "191051",
+        "gezinshoofd": "Struik, Albert",
+        "year_of_birth": 12,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "210383",
+        "waarheen": "overleden",
+        "remarks": "Hilversum"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "130684",
+        "gezinshoofd": "Mulder, Elisabeth W",
+        "year_of_birth": 12,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "overleden",
+        "waarheen": "",
+        "remarks": ""
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "240884",
+        "gezinshoofd": "Bernhard, Petronella",
+        "year_of_birth": 20,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 2,
+        "datum": "290861",
+        "inwonenden": "Reinderts, Frits P",
+        "year_of_birth": 39,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "bk010463",
+        "waarheen": "Bosb Toussaintstr 39 II",
+        "remarks": "Heemstedestr 40 hs"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "010465",
+        "inwonenden": "Reinderts, Frits P",
+        "year_of_birth": 39,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "bhd",
+        "waarheen": "abusief",
+        "remarks": "Woestduinstr 62 I"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "240882",
+        "inwonenden": "Kok, Wilhelmus J",
+        "year_of_birth": 13,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "270982",
+        "waarheen": "Amstelveen",
+        "remarks": "Calabasas VSA"
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 610,
+    "total_cost_usd": 0.004981
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=1GhUrgq8MOu2HG_aAFRg6L4qKqGqJky5d"
+}

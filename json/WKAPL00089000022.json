@@ -1,0 +1,201 @@
+{
+  "filename": "WKAPL00089000022",
+  "validated_json": {
+    "header": {
+      "street": "Alexanderplein",
+      "house_number": "3",
+      "codenummer": 38,
+      "buurtletter": "V 2",
+      "stemdistrict_nr": "02-059"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "107250",
+        "gezinshoofd": "Lavrijsen, Josephus A M",
+        "year_of_birth": 10,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "201255",
+        "waarheen": "Joubertstr 6 hs",
+        "remarks": "Tuinstr 6 hs"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "280156",
+        "gezinshoofd": "Heemskerk, Gerardus J",
+        "year_of_birth": 7,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "Joubertstr 6 hs",
+        "remarks": ""
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "261066",
+        "gezinshoofd": "Admiraal, Jan",
+        "year_of_birth": 15,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "260674",
+        "waarheen": "Hengelo O",
+        "remarks": "van 3 hs"
+      },
+      {
+        "record_no": 4,
+        "datum_registration": "",
+        "gezinshoofd": "echtg Admiraal, Weijschede, Aat J (van der Meer)",
+        "year_of_birth": 4,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "060476",
+        "waarheen": "Hengelo O",
+        "remarks": ""
+      },
+      {
+        "record_no": 5,
+        "datum_registration": "",
+        "gezinshoofd": "Admiraal, Lex A",
+        "year_of_birth": 45,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "190479",
+        "waarheen": "Geerdinkhof 214",
+        "remarks": ""
+      },
+      {
+        "record_no": 6,
+        "datum_registration": "050679",
+        "gezinshoofd": "van Log, Ulke J",
+        "year_of_birth": 45,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "251079",
+        "waarheen": "Alexanderplein 3 hs",
+        "remarks": "Wester-Koggenland"
+      },
+      {
+        "record_no": 7,
+        "datum_registration": "030879",
+        "gezinshoofd": "Brons, Gradina M E",
+        "year_of_birth": 51,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "160787",
+        "waarheen": "Landsmeer",
+        "remarks": ""
+      },
+      {
+        "record_no": 8,
+        "datum_registration": "",
+        "gezinshoofd": "de Vriese, Rosaline",
+        "year_of_birth": 59,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "210256",
+        "inwonenden": "van den Akker, Jouw",
+        "year_of_birth": 2,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "011059",
+        "waarheen": "JohannAmmanhof 25",
+        "remarks": "IJVlennepkade 1 hs"
+      },
+      {
+        "volg_nr": 2,
+        "datum": "010356",
+        "inwonenden": "de Vries, Wietske",
+        "year_of_birth": 32,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "231157",
+        "waarheen": "2e Rozendwstr 10 I",
+        "remarks": "Leidsegracht 95 hs"
+      },
+      {
+        "volg_nr": 3,
+        "datum": "010356",
+        "inwonenden": "Stek, Trijntje G",
+        "year_of_birth": 29,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "201157",
+        "waarheen": "2e Rozendwstr 10 I",
+        "remarks": "Leidsegracht 95 hs"
+      },
+      {
+        "volg_nr": 4,
+        "datum": "",
+        "inwonenden": "Heemskerk, Gerardus J",
+        "year_of_birth": 7,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "90463",
+        "waarheen": "Hoofdweg 447 II",
+        "remarks": "zoz gezin 2"
+      },
+      {
+        "volg_nr": 5,
+        "datum": "",
+        "inwonenden": "Admiraal, Lex A",
+        "year_of_birth": 45,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": "zoz gezin 7"
+      },
+      {
+        "volg_nr": 6,
+        "datum": "100780",
+        "inwonenden": "Blauw, Peter A",
+        "year_of_birth": 57,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "230983",
+        "waarheen": "3e Kostverlorenkade",
+        "remarks": "Amstelveen"
+      },
+      {
+        "volg_nr": 9,
+        "datum": "210487",
+        "inwonenden": "de Vriese, Rosaline",
+        "year_of_birth": 59,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": "zoz gezin 10"
+      },
+      {
+        "volg_nr": 9,
+        "datum": "210487",
+        "inwonenden": "Smithuis, Franciscus M",
+        "year_of_birth": 58,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "220988",
+        "waarheen": "Thailand",
+        "remarks": ""
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 1503,
+    "total_cost_usd": 0.009446
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=12ZaHwCTKQOk5k8huJjmTJhC41KtgVuOg"
+}

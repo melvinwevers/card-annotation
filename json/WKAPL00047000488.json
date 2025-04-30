@@ -1,0 +1,23 @@
+{
+  "filename": "WKAPL00047000488",
+  "validated_json": {
+    "header": {
+      "street": "Van Hilligaertstraat",
+      "house_number": "",
+      "codenummer": 699,
+      "buurtletter": "AH 1",
+      "stemdistrict_nr": ""
+    },
+    "main_entries": [],
+    "follow_up_entries": [],
+    "footer_notes": "Ontbrekende nummers: 2 HR/142. Onderstreept betekent vervallen, zie archiefcollectie. SDA 5562-5.21-2750."
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 111,
+    "total_cost_usd": 0.002486
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=1C410JAThkV1CMbCVC34rp0Ttc--zcW5a"
+}

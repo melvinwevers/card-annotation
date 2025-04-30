@@ -1,0 +1,46 @@
+{
+  "filename": "WKAPL00212001263",
+  "validated_json": {
+    "header": {
+      "street": "Socratesstraat",
+      "house_number": "11",
+      "codenummer": 4012,
+      "buurtletter": "F",
+      "stemdistrict_nr": "10-663"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "040855",
+        "gezinshoofd": "Neufeglise, Petrus E",
+        "year_of_birth": 1882,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "250674",
+        "waarheen": "Socratesstraat 23 I",
+        "remarks": "Driebergen-Rijsenb"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "230474",
+        "gezinshoofd": "echtg. van Dijk, de Boer, Cornelia",
+        "year_of_birth": 1892,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 264,
+    "total_cost_usd": 0.003251
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=1tRxAGP_zXXVRdc-xOnB3HOxGJ5jnuVIW"
+}

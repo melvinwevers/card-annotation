@@ -1,0 +1,146 @@
+{
+  "filename": "WKAPL00037000818",
+  "validated_json": {
+    "header": {
+      "street": "Beverwijkstraat",
+      "house_number": "",
+      "codenummer": 5236,
+      "buurtletter": "U",
+      "stemdistrict_nr": "02"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "020568",
+        "gezinshoofd": "Briedé,Eugène W P H",
+        "year_of_birth": 47,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "180272",
+        "waarheen": "overl te Ilpendam",
+        "remarks": "Leonardostr 5 I"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "020568",
+        "gezinshoofd": "wed. Briedé,Sundermeijer,Hillegonda A",
+        "year_of_birth": 50,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "280179",
+        "waarheen": "Avereest",
+        "remarks": "van gezin 1"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "040279",
+        "gezinshoofd": "Broekhof,Gerardus H M",
+        "year_of_birth": 30,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "200782",
+        "waarheen": "Hoptille 100",
+        "remarks": "zie gezin 7"
+      },
+      {
+        "record_no": 4,
+        "datum_registration": "050782",
+        "gezinshoofd": "Wieringa,Evelina (de Wit)",
+        "year_of_birth": 52,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "250286",
+        "waarheen": "Almere",
+        "remarks": ""
+      },
+      {
+        "record_no": 5,
+        "datum_registration": "",
+        "gezinshoofd": "van Gemen,Robert (de Wit)",
+        "year_of_birth": 52,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "Almere",
+        "remarks": ""
+      },
+      {
+        "record_no": 6,
+        "datum_registration": "100786",
+        "gezinshoofd": "Hogendoorn,Willebrordus",
+        "year_of_birth": 64,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "070787",
+        "waarheen": "Purmerend",
+        "remarks": ""
+      },
+      {
+        "record_no": 7,
+        "datum_registration": "010787",
+        "gezinshoofd": "Kooij,Cornelis D",
+        "year_of_birth": 54,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      },
+      {
+        "record_no": 8,
+        "datum_registration": "010787",
+        "gezinshoofd": "den Riet,Ineke E",
+        "year_of_birth": 46,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 5,
+        "datum": "060784",
+        "inwonenden": "van Gemen,Robert",
+        "year_of_birth": 52,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "zoz gezin 7",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 7,
+        "datum": "181084",
+        "inwonenden": "Borgmann,Jan",
+        "year_of_birth": 63,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "070785",
+        "waarheen": "Weissenbruchstraat 13 I",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 8,
+        "datum": "100786",
+        "inwonenden": "Worst,Sabrina",
+        "year_of_birth": 64,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "070787",
+        "waarheen": "Purmerend",
+        "remarks": ""
+      }
+    ],
+    "footer_notes": "Aang. 14-9-69 con."
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 1032,
+    "total_cost_usd": 0.007091
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=1PWMp8Mdw1Odqhsf4vTgqevIi41KhdUiJ"
+}

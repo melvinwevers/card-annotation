@@ -1,0 +1,35 @@
+{
+  "filename": "WKAPL00092001061",
+  "validated_json": {
+    "header": {
+      "street": "1e Boerhaavestraat",
+      "house_number": "20",
+      "codenummer": 212,
+      "buurtletter": "",
+      "stemdistrict_nr": "01-162"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "501045",
+        "gezinshoofd": "Smit, Pieter J",
+        "year_of_birth": 1904,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "300361",
+        "waarheen": "Ruyschstraat 11 II",
+        "remarks": "2e JvdHeijdenstr 65 II zaak in visserij artikelen in gebruik bij P.J. Smit, woont Ruyschstr 11 II"
+      }
+    ],
+    "follow_up_entries": [],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 202,
+    "total_cost_usd": 0.002941
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=1Ltl_bDzrcA5M2CqRDmbqw-A-xqIH69R_"
+}

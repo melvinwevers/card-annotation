@@ -1,0 +1,179 @@
+{
+  "filename": "WKAPL00147001229",
+  "validated_json": {
+    "header": {
+      "street": "Orteliuskade",
+      "house_number": "1322",
+      "codenummer": 1322,
+      "buurtletter": "HC",
+      "stemdistrict_nr": "02-573"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "270562",
+        "gezinshoofd": "Vale, Cornelis G",
+        "year_of_birth": 34,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "280674",
+        "waarheen": "Leek",
+        "remarks": "Orteliusstr 131 I"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "300872",
+        "gezinshoofd": "Meije, Margaretha C H",
+        "year_of_birth": 31,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": "zie 2 regels lager"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "140286",
+        "gezinshoofd": "Sommers, Petrus A",
+        "year_of_birth": 58,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "210250",
+        "inwonenden": "Visser, Pieter J",
+        "year_of_birth": 22,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "220954",
+        "waarheen": "Bellamydwstr. 28 II",
+        "remarks": "Orteliusstr. 249 III"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "110354",
+        "inwonenden": "Kroezen, Herman",
+        "year_of_birth": 31,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "240155",
+        "waarheen": "Distelkade 10 hs",
+        "remarks": "Kamperfoeliely 167 I"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "041254",
+        "inwonenden": "Aeskhof, Reindert",
+        "year_of_birth": 32,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "240155",
+        "waarheen": "3e Helmersstr 60 II",
+        "remarks": "B roussanstr 42"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "511255",
+        "inwonenden": "Pors, Marinus",
+        "year_of_birth": 32,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "240556",
+        "waarheen": "VanBeuningensstr 156",
+        "remarks": "Van 7 III"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "190656",
+        "inwonenden": "van Heerden, Hendricus Th",
+        "year_of_birth": 32,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "050157",
+        "waarheen": "1eOosterstr. 35 IIa",
+        "remarks": "M Polostr. 35 hs"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "060756",
+        "inwonenden": "Klaasen Bos, Hendrik C",
+        "year_of_birth": 32,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "090959",
+        "waarheen": "Hazenstraat 52 II",
+        "remarks": "M Polostr. 44 II"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "150758",
+        "inwonenden": "Hayenaar, Jacques",
+        "year_of_birth": 32,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "210259",
+        "waarheen": "Jekrstraat 52 II",
+        "remarks": "Vespuccistr. 4 II"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "300958",
+        "inwonenden": "Kroezen, Herman",
+        "year_of_birth": 32,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "110960",
+        "waarheen": "2eVdHeijdenstr 7",
+        "remarks": "Distelkade 10hs"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "270560",
+        "inwonenden": "Stasse, Maria W",
+        "year_of_birth": 32,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "240461",
+        "waarheen": "Hoofdweg. 384 III",
+        "remarks": "Churchill-ln 32 II"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "041160",
+        "inwonenden": "Verzee, Johannes F",
+        "year_of_birth": 35,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "281060",
+        "waarheen": "Hoofdweg. 384 II",
+        "remarks": "zie 2 regels hoger"
+      },
+      {
+        "volg_nr": 3,
+        "datum": "200281",
+        "inwonenden": "Kil, Adrianus",
+        "year_of_birth": 26,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "270562",
+        "waarheen": "Orteliusstr. 131 I",
+        "remarks": "Buitenrustpad. 8-hs"
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 1386,
+    "total_cost_usd": 0.008861
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=1w3mRbjuLCQW2WbLrnQ9NNpIZTyo_cA4-"
+}
