@@ -1,0 +1,124 @@
+{
+  "filename": "WKAPL00323001287",
+  "validated_json": {
+    "header": {
+      "street": "Wijttenbachstraat",
+      "house_number": "20",
+      "codenummer": 375,
+      "buurtletter": "T",
+      "stemdistrict_nr": "02-134"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "200340",
+        "gezinshoofd": "van Dam, Magnus H",
+        "year_of_birth": 15,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "150920",
+        "waarheen": "vd Vijverstr 20hs",
+        "remarks": "Zev Swindenstr 56 II"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "201170",
+        "gezinshoofd": "Helstone, Justus R G",
+        "year_of_birth": 56,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "30527",
+        "waarheen": "rVvSerooskerkenweg Amstelveen",
+        "remarks": ""
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "260471",
+        "gezinshoofd": "wed Bruinsma, Bijl, Jaapje",
+        "year_of_birth": 90,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "50684",
+        "waarheen": "Nwe Kerkstr 159",
+        "remarks": "Bergen NH"
+      },
+      {
+        "record_no": 4,
+        "datum_registration": "130484",
+        "gezinshoofd": "Lahmaj, Mohamed",
+        "year_of_birth": 56,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "180687",
+        "waarheen": "Commelinstraat 23 I",
+        "remarks": ""
+      },
+      {
+        "record_no": 5,
+        "datum_registration": "181285",
+        "gezinshoofd": "Koudan, Soumicha",
+        "year_of_birth": 56,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "180687",
+        "waarheen": "Commelinstr 25 III",
+        "remarks": ""
+      },
+      {
+        "record_no": 6,
+        "datum_registration": "300586",
+        "gezinshoofd": "Kallachi, Aicha",
+        "year_of_birth": 58,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "180687",
+        "waarheen": "Commelinstraat 23 I",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "201267",
+        "inwonenden": "Loomans, Robert",
+        "year_of_birth": 42,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "140886",
+        "waarheen": "3e Oosterp str 250 Iv",
+        "remarks": "Brack-State 53"
+      },
+      {
+        "volg_nr": 3,
+        "datum": "150327",
+        "inwonenden": "van Zeist, Meis",
+        "year_of_birth": 49,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "290927",
+        "waarheen": "rVvSerooskerkenweg 158 hs",
+        "remarks": "Ruysdaelstr 55 II"
+      },
+      {
+        "volg_nr": 4,
+        "datum": "130484",
+        "inwonenden": "Koudan, Soumicha",
+        "year_of_birth": 56,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": "zoz-regel-5"
+      }
+    ],
+    "footer_notes": "Verm. bij Besch. B & Wt. Nr. 46 dd. 28-2-1978"
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 934,
+    "total_cost_usd": 0.006601
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=175CGFXZvTWcp97Zl_16n2vTupbv1SKNE"
+}

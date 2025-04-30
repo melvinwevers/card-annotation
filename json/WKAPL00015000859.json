@@ -1,0 +1,35 @@
+{
+  "filename": "WKAPL00015000859",
+  "validated_json": {
+    "header": {
+      "street": "Ferdinand Bolstraat",
+      "house_number": "49",
+      "codenummer": 494,
+      "buurtletter": "D",
+      "stemdistrict_nr": "01-263"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "",
+        "gezinshoofd": "Kruidenierswinkel NV Simon de Wit",
+        "year_of_birth": null,
+        "M": 0,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": "(Filiaalhouder woont 1 hoog)"
+      }
+    ],
+    "follow_up_entries": [],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 164,
+    "total_cost_usd": 0.002751
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=1tr7JKbjCLz3RC8swfGACjAHOpSf4PGgE"
+}

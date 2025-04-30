@@ -1,0 +1,35 @@
+{
+  "filename": "WKAPL00031001021",
+  "validated_json": {
+    "header": {
+      "street": "Baroniepad",
+      "house_number": "",
+      "codenummer": 2300,
+      "buurtletter": "AR 15",
+      "stemdistrict_nr": "01-353"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "",
+        "gezinshoofd": "Bergplaats",
+        "year_of_birth": null,
+        "M": null,
+        "V": null,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 147,
+    "total_cost_usd": 0.002666
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=1sEkmH1tmFxwBAsK8hL25uT6gDi2rimjT"
+}

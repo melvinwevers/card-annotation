@@ -1,0 +1,68 @@
+{
+  "filename": "WKAPL00225000586",
+  "validated_json": {
+    "header": {
+      "street": "LOUIS BOUWMEESTERSTRAAT",
+      "house_number": "45",
+      "codenummer": 3315,
+      "buurtletter": "HD",
+      "stemdistrict_nr": ""
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "",
+        "gezinshoofd": "wed. Gerrits, van der Heijden",
+        "year_of_birth": 83,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "181281",
+        "waarheen": "overleden",
+        "remarks": "L Chrispijnstr 50"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "",
+        "gezinshoofd": "Alida M",
+        "year_of_birth": null,
+        "M": 0,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "210182",
+        "gezinshoofd": "Heeg, Jan J",
+        "year_of_birth": 91,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "080684",
+        "waarheen": "overleden",
+        "remarks": ""
+      },
+      {
+        "record_no": 4,
+        "datum_registration": "090884",
+        "gezinshoofd": "Brinkman, Elisabeth",
+        "year_of_birth": 2,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [],
+    "footer_notes": "Bej. Centrum \"De Drie Hoven\""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 413,
+    "total_cost_usd": 0.003996
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=1TUYQGbt_cGgum4mZffscb3pGJw43IHHB"
+}

@@ -1,0 +1,190 @@
+{
+  "filename": "WKAPL00144000950",
+  "validated_json": {
+    "header": {
+      "street": "1e Oosterparkstraat",
+      "house_number": "1305",
+      "codenummer": 1305,
+      "buurtletter": "I",
+      "stemdistrict_nr": "02-164"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "50634",
+        "gezinshoofd": "Lustig, Diederik J",
+        "year_of_birth": 87,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "40665",
+        "waarheen": "overl. te Zaltbommel",
+        "remarks": "Vrolikstr 339 hs"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "10963",
+        "gezinshoofd": "de Haas, Theodorus B",
+        "year_of_birth": 2,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "50466",
+        "waarheen": "RdeBerenbrouckstr 51",
+        "remarks": "Leidunstr 22 I"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "030666",
+        "gezinshoofd": "Dieterich, Willemintje D",
+        "year_of_birth": 26,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "190278",
+        "waarheen": "Zeist",
+        "remarks": "Herengrt 627 III"
+      },
+      {
+        "record_no": 4,
+        "datum_registration": "060831",
+        "gezinshoofd": "Hertle, Adriana E",
+        "year_of_birth": 4,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "120281",
+        "waarheen": "Trompenburgstraat 93 I",
+        "remarks": ""
+      },
+      {
+        "record_no": 5,
+        "datum_registration": "060831",
+        "gezinshoofd": "Egas, Robert",
+        "year_of_birth": 10,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "150782",
+        "waarheen": "Klieverink 122",
+        "remarks": ""
+      },
+      {
+        "record_no": 6,
+        "datum_registration": "050484",
+        "gezinshoofd": "Loci, Frederica",
+        "year_of_birth": 280,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "280386",
+        "waarheen": "Z IJ Polders",
+        "remarks": ""
+      },
+      {
+        "record_no": 7,
+        "datum_registration": "050484",
+        "gezinshoofd": "Wolvekamp, Paul",
+        "year_of_birth": 5,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "150815",
+        "waarheen": "Orteliouskade 67 III",
+        "remarks": ""
+      },
+      {
+        "record_no": 8,
+        "datum_registration": "100485",
+        "gezinshoofd": "Holst, Anna G",
+        "year_of_birth": 66,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "161087",
+        "waarheen": "Vow",
+        "remarks": ""
+      },
+      {
+        "record_no": 9,
+        "datum_registration": "120387",
+        "gezinshoofd": "Koomen, Anna B P M",
+        "year_of_birth": 54,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "31274",
+        "inwonenden": "echtg van der Werf, Henlé, Catharina D",
+        "year_of_birth": 56,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "zie 2 regels lager",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 4,
+        "datum": "020175",
+        "inwonenden": "van der Werf, Johannes C",
+        "year_of_birth": 53,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "250975",
+        "waarheen": "Elst Dijksgracht",
+        "remarks": "Ledn"
+      },
+      {
+        "volg_nr": 2,
+        "datum": "270380",
+        "inwonenden": "Sarneel, Matthias F M",
+        "year_of_birth": 59,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "260384",
+        "waarheen": "a/b ws Jannie a/d",
+        "remarks": "Castricum"
+      },
+      {
+        "volg_nr": 5,
+        "datum": "050381",
+        "inwonenden": "Hensens, Maurina",
+        "year_of_birth": 62,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "150782",
+        "waarheen": "Klieverink 122",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 6,
+        "datum": "060781",
+        "inwonenden": "Sussenbach, Virginia J (Manhoef)",
+        "year_of_birth": 47,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "230782",
+        "waarheen": "Vow",
+        "remarks": "Vlissingen"
+      },
+      {
+        "volg_nr": 7,
+        "datum": "050483",
+        "inwonenden": "Stroethoff, Adriana",
+        "year_of_birth": 63,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "150185",
+        "waarheen": "Orteliouskade 67 III",
+        "remarks": ""
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 1419,
+    "total_cost_usd": 0.009026
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=16Ug_MkQm8x5EhxFuVMxr6mxF8THdGtoO"
+}

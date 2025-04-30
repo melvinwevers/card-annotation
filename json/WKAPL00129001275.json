@@ -1,0 +1,102 @@
+{
+  "filename": "WKAPL00129001275",
+  "validated_json": {
+    "header": {
+      "street": "Rustenburgerstraat",
+      "house_number": "294",
+      "codenummer": 1574,
+      "buurtletter": "R",
+      "stemdistrict_nr": "01-280"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "250745",
+        "gezinshoofd": "van Assen, Arie J",
+        "year_of_birth": 8,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "280367",
+        "waarheen": "Van Woustr 198 III",
+        "remarks": "P. Vlamingstr. 70 II"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "230367",
+        "gezinshoofd": "Rutkens, Jacobus H",
+        "year_of_birth": 21,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": "v Woustr. 198.III"
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "260449",
+        "inwonenden": "Egelman, Wilhelm F L",
+        "year_of_birth": 1,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "080855",
+        "waarheen": "Noorderstr 60 II",
+        "remarks": "Diezestr. 28 II"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "240750",
+        "inwonenden": "Tukker, Adrianus J",
+        "year_of_birth": 4,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "170353",
+        "waarheen": "Wibautstr 97 hs",
+        "remarks": "Wavestr 85 I"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "271158",
+        "inwonenden": "Vernooy, Marinus C",
+        "year_of_birth": 28,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "140261",
+        "waarheen": "Andreas Bonnstr 20hs",
+        "remarks": "RHoogebr.str 125 III"
+      },
+      {
+        "volg_nr": 2,
+        "datum": "120476",
+        "inwonenden": "Krikke, Egbert H",
+        "year_of_birth": 46,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "020880",
+        "waarheen": "Leersum",
+        "remarks": "Rheda Dl."
+      },
+      {
+        "volg_nr": 2,
+        "datum": "241180",
+        "inwonenden": "Kuitems, Leonard T G",
+        "year_of_birth": 54,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "111280",
+        "waarheen": "Winterswijk",
+        "remarks": "Borculo"
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 732,
+    "total_cost_usd": 0.005591
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=1yxy4mlWwQCfK63dTKM65fOHPBgNIcMM-"
+}

@@ -1,0 +1,58 @@
+{
+  "filename": "WKAPL00316000673",
+  "validated_json": {
+    "header": {
+      "street": "Sloterweg",
+      "house_number": "1 hoog",
+      "codenummer": 8,
+      "buurtletter": "SX",
+      "stemdistrict_nr": "61-612"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "190635",
+        "gezinshoofd": "Crucq, Jacob",
+        "year_of_birth": 1904,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "29017",
+        "waarheen": "Middelburg",
+        "remarks": "Sassenh str 4 hs"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "300771",
+        "gezinshoofd": "echtg. van Wijk, Maria",
+        "year_of_birth": 1905,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "gew. Rijnsburgstr. Kr. Iemuidenstr. 13",
+        "remarks": "Raadsbesl. No.907 dd 29-8-73"
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "201053",
+        "inwonenden": "Nieuwenhuijse, Jacobus",
+        "year_of_birth": 1931,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "171056",
+        "waarheen": "Cliostraat 11 II",
+        "remarks": "Middelburg"
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 379,
+    "total_cost_usd": 0.003826
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=1iW0YE8oI9SaUPI_r7zS3Xj67d_sRje1N"
+}

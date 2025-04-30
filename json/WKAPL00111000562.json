@@ -1,0 +1,135 @@
+{
+  "filename": "WKAPL00111000562",
+  "validated_json": {
+    "header": {
+      "street": "Kinkerstraat",
+      "house_number": "5 I hoog",
+      "codenummer": 914,
+      "buurtletter": "SG",
+      "stemdistrict_nr": "51.482.01.82"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "290454",
+        "gezinshoofd": "van Aalst,Johannes H",
+        "year_of_birth": 1908,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "160254",
+        "waarheen": "Pl Parklaan 9G L-III",
+        "remarks": "Brederodestr. 64 II"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "110354",
+        "gezinshoofd": "Munnik,Jan",
+        "year_of_birth": null,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "230658",
+        "waarheen": "Haarlemmerdijk 56 hs",
+        "remarks": "Zonnepln 1 hs"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "",
+        "gezinshoofd": "wed van Gemen,Pronk,Jan-tje",
+        "year_of_birth": 1906,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "100958",
+        "waarheen": "Diemen",
+        "remarks": "zoz regel 1"
+      },
+      {
+        "record_no": 5,
+        "datum_registration": "280858",
+        "gezinshoofd": "van der Veldt,Hendrikus H",
+        "year_of_birth": 1928,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "050467",
+        "waarheen": "Haarl meer",
+        "remarks": "v Boetzelaerstr 4 hs"
+      },
+      {
+        "record_no": 6,
+        "datum_registration": "140367",
+        "gezinshoofd": "Toebes,Johannes H",
+        "year_of_birth": 1922,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "020782",
+        "waarheen": "Lichtenvoorde",
+        "remarks": "Gr v Prinsterestraat 22"
+      },
+      {
+        "record_no": 7,
+        "datum_registration": "281082",
+        "gezinshoofd": "Besier,Catharina I",
+        "year_of_birth": 1904,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 2,
+        "datum": "110354",
+        "inwonenden": "wed van Gemen,Pronk,Jan-tje",
+        "year_of_birth": 1906,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "zoz gezin 3",
+        "remarks": "Zonnepln 1 hs"
+      },
+      {
+        "volg_nr": 3,
+        "datum": "",
+        "inwonenden": "van Gemen,Hillegonda",
+        "year_of_birth": 1931,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "100958",
+        "waarheen": "Diemen",
+        "remarks": "zie 2 regels hoger"
+      },
+      {
+        "volg_nr": 5,
+        "datum": "101058",
+        "inwonenden": "Bervpets,Marinus",
+        "year_of_birth": 1923,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "231258",
+        "waarheen": "J v Lennepstr 306 hs",
+        "remarks": "Pontanastr. 24 IIIa"
+      },
+      {
+        "volg_nr": 6,
+        "datum": "",
+        "inwonenden": "Toebes,Bernardus W J M",
+        "year_of_birth": 1951,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "271178",
+        "waarheen": "Haarl'meer",
+        "remarks": ""
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 1018,
+    "total_cost_usd": 0.007021
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=1X6yUnLXRXGPxsFLisTqsB1a5aT4zO547"
+}

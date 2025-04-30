@@ -1,0 +1,432 @@
+{
+  "filename": "WKAPL00282001308",
+  "validated_json": {
+    "header": {
+      "street": "De Wittenstraat",
+      "house_number": "",
+      "codenummer": 2056,
+      "buurtletter": "SJD 2",
+      "stemdistrict_nr": "02-451"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "",
+        "gezinshoofd": "Zweetbroek, Maria G E",
+        "year_of_birth": 75,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "280585",
+        "waarheen": "overleden",
+        "remarks": "Marnixkade 86 IIIa"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "",
+        "gezinshoofd": "de Wolf, Henriëtte",
+        "year_of_birth": 84,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "171046",
+        "waarheen": "Meer en Vaart 27",
+        "remarks": "Ostadestr 337 I"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "",
+        "gezinshoofd": "de Wolf, Gijsbertje",
+        "year_of_birth": 82,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "171046",
+        "waarheen": "Meer en Vaart 27",
+        "remarks": "Ostadestr 337 I"
+      },
+      {
+        "record_no": 4,
+        "datum_registration": "",
+        "gezinshoofd": "Visser, Neeltje",
+        "year_of_birth": 74,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "110265",
+        "waarheen": "Nwe Keizersgrt 120",
+        "remarks": "v/Seroosweg 102 II"
+      },
+      {
+        "record_no": 5,
+        "datum_registration": "",
+        "gezinshoofd": "wed Smit, Feldcamp, Cornelia A",
+        "year_of_birth": 67,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "110265",
+        "waarheen": "Nwe Keizersgrt 120",
+        "remarks": "Sloter 140 I"
+      },
+      {
+        "record_no": 6,
+        "datum_registration": "",
+        "gezinshoofd": "Spork, Alida M",
+        "year_of_birth": 29,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "280545",
+        "waarheen": "overleden",
+        "remarks": "G v Amstelstr 15 I"
+      },
+      {
+        "record_no": 7,
+        "datum_registration": "",
+        "gezinshoofd": "Schouten, Gerritje",
+        "year_of_birth": 94,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "310321",
+        "waarheen": "Staringpln 9",
+        "remarks": "Slaakstr 9 II"
+      },
+      {
+        "record_no": 8,
+        "datum_registration": "",
+        "gezinshoofd": "Smit, Cornelia, A",
+        "year_of_birth": 60,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "110265",
+        "waarheen": "Nwe Keizersgrt 120",
+        "remarks": "zie 3 regels hoger"
+      },
+      {
+        "record_no": 9,
+        "datum_registration": "",
+        "gezinshoofd": "Schwärzer, Dorothea N",
+        "year_of_birth": 91,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "280970",
+        "waarheen": "Staringpln 9",
+        "remarks": "Fred Hendrikstr188"
+      },
+      {
+        "record_no": 10,
+        "datum_registration": "",
+        "gezinshoofd": "de Wit, Elisabeth M",
+        "year_of_birth": 91,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "510770",
+        "waarheen": "overl te Blaricum",
+        "remarks": "Beethovenstr 15 II"
+      },
+      {
+        "record_no": 11,
+        "datum_registration": "",
+        "gezinshoofd": "Wienneke, Sophia W",
+        "year_of_birth": 90,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "080572",
+        "waarheen": "Meer en Vaart 27",
+        "remarks": "J Catskd 33 II"
+      },
+      {
+        "record_no": 12,
+        "datum_registration": "",
+        "gezinshoofd": "wed. van Zuidam, Rolfing, A N",
+        "year_of_birth": 0,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "310872",
+        "waarheen": "overleden",
+        "remarks": "Rt"
+      },
+      {
+        "record_no": 13,
+        "datum_registration": "",
+        "gezinshoofd": "Sengpiel, Marie S A",
+        "year_of_birth": 46,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "171046",
+        "waarheen": "Meer en Vaart 27",
+        "remarks": "Kanaalstr 110 II"
+      },
+      {
+        "record_no": 14,
+        "datum_registration": "",
+        "gezinshoofd": "Zijp, Antje",
+        "year_of_birth": 0,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "280884",
+        "waarheen": "overl te Hoorn",
+        "remarks": "Nwe Keizersgrt 120"
+      },
+      {
+        "record_no": 15,
+        "datum_registration": "",
+        "gezinshoofd": "Zank, Josephina J C",
+        "year_of_birth": 33,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "220970",
+        "waarheen": "Roelof Hartpln 4",
+        "remarks": "Nwe Keizersgrt 120"
+      },
+      {
+        "record_no": 16,
+        "datum_registration": "",
+        "gezinshoofd": "van Schaik, Jansje D",
+        "year_of_birth": 24,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "090371",
+        "waarheen": "Gliphoeve 506",
+        "remarks": "Nwe Keizersgrt 120"
+      },
+      {
+        "record_no": 17,
+        "datum_registration": "",
+        "gezinshoofd": "Schoen, Immetje",
+        "year_of_birth": 24,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "090371",
+        "waarheen": "Geinwijk 249",
+        "remarks": "Nwe Keizersgrt 120"
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 18,
+        "datum": "",
+        "inwonenden": "Sopacua, Salomi",
+        "year_of_birth": 47,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "271276",
+        "waarheen": "Van Boetzelaerstr 86",
+        "remarks": "Grimburgwal 10"
+      },
+      {
+        "volg_nr": 19,
+        "datum": "040472",
+        "inwonenden": "van de Ven, Aike J",
+        "year_of_birth": 54,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "111276",
+        "waarheen": "v. Hogendorpstr 91 II",
+        "remarks": "Heemstede"
+      },
+      {
+        "volg_nr": 20,
+        "datum": "100273",
+        "inwonenden": "Sultan, Samsoenahar",
+        "year_of_birth": 50,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "181274",
+        "waarheen": "balistr 127 I bechts",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 21,
+        "datum": "100273",
+        "inwonenden": "Zwaan, Jacob C",
+        "year_of_birth": 50,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "290575",
+        "waarheen": "M Polostr 228 I",
+        "remarks": "Staveren"
+      },
+      {
+        "volg_nr": 22,
+        "datum": "100273",
+        "inwonenden": "Wolff, Carel L",
+        "year_of_birth": 50,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "100572",
+        "waarheen": "Nieuwersluishof 169",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 23,
+        "datum": "100273",
+        "inwonenden": "van de Sluis, Leendert",
+        "year_of_birth": 50,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "Zoetermeer",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 24,
+        "datum": "100273",
+        "inwonenden": "Tjan Tjoe, _",
+        "year_of_birth": 50,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "Ruimzicht 119",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 25,
+        "datum": "100273",
+        "inwonenden": "Tjon Affoo, Magda D",
+        "year_of_birth": 50,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "040672",
+        "waarheen": "Rozenstr 119 I",
+        "remarks": "Hlm"
+      },
+      {
+        "volg_nr": 26,
+        "datum": "100273",
+        "inwonenden": "Wiegerink, Hermina",
+        "year_of_birth": 50,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "210477",
+        "waarheen": "Hoevelaken",
+        "remarks": "Leerdam"
+      },
+      {
+        "volg_nr": 27,
+        "datum": "100273",
+        "inwonenden": "Wiegerink, Anneke",
+        "year_of_birth": 50,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "Hoevelaken",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 28,
+        "datum": "100273",
+        "inwonenden": "Wissink, Benjamin J",
+        "year_of_birth": 50,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "071077",
+        "waarheen": "Govert Flinckstr 135",
+        "remarks": "Zutphen"
+      },
+      {
+        "volg_nr": 29,
+        "datum": "100273",
+        "inwonenden": "van de Sluis, Elizabeth",
+        "year_of_birth": 50,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "230481",
+        "waarheen": "Singel 7 d II",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 30,
+        "datum": "100273",
+        "inwonenden": "de Wit, Mona C",
+        "year_of_birth": 50,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "280977",
+        "waarheen": "St Willibrordusstr",
+        "remarks": "Hoevelaken"
+      },
+      {
+        "volg_nr": 31,
+        "datum": "100273",
+        "inwonenden": "van Stek, Ronald P",
+        "year_of_birth": 59,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "250178",
+        "waarheen": "Jac van Lennepstr",
+        "remarks": "Meppel"
+      },
+      {
+        "volg_nr": 32,
+        "datum": "100273",
+        "inwonenden": "Thielman, Victor E",
+        "year_of_birth": 54,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "250178",
+        "waarheen": "Nuth",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 33,
+        "datum": "100273",
+        "inwonenden": "Stuifbergen, Johanna W C",
+        "year_of_birth": 54,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "300382",
+        "waarheen": "Dulongstr 55 hs",
+        "remarks": "Berkel Enschot NB"
+      },
+      {
+        "volg_nr": 34,
+        "datum": "100273",
+        "inwonenden": "Visser, Charles",
+        "year_of_birth": 54,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "300382",
+        "waarheen": "1e Weteringstr 56",
+        "remarks": "N O Polder"
+      },
+      {
+        "volg_nr": 35,
+        "datum": "100273",
+        "inwonenden": "de Wolff, Eric A",
+        "year_of_birth": 54,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "180384",
+        "waarheen": "Millestr 3 I",
+        "remarks": "Middelburg"
+      },
+      {
+        "volg_nr": 36,
+        "datum": "100273",
+        "inwonenden": "Wijnen, Martinus S A",
+        "year_of_birth": 54,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "300382",
+        "waarheen": "A de Ruijterweg 39 hs+I",
+        "remarks": "Blaricum"
+      },
+      {
+        "volg_nr": 37,
+        "datum": "100273",
+        "inwonenden": "Stam, Yvonne M",
+        "year_of_birth": 60,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "230181",
+        "waarheen": "Van Swindenwarstr",
+        "remarks": "Diemen"
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 3422,
+    "total_cost_usd": 0.019041
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=1dC4o3kmErpWZteDULchQRbzaFAwMsfQT"
+}

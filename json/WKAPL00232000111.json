@@ -1,0 +1,157 @@
+{
+  "filename": "WKAPL00232000111",
+  "validated_json": {
+    "header": {
+      "street": "Marco Polostraat",
+      "house_number": "239",
+      "codenummer": 111,
+      "buurtletter": "H III",
+      "stemdistrict_nr": "02-567"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "300156",
+        "gezinshoofd": "Wolke, Antonius W M",
+        "year_of_birth": 1909,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "300156",
+        "waarheen": "VascodaGamastr 63 I",
+        "remarks": ""
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "300256",
+        "gezinshoofd": "wed Schaftenaer, Jansen, Antje",
+        "year_of_birth": 1886,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "200467",
+        "waarheen": "Wieringerwaardstr 42",
+        "remarks": "VascodaGamastr 63 I"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "060662",
+        "gezinshoofd": "de Koning, Adrian A",
+        "year_of_birth": 1946,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "030172",
+        "waarheen": "Nedersticht 315",
+        "remarks": ""
+      },
+      {
+        "record_no": 4,
+        "datum_registration": "180472",
+        "gezinshoofd": "Mein, Jan",
+        "year_of_birth": 1907,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "161074",
+        "waarheen": "Bovenkarspel",
+        "remarks": "2e JvdHeijdenstr 87 hs"
+      },
+      {
+        "record_no": 5,
+        "datum_registration": "061174",
+        "gezinshoofd": "Bladergroen, Eduard J H",
+        "year_of_birth": 1920,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "010888",
+        "waarheen": "2e Oosterparkstr 76 A",
+        "remarks": "Quellijnstr 27 III a"
+      },
+      {
+        "record_no": 6,
+        "datum_registration": "150883",
+        "gezinshoofd": "Hustin, Martha A",
+        "year_of_birth": 1920,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "120488",
+        "waarheen": "Bernissestraat 41 II",
+        "remarks": ""
+      },
+      {
+        "record_no": 7,
+        "datum_registration": "160588",
+        "gezinshoofd": "Montijn, Wilhelmina",
+        "year_of_birth": 1926,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 2,
+        "datum": "180964",
+        "inwonenden": "van Leeuwen, Leendert",
+        "year_of_birth": 1927,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "200467",
+        "waarheen": "Wieringerwaardstr 42 A",
+        "remarks": "Bontekoepltsn 4 II"
+      },
+      {
+        "volg_nr": 6,
+        "datum": "070287",
+        "inwonenden": "Smit, Richard M",
+        "year_of_birth": 1959,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "050276",
+        "waarheen": "Almelo",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 6,
+        "datum": "040877",
+        "inwonenden": "Smit, Richard M",
+        "year_of_birth": 1959,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "270181",
+        "waarheen": "V v Goghstr 4 I",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 7,
+        "datum": "150883",
+        "inwonenden": "Biessen, Leonardus P A",
+        "year_of_birth": 1930,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "210284",
+        "waarheen": "Milletstraat 58 I",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 7,
+        "datum": "210284",
+        "inwonenden": "Ismangi, Sadko I",
+        "year_of_birth": 1956,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "120488",
+        "waarheen": "Bernissestraat 41 II",
+        "remarks": ""
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 1177,
+    "total_cost_usd": 0.007816
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=1Yxuux7m52M6PaRumkRdLvV8FupDFswPt"
+}

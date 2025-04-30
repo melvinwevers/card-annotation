@@ -1,0 +1,113 @@
+{
+  "filename": "WKAPL00055001130",
+  "validated_json": {
+    "header": {
+      "street": "Latherusstraat",
+      "house_number": "93",
+      "codenummer": 1000,
+      "buurtletter": "BA",
+      "stemdistrict_nr": "07-839"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "290531",
+        "gezinshoofd": "Mijdema, Dirk",
+        "year_of_birth": 1902,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "090860",
+        "waarheen": "Hayelaanstr 13 hs",
+        "remarks": "JvLennepstr 51 IIIV"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "130960",
+        "gezinshoofd": "Carstens, Martin F.",
+        "year_of_birth": 1937,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "261067",
+        "waarheen": "Tirau (NZ)",
+        "remarks": "Lepelstr 37 I"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "391267",
+        "gezinshoofd": "Keerweer, Petrus H.",
+        "year_of_birth": 1904,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "161081",
+        "waarheen": "Latherusstraat 98",
+        "remarks": "Vogelpls 28 hs"
+      },
+      {
+        "record_no": 4,
+        "datum_registration": "231181",
+        "gezinshoofd": "Stork, Angenita Th. M. M. (Veen)",
+        "year_of_birth": 1945,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "141085",
+        "waarheen": "Latherusstraat 46 hs",
+        "remarks": ""
+      },
+      {
+        "record_no": 5,
+        "datum_registration": "141085",
+        "gezinshoofd": "Kramer, Cornelia",
+        "year_of_birth": 1933,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "270854",
+        "inwonenden": "Mijdema, Marinus",
+        "year_of_birth": 1931,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "a/b \"Betsy\" ligpl Nwe Achtergrt 7/0105",
+        "remarks": "zoz. gezin 1"
+      },
+      {
+        "volg_nr": 2,
+        "datum": "050258",
+        "inwonenden": "Schwartz, Johan E.",
+        "year_of_birth": 1926,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "Appelweg 35 I",
+        "remarks": "Urkstr 16 hs"
+      },
+      {
+        "volg_nr": 3,
+        "datum": "080673",
+        "inwonenden": "echtg Munten, Keerweer, Johanna H. M.",
+        "year_of_birth": 1933,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "Uitgeest",
+        "remarks": ""
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 829,
+    "total_cost_usd": 0.006076
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=1FD7Or_TzLxuir-vKGg4K7CzQ9m8WozfW"
+}

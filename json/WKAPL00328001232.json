@@ -1,0 +1,190 @@
+{
+  "filename": "WKAPL00328001232",
+  "validated_json": {
+    "header": {
+      "street": "Kattenburgerkade",
+      "house_number": "2 5",
+      "codenummer": 70656,
+      "buurtletter": "T",
+      "stemdistrict_nr": "05-064"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "281041",
+        "gezinshoofd": "Abels, Marinus E",
+        "year_of_birth": 17,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "120254",
+        "waarheen": "Borgerstr 64 II",
+        "remarks": "Gwlittenb str 95 II"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "080254",
+        "gezinshoofd": "Golsteijn, Willem",
+        "year_of_birth": 10,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "500955",
+        "waarheen": "L Leidsedwstr 108 III",
+        "remarks": "Borgerstr 64 II"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "031055",
+        "gezinshoofd": "echtg van der Genugten, van der Veer, Wijnanda",
+        "year_of_birth": 10,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "zie gezin 5",
+        "remarks": "Lleidsedwstr 108 III"
+      },
+      {
+        "record_no": 4,
+        "datum_registration": "",
+        "gezinshoofd": "van der Veen, Wijnanda (van der Genugten)",
+        "year_of_birth": 10,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "zie gezin 7",
+        "remarks": "zie gezin 3"
+      },
+      {
+        "record_no": 5,
+        "datum_registration": "",
+        "gezinshoofd": "de Ridder, Hendrik J (van der Genugten)",
+        "year_of_birth": 10,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "120563",
+        "waarheen": "L Bothastr 10 I",
+        "remarks": "zoz regel 9"
+      },
+      {
+        "record_no": 6,
+        "datum_registration": "270566",
+        "gezinshoofd": "Vrasdonk, Hendricus C",
+        "year_of_birth": 44,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "290667",
+        "waarheen": "Nwe Prinsengrt 25 II",
+        "remarks": "Bergen NH"
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "080254",
+        "inwonenden": "wed echtg Badoux, Orsel, Egberta M",
+        "year_of_birth": 22,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "zoz gezin 2",
+        "remarks": "Borgerstr 64 II"
+      },
+      {
+        "volg_nr": 2,
+        "datum": "080254",
+        "inwonenden": "Lammers, Jacobus",
+        "year_of_birth": 51,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "190855",
+        "waarheen": "Haarl liede ca",
+        "remarks": "Borgerstr 64 II"
+      },
+      {
+        "volg_nr": 2,
+        "datum": "080254",
+        "inwonenden": "Okhuijse, Cornelis",
+        "year_of_birth": 51,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "0705540",
+        "waarheen": "7 Achterb wal 42 III",
+        "remarks": "Borgerstr 64 II II"
+      },
+      {
+        "volg_nr": 2,
+        "datum": "120454",
+        "inwonenden": "Berreboom, Marie (Sterrenberg)",
+        "year_of_birth": 4,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "220654",
+        "waarheen": "Zaltbommel",
+        "remarks": "1e Kattenbdwstr 11"
+      },
+      {
+        "volg_nr": 3,
+        "datum": "301155",
+        "inwonenden": "Okhuijse, Cornelis",
+        "year_of_birth": 5,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "060856",
+        "waarheen": "Nmg",
+        "remarks": "02 Achterbwal 42 II"
+      },
+      {
+        "volg_nr": 5,
+        "datum": "120563",
+        "inwonenden": "Groen, Cornelis H",
+        "year_of_birth": 31,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "130955",
+        "waarheen": "Grt Kattenb str 124",
+        "remarks": "Vielandstr 22hs"
+      },
+      {
+        "volg_nr": 6,
+        "datum": "250656",
+        "inwonenden": "de Ridder, Hendrik J",
+        "year_of_birth": 1,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "zie 2 regels lager",
+        "remarks": "zoz gezin 7"
+      },
+      {
+        "volg_nr": 7,
+        "datum": "270866",
+        "inwonenden": "Peters, Hubert",
+        "year_of_birth": 40,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "290661",
+        "waarheen": "Czaar Peterstr 143 II",
+        "remarks": "3e Ooster str 85 hs"
+      },
+      {
+        "volg_nr": 7,
+        "datum": "",
+        "inwonenden": "van der Genugten, Bonne W",
+        "year_of_birth": 4,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "280563",
+        "waarheen": "Kinkerstr 212 III",
+        "remarks": "zoz gezin 7"
+      }
+    ],
+    "footer_notes": "Onbewoonbaar verklaard, Raadsbesluit 19 dec 1962 no: 123"
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 1530,
+    "total_cost_usd": 0.009581
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=1mQxsLFEjCcV6y7x0MI6MgsMUjgmHYzQN"
+}

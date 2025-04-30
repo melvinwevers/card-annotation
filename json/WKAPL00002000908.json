@@ -1,0 +1,57 @@
+{
+  "filename": "WKAPL00002000908",
+  "validated_json": {
+    "header": {
+      "street": "Deymanstraat",
+      "house_number": "18",
+      "codenummer": 374,
+      "buurtletter": "W",
+      "stemdistrict_nr": "02-162"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "",
+        "gezinshoofd": "Magazijn Amsterdamse Coöperatieve Inkoopvereniging \"Ons Belang\" kantoor",
+        "year_of_birth": null,
+        "M": null,
+        "V": null,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "",
+        "gezinshoofd": "14 A I hoog",
+        "year_of_birth": null,
+        "M": null,
+        "V": null,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "",
+        "gezinshoofd": "Wibaut Garage",
+        "year_of_birth": null,
+        "M": null,
+        "V": null,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 300,
+    "total_cost_usd": 0.003431
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=1UYSsX_5JJLzBMxFjE-SNnULo3N7r1f5d"
+}

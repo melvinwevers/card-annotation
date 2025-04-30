@@ -1,0 +1,91 @@
+{
+  "filename": "WKAPL00133000995",
+  "validated_json": {
+    "header": {
+      "street": "Swammerdamstraat",
+      "house_number": "4 2",
+      "codenummer": 1775,
+      "buurtletter": "W",
+      "stemdistrict_nr": "05-162"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "40447",
+        "gezinshoofd": "van den Bos, Sjoerd",
+        "year_of_birth": 17,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "13055",
+        "waarheen": "overleden",
+        "remarks": "Cruquiusstraat 2 I R"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "",
+        "gezinshoofd": "wed van den Bos, Snijder",
+        "year_of_birth": 24,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "zie gezin 1",
+        "remarks": "zie gezin 1"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "",
+        "gezinshoofd": "Tjeerdje",
+        "year_of_birth": null,
+        "M": 0,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      },
+      {
+        "record_no": 4,
+        "datum_registration": "",
+        "gezinshoofd": "Pals, Wouter",
+        "year_of_birth": 33,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "19046",
+        "waarheen": "ST Domela Nieuwenhuis",
+        "remarks": "zie regel 1"
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 2,
+        "datum": "030556",
+        "inwonenden": "Pals, Wouter",
+        "year_of_birth": 33,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "zoz",
+        "waarheen": "gezin 4",
+        "remarks": "Blankenstr 145 III"
+      },
+      {
+        "volg_nr": 6,
+        "datum": "280284",
+        "inwonenden": "Schaap, Ernst W",
+        "year_of_birth": 54,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "150186",
+        "waarheen": "Wibautstraat 60 hs",
+        "remarks": ""
+      }
+    ],
+    "footer_notes": "Samengevoegd met 44hs. Staat BWT nr479 d.d. 18.9.86"
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 622,
+    "total_cost_usd": 0.005041
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=1zunl3GU7F4oDWOmbuK2dIpnyHsxSmdsh"
+}

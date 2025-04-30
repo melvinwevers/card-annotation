@@ -1,0 +1,223 @@
+{
+  "filename": "WKAPL00028001240",
+  "validated_json": {
+    "header": {
+      "street": "Van Baerlestraat",
+      "house_number": "168",
+      "codenummer": 110,
+      "buurtletter": "A T",
+      "stemdistrict_nr": "01-296"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "300353",
+        "gezinshoofd": "Haas, Albertina",
+        "year_of_birth": 97,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "120172",
+        "waarheen": "Emmastraat 33-37",
+        "remarks": "Singer 402 hs"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "90952",
+        "gezinshoofd": "Moes, Joris",
+        "year_of_birth": 44,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "210977",
+        "waarheen": "Brouwersgracht 97 II",
+        "remarks": "zoz. regel 3"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "80682",
+        "gezinshoofd": "Six, François C (Jnkhr)",
+        "year_of_birth": 51,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "240582",
+        "waarheen": "J Verhulststr 128 II",
+        "remarks": ""
+      },
+      {
+        "record_no": 4,
+        "datum_registration": "",
+        "gezinshoofd": "van der Burg, Antoinette L (Voorhoeve)",
+        "year_of_birth": 41,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "270947",
+        "inwonenden": "van Hoorn, Eduard J",
+        "year_of_birth": 22,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "061053",
+        "waarheen": "Pr Hendrikln 46 hs",
+        "remarks": "Spinozastr 3 hs"
+      },
+      {
+        "volg_nr": 2,
+        "datum": "90952",
+        "inwonenden": "Haas, Leonarda A",
+        "year_of_birth": 25,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "120172",
+        "waarheen": "Emmastraat 33-37",
+        "remarks": "Alkmaar"
+      },
+      {
+        "volg_nr": 3,
+        "datum": "111171",
+        "inwonenden": "Moes, Joris",
+        "year_of_birth": 44,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": "zoz. gezin 2"
+      },
+      {
+        "volg_nr": 4,
+        "datum": "290972",
+        "inwonenden": "Patijn, Albert E",
+        "year_of_birth": 46,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "240976",
+        "waarheen": "Koninginneweg 177 II",
+        "remarks": "Laren NH"
+      },
+      {
+        "volg_nr": 5,
+        "datum": "290972",
+        "inwonenden": "Moes, Gerlacus",
+        "year_of_birth": 46,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "040275",
+        "waarheen": "Laren",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 6,
+        "datum": "270472",
+        "inwonenden": "Veen, Ernst W",
+        "year_of_birth": 46,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "180474",
+        "waarheen": "Ruysdaelkade 25 II+",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 7,
+        "datum": "140475",
+        "inwonenden": "Willeumier, Jacob",
+        "year_of_birth": 51,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "250875",
+        "waarheen": "Titiaanstr 38 I",
+        "remarks": "Ut"
+      },
+      {
+        "volg_nr": 8,
+        "datum": "120176",
+        "inwonenden": "Six, François C (jnkhr)",
+        "year_of_birth": 51,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": "zoz. gezin 3"
+      },
+      {
+        "volg_nr": 9,
+        "datum": "120177",
+        "inwonenden": "van Asbeck, Carel E (baron)",
+        "year_of_birth": 53,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "290977",
+        "waarheen": "Alb Cuypstr 133 I",
+        "remarks": "zie 2 regels hoger"
+      },
+      {
+        "volg_nr": 10,
+        "datum": "080872",
+        "inwonenden": "de Rooij, Maria J G",
+        "year_of_birth": 51,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 11,
+        "datum": "30283",
+        "inwonenden": "van der Putten, Charlotte M",
+        "year_of_birth": 54,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 12,
+        "datum": "90084",
+        "inwonenden": "Wilms, Renate A",
+        "year_of_birth": 65,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "120589",
+        "waarheen": "Alkmaar",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 13,
+        "datum": "050988",
+        "inwonenden": "Somer, Saskia O",
+        "year_of_birth": 67,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "270988",
+        "waarheen": "Akoleienstraat 3 III",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 14,
+        "datum": "",
+        "inwonenden": "Tan, Bianca G",
+        "year_of_birth": 58,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 1637,
+    "total_cost_usd": 0.010116
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=1WEyRT1Ec_a_hB2ocsd9T0Rys-Zvbx-qW"
+}

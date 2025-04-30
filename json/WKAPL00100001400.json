@@ -1,0 +1,6 @@
+{
+  "filename": "WKAPL00100001400",
+  "validated_json": null,
+  "error": "process_image_gpt4o.<locals>.call_gpt4o() got an unexpected keyword argument 'max_tokens'",
+  "_url": "https://drive.google.com/uc?export=view&id=1pdV8mhhwSi14USf9EDGqmtyuVv5F6g4u"
+}

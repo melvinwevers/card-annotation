@@ -1,0 +1,245 @@
+{
+  "filename": "WKAPL00341001269",
+  "validated_json": {
+    "header": {
+      "street": "Diderikdijkstraat",
+      "house_number": "169",
+      "codenummer": 74,
+      "buurtletter": "SP",
+      "stemdistrict_nr": "01-479"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "070962",
+        "gezinshoofd": "Gutierrez Lopez, José",
+        "year_of_birth": 36,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "101271",
+        "waarheen": "Marokko",
+        "remarks": "Lion (Fr)"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "311065",
+        "gezinshoofd": "Garcia Rodriguez, Francisco",
+        "year_of_birth": 34,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "100267",
+        "waarheen": "Framrijk",
+        "remarks": "Antwerpen (Be)"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "391165",
+        "gezinshoofd": "Houlich, Mohamed A B",
+        "year_of_birth": 30,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "100267",
+        "waarheen": "Marnixstr 401 hs",
+        "remarks": "Beni Buifur (Mar)"
+      },
+      {
+        "record_no": 4,
+        "datum_registration": "051265",
+        "gezinshoofd": "Gonzalez Tejera, Juan P",
+        "year_of_birth": 27,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "230466",
+        "waarheen": "Velsen",
+        "remarks": "Tenerifefe (Sp)"
+      },
+      {
+        "record_no": 5,
+        "datum_registration": "012165",
+        "gezinshoofd": "de Haseth, Charles P L",
+        "year_of_birth": 30,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "270466",
+        "waarheen": "Da Costakade 153 hs",
+        "remarks": "Spetalozabrief"
+      },
+      {
+        "record_no": 6,
+        "datum_registration": "040166",
+        "gezinshoofd": "Hernandez Garcia, Antonio",
+        "year_of_birth": 30,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "Sp",
+        "remarks": "Santa Cruz de Ten (Sp)"
+      },
+      {
+        "record_no": 7,
+        "datum_registration": "040166",
+        "gezinshoofd": "Hernandez Suarez, Francisco",
+        "year_of_birth": 30,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "Sp",
+        "remarks": "Santa Cruz de Ten (Sp)"
+      },
+      {
+        "record_no": 8,
+        "datum_registration": "040166",
+        "gezinshoofd": "Jacobs, Ronald T",
+        "year_of_birth": 30,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "040166",
+        "waarheen": "Houtrijkstr 51 II",
+        "remarks": "Makassarstraat 23"
+      },
+      {
+        "record_no": 9,
+        "datum_registration": "040166",
+        "gezinshoofd": "Ibars Jimenez, Diego",
+        "year_of_birth": 30,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "040166",
+        "waarheen": "Buitenland",
+        "remarks": "Santa Cruz de Ten (Sp)"
+      },
+      {
+        "record_no": 10,
+        "datum_registration": "290666",
+        "gezinshoofd": "Garcia Hernandez, José",
+        "year_of_birth": 30,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "071068",
+        "waarheen": "Spanje",
+        "remarks": "Santa Cruz de Ten (Sp)"
+      },
+      {
+        "record_no": 11,
+        "datum_registration": "230866",
+        "gezinshoofd": "Hossein, Allal M",
+        "year_of_birth": 30,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "031268",
+        "waarheen": "Laurierstr 48 I",
+        "remarks": "Beni Bonifour Mar"
+      },
+      {
+        "record_no": 12,
+        "datum_registration": "090666",
+        "gezinshoofd": "Gonzalez Gonzalez, Antonio",
+        "year_of_birth": 30,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "160161",
+        "waarheen": "Faeslstr 57 II",
+        "remarks": "Canarische eil"
+      },
+      {
+        "record_no": 13,
+        "datum_registration": "160167",
+        "gezinshoofd": "Hazel, Julio Fernando",
+        "year_of_birth": 42,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "040267",
+        "waarheen": "Bussum",
+        "remarks": "Granadilla de Abona"
+      },
+      {
+        "record_no": 14,
+        "datum_registration": "230167",
+        "gezinshoofd": "Greco, Michele",
+        "year_of_birth": 35,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "180467",
+        "waarheen": "v Hogendorpstr 141 II",
+        "remarks": "Belmonte Bezzagno It"
+      },
+      {
+        "record_no": 15,
+        "datum_registration": "230167",
+        "gezinshoofd": "Ignacio, Juan M",
+        "year_of_birth": 30,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "230168",
+        "waarheen": "Nassaukade 59 hs",
+        "remarks": "Marnixstr 290"
+      },
+      {
+        "record_no": 16,
+        "datum_registration": "230167",
+        "gezinshoofd": "Horwijks, Edmund",
+        "year_of_birth": 30,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "230168",
+        "waarheen": "VOW",
+        "remarks": "St Olofsteeg 2 II"
+      },
+      {
+        "record_no": 17,
+        "datum_registration": "080464",
+        "gezinshoofd": "Haize, George B",
+        "year_of_birth": 30,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "080466",
+        "waarheen": "NA",
+        "remarks": "Rozengrt 71 II"
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 18,
+        "datum": "91068",
+        "inwonenden": "Girardi, Livio",
+        "year_of_birth": 39,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "130669",
+        "waarheen": "S F v Ossstr 280",
+        "remarks": "Tiene It"
+      },
+      {
+        "volg_nr": 19,
+        "datum": "111168",
+        "inwonenden": "Gumbs, John A",
+        "year_of_birth": 41,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "270770",
+        "waarheen": "Marnixstr 290",
+        "remarks": "Oldenzaal"
+      },
+      {
+        "volg_nr": 20,
+        "datum": "090270",
+        "inwonenden": "Haidioine, Mohamed",
+        "year_of_birth": 34,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "040570",
+        "waarheen": "Ottho Heldringstr 102",
+        "remarks": "Bredeweg 11 hs"
+      }
+    ],
+    "footer_notes": "Hoofdbewoner: Eppinghaus, Nicolaas A, geb'93 Zie oude wk Archief Aigebr Opg B&W: 8/72"
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 1939,
+    "total_cost_usd": 0.011626
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=1DxL8mYt8MhInKGrgS9lW22gThguhnRac"
+}

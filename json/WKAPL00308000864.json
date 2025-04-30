@@ -1,0 +1,47 @@
+{
+  "filename": "WKAPL00308000864",
+  "validated_json": {
+    "header": {
+      "street": "DOGGER T/O PRINSENGRACHT",
+      "house_number": "1047A",
+      "codenummer": 0,
+      "buurtletter": "AB",
+      "stemdistrict_nr": "039"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "031071",
+        "gezinshoofd": "VAN HULST, LAURENS DD",
+        "year_of_birth": 50,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "230573",
+        "waarheen": "Weesperzijde 103 hs+I",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "211172",
+        "inwonenden": "Kramers, Pauline",
+        "year_of_birth": 49,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "230573",
+        "waarheen": "Weesperzijde 103 hs+I",
+        "remarks": ""
+      }
+    ],
+    "footer_notes": "039 029\n05 059\n1017 1002"
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 281,
+    "total_cost_usd": 0.003336
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=1e8XBwit-mSFwbzEyNxrbna2VSZgsasQR"
+}

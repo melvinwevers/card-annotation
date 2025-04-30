@@ -1,0 +1,35 @@
+{
+  "filename": "WKAPL00026000837",
+  "validated_json": {
+    "header": {
+      "street": "Asingaborg",
+      "house_number": "",
+      "codenummer": 2263,
+      "buurtletter": "AT",
+      "stemdistrict_nr": "01-409"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "190565",
+        "gezinshoofd": "Janning, Andre B",
+        "year_of_birth": 58,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": "Weesperzijde 65hs"
+      }
+    ],
+    "follow_up_entries": [],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 161,
+    "total_cost_usd": 0.002736
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=1inEh-IaXen0SnYEeeLRTuJzSxxVJL0L-"
+}

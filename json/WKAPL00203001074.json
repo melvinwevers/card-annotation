@@ -1,0 +1,80 @@
+{
+  "filename": "WKAPL00203001074",
+  "validated_json": {
+    "header": {
+      "street": "Sarphatistraat",
+      "house_number": "86",
+      "codenummer": 1595,
+      "buurtletter": "W",
+      "stemdistrict_nr": "07-060"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "131248",
+        "gezinshoofd": "Vomberg, Salomon",
+        "year_of_birth": 20,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "260255",
+        "waarheen": "Montevideo (Urug)",
+        "remarks": "Frederikspln II"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "111252",
+        "gezinshoofd": "Bergkamp, Johannes N",
+        "year_of_birth": 15,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": "Haarenstr I"
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "010351",
+        "inwonenden": "Vomberg, Adolf",
+        "year_of_birth": 93,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "260253",
+        "waarheen": "Montevideo (Urug)",
+        "remarks": "Warnsveld"
+      },
+      {
+        "volg_nr": 2,
+        "datum": "",
+        "inwonenden": "echtg. Ruhe, Bergkamp, Anjo",
+        "year_of_birth": 46,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "240969",
+        "waarheen": "Prinsengr 752 hs",
+        "remarks": "zoz gezin 2"
+      },
+      {
+        "volg_nr": 2,
+        "datum": "020484",
+        "inwonenden": "Bergkamp, Nicoline E",
+        "year_of_birth": 53,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "110984",
+        "waarheen": "Lijnbaansgracht 265 II",
+        "remarks": ""
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 529,
+    "total_cost_usd": 0.004576
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=1JPMXblT1mnT7CSyQnFOz8pFLHMOBfn7Y"
+}

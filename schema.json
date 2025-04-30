@@ -1,0 +1,35 @@
+{
+    "header": {
+      "street": string,
+      "house_number": string,
+      "codenummer": integer,
+      "buurtletter": string,
+      "stemdistrict_nr": string
+    },
+    "main_entries": [
+      { "record_no": integer,
+        "datum_registration": string,
+        "gezinshoofd": string,
+        "year_of_birth": integer,
+        "M": integer,
+        "V": integer,
+        "datum_vertrek": string,
+        "waarheen": string,
+        "remarks": string
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": integer,
+        "datum": string,
+        "inwonenden": string,
+        "year_of_birth": integer,
+        "M": integer,
+        "V": integer,
+        "datum_vertrek": string,
+        "waarheen": string,
+        "remarks": string
+      }
+    ],
+    "footer_notes": string
+  }

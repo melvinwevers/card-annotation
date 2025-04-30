@@ -1,0 +1,58 @@
+{
+  "filename": "WKAPL00067000661",
+  "validated_json": {
+    "header": {
+      "street": "Nicolaas Japiksestraat",
+      "house_number": "5 3",
+      "codenummer": 3507,
+      "buurtletter": "HD",
+      "stemdistrict_nr": "11 - 672"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "171055",
+        "gezinshoofd": "Jaggie, Johannes",
+        "year_of_birth": 19,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "200267",
+        "waarheen": "Deventer",
+        "remarks": "Boergoestr. 29 I"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "50267",
+        "gezinshoofd": "Gierveld, Johannes",
+        "year_of_birth": 23,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "Deventer",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 2,
+        "datum": "",
+        "inwonenden": "Gierveld, Gerrit J",
+        "year_of_birth": 57,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "zn170284",
+        "waarheen": "Haarlemmermeer",
+        "remarks": ""
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 341,
+    "total_cost_usd": 0.003636
+  },
+  "finish_reason": "stop",
+  "_url": "https://drive.google.com/uc?export=view&id=1qGUCK0G9U2eMdW0wzv-7NzAR2VNjbvK7"
+}
