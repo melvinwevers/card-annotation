@@ -1,0 +1,301 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00285000490",
+  "validated_json": {
+    "header": {
+      "street": "Oudezijds Voorburgwal",
+      "house_number": "47 II hoog",
+      "codenummer": 1947,
+      "buurtletter": "K",
+      "stemdistrict_nr": "14-006"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "50539",
+        "gezinshoofd": "Driesen, Antoon",
+        "year_of_birth": 86,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "4/10/56",
+        "waarheen": "overleden",
+        "remarks": "Hilversum"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "50539",
+        "gezinshoofd": "wed. Driesen, Dame, Catharina M",
+        "year_of_birth": 87,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "5/01/60",
+        "waarheen": "Harmonielhof 30 II",
+        "remarks": "zie gezin 1"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "150327",
+        "gezinshoofd": "Ng, Hee H",
+        "year_of_birth": 34,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "19/09/72",
+        "waarheen": "Riouwstraat 53 II",
+        "remarks": "Makelaarskantoor Blessing"
+      },
+      {
+        "record_no": 4,
+        "datum_registration": "240722",
+        "gezinshoofd": "Wong, Lam",
+        "year_of_birth": 31,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "4/07/73",
+        "waarheen": "Heerhugowaard",
+        "remarks": "BiBantammerstr 11 hs"
+      },
+      {
+        "record_no": 5,
+        "datum_registration": "",
+        "gezinshoofd": "",
+        "year_of_birth": null,
+        "M": 0,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": "In gebruik bij 47 huis (Hr Wong, Hing Yin)"
+      },
+      {
+        "record_no": 6,
+        "datum_registration": "70586",
+        "gezinshoofd": "Esajas, Ronald L",
+        "year_of_birth": 52,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 3,
+        "datum": "150564",
+        "inwonenden": "Wong, Hei S",
+        "year_of_birth": 33,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "60866",
+        "waarheen": "Winterswijk",
+        "remarks": "Kromme Waal 15 II"
+      },
+      {
+        "volg_nr": 3,
+        "datum": "260466",
+        "inwonenden": "Chan, Ngai C",
+        "year_of_birth": 31,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "181065",
+        "waarheen": "Oz Voorb wal 47 I",
+        "remarks": "Hlm"
+      },
+      {
+        "volg_nr": 3,
+        "datum": "170567",
+        "inwonenden": "Man, Hau T",
+        "year_of_birth": 42,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "221168",
+        "waarheen": "Heemskerk",
+        "remarks": "Vijzelstr 97 hs (IV"
+      },
+      {
+        "volg_nr": 3,
+        "datum": "041067",
+        "inwonenden": "Lee, Shek F",
+        "year_of_birth": 34,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "140668",
+        "waarheen": "Alkmaar",
+        "remarks": "Burg v Leeuwenln 41"
+      },
+      {
+        "volg_nr": 3,
+        "datum": "170169",
+        "inwonenden": "Cheung, Kin Wai",
+        "year_of_birth": 43,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "Koestr 32 hs",
+        "remarks": "Tolstraat 99 II"
+      },
+      {
+        "volg_nr": 4,
+        "datum": "130471",
+        "inwonenden": "Lung, Pak L",
+        "year_of_birth": 40,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "180871",
+        "waarheen": "Balistr 129 II",
+        "remarks": "Vijzelstr 28 hs"
+      },
+      {
+        "volg_nr": 4,
+        "datum": "120721",
+        "inwonenden": "Ng, Chin K",
+        "year_of_birth": 47,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "010372",
+        "waarheen": "Amsteldijk 133 III",
+        "remarks": "Herengrt 515 hs"
+      },
+      {
+        "volg_nr": 4,
+        "datum": "490227",
+        "inwonenden": "Chan, Chi C",
+        "year_of_birth": 42,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "060272",
+        "waarheen": "Mr. P.N. Arntzeniusweg",
+        "remarks": "Hong Kong"
+      },
+      {
+        "volg_nr": 4,
+        "datum": "300273",
+        "inwonenden": "Wong, Lam",
+        "year_of_birth": 31,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "250578",
+        "waarheen": "Ferd Bolstraat 184 II",
+        "remarks": "Ehv"
+      },
+      {
+        "volg_nr": 4,
+        "datum": "300273",
+        "inwonenden": "Chan, Ji S",
+        "year_of_birth": 50,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "250578",
+        "waarheen": "Zierikzee",
+        "remarks": "Veenendaal"
+      },
+      {
+        "volg_nr": 4,
+        "datum": "300273",
+        "inwonenden": "Chan, Yu H",
+        "year_of_birth": 48,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "zie 3 regels hoger",
+        "remarks": "Ah"
+      },
+      {
+        "volg_nr": 4,
+        "datum": "300273",
+        "inwonenden": "Wong, Kam L",
+        "year_of_birth": 50,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "Molensteeg 13 III",
+        "remarks": "Hoorn"
+      },
+      {
+        "volg_nr": 6,
+        "datum": "200283",
+        "inwonenden": "Chai, Mok C",
+        "year_of_birth": 48,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "Pehang, Malei",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 6,
+        "datum": "200283",
+        "inwonenden": "Tsui, Wai K",
+        "year_of_birth": 43,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "Balistr 49 I",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 6,
+        "datum": "200283",
+        "inwonenden": "Cheung, Tat Ming",
+        "year_of_birth": 44,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "Hong Kong",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 6,
+        "datum": "091182",
+        "inwonenden": "Chim, Ji Sim",
+        "year_of_birth": 38,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "3e Wittenburgerdwarsstraat 12",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 6,
+        "datum": "120985",
+        "inwonenden": "Limon, Franklin E",
+        "year_of_birth": 47,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "141186",
+        "waarheen": "VOW",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 7,
+        "datum": "010787",
+        "inwonenden": "Guzmán, Maria D",
+        "year_of_birth": 54,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "180387",
+        "waarheen": "Nieuwegein",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 7,
+        "datum": "010787",
+        "inwonenden": "Harmsen, Maria A S",
+        "year_of_birth": 58,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 2259,
+    "total_cost_usd": 0.013226
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00285000490.jpg"
+}

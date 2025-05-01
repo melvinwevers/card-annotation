@@ -1,0 +1,246 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00076001045",
+  "validated_json": {
+    "header": {
+      "street": "Des Présstraat",
+      "house_number": "hoek Cornelis Krusemanstraat",
+      "codenummer": 1444,
+      "buurtletter": "AL 1",
+      "stemdistrict_nr": "06-377"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "200146",
+        "gezinshoofd": "Bleij, Jan",
+        "year_of_birth": 0,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "160153",
+        "waarheen": "Marnixstr 237hs I",
+        "remarks": "Molukkenstr 108 hs"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "250153",
+        "gezinshoofd": "van Hecke, Wilhelmus M",
+        "year_of_birth": 0,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "030157",
+        "waarheen": "Rt",
+        "remarks": "Yselstr 2 hs"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "250153",
+        "gezinshoofd": "Otjes, Johannes J",
+        "year_of_birth": 0,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "230157",
+        "waarheen": "Senecastr 39",
+        "remarks": "Rooseveltln 67 hs"
+      },
+      {
+        "record_no": 4,
+        "datum_registration": "191156",
+        "gezinshoofd": "Loos, Cornelis J",
+        "year_of_birth": 0,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "190157",
+        "waarheen": "Surinamestr 1 II",
+        "remarks": "Alkemade"
+      },
+      {
+        "record_no": 5,
+        "datum_registration": "191156",
+        "gezinshoofd": "Boeije, Maria Q",
+        "year_of_birth": 0,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "230721",
+        "waarheen": "Sassenheimstr 86 II",
+        "remarks": "Deventer"
+      },
+      {
+        "record_no": 6,
+        "datum_registration": "191156",
+        "gezinshoofd": "Maas, Leintje",
+        "year_of_birth": 44,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "310872",
+        "waarheen": "Zwitserland",
+        "remarks": "Michelangelostr 57 II"
+      },
+      {
+        "record_no": 7,
+        "datum_registration": "191156",
+        "gezinshoofd": "Demper, Paul F",
+        "year_of_birth": 54,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "040254",
+        "waarheen": "Fr. v. Mierisstr 27 I",
+        "remarks": "Gv"
+      },
+      {
+        "record_no": 8,
+        "datum_registration": "408272",
+        "gezinshoofd": "Holstein, Paul R",
+        "year_of_birth": 54,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "020457",
+        "waarheen": "VOW",
+        "remarks": "Hattum"
+      },
+      {
+        "record_no": 9,
+        "datum_registration": "305274",
+        "gezinshoofd": "van Remortel, Amelia M J",
+        "year_of_birth": 0,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "030274",
+        "waarheen": "Sarphatijstr 59/61 I",
+        "remarks": ""
+      },
+      {
+        "record_no": 10,
+        "datum_registration": "305274",
+        "gezinshoofd": "Dooper, Willem E",
+        "year_of_birth": 55,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "120177",
+        "waarheen": "Gelderskade 1 I",
+        "remarks": "abusief"
+      },
+      {
+        "record_no": 11,
+        "datum_registration": "808274",
+        "gezinshoofd": "Kaandorp, Theodorus J",
+        "year_of_birth": 51,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "Castricum",
+        "remarks": ""
+      },
+      {
+        "record_no": 12,
+        "datum_registration": "808274",
+        "gezinshoofd": "Kaandorp, Theodorus J",
+        "year_of_birth": 51,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "191285",
+        "waarheen": "Jonas Daniël Meijerplein 18",
+        "remarks": ""
+      },
+      {
+        "record_no": 13,
+        "datum_registration": "808274",
+        "gezinshoofd": "van Son, Alexandra M F M",
+        "year_of_birth": 59,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "850972",
+        "inwonenden": "Smits, Johannes L M",
+        "year_of_birth": 48,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "030274",
+        "waarheen": "Sarphatijstr 59/61 I",
+        "remarks": "Breda"
+      },
+      {
+        "volg_nr": 10,
+        "datum": "808274",
+        "inwonenden": "Kaandorp, Theodorus J",
+        "year_of_birth": 51,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "zo gezin 12",
+        "remarks": "Castricum"
+      },
+      {
+        "volg_nr": 12,
+        "datum": "180280",
+        "inwonenden": "van Kampen, Roeland F",
+        "year_of_birth": 56,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "191285",
+        "waarheen": "Jonas Daniël Meijerplein 18",
+        "remarks": "Diemen"
+      },
+      {
+        "volg_nr": 12,
+        "datum": "300384",
+        "inwonenden": "Dragtsma, Hanny",
+        "year_of_birth": 54,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "130284",
+        "waarheen": "Bennebroekstraat 30 II",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 12,
+        "datum": "260684",
+        "inwonenden": "Stutterheim, Wilhelmina A",
+        "year_of_birth": 55,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "130284",
+        "waarheen": "Bennebroekstraat 30 II",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 12,
+        "datum": "202885",
+        "inwonenden": "van Son, Alexandra M F M",
+        "year_of_birth": 59,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "zo gezin 13",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 12,
+        "datum": "300885",
+        "inwonenden": "Kuipers, Edgar W",
+        "year_of_birth": 62,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 1864,
+    "total_cost_usd": 0.011251
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00076001045.jpg"
+}

@@ -1,0 +1,81 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00059000288",
+  "validated_json": {
+    "header": {
+      "street": "Leidsestraat",
+      "house_number": "82/84",
+      "codenummer": 1025,
+      "buurtletter": "JJ",
+      "stemdistrict_nr": "07-019"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "",
+        "gezinshoofd": "Hoofdkantoor Levensverzekerings Maatschappij \"De Nederlanden van 1870\"",
+        "year_of_birth": null,
+        "M": null,
+        "V": null,
+        "datum_vertrek": "",
+        "waarheen": "Alexander Hotel van Dijk en Thijs",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "260148",
+        "inwonenden": "van Oostveen, Johannes P",
+        "year_of_birth": 1931,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "150958",
+        "waarheen": "Vlissingen",
+        "remarks": "Vlissingen"
+      },
+      {
+        "volg_nr": 2,
+        "datum": "021058",
+        "inwonenden": "Schmidt, Franciscus H",
+        "year_of_birth": 1908,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "280165",
+        "waarheen": "Herengrt 124-128 hs 2e Helmersstr 33hs",
+        "remarks": "CPR"
+      },
+      {
+        "volg_nr": 2,
+        "datum": "070471",
+        "inwonenden": "Groos, Werner",
+        "year_of_birth": 1944,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "151171",
+        "waarheen": "Glihoeve 515",
+        "remarks": "CPR"
+      },
+      {
+        "volg_nr": 3,
+        "datum": "240680",
+        "inwonenden": "Edwards, Nigel T",
+        "year_of_birth": 1941,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "070880",
+        "waarheen": "Keizersgracht 120",
+        "remarks": "Hong Kong"
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 542,
+    "total_cost_usd": 0.004641
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00059000288.jpg"
+}

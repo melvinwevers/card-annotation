@@ -1,0 +1,69 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00030001000",
+  "validated_json": {
+    "header": {
+      "street": "Banne Buikslootlaan",
+      "house_number": "",
+      "codenummer": 2270,
+      "buurtletter": "BC",
+      "stemdistrict_nr": "02-835"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "180173",
+        "gezinshoofd": "Bouman, Arie",
+        "year_of_birth": 92,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "240976",
+        "waarheen": "Kramatweg 20 A",
+        "remarks": ""
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "011176",
+        "gezinshoofd": "wed. Visser, Schelp, Amalia W.",
+        "year_of_birth": 92,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "280780",
+        "waarheen": "Kramatweg 20 A",
+        "remarks": ""
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "200880",
+        "gezinshoofd": "wed. van Rongen, van Eekelen, Dympha C.",
+        "year_of_birth": 98,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "211283",
+        "waarheen": "Ookmeerweg 268",
+        "remarks": ""
+      },
+      {
+        "record_no": 4,
+        "datum_registration": "310184",
+        "gezinshoofd": "Dumont, Hermina A.",
+        "year_of_birth": 5,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 433,
+    "total_cost_usd": 0.004096
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00030001000.jpg"
+}

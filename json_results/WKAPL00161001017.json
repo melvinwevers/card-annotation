@@ -1,0 +1,36 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00161001017",
+  "validated_json": {
+    "header": {
+      "street": "Burgemeester Hogguerstraat",
+      "house_number": "443",
+      "codenummer": 2340,
+      "buurtletter": "HP",
+      "stemdistrict_nr": "02-667"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "",
+        "gezinshoofd": "Bergplaats",
+        "year_of_birth": null,
+        "M": null,
+        "V": null,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 151,
+    "total_cost_usd": 0.002686
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00161001017.jpg"
+}

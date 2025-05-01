@@ -1,0 +1,125 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00021001101",
+  "validated_json": {
+    "header": {
+      "street": "Amstelkade",
+      "house_number": "44 II hoog",
+      "codenummer": 53,
+      "buurtletter": "AR 8",
+      "stemdistrict_nr": "01-330"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "110336",
+        "gezinshoofd": "Klaasen, Johannes G.",
+        "year_of_birth": 90,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "190557",
+        "waarheen": "overleden",
+        "remarks": "le J Steenstr 140 I"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "",
+        "gezinshoofd": "wed Klaasen, Heij, Geertruida M.",
+        "year_of_birth": 4,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "180461",
+        "waarheen": "overleden Blaricum",
+        "remarks": "zie gezin 1"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "200761",
+        "gezinshoofd": "van der Wearden, Johannes P.",
+        "year_of_birth": 97,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "260488",
+        "waarheen": "overleden",
+        "remarks": "Amstelkade 44 hs"
+      },
+      {
+        "record_no": 4,
+        "datum_registration": "",
+        "gezinshoofd": "Waffner, Gertrud",
+        "year_of_birth": 4,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "200588",
+        "waarheen": "overleden",
+        "remarks": ""
+      },
+      {
+        "record_no": 5,
+        "datum_registration": "300888",
+        "gezinshoofd": "de Goede, Marcel",
+        "year_of_birth": 67,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      },
+      {
+        "record_no": 6,
+        "datum_registration": "300888",
+        "gezinshoofd": "Hoogland, Elsje M",
+        "year_of_birth": 67,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 2,
+        "datum": "040460",
+        "inwonenden": "Klestadt, Marion",
+        "year_of_birth": 41,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "170660",
+        "waarheen": "Dufaystr 9 II",
+        "remarks": "Stadionweg 99 hs"
+      },
+      {
+        "volg_nr": 3,
+        "datum": "101260",
+        "inwonenden": "van der Neut, Trinette",
+        "year_of_birth": 38,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "200761",
+        "waarheen": "Wesperzijde 59 hs",
+        "remarks": "van 42 III"
+      },
+      {
+        "volg_nr": 4,
+        "datum": "200761",
+        "inwonenden": "Solingen, Hermina Ph",
+        "year_of_birth": 31,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "020362",
+        "waarheen": "Willemsstr 183 III",
+        "remarks": "van 44 hs"
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 875,
+    "total_cost_usd": 0.006306
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00021001101.jpg"
+}

@@ -1,0 +1,213 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00011001334",
+  "validated_json": {
+    "header": {
+      "street": "Elandsgracht",
+      "house_number": "234/II",
+      "codenummer": 461,
+      "buurtletter": "G",
+      "stemdistrict_nr": "01-035"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "200945",
+        "gezinshoofd": "Cahn, Hendrik I.",
+        "year_of_birth": 1902,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "210454",
+        "waarheen": "Brederodestr. 94 I",
+        "remarks": "JWBrouwerspln. 18 hs"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "231153",
+        "gezinshoofd": "echtg Ormel, van der Meer, Adriana H.",
+        "year_of_birth": 1908,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "160552",
+        "waarheen": "Den Helder",
+        "remarks": "Rozengrt 133hs"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "250955",
+        "gezinshoofd": "Koenders, Jan Christiaan",
+        "year_of_birth": 1915,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "v. Suchtelen v.d. Haare",
+        "waarheen": "str 17",
+        "remarks": "Schoorl"
+      },
+      {
+        "record_no": 4,
+        "datum_registration": "250955",
+        "gezinshoofd": "Sondaar, Lodewijk W.",
+        "year_of_birth": 1910,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "071260",
+        "waarheen": "Vijzelgracht 55hs",
+        "remarks": "Marnixstr. 218 hs"
+      },
+      {
+        "record_no": 5,
+        "datum_registration": "250955",
+        "gezinshoofd": "van der Molen, Maartje B. L.",
+        "year_of_birth": 1901,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "overleden",
+        "waarheen": "",
+        "remarks": "Raamstr. 4 hs"
+      },
+      {
+        "record_no": 6,
+        "datum_registration": "250955",
+        "gezinshoofd": "Rings, Wilhelm",
+        "year_of_birth": 1902,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "110360",
+        "waarheen": "Jlnalstraat 31 III",
+        "remarks": "Ruysdaelkade 79"
+      },
+      {
+        "record_no": 7,
+        "datum_registration": "250955",
+        "gezinshoofd": "Volkert, Adrianus",
+        "year_of_birth": 1906,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "180367",
+        "waarheen": "Elandsgracht 128 b",
+        "remarks": "Pl Kerkln 26.III"
+      },
+      {
+        "record_no": 8,
+        "datum_registration": "250955",
+        "gezinshoofd": "Delmonte, Doris A.",
+        "year_of_birth": 1908,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "290272",
+        "waarheen": "Elandsgracht 128 II",
+        "remarks": "Wim"
+      },
+      {
+        "record_no": 9,
+        "datum_registration": "250955",
+        "gezinshoofd": "Wouters, Johannes J.",
+        "year_of_birth": 1948,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "240976",
+        "waarheen": "Nassaukade 32 I",
+        "remarks": "Van Spilbergenstraat 79 I"
+      },
+      {
+        "record_no": 10,
+        "datum_registration": "212271",
+        "gezinshoofd": "van den Iserrt, Gabrielle",
+        "year_of_birth": 1955,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "zie gezin 12",
+        "remarks": "Bergen NH"
+      },
+      {
+        "record_no": 11,
+        "datum_registration": "130813",
+        "gezinshoofd": "Kollaard, Elmer R.",
+        "year_of_birth": 1955,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "180183",
+        "waarheen": "Da Costakade 118 III",
+        "remarks": ""
+      },
+      {
+        "record_no": 12,
+        "datum_registration": "130813",
+        "gezinshoofd": "Smit, Bernadine J.",
+        "year_of_birth": 1963,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "280885",
+        "waarheen": "Brouwersgracht 655",
+        "remarks": ""
+      },
+      {
+        "record_no": 13,
+        "datum_registration": "251085",
+        "gezinshoofd": "Suliman, Mohamed N.",
+        "year_of_birth": 1948,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      },
+      {
+        "record_no": 14,
+        "datum_registration": "251085",
+        "gezinshoofd": "Anwari, Zinet",
+        "year_of_birth": 1956,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 5,
+        "datum": "230860",
+        "inwonenden": "echtg-Kok, Engel, Jacoba M.",
+        "year_of_birth": 1912,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "bm071160",
+        "waarheen": "dewittenkade 57 I a",
+        "remarks": "Marnixstr 218 hs"
+      },
+      {
+        "volg_nr": 5,
+        "datum": "291160",
+        "inwonenden": "van der Molen, Maartje B.",
+        "year_of_birth": 1901,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "abusief",
+        "remarks": "Raamstr 4 hs"
+      },
+      {
+        "volg_nr": 11,
+        "datum": "230972",
+        "inwonenden": "Kollaard, Elmer R.",
+        "year_of_birth": 1955,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "zoz gezin 12",
+        "remarks": ""
+      }
+    ],
+    "footer_notes": "gew.opg.W.D. 12/60. Samengevoegd met voor Staat B & Wt dd. 15.2.1980+"
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 1688,
+    "total_cost_usd": 0.010371
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00011001334.jpg"
+}

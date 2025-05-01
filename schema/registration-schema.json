@@ -1,0 +1,72 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Registration Card Schema",
+    "type": "object",
+    "required": ["filename", "image_url", "validated_json"],
+    "properties": {
+      "filename": {
+        "type": "string"
+      },
+      "image_url": {
+        "type": "string",
+        "pattern": "^\\.\\/images\\/.+\\.(jpg|jpeg|png|tif)$"
+      },
+      "validated_json": {
+        "type": "object",
+        "required": ["header", "main_entries", "follow_up_entries", "footer_notes"],
+        "properties": {
+          "header": {
+            "type": "object",
+            "required": ["street", "house_number", "codenummer", "buurtletter", "stemdistrict_nr"],
+            "properties": {
+              "street": { "type": "string" },
+              "house_number": { "type": "string" },
+              "codenummer": { "type": "integer" },
+              "buurtletter": { "type": "string" },
+              "stemdistrict_nr": { "type": "string" }
+            }
+          },
+          "main_entries": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["record_no", "datum_registration", "gezinshoofd", "year_of_birth", "M", "V"],
+              "properties": {
+                "record_no": { "type": "integer" },
+                "datum_registration": { "type": "string" },
+                "gezinshoofd": { "type": "string" },
+                "year_of_birth": { "type": "integer" },
+                "M": { "type": "integer" },
+                "V": { "type": "integer" },
+                "datum_vertrek": { "type": "string" },
+                "waarheen": { "type": "string" },
+                "remarks": { "type": "string" }
+              }
+            }
+          },
+          "follow_up_entries": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["volg_nr", "datum", "inwonenden", "year_of_birth", "M", "V"],
+              "properties": {
+                "volg_nr": { "type": "integer" },
+                "datum": { "type": "string" },
+                "inwonenden": { "type": "string" },
+                "year_of_birth": { "type": "integer" },
+                "M": { "type": "integer" },
+                "V": { "type": "integer" },
+                "datum_vertrek": { "type": "string" },
+                "waarheen": { "type": "string" },
+                "remarks": { "type": "string" }
+              }
+            }
+          },
+          "footer_notes": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+  

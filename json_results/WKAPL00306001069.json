@@ -1,0 +1,114 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00306001069",
+  "validated_json": {
+    "header": {
+      "street": "IJsselstroom",
+      "house_number": "",
+      "codenummer": 45,
+      "buurtletter": "B",
+      "stemdistrict_nr": "191"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "220175",
+        "gezinshoofd": "de Groot, Engelbertus",
+        "year_of_birth": 53,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "250576",
+        "waarheen": "Tugelaweg 98 III",
+        "remarks": ""
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "130526",
+        "gezinshoofd": "Belser, Godfried P",
+        "year_of_birth": 54,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "240976",
+        "waarheen": "Swammerdamstraat 33 hs",
+        "remarks": ""
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "011076",
+        "gezinshoofd": "echtg. van Ramesdonk, Hilbrink, Wilhelmina A",
+        "year_of_birth": 43,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "150872",
+        "waarheen": "Balistraat 126 III",
+        "remarks": ""
+      },
+      {
+        "record_no": 4,
+        "datum_registration": "060277",
+        "gezinshoofd": "Tol, Johannes",
+        "year_of_birth": 53,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "100378",
+        "waarheen": "Gv",
+        "remarks": ""
+      },
+      {
+        "record_no": 5,
+        "datum_registration": "090478",
+        "gezinshoofd": "van de Venis, Arend",
+        "year_of_birth": 53,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "300780",
+        "waarheen": "Oldebroek",
+        "remarks": ""
+      },
+      {
+        "record_no": 6,
+        "datum_registration": "080678",
+        "gezinshoofd": "van der Meulen, Jelle",
+        "year_of_birth": 54,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "130884",
+        "waarheen": "Woerden",
+        "remarks": "singel zie ligplaats 2 B a/d Vroegopsingel"
+      },
+      {
+        "record_no": 7,
+        "datum_registration": "150884",
+        "gezinshoofd": "van de Maaden, Alida E",
+        "year_of_birth": 43,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": "Zie ws Ligplaats 2 B a/d Jan Vroegopsingel. Besch. B & Wt. Nr. 317 dd. 8-10.86"
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 2,
+        "datum": "130576",
+        "inwonenden": "Peters, Elisa H A M",
+        "year_of_birth": 51,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "zoz gezin 2",
+        "remarks": ""
+      }
+    ],
+    "footer_notes": "ws Joan Muyskenweg Maria Stella Maris IJsselstroom"
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 833,
+    "total_cost_usd": 0.006096
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00306001069.jpg"
+}

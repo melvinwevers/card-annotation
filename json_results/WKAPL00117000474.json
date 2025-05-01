@@ -1,0 +1,58 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00117000474",
+  "validated_json": {
+    "header": {
+      "street": "Korteweghof",
+      "house_number": "9",
+      "codenummer": 955,
+      "buurtletter": "W.H. 6",
+      "stemdistrict_nr": "08-185"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "060451",
+        "gezinshoofd": "van der Scheer, Pieter",
+        "year_of_birth": 24,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "200858",
+        "waarheen": "Hilversum",
+        "remarks": "Hunzestr 109 II"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "070956",
+        "gezinshoofd": "Scalé, Georg",
+        "year_of_birth": 28,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "270667",
+        "waarheen": "Purmerend",
+        "remarks": "Hilversum"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "030767",
+        "gezinshoofd": "Thomassen, Frans C",
+        "year_of_birth": 12,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": "Trompenburgstr. 83 III"
+      }
+    ],
+    "follow_up_entries": [],
+    "footer_notes": "DUPLEXWONING"
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 356,
+    "total_cost_usd": 0.003711
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00117000474.jpg"
+}

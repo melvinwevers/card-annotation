@@ -1,0 +1,136 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00024000561",
+  "validated_json": {
+    "header": {
+      "street": "Anselmushof",
+      "house_number": "",
+      "codenummer": 2226,
+      "buurtletter": "HF",
+      "stemdistrict_nr": "02-664"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "040854",
+        "gezinshoofd": "van Meerveld, Willem",
+        "year_of_birth": 92,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "210676",
+        "waarheen": "overleden",
+        "remarks": "NwKeizersgrt 16 hs"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "",
+        "gezinshoofd": "wed van Meerveld, de Rosario, Clara A",
+        "year_of_birth": 88,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "300754",
+        "inwonenden": "de Souza, Eliza A",
+        "year_of_birth": 98,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "310358",
+        "waarheen": "Hengelo.0",
+        "remarks": "Hengelo.(0)"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "110959",
+        "inwonenden": "de Souza, Eliza A",
+        "year_of_birth": 98,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "251170",
+        "waarheen": "overleden",
+        "remarks": "Hengelo.0"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "",
+        "inwonenden": "van Meerveld, Bernhard",
+        "year_of_birth": 40,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "280564",
+        "waarheen": "Afrikanerpln 25.III",
+        "remarks": "zoz gezin 1"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "070962",
+        "inwonenden": "wed Vinke, Schwind, Anita",
+        "year_of_birth": 8,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "040263",
+        "waarheen": "de Lairessestraat 170",
+        "remarks": "Willemsparkweg 13 I"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "030371",
+        "inwonenden": "de Rozario, Reginald R",
+        "year_of_birth": 4,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "190473",
+        "waarheen": "Bleumidnstr 26 I",
+        "remarks": "Valkenswaard"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "250276",
+        "inwonenden": "Schgt Donkers, Fox, Sarah O M",
+        "year_of_birth": 52,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "090877",
+        "waarheen": "Paul Scholtenstr 69hs",
+        "remarks": "Hm"
+      },
+      {
+        "volg_nr": 2,
+        "datum": "150581",
+        "inwonenden": "Versteeg, Franciscus D T",
+        "year_of_birth": 51,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "290681",
+        "waarheen": "Corn Drebbelstr 9 LtH",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 2,
+        "datum": "310887",
+        "inwonenden": "van Meerveld, Wilhelm",
+        "year_of_birth": 62,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 978,
+    "total_cost_usd": 0.006821
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00024000561.jpg"
+}

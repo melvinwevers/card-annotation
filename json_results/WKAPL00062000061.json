@@ -1,0 +1,257 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00062000061",
+  "validated_json": {
+    "header": {
+      "street": "Lindengracht",
+      "house_number": "65 I hoog",
+      "codenummer": 1046,
+      "buurtletter": "PP",
+      "stemdistrict_nr": "03-025"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "231227",
+        "gezinshoofd": "van Duijkeren, Johannes M",
+        "year_of_birth": 99,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "010460",
+        "waarheen": "Valken. str 130 I",
+        "remarks": "van 168 Lv"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "040560",
+        "gezinshoofd": "Haan, Jacob",
+        "year_of_birth": 2,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "50561",
+        "waarheen": "Willemspark 123 IIIV R",
+        "remarks": "Willemspark 15 hs"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "170461",
+        "gezinshoofd": "Klijssen, Petrus A",
+        "year_of_birth": 4,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "140168",
+        "waarheen": "Bloemgracht 103 II L",
+        "remarks": "Willemsstr. 123 III R"
+      },
+      {
+        "record_no": 4,
+        "datum_registration": "140163",
+        "gezinshoofd": "van Breda, Pieter J",
+        "year_of_birth": 2,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "240764",
+        "waarheen": "Sarphatistr 126 hs",
+        "remarks": "Bloemgracht 103 II"
+      },
+      {
+        "record_no": 5,
+        "datum_registration": "010664",
+        "gezinshoofd": "van den Noord, Adam",
+        "year_of_birth": 6,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "040478",
+        "waarheen": "Westzaanstr 45 II",
+        "remarks": "Zaandam"
+      },
+      {
+        "record_no": 6,
+        "datum_registration": "300378",
+        "gezinshoofd": "van Voorst, Frans T",
+        "year_of_birth": 7,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "170380",
+        "waarheen": "Mercatorstraat 25 I",
+        "remarks": "Brdr"
+      },
+      {
+        "record_no": 7,
+        "datum_registration": "150378",
+        "gezinshoofd": "Bernard, Jacobus",
+        "year_of_birth": 0,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "250283",
+        "waarheen": "Anjeliersstraat 122",
+        "remarks": ""
+      },
+      {
+        "record_no": 8,
+        "datum_registration": "250283",
+        "gezinshoofd": "Hawkhead, William R D",
+        "year_of_birth": 53,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "250186",
+        "waarheen": "De Wittenkade 47 II",
+        "remarks": "Gorizia It"
+      },
+      {
+        "record_no": 9,
+        "datum_registration": "",
+        "gezinshoofd": "in gebruik bij D. Bouazzi, woont te Frankrijk",
+        "year_of_birth": 0,
+        "M": 0,
+        "V": 0,
+        "datum_vertrek": "13-10-83",
+        "waarheen": "",
+        "remarks": ""
+      },
+      {
+        "record_no": 10,
+        "datum_registration": "110986",
+        "gezinshoofd": "Prins, Elisabeth C",
+        "year_of_birth": 55,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "300888",
+        "waarheen": "Marnixkade 91 III",
+        "remarks": ""
+      },
+      {
+        "record_no": 11,
+        "datum_registration": "140988",
+        "gezinshoofd": "Haavekost, Rudi",
+        "year_of_birth": 53,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "230463",
+        "inwonenden": "echtg Heuvel, van Dam, Francisca S",
+        "year_of_birth": 26,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "zie 2 regels lager",
+        "remarks": "Slootstr 2 II"
+      },
+      {
+        "volg_nr": 2,
+        "datum": "",
+        "inwonenden": "van Dam, Francisca S",
+        "year_of_birth": 26,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "240764",
+        "waarheen": "Sarphatistr 126 hs",
+        "remarks": "zie 2 regels hoger"
+      },
+      {
+        "volg_nr": 3,
+        "datum": "040270",
+        "inwonenden": "van der Hilst, Marinus L",
+        "year_of_birth": 4,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "110730",
+        "waarheen": "Weesperzijde 110",
+        "remarks": "1e. Goudsbloemdw.str"
+      },
+      {
+        "volg_nr": 4,
+        "datum": "050976",
+        "inwonenden": "echtg Hoffmann, van der Moot, Johanna",
+        "year_of_birth": 37,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "101292",
+        "waarheen": "overleden",
+        "remarks": "Diemen"
+      },
+      {
+        "volg_nr": 5,
+        "datum": "040282",
+        "inwonenden": "Medeot, Grazia M",
+        "year_of_birth": 58,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "130183",
+        "waarheen": "De Wittenkade 47 II voor",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 6,
+        "datum": "020284",
+        "inwonenden": "van Amsterdam, Cornelis J",
+        "year_of_birth": 47,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "230784",
+        "waarheen": "Hudsonstraat 63 I",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 7,
+        "datum": "",
+        "inwonenden": "Haavekost, Rudi",
+        "year_of_birth": 53,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "130585",
+        "waarheen": "VOW",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 8,
+        "datum": "111184",
+        "inwonenden": "Wienkamp, Jurriaan W",
+        "year_of_birth": 60,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "221085",
+        "waarheen": "Lindengracht 65 II'",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 9,
+        "datum": "221184",
+        "inwonenden": "van Ravenstein, Catharina A L",
+        "year_of_birth": 60,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "030685",
+        "waarheen": "1e. Boerhaavestraat 3 II",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 10,
+        "datum": "251085",
+        "inwonenden": "Haavekost, Rudi",
+        "year_of_birth": 53,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "240687",
+        "waarheen": "VOW",
+        "remarks": ""
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 1977,
+    "total_cost_usd": 0.011816
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00062000061.jpg"
+}

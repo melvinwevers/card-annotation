@@ -1,0 +1,147 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00141001353",
+  "validated_json": {
+    "header": {
+      "street": "Van Oldenbarneveldstraat",
+      "house_number": "96 A",
+      "codenummer": 1277,
+      "buurtletter": "S",
+      "stemdistrict_nr": "02-473"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "201042",
+        "gezinshoofd": "Holdorp, Christiaan",
+        "year_of_birth": 7,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "50867",
+        "waarheen": "Wijenburg 109",
+        "remarks": "Borgerstr. 166 III"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "209067",
+        "gezinshoofd": "Westra, Casper J",
+        "year_of_birth": 7,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "230726",
+        "waarheen": "Gulden Winckelstr. 10hs",
+        "remarks": "Halbertsmastr. 25"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "",
+        "gezinshoofd": "",
+        "year_of_birth": null,
+        "M": 0,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": "Bedrijfsruimte 10-11-81"
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 2,
+        "datum": "",
+        "inwonenden": "Abad, Martin, Rosa M",
+        "year_of_birth": 41,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "040272",
+        "waarheen": "Spanje",
+        "remarks": "zoa-gezin-2"
+      },
+      {
+        "volg_nr": 3,
+        "datum": "21026",
+        "inwonenden": "Kuiper, Riemke",
+        "year_of_birth": 56,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "060278",
+        "waarheen": "Van Oldenbarneveldstraat 96Ahs",
+        "remarks": "Volta"
+      },
+      {
+        "volg_nr": 3,
+        "datum": "27078",
+        "inwonenden": "Kuiper, Cornelia J",
+        "year_of_birth": 41,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "280283",
+        "waarheen": "Daniël Stalpertstr.",
+        "remarks": "Ouagadougou-Boven"
+      },
+      {
+        "volg_nr": 5,
+        "datum": "30183",
+        "inwonenden": "Aikman, Meriam D",
+        "year_of_birth": 62,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "190485",
+        "waarheen": "Roegveenstraat 6/10",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 5,
+        "datum": "51083",
+        "inwonenden": "van Teylingen, Ingeborg R",
+        "year_of_birth": 67,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "270184",
+        "waarheen": "Admiraal de Ruijterweg 375 III",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 6,
+        "datum": "08084",
+        "inwonenden": "Laddrak, Sylvia M",
+        "year_of_birth": 58,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "211086",
+        "waarheen": "Van Oldenbarneveldstraat 96 A I",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 7,
+        "datum": "030984",
+        "inwonenden": "Strauss, Hans-Burghard",
+        "year_of_birth": 55,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "020986",
+        "waarheen": "Kerkstraat 240 hs",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 8,
+        "datum": "101086",
+        "inwonenden": "Huberts, Alexander W L",
+        "year_of_birth": 56,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 1068,
+    "total_cost_usd": 0.007271
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00141001353.jpg"
+}

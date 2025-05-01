@@ -1,0 +1,114 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00148000059",
+  "validated_json": {
+    "header": {
+      "street": "Orteliusstraat",
+      "house_number": "83",
+      "codenummer": 1323,
+      "buurtletter": "SW",
+      "stemdistrict_nr": "01-586"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "500339",
+        "gezinshoofd": "Daniels, Wilhelm",
+        "year_of_birth": 1916,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "200158",
+        "waarheen": "a.bwa a/d W. Fenenga",
+        "remarks": "W. de Zwijgerln 321"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "",
+        "gezinshoofd": "echtg Daniels, Scholz, Elisabeth",
+        "year_of_birth": 1915,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": "zie gezin 1"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "420264",
+        "gezinshoofd": "Daniels, Wilhelm",
+        "year_of_birth": 1916,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "040666",
+        "waarheen": "Valkhof 135",
+        "remarks": "Valkhof 135"
+      },
+      {
+        "record_no": 4,
+        "datum_registration": "500664",
+        "gezinshoofd": "Kamp, Sjouke",
+        "year_of_birth": 1892,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "290478",
+        "waarheen": "overleden",
+        "remarks": "Kloveniersburgw 13"
+      },
+      {
+        "record_no": 5,
+        "datum_registration": "040861",
+        "gezinshoofd": "wed Kamp, Witte, Franziska",
+        "year_of_birth": 1908,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "040581",
+        "waarheen": "Duitsland",
+        "remarks": ""
+      },
+      {
+        "record_no": 6,
+        "datum_registration": "040861",
+        "gezinshoofd": "wed van't Hag, van der Kort, Geertruida C",
+        "year_of_birth": 1908,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "090389",
+        "waarheen": "Roetersstraat 2",
+        "remarks": ""
+      },
+      {
+        "record_no": 7,
+        "datum_registration": "040788",
+        "gezinshoofd": "Scholtens, Jochem",
+        "year_of_birth": 1949,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "130472",
+        "inwonenden": "Kamp, Gerrit",
+        "year_of_birth": 1942,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "zn190672",
+        "waarheen": "Edam",
+        "remarks": "Kaapstad ZAf"
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 796,
+    "total_cost_usd": 0.005911
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00148000059.jpg"
+}

@@ -1,0 +1,113 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00192000097",
+  "validated_json": {
+    "header": {
+      "street": "",
+      "house_number": "",
+      "codenummer": 2863,
+      "buurtletter": "",
+      "stemdistrict_nr": ""
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "",
+        "gezinshoofd": "Voor hoofd bewoner zie kaart nr 1 (c. Syed Sabir Hussain Shah, --)",
+        "year_of_birth": null,
+        "M": null,
+        "V": null,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "170987",
+        "gezinshoofd": "Syed Safdar Hussain, --",
+        "year_of_birth": 62,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "110388",
+        "waarheen": "Nico van Suchtelenhof 10.II",
+        "remarks": ""
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "080388",
+        "gezinshoofd": "Ismail Hossain, --",
+        "year_of_birth": 65,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      },
+      {
+        "record_no": 4,
+        "datum_registration": "070388",
+        "gezinshoofd": "Ahmad Nazir, --",
+        "year_of_birth": 49,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "201288",
+        "waarheen": "Kempering 942",
+        "remarks": ""
+      },
+      {
+        "record_no": 5,
+        "datum_registration": "220388",
+        "gezinshoofd": "Khawar Alam, --",
+        "year_of_birth": 60,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "zie kaart 1 gezin 4",
+        "remarks": ""
+      },
+      {
+        "record_no": 6,
+        "datum_registration": "270887",
+        "gezinshoofd": "Syed Nacem Abbas, --",
+        "year_of_birth": 62,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "060588",
+        "waarheen": "Vow",
+        "remarks": ""
+      },
+      {
+        "record_no": 7,
+        "datum_registration": "070488",
+        "gezinshoofd": "Mohammad Shareef Gujjer, --",
+        "year_of_birth": 55,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "211288",
+        "waarheen": "Vow",
+        "remarks": ""
+      },
+      {
+        "record_no": 10,
+        "datum_registration": "020688",
+        "gezinshoofd": "Wadhwa Singh, --",
+        "year_of_birth": 58,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "290888",
+        "waarheen": "Wisseloord 14",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 752,
+    "total_cost_usd": 0.005691
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00192000097.jpg"
+}

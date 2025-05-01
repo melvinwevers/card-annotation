@@ -1,0 +1,92 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00349000256",
+  "validated_json": {
+    "header": {
+      "street": "Haarlemmer Houttuinen",
+      "house_number": "48 B",
+      "codenummer": 0,
+      "buurtletter": "U",
+      "stemdistrict_nr": "01-044"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "030338",
+        "gezinshoofd": "Arkenbout, Adrianus",
+        "year_of_birth": 1904,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "050958",
+        "waarheen": "Prinseneiland 42 II",
+        "remarks": "Roomolenstr 2 II"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "230159",
+        "gezinshoofd": "wed Arkenbout, van Troost, Helena",
+        "year_of_birth": 1906,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "210467",
+        "waarheen": "Haarlemmerdijk 92 I",
+        "remarks": "Prinseneiland 42 II"
+      },
+      {
+        "record_no": 4,
+        "datum_registration": "",
+        "gezinshoofd": "Arkenbout, Johan B P",
+        "year_of_birth": 1933,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "010969",
+        "waarheen": "Amaliastr 22 I",
+        "remarks": "zoz. regel 3"
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 2,
+        "datum": "",
+        "inwonenden": "Arkenbout, Dirk",
+        "year_of_birth": 1956,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "nn50860",
+        "waarheen": "De Wittenstr 54 III",
+        "remarks": "zoz. gezin 2"
+      },
+      {
+        "volg_nr": 2,
+        "datum": "180561",
+        "inwonenden": "Arkenbout, Dirk",
+        "year_of_birth": 1956,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "301061",
+        "waarheen": "le Breuerwstr 4 1a",
+        "remarks": "De Wittenstr 54 II"
+      },
+      {
+        "volg_nr": 2,
+        "datum": "",
+        "inwonenden": "Arkenbout, Johan B P",
+        "year_of_birth": 1933,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "zoz gezin 4",
+        "remarks": "zoz gezin 2"
+      }
+    ],
+    "footer_notes": "Ageb. Org. B&W 9/70"
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 665,
+    "total_cost_usd": 0.005256
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00349000256.jpg"
+}

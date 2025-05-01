@@ -1,0 +1,36 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00092000478",
+  "validated_json": {
+    "header": {
+      "street": "De Boelelaan",
+      "house_number": "",
+      "codenummer": 2337,
+      "buurtletter": "At",
+      "stemdistrict_nr": "01-407"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "",
+        "gezinshoofd": "Clubhuis van de \"Sport Club Amsterdam\"",
+        "year_of_birth": null,
+        "M": 0,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 154,
+    "total_cost_usd": 0.002701
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00092000478.jpg"
+}

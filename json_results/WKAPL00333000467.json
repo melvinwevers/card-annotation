@@ -1,0 +1,7 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00333000467",
+  "validated_json": null,
+  "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-6a6xqp0lAUEomKR81xohX6UE on tokens per min (TPM): Limit 30000, Used 29921, Requested 1200. Please try again in 2.242s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}",
+  "image_url": "../processed_images/WKAPL00333000467.jpg"
+}

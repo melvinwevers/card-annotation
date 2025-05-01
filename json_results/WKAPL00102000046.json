@@ -1,0 +1,59 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00102000046",
+  "validated_json": {
+    "header": {
+      "street": "Van der Hoopstraat",
+      "house_number": "",
+      "codenummer": 725,
+      "buurtletter": "F",
+      "stemdistrict_nr": ""
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "",
+        "gezinshoofd": "Wooneenheid (bewoners inwonend bekend)",
+        "year_of_birth": null,
+        "M": null,
+        "V": null,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 241186,
+        "datum": "",
+        "inwonenden": "Lachbata, Mohamed",
+        "year_of_birth": 63,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 300987,
+        "datum": "",
+        "inwonenden": "Tesfay, Mesfin",
+        "year_of_birth": 62,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "footer_notes": "H.A.T."
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 302,
+    "total_cost_usd": 0.003441
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00102000046.jpg"
+}

@@ -1,0 +1,92 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00139000857",
+  "validated_json": {
+    "header": {
+      "street": "Torresstraat",
+      "house_number": "6",
+      "codenummer": 1838,
+      "buurtletter": "SW",
+      "stemdistrict_nr": "02-572"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "290634",
+        "gezinshoofd": "Blaauw, Jan H",
+        "year_of_birth": 72,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "161274",
+        "waarheen": "overleden",
+        "remarks": "Stolwijkstr 8"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "",
+        "gezinshoofd": "wed Blaauw, van Winkel, Cornelia",
+        "year_of_birth": 5,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "250984",
+        "waarheen": "Emmastraat 17/19",
+        "remarks": ""
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "180285",
+        "gezinshoofd": "van der Meij, Leonard G",
+        "year_of_birth": 60,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "070160",
+        "inwonenden": "Blaauw, Hendrik N",
+        "year_of_birth": 35,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "040363",
+        "waarheen": "Ouder-Amstel",
+        "remarks": "zoz gezin 1"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "",
+        "inwonenden": "Blaauw, Jan H",
+        "year_of_birth": 76,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "160965",
+        "waarheen": "overleden",
+        "remarks": "Vinkeveen ca"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "",
+        "inwonenden": "Blaauw, Robert J",
+        "year_of_birth": 43,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "220367",
+        "waarheen": "Hogeweg 86.II",
+        "remarks": "zoz gezin 1"
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 603,
+    "total_cost_usd": 0.004946
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00139000857.jpg"
+}

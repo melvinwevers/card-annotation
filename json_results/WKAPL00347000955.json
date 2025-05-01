@@ -1,0 +1,59 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00347000955",
+  "validated_json": {
+    "header": {
+      "street": "Gerard Doustraat",
+      "house_number": "76 II hoog voor",
+      "codenummer": 0,
+      "buurtletter": "AD",
+      "stemdistrict_nr": "01-262"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "090447",
+        "gezinshoofd": "wed Kuijpers, Kuipers, Wilhelmina E",
+        "year_of_birth": null,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "270477",
+        "waarheen": "Brunsum",
+        "remarks": "Maasbree"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "391171",
+        "gezinshoofd": "van der Muts, Gisbertus J",
+        "year_of_birth": null,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "abusief",
+        "remarks": "van 76 IIa"
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "240461",
+        "inwonenden": "Kuypers, Herman C",
+        "year_of_birth": 22,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "270477",
+        "waarheen": "Brunsum",
+        "remarks": "Ehv"
+      }
+    ],
+    "footer_notes": "In gebruik bij 76 II achter\nSamengevoegd met 76 II achter\nStaat B & Wt 21.6.1978"
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 384,
+    "total_cost_usd": 0.003851
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00347000955.jpg"
+}

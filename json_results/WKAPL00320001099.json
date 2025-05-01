@@ -1,0 +1,400 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00320001099",
+  "validated_json": {
+    "header": {
+      "street": "Wagenaarstraat",
+      "house_number": "43",
+      "codenummer": 1,
+      "buurtletter": "I",
+      "stemdistrict_nr": "01-130"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "250756",
+        "gezinshoofd": "Swart, Johannes",
+        "year_of_birth": 95,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "170565",
+        "waarheen": "Wilhelminastr. 7",
+        "remarks": "De Helmersstraat 53"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "280856",
+        "gezinshoofd": "Moed, Johannes",
+        "year_of_birth": 95,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "200957",
+        "waarheen": "2e v.d. Heijdenstr. 15",
+        "remarks": "Wilhelminahuis (DI)"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "210956",
+        "gezinshoofd": "Kost, Cornelis",
+        "year_of_birth": 0,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "200958",
+        "waarheen": "Piet v. Nieuwendijkstr. 72",
+        "remarks": "Wenslauerstr. 7"
+      },
+      {
+        "record_no": 4,
+        "datum_registration": "260956",
+        "gezinshoofd": "Aardema, Herman",
+        "year_of_birth": 0,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "201258",
+        "waarheen": "P. Nieuwlandstr. 72 III",
+        "remarks": "P. Nieuwlandstr. 72"
+      },
+      {
+        "record_no": 5,
+        "datum_registration": "111257",
+        "gezinshoofd": "Bakker, Pieter",
+        "year_of_birth": 0,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "100358",
+        "waarheen": "Haarlemmer Houttuinen 80 II",
+        "remarks": "Javastr. 34 II"
+      },
+      {
+        "record_no": 6,
+        "datum_registration": "040257",
+        "gezinshoofd": "Smits, Johannes J.",
+        "year_of_birth": 0,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "100357",
+        "waarheen": "Brouwersgr. 40 I",
+        "remarks": "Javastr. 11 II"
+      },
+      {
+        "record_no": 7,
+        "datum_registration": "040257",
+        "gezinshoofd": "van Akcokij, Johannes C.",
+        "year_of_birth": 0,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "170657",
+        "waarheen": "Hoogeweg 45",
+        "remarks": "Herenmarkt 36 I"
+      },
+      {
+        "record_no": 8,
+        "datum_registration": "040257",
+        "gezinshoofd": "van der Kuijl, Anton N.",
+        "year_of_birth": 0,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "291157",
+        "waarheen": "Cz Peterstr. 126 III",
+        "remarks": "Reinwardtstr. 56 III"
+      },
+      {
+        "record_no": 9,
+        "datum_registration": "040257",
+        "gezinshoofd": "van der Hoek, Beene A.",
+        "year_of_birth": 0,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "130257",
+        "waarheen": "Kl Kattenburgerstr. 78 hs",
+        "remarks": "Kattenb. kade 58"
+      },
+      {
+        "record_no": 10,
+        "datum_registration": "040257",
+        "gezinshoofd": "Smit, Egbert",
+        "year_of_birth": 0,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "130257",
+        "waarheen": "Kattenb. tusenstr. III",
+        "remarks": "Gr. Wittenburgerstr. 95"
+      },
+      {
+        "record_no": 11,
+        "datum_registration": "040257",
+        "gezinshoofd": "Visser, Siebe",
+        "year_of_birth": 0,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "130257",
+        "waarheen": "Swammerdamstr. 15 hs",
+        "remarks": "N. Beukelstr. 26 hs"
+      },
+      {
+        "record_no": 12,
+        "datum_registration": "040257",
+        "gezinshoofd": "Knecht, Jan",
+        "year_of_birth": 0,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "130257",
+        "waarheen": "2e Boerhaavestr. 105 II",
+        "remarks": "Ger. Doustr. 63 II"
+      },
+      {
+        "record_no": 13,
+        "datum_registration": "040257",
+        "gezinshoofd": "Bloemraad, Reginald",
+        "year_of_birth": 0,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "130257",
+        "waarheen": "P. v. Steynstr. 18 I",
+        "remarks": "Vrolikstr. 307 III"
+      },
+      {
+        "record_no": 14,
+        "datum_registration": "111257",
+        "gezinshoofd": "Albert de la Bruhèze, Geert",
+        "year_of_birth": 0,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "010558",
+        "waarheen": "Javastr. 217 hs",
+        "remarks": "Zeeb dijk 212 I"
+      },
+      {
+        "record_no": 15,
+        "datum_registration": "111257",
+        "gezinshoofd": "den Toom, Marinus",
+        "year_of_birth": 0,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "010558",
+        "waarheen": "Javastr. 217 hs",
+        "remarks": "Zeeb dijk 212 I"
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "181257",
+        "inwonenden": "echtg van Essen, van der Kruk, Cornelia",
+        "year_of_birth": 27,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "040858",
+        "waarheen": "Gv",
+        "remarks": "Minahassastr. 35 hs R"
+      },
+      {
+        "volg_nr": 2,
+        "datum": "201257",
+        "inwonenden": "Bakker, Jacobus J",
+        "year_of_birth": 6,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "040258",
+        "waarheen": "Kuiperstr. 134 I",
+        "remarks": "Zekostverl kade 25 hs"
+      },
+      {
+        "volg_nr": 3,
+        "datum": "150258",
+        "inwonenden": "de Vries, Jacob",
+        "year_of_birth": 0,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "230558",
+        "waarheen": "Jodenbreestr. 75 I",
+        "remarks": "Dugelaanweg 102"
+      },
+      {
+        "volg_nr": 4,
+        "datum": "070356",
+        "inwonenden": "van Poelgeest, Theodorus",
+        "year_of_birth": 36,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "130558",
+        "waarheen": "Tilanusstr. 63 I",
+        "remarks": "Tugelaweg 117 hs"
+      },
+      {
+        "volg_nr": 5,
+        "datum": "070356",
+        "inwonenden": "van Leeuwaarde, Jenny J.",
+        "year_of_birth": 0,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "130558",
+        "waarheen": "Cz Peterstr. 37 III",
+        "remarks": "Paramaribo (C)"
+      },
+      {
+        "volg_nr": 6,
+        "datum": "070356",
+        "inwonenden": "Knolles, Marinus J.",
+        "year_of_birth": 0,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "130558",
+        "waarheen": "Lepelstr. 85 II",
+        "remarks": "P. Simonszstr. 80 I"
+      },
+      {
+        "volg_nr": 7,
+        "datum": "260958",
+        "inwonenden": "Roosa, Johannes W",
+        "year_of_birth": 37,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "310558",
+        "waarheen": "3e Oosterp. str. 220",
+        "remarks": "Orteliusstr. 148 I"
+      },
+      {
+        "volg_nr": 8,
+        "datum": "260958",
+        "inwonenden": "Bango, Tibor J",
+        "year_of_birth": 0,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "310558",
+        "waarheen": "Diemen",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 9,
+        "datum": "260958",
+        "inwonenden": "Lamberts, Johannes G. M.",
+        "year_of_birth": 0,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "310558",
+        "waarheen": "de Flinckstr. 344 II",
+        "remarks": "Maasstr. 59 hs"
+      },
+      {
+        "volg_nr": 10,
+        "datum": "310558",
+        "inwonenden": "Brohwein, Hermanus",
+        "year_of_birth": 0,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "201059",
+        "waarheen": "Roetersstr. 2",
+        "remarks": "Esmoreitstr. 14 hs"
+      },
+      {
+        "volg_nr": 11,
+        "datum": "310558",
+        "inwonenden": "Lipinhof, Nicolaas",
+        "year_of_birth": 0,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "201059",
+        "waarheen": "Meer en Vaart 46 II",
+        "remarks": "Transvaalstr. 14 I"
+      },
+      {
+        "volg_nr": 12,
+        "datum": "310558",
+        "inwonenden": "van den Boogaard, Jan W.",
+        "year_of_birth": 0,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "110959",
+        "waarheen": "Asterweg 37 hs",
+        "remarks": "Vrolikstr. 283 II"
+      },
+      {
+        "volg_nr": 13,
+        "datum": "310558",
+        "inwonenden": "van den Boogaard, Johannes J.",
+        "year_of_birth": 0,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "110959",
+        "waarheen": "Zijde v. Swindenstr. 49 hs",
+        "remarks": "Swammerdamstr. 7"
+      },
+      {
+        "volg_nr": 14,
+        "datum": "310558",
+        "inwonenden": "Dittmer, Everet D.",
+        "year_of_birth": 0,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "110959",
+        "waarheen": "Kepserzijde 110",
+        "remarks": "H. Vrolikstr. 17 I"
+      },
+      {
+        "volg_nr": 15,
+        "datum": "310558",
+        "inwonenden": "Leben, Jan",
+        "year_of_birth": 0,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "110959",
+        "waarheen": "Reinwardtstr. 36 hs",
+        "remarks": "Woustr. 181 II"
+      },
+      {
+        "volg_nr": 16,
+        "datum": "310558",
+        "inwonenden": "Dekker, Klaas",
+        "year_of_birth": 0,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "110959",
+        "waarheen": "Zagmolensrt. 7 I",
+        "remarks": "Wibautstr. 60 III"
+      },
+      {
+        "volg_nr": 17,
+        "datum": "310558",
+        "inwonenden": "Voerman, Harman",
+        "year_of_birth": 0,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "110959",
+        "waarheen": "Zijde v. Swindenstr. 4 I",
+        "remarks": "P. Nieuwlandstr. 39 I"
+      },
+      {
+        "volg_nr": 18,
+        "datum": "110360",
+        "inwonenden": "Mauw, Benjamin J.",
+        "year_of_birth": 40,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "170560",
+        "waarheen": "Mauritskade 110 II",
+        "remarks": "Wittenbachstr. 28 hs"
+      },
+      {
+        "volg_nr": 19,
+        "datum": "30860",
+        "inwonenden": "van Rinsum, Hendrik C.",
+        "year_of_birth": 26,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "180360",
+        "waarheen": "2e v. Swindenstr. 78",
+        "remarks": "2e v. Swindenstr. 78"
+      }
+    ],
+    "footer_notes": "Gesloopt Besch. B & W Nr 4 d.d. 20/1/1984"
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 3417,
+    "total_cost_usd": 0.019016
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00320001099.jpg"
+}

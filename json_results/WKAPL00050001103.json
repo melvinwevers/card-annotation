@@ -1,0 +1,158 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00050001103",
+  "validated_json": {
+    "header": {
+      "street": "Hoofddorpplein",
+      "house_number": "6",
+      "codenummer": 718,
+      "buurtletter": "SX",
+      "stemdistrict_nr": "1-611"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "230937",
+        "gezinshoofd": "van Doorne, Hendrik",
+        "year_of_birth": 52,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "061161",
+        "waarheen": "Lomanstr 4 hs Rotterdam",
+        "remarks": ""
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "231262",
+        "gezinshoofd": "van Bronkhorst, Johannes A",
+        "year_of_birth": 55,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "160766",
+        "waarheen": "Diemen",
+        "remarks": "Hacquartstr 14 hs"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "090665",
+        "gezinshoofd": "Bakker, Evert Adr",
+        "year_of_birth": 18,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "100370",
+        "waarheen": "Prinsenstein 11",
+        "remarks": "le C Huygensstr 92hs"
+      },
+      {
+        "record_no": 4,
+        "datum_registration": "150570",
+        "gezinshoofd": "Faber, Jacob R",
+        "year_of_birth": 46,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "171173",
+        "waarheen": "Jacob van Lennepkade 65-II",
+        "remarks": "zoz regel 3"
+      },
+      {
+        "record_no": 5,
+        "datum_registration": "200770",
+        "gezinshoofd": "Bakker, Evert A",
+        "year_of_birth": 29,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "291188",
+        "waarheen": "1e Constantijn Huygensstr 11",
+        "remarks": "Gensstrat 92 I"
+      },
+      {
+        "record_no": 6,
+        "datum_registration": "090784",
+        "gezinshoofd": "Graanboom, Hans",
+        "year_of_birth": 49,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "071185",
+        "waarheen": "Sportstraat 25 II",
+        "remarks": "IJselstr 11 hs"
+      },
+      {
+        "record_no": 7,
+        "datum_registration": "150845",
+        "gezinshoofd": "Slooijer, Berendina J",
+        "year_of_birth": 52,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "Sportstraat 25 II",
+        "remarks": ""
+      },
+      {
+        "record_no": 8,
+        "datum_registration": "090184",
+        "gezinshoofd": "Graanboom, Hans",
+        "year_of_birth": 49,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "071185",
+        "waarheen": "Sportstraat 25 II",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "020164",
+        "inwonenden": "Vincent, Albertus J",
+        "year_of_birth": 50,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "310864",
+        "waarheen": "Hilversum",
+        "remarks": "Dintelstr 126hs"
+      },
+      {
+        "volg_nr": 3,
+        "datum": "230764",
+        "inwonenden": "Wijnands, Cornelis",
+        "year_of_birth": 44,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "51266",
+        "waarheen": "Houtrijkstr 105 I",
+        "remarks": "Ingenhouszhof 9 I"
+      },
+      {
+        "volg_nr": 4,
+        "datum": "",
+        "inwonenden": "Faber, Jacob R",
+        "year_of_birth": 46,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "110871",
+        "waarheen": "Bankastr 25 III",
+        "remarks": "zoz.gezin 5"
+      },
+      {
+        "volg_nr": 5,
+        "datum": "090287",
+        "inwonenden": "Grein, Stefan W",
+        "year_of_birth": 58,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "footer_notes": "Zie brief VH. .d.d 2.09.86"
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 1180,
+    "total_cost_usd": 0.007831
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00050001103.jpg"
+}

@@ -1,0 +1,36 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00209000373",
+  "validated_json": {
+    "header": {
+      "street": "Singel",
+      "house_number": "",
+      "codenummer": 1650,
+      "buurtletter": "F",
+      "stemdistrict_nr": "16-003"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "",
+        "gezinshoofd": "",
+        "year_of_birth": null,
+        "M": null,
+        "V": null,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": "Is één met Spui 30 (Restaurant de Bock)"
+      }
+    ],
+    "follow_up_entries": [],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 153,
+    "total_cost_usd": 0.002696
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00209000373.jpg"
+}

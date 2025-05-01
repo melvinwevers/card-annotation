@@ -1,0 +1,224 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00028000248",
+  "validated_json": {
+    "header": {
+      "street": "Baarsjesweg",
+      "house_number": "I hoog",
+      "codenummer": 104,
+      "buurtletter": "SW",
+      "stemdistrict_nr": "01-590"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "040654",
+        "gezinshoofd": "wed Holshuijsen, Roger, Anna M E",
+        "year_of_birth": null,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "040654",
+        "waarheen": "Weteringschans 197 II",
+        "remarks": ""
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "010654",
+        "gezinshoofd": "Wessels, Ebel",
+        "year_of_birth": null,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "260656",
+        "waarheen": "Hoofdweg 102 I",
+        "remarks": "Weteringschans 197"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "100765",
+        "gezinshoofd": "Bokhout, Maartje",
+        "year_of_birth": null,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "260656",
+        "waarheen": "Hoofdweg 102 I",
+        "remarks": ""
+      },
+      {
+        "record_no": 4,
+        "datum_registration": "121177",
+        "gezinshoofd": "Blommesteijn, Aloysius N",
+        "year_of_birth": 31,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "250576",
+        "waarheen": "Boterdiepstr. 64 II",
+        "remarks": "J v Lennepdk 313 III"
+      },
+      {
+        "record_no": 5,
+        "datum_registration": "290473",
+        "gezinshoofd": "Zeilstra, Hendrik E",
+        "year_of_birth": 52,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "250576",
+        "waarheen": "Z L U Polders",
+        "remarks": "137"
+      },
+      {
+        "record_no": 6,
+        "datum_registration": "030177",
+        "gezinshoofd": "Hogenhout, Anton",
+        "year_of_birth": 54,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "020689",
+        "waarheen": "Schermerstr 29",
+        "remarks": "Ehv"
+      },
+      {
+        "record_no": 7,
+        "datum_registration": "100680",
+        "gezinshoofd": "de Roo, Johannes F",
+        "year_of_birth": 53,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "080783",
+        "waarheen": "Hoorn",
+        "remarks": ""
+      },
+      {
+        "record_no": 8,
+        "datum_registration": "010778",
+        "gezinshoofd": "Vrutaal, Ivy V",
+        "year_of_birth": 54,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": "Rt"
+      },
+      {
+        "record_no": 9,
+        "datum_registration": "100985",
+        "gezinshoofd": "Voors, Pieter",
+        "year_of_birth": 45,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      },
+      {
+        "record_no": 10,
+        "datum_registration": "100985",
+        "gezinshoofd": "Beroy, Kristian P",
+        "year_of_birth": 45,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "111285",
+        "waarheen": "Amsteldijk 132 A",
+        "remarks": ""
+      },
+      {
+        "record_no": 11,
+        "datum_registration": "100985",
+        "gezinshoofd": "Swaak, Ronald M",
+        "year_of_birth": 63,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "080194",
+        "inwonenden": "Algra, Elias",
+        "year_of_birth": 23,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "021052",
+        "waarheen": "Archimedespl soen 145",
+        "remarks": "Spilnckstr 318 I"
+      },
+      {
+        "volg_nr": 4,
+        "datum": "040666",
+        "inwonenden": "van der Velde, Jeltine M",
+        "year_of_birth": 40,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "100567",
+        "waarheen": "v Nijenrodeweg 67",
+        "remarks": "Hoofdweg 102 I"
+      },
+      {
+        "volg_nr": 10,
+        "datum": "220284",
+        "inwonenden": "Voors, Albertus G",
+        "year_of_birth": 60,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "080783",
+        "waarheen": "Hoorn",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 11,
+        "datum": "110984",
+        "inwonenden": "Christov, Kostadin",
+        "year_of_birth": 46,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "181084",
+        "waarheen": "Korte Blekerstraat 8 II",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 14,
+        "datum": "040385",
+        "inwonenden": "Hofman, Gerard",
+        "year_of_birth": 57,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "120685",
+        "waarheen": "Paramaribostraat 29",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 15,
+        "datum": "220385",
+        "inwonenden": "Both, Angelika W",
+        "year_of_birth": 55,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "120685",
+        "waarheen": "Paramaribostraat 29",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 12,
+        "datum": "300688",
+        "inwonenden": "Geurts, Ronald H J",
+        "year_of_birth": 62,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 1647,
+    "total_cost_usd": 0.010166
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00028000248.jpg"
+}

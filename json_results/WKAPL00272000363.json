@@ -1,0 +1,35 @@
+{
+  "filename": "WKAPL00272000363",
+  "validated_json": {
+    "header": {
+      "street": "Valschermkade",
+      "house_number": "",
+      "codenummer": 1888,
+      "buurtletter": "",
+      "stemdistrict_nr": "2-2"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "",
+        "gezinshoofd": "Bedrijfsruimte",
+        "year_of_birth": null,
+        "M": null,
+        "V": null,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [],
+    "footer_notes": "Besch. B & Wt. Nr. 127 dd. 27-5-87. Zie ook Besch. B & Wt. Nr. 191 dd. 31-8-87."
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 188,
+    "total_cost_usd": 0.002871
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00272000363.jpg"
+}

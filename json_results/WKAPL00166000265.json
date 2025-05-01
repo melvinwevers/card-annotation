@@ -1,0 +1,70 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00166000265",
+  "validated_json": {
+    "header": {
+      "street": "Centaurusstraat",
+      "house_number": "",
+      "codenummer": 294,
+      "buurtletter": "O",
+      "stemdistrict_nr": "03-806"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "70338",
+        "gezinshoofd": "Heida, Jan",
+        "year_of_birth": 94,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "111074",
+        "waarheen": "Zaanstad",
+        "remarks": "Oostzanerdijk 81hs"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "231274",
+        "gezinshoofd": "Jonker, Timen",
+        "year_of_birth": 26,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "3",
+        "waarheen": "",
+        "remarks": "mo dochter 25-9-80"
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "180852",
+        "inwonenden": "Drenth, Thijs",
+        "year_of_birth": 50,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "130156",
+        "waarheen": "Heerenveen",
+        "remarks": "Heerenveen"
+      },
+      {
+        "volg_nr": 2,
+        "datum": "210854",
+        "inwonenden": "Poppen, Arie J",
+        "year_of_birth": 27,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "090355",
+        "waarheen": "Planetenpln 15 hs",
+        "remarks": "Ut"
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 431,
+    "total_cost_usd": 0.004086
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00166000265.jpg"
+}

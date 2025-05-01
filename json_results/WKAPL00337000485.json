@@ -1,0 +1,48 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00337000485",
+  "validated_json": {
+    "header": {
+      "street": "1e Oosterparkstraat",
+      "house_number": "72 I hoog",
+      "codenummer": 0,
+      "buurtletter": "H III",
+      "stemdistrict_nr": ""
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "281140",
+        "gezinshoofd": "wed Postma, Heitmans, Johan",
+        "year_of_birth": 80,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "030664",
+        "waarheen": "J. de Louterstr 23 hs",
+        "remarks": "Rustenb str 118bov"
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "030644",
+        "inwonenden": "van der Weijden, Willem",
+        "year_of_birth": 85,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "070754",
+        "waarheen": "overleden",
+        "remarks": "Transvaalpln 19hs"
+      }
+    ],
+    "footer_notes": "Afgebroken Opg b/n 3/53"
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 287,
+    "total_cost_usd": 0.003366
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00337000485.jpg"
+}

@@ -1,0 +1,92 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00010000920",
+  "validated_json": {
+    "header": {
+      "street": "Egeldonk",
+      "house_number": "",
+      "codenummer": 2639,
+      "buurtletter": "DC1",
+      "stemdistrict_nr": ""
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "",
+        "gezinshoofd": "Tabarki, Mohamed",
+        "year_of_birth": 39,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "131078",
+        "waarheen": "Zoetermeer",
+        "remarks": ""
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "131178",
+        "gezinshoofd": "van Tellingen, Erik",
+        "year_of_birth": 52,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "170884",
+        "waarheen": "Purmerend",
+        "remarks": ""
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "",
+        "gezinshoofd": "Romanov, Julia K",
+        "year_of_birth": 57,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "280486",
+        "waarheen": "Vow",
+        "remarks": ""
+      },
+      {
+        "record_no": 4,
+        "datum_registration": "",
+        "gezinshoofd": "Timmermans, Teddy P",
+        "year_of_birth": 50,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "150389",
+        "waarheen": "Dennenrode 804",
+        "remarks": ""
+      },
+      {
+        "record_no": 5,
+        "datum_registration": "",
+        "gezinshoofd": "Exmann, Gemma M",
+        "year_of_birth": 46,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 2,
+        "datum": "131178",
+        "inwonenden": "Bos, Marijke C",
+        "year_of_birth": 58,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "170884",
+        "waarheen": "Purmerend",
+        "remarks": ""
+      }
+    ],
+    "footer_notes": "Gesplitst. Besch. B & Wt. Nr.276 dd. 16.8.82+"
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 580,
+    "total_cost_usd": 0.004831
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00010000920.jpg"
+}

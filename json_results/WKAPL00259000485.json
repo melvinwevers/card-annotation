@@ -1,0 +1,92 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00259000485",
+  "validated_json": {
+    "header": {
+      "street": "Karimatastraat",
+      "house_number": "4",
+      "codenummer": 867,
+      "buurtletter": "E",
+      "stemdistrict_nr": "04-123"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "200938",
+        "gezinshoofd": "Zwaal, Albert J. D.",
+        "year_of_birth": 1902,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "141175",
+        "waarheen": "Dennerode 305",
+        "remarks": "van 4 III"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "250474",
+        "gezinshoofd": "Tediek, Hendrikus J.",
+        "year_of_birth": 1912,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "010978",
+        "waarheen": "2e van der Helststraat 63 hs",
+        "remarks": ""
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "070279",
+        "gezinshoofd": "Elmacı, Nevzat",
+        "year_of_birth": 1952,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "280185",
+        "waarheen": "Niasstraat 60 III",
+        "remarks": ""
+      },
+      {
+        "record_no": 4,
+        "datum_registration": "",
+        "gezinshoofd": "Erdoğan, Özcan",
+        "year_of_birth": 1957,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "261157",
+        "inwonenden": "Bouman, Julia G.",
+        "year_of_birth": 1955,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "100458",
+        "waarheen": "Den Helder",
+        "remarks": "Den Helder"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "150866",
+        "inwonenden": "Danen, Evertje",
+        "year_of_birth": 1943,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "141166",
+        "waarheen": "Tugelaweg 118 III",
+        "remarks": "Wageningen"
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 610,
+    "total_cost_usd": 0.004981
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00259000485.jpg"
+}

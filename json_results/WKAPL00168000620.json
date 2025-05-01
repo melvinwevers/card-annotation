@@ -1,0 +1,169 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00168000620",
+  "validated_json": {
+    "header": {
+      "street": "Cilliersstraat",
+      "house_number": "22",
+      "codenummer": 304,
+      "buurtletter": "R 3",
+      "stemdistrict_nr": "01-159"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "260740",
+        "gezinshoofd": "wed Kuh, Daub, Angelica",
+        "year_of_birth": 73,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "030854",
+        "waarheen": "overleden",
+        "remarks": "Helmholtzstr 15 bv"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "270754",
+        "gezinshoofd": "Günzel, Jacob M",
+        "year_of_birth": 27,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "011054",
+        "waarheen": "Kuiperstr. 45 II",
+        "remarks": "zor-regel-2"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "311154",
+        "gezinshoofd": "ter Horst, Albertus H",
+        "year_of_birth": 22,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "281169",
+        "waarheen": "Hofgeest 18",
+        "remarks": "Celebesstr 58 II"
+      },
+      {
+        "record_no": 4,
+        "datum_registration": "270170",
+        "gezinshoofd": "van Bergen, Bernardus J A M",
+        "year_of_birth": 45,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "202273",
+        "waarheen": "Nmg",
+        "remarks": "Gr. Witten. str 161hs"
+      },
+      {
+        "record_no": 5,
+        "datum_registration": "020574",
+        "gezinshoofd": "van der Zee, Eduard W",
+        "year_of_birth": 44,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "241280",
+        "waarheen": "Frans van Mierisstraat 83 hs",
+        "remarks": ""
+      },
+      {
+        "record_no": 6,
+        "datum_registration": "090181",
+        "gezinshoofd": "van Leeuwen, Anne G",
+        "year_of_birth": 62,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "061145",
+        "inwonenden": "van Rossem, Jacob M",
+        "year_of_birth": 88,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "130154",
+        "waarheen": "Robbert Cijferstr 5",
+        "remarks": "Gv"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "040254",
+        "inwonenden": "Günzel, Jacob M",
+        "year_of_birth": 27,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": "zie gezin 2"
+      },
+      {
+        "volg_nr": 5,
+        "datum": "020574",
+        "inwonenden": "van der Zee, Elisabeth",
+        "year_of_birth": 50,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "190376",
+        "waarheen": "Spuistraat 64/70 hs",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 6,
+        "datum": "090181",
+        "inwonenden": "Hajer, Maarten A",
+        "year_of_birth": 52,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "120387",
+        "waarheen": "Haarlemmerdijk 30 II",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 16,
+        "datum": "190181",
+        "inwonenden": "van Leeuwen, Arend T",
+        "year_of_birth": 50,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "220981",
+        "waarheen": "Gendt",
+        "remarks": "Gendt"
+      },
+      {
+        "volg_nr": 6,
+        "datum": "250386",
+        "inwonenden": "Lammers, Esther",
+        "year_of_birth": 65,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "160382",
+        "waarheen": "Christiaan de Wetstraat 42 hs",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 160287,
+        "datum": "",
+        "inwonenden": "Kemper, Ivonne",
+        "year_of_birth": 50,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 1224,
+    "total_cost_usd": 0.008051
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00168000620.jpg"
+}

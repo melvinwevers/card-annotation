@@ -1,0 +1,91 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00187000985",
+  "validated_json": {
+    "header": {
+      "street": "Czaar Peterstraat",
+      "house_number": "34 I hoog",
+      "codenummer": 352,
+      "buurtletter": "T",
+      "stemdistrict_nr": "01-068"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "180645",
+        "gezinshoofd": "Bolt, Gerardus",
+        "year_of_birth": 1881,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "270554",
+        "waarheen": "R. Hogebrugstr. 107",
+        "remarks": "P. Langendijkstr. 14"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "090652",
+        "gezinshoofd": "Aukema, Bote",
+        "year_of_birth": 1915,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "150458",
+        "waarheen": "2e v Svnd. str 52 II",
+        "remarks": "tuincompl. 'Linnaeus'"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "270459",
+        "gezinshoofd": "wed Heijlman, de Leeuw, Cornelia W.",
+        "year_of_birth": 1884,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "131261",
+        "waarheen": "Uithoorn",
+        "remarks": "Uithoorn"
+      },
+      {
+        "record_no": 4,
+        "datum_registration": "30262",
+        "gezinshoofd": "Gemser, Frederik",
+        "year_of_birth": 1935,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "170166",
+        "waarheen": "Kattenb. grt 1 II",
+        "remarks": "Poggenbeeksbr. 16 I"
+      },
+      {
+        "record_no": 5,
+        "datum_registration": "210166",
+        "gezinshoofd": "Schrama, Adrianus J",
+        "year_of_birth": 1900,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "300189",
+        "waarheen": "Nieuwe Passeerdersstraat",
+        "remarks": "Kattenb. grt 1 II"
+      },
+      {
+        "record_no": 6,
+        "datum_registration": "190189",
+        "gezinshoofd": "Boon, Bodil",
+        "year_of_birth": 1951,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 652,
+    "total_cost_usd": 0.005191
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00187000985.jpg"
+}

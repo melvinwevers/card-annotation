@@ -1,0 +1,125 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00283000121",
+  "validated_json": {
+    "header": {
+      "street": "De Wittenstraat",
+      "house_number": "20",
+      "codenummer": 2056,
+      "buurtletter": "I",
+      "stemdistrict_nr": "02-451"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "91135",
+        "gezinshoofd": "Kamphuis, Jan",
+        "year_of_birth": 94,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "221254",
+        "waarheen": "overleden",
+        "remarks": "Kl Houtstr 5 II lks."
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "91135",
+        "gezinshoofd": "wed Kamphuis, van der Zee, Catharina",
+        "year_of_birth": 92,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "240457",
+        "waarheen": "Hembrugstr 150 II",
+        "remarks": "zie gezin 1"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "160752",
+        "gezinshoofd": "Schep, Herman",
+        "year_of_birth": 32,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "261062",
+        "waarheen": "Burg Vening Meineszla",
+        "remarks": "Egel dw.str 7 II"
+      },
+      {
+        "record_no": 5,
+        "datum_registration": "20462",
+        "gezinshoofd": "Hensen, Bernardus F",
+        "year_of_birth": 58,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "230666",
+        "waarheen": "Nova Zembla str 54 II",
+        "remarks": "Tasmanstr 19 hsa"
+      },
+      {
+        "record_no": 6,
+        "datum_registration": "80766",
+        "gezinshoofd": "Westerhuis, Bernard H C G",
+        "year_of_birth": 37,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "311066",
+        "waarheen": "De Wittenstr 20 II",
+        "remarks": "Vde Wittenkade 19 hs"
+      },
+      {
+        "record_no": 8,
+        "datum_registration": "100720",
+        "gezinshoofd": "Vinju, Adrianus T",
+        "year_of_birth": 46,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "In gebruik bij de huis Klaassen, Machel 19",
+        "remarks": "1e Keucheniusstr 7 III"
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 8,
+        "datum": "311077",
+        "inwonenden": "Vinju, Frederik C",
+        "year_of_birth": 40,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "140574",
+        "waarheen": "Haarlemmerplein 25 I",
+        "remarks": "Purmerend"
+      },
+      {
+        "volg_nr": 8,
+        "datum": "270982",
+        "inwonenden": "Vinju, Lucas J",
+        "year_of_birth": 61,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "050384",
+        "waarheen": "Haarlemmerplein 25 II",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 8,
+        "datum": "270982",
+        "inwonenden": "Annink, Cornelia J",
+        "year_of_birth": 63,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "280284",
+        "waarheen": "2e Oosterparkstraat 46 I",
+        "remarks": ""
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 929,
+    "total_cost_usd": 0.006576
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00283000121.jpg"
+}

@@ -1,0 +1,103 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00335001323",
+  "validated_json": {
+    "header": {
+      "street": "2e Nassaustraat",
+      "house_number": "15",
+      "codenummer": 80,
+      "buurtletter": "S",
+      "stemdistrict_nr": "04-452"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "240752",
+        "gezinshoofd": "Pastor, Petrus A",
+        "year_of_birth": 28,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "010361",
+        "waarheen": "Borgerstr 231 III r",
+        "remarks": "v/Halstr 15 II"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "080561",
+        "gezinshoofd": "Kraan, Christiaan",
+        "year_of_birth": 40,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "260766",
+        "waarheen": "v. Bosserst 82 hs",
+        "remarks": "2e Nassaustraat 15 hs"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "040866",
+        "gezinshoofd": "Both, Jan P",
+        "year_of_birth": 19,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "40268",
+        "waarheen": "G Winckelpls 6 I",
+        "remarks": "Van Bosserst 82 hs"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "040866",
+        "gezinshoofd": "Both, van Klaveren, Wilhelmina G",
+        "year_of_birth": 15,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "271080",
+        "waarheen": "Avenhornstraat 66",
+        "remarks": "zie gezin 3"
+      },
+      {
+        "record_no": 4,
+        "datum_registration": "241180",
+        "gezinshoofd": "Choukri, Ahmed",
+        "year_of_birth": 55,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "020384",
+        "waarheen": "Geuzenstraat 78 hs",
+        "remarks": ""
+      },
+      {
+        "record_no": 7,
+        "datum_registration": "280384",
+        "gezinshoofd": "Bolder, Daniël T",
+        "year_of_birth": 65,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "220986",
+        "waarheen": "Van Beuningensstraat 66",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 4,
+        "datum": "180377",
+        "inwonenden": "Krikke, Hendrik J",
+        "year_of_birth": 19,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "271080",
+        "waarheen": "Avenhornstraat 66",
+        "remarks": ""
+      }
+    ],
+    "footer_notes": "Gesloopt Besch. B&Wt Nr21 d.d. 12/2/1987"
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 751,
+    "total_cost_usd": 0.005686
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00335001323.jpg"
+}

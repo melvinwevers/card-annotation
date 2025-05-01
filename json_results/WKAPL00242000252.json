@@ -1,0 +1,24 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00242000252",
+  "validated_json": {
+    "header": {
+      "street": "Jacob van Lennepstraat",
+      "house_number": "",
+      "codenummer": 106,
+      "buurtletter": "A",
+      "stemdistrict_nr": ""
+    },
+    "main_entries": [],
+    "follow_up_entries": [],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 73,
+    "total_cost_usd": 0.002296
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00242000252.jpg"
+}

@@ -1,0 +1,47 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00264000641",
+  "validated_json": {
+    "header": {
+      "street": "Vianenstraat",
+      "house_number": "",
+      "codenummer": 4753,
+      "buurtletter": "DF",
+      "stemdistrict_nr": "6"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "070383",
+        "gezinshoofd": "van der Klugt, Gerardus",
+        "year_of_birth": 22,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "070383",
+        "gezinshoofd": "van Buuren, Cornelia B",
+        "year_of_birth": 21,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 232,
+    "total_cost_usd": 0.003091
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00264000641.jpg"
+}

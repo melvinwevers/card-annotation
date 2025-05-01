@@ -1,0 +1,59 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00241000093",
+  "validated_json": {
+    "header": {
+      "street": "MILLINGENHOF",
+      "house_number": "",
+      "codenummer": 3406,
+      "buurtletter": "DF",
+      "stemdistrict_nr": ""
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "270477",
+        "gezinshoofd": "Wempe, Rudolf J",
+        "year_of_birth": 27,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "060688",
+        "waarheen": "Maarssen",
+        "remarks": ""
+      },
+      {
+        "record_no": 1,
+        "datum_registration": "270477",
+        "gezinshoofd": "Voet, Ludy",
+        "year_of_birth": 46,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "060688",
+        "waarheen": "Maarssen",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "",
+        "inwonenden": "Voet, Ludy",
+        "year_of_birth": 46,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "zoz gezin 2",
+        "remarks": ""
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 321,
+    "total_cost_usd": 0.003536
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00241000093.jpg"
+}

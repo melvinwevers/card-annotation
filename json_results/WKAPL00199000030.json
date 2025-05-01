@@ -1,0 +1,147 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00199000030",
+  "validated_json": {
+    "header": {
+      "street": "Granidastraat",
+      "house_number": "27",
+      "codenummer": 586,
+      "buurtletter": "ST",
+      "stemdistrict_nr": "01-534"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "300850",
+        "gezinshoofd": "Bierau,Willem J",
+        "year_of_birth": 22,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "180658",
+        "waarheen": "BurgTellegenstr50hs",
+        "remarks": "vOstadestr 490 hs"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "250658",
+        "gezinshoofd": "van Gijlswijk,Nicolaas W",
+        "year_of_birth": 16,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "251165",
+        "waarheen": "GuldenWinckelstr 28-I",
+        "remarks": "Burg Tellegenstr. 50"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "201265",
+        "gezinshoofd": "Granade,Leo",
+        "year_of_birth": 27,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "200781",
+        "waarheen": "G Winckelstr 4 I",
+        "remarks": "Granidastr. 29 II"
+      },
+      {
+        "record_no": 4,
+        "datum_registration": "151061",
+        "gezinshoofd": "Pickhard,Marianne",
+        "year_of_birth": 49,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": "(Diez Pickhard)"
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "150452",
+        "inwonenden": "Janssen,Maria M",
+        "year_of_birth": 50,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "201052",
+        "waarheen": "Gv",
+        "remarks": "Gv"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "181153",
+        "inwonenden": "Perra­geau de St. Amand,Sébastien C J",
+        "year_of_birth": 32,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "130154",
+        "waarheen": "Bilderdijkkade 35 I",
+        "remarks": "Bilderd kade 35 I"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "230855",
+        "inwonenden": "Linting,Regina P",
+        "year_of_birth": 34,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "zie regel lager",
+        "remarks": "Tinn hof 84 hs"
+      },
+      {
+        "volg_nr": 2,
+        "datum": "",
+        "inwonenden": "echtg van der Valk,Linting,Regina P",
+        "year_of_birth": 34,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "250258",
+        "waarheen": "Hofmeyrstraat 34 I",
+        "remarks": "zie regel hoger"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "170956",
+        "inwonenden": "van Timmeren,Roelf",
+        "year_of_birth": 33,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "sk 050258",
+        "waarheen": "Westerstr 236 II",
+        "remarks": "Apeldoorn"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "230580",
+        "inwonenden": "ter Bruggen,Peter",
+        "year_of_birth": 58,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "221280",
+        "waarheen": "Admiraal de Ruijterweg 523-III",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 5,
+        "datum": "090328",
+        "inwonenden": "Diez Salazar,José M",
+        "year_of_birth": 48,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "150783",
+        "waarheen": "Kazernestraat 8 A",
+        "remarks": "NBV"
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 1106,
+    "total_cost_usd": 0.007461
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00199000030.jpg"
+}

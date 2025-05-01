@@ -1,0 +1,69 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00244001313",
+  "validated_json": {
+    "header": {
+      "street": "Jan van Galenstraat",
+      "house_number": "24 7",
+      "codenummer": 785,
+      "buurtletter": "SW",
+      "stemdistrict_nr": "01-567"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "",
+        "gezinshoofd": "Sminia, Mnrk",
+        "year_of_birth": 23,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "280465",
+        "waarheen": "Roerstr 24 III",
+        "remarks": ""
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "",
+        "gezinshoofd": "Monden, Franciscus H H",
+        "year_of_birth": 14,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "241186",
+        "waarheen": "Lelystad",
+        "remarks": "Torrestr 16 II"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "191081",
+        "gezinshoofd": "Siemons, Jolkje",
+        "year_of_birth": 15,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "060988",
+        "waarheen": "Staringplein 9",
+        "remarks": ""
+      },
+      {
+        "record_no": 4,
+        "datum_registration": "290888",
+        "gezinshoofd": "Hanuman, Krishnawattie M",
+        "year_of_birth": 59,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 422,
+    "total_cost_usd": 0.004041
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00244001313.jpg"
+}

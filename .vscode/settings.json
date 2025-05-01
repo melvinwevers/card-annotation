@@ -1,0 +1,9 @@
+{
+    "json.schemas": [
+      {
+        "fileMatch": ["json_results/*.json"],
+        "url": "./schema/registration-schema.json"
+      }
+    ]
+  }
+  

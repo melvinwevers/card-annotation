@@ -1,0 +1,36 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00311000463",
+  "validated_json": {
+    "header": {
+      "street": "Pieter Pauwstraat",
+      "house_number": "1",
+      "codenummer": 3,
+      "buurtletter": "Z",
+      "stemdistrict_nr": "09-054"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "",
+        "gezinshoofd": "Garage",
+        "year_of_birth": null,
+        "M": null,
+        "V": null,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": "In gebruik bij 7 huis"
+      }
+    ],
+    "follow_up_entries": [],
+    "footer_notes": "Verplaatst naar 72W per 4/7/71"
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 167,
+    "total_cost_usd": 0.002766
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00311000463.jpg"
+}

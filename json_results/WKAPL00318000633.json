@@ -1,0 +1,125 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00318000633",
+  "validated_json": {
+    "header": {
+      "street": "Teerplein",
+      "house_number": "2",
+      "codenummer": 1,
+      "buurtletter": "UU",
+      "stemdistrict_nr": "10-046"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "180934",
+        "gezinshoofd": "Meesters, Bertus",
+        "year_of_birth": 90,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "271256",
+        "waarheen": "L Bouwmeesterstr 32",
+        "remarks": "Gr. Bickersstr 79 I"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "110527",
+        "gezinshoofd": "Herders, Petrus J.",
+        "year_of_birth": 2,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "250946",
+        "waarheen": "Ingoosstr 1 III",
+        "remarks": "Laanweg 57 II"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "201164",
+        "gezinshoofd": "Stratings, Elberdina C",
+        "year_of_birth": 42,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "231067",
+        "waarheen": "Teerplein 2 III",
+        "remarks": "Kl Houtstr 6 hs"
+      },
+      {
+        "record_no": 4,
+        "datum_registration": "290967",
+        "gezinshoofd": "Schermacher, Albertus M",
+        "year_of_birth": 22,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "190268",
+        "waarheen": "Weteringstr 5 II",
+        "remarks": "Grote Houtstr. 8 hs"
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "251164",
+        "inwonenden": "Norbart, Antonie",
+        "year_of_birth": 31,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "160271",
+        "waarheen": "VOW",
+        "remarks": "Kl Houtstr 6 hs"
+      },
+      {
+        "volg_nr": 2,
+        "datum": "270165",
+        "inwonenden": "van Dragt, Gerard",
+        "year_of_birth": 48,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "231067",
+        "waarheen": "Teerplein 2 III",
+        "remarks": "Ermelo"
+      },
+      {
+        "volg_nr": 3,
+        "datum": "081065",
+        "inwonenden": "Strating, Hendrikus",
+        "year_of_birth": 44,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "b050766",
+        "waarheen": "Blasiusstr. 118 I",
+        "remarks": "Blasiusstr 118 I"
+      },
+      {
+        "volg_nr": 4,
+        "datum": "050268",
+        "inwonenden": "van Poelgeest, Jacobus",
+        "year_of_birth": 43,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "040997",
+        "waarheen": "Alb. Thijmstr. 28 I",
+        "remarks": "Achillesstr 28 II"
+      },
+      {
+        "volg_nr": 4,
+        "datum": "050268",
+        "inwonenden": "van der Deure, Margriet",
+        "year_of_birth": 43,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "040997",
+        "waarheen": "Alb. Thijmstr. 28 I",
+        "remarks": "Achillesstr 28 II"
+      }
+    ],
+    "footer_notes": "Hand. gelopen VH 9log. Geop. 1971"
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 955,
+    "total_cost_usd": 0.006706
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00318000633.jpg"
+}

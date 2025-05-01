@@ -1,0 +1,169 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00057001166",
+  "validated_json": {
+    "header": {
+      "street": "Leeuwerikstraat",
+      "house_number": "44 B",
+      "codenummer": 1015,
+      "buurtletter": "XX",
+      "stemdistrict_nr": "03-842"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "132251",
+        "gezinshoofd": "Leurink, Johannes B H",
+        "year_of_birth": 3,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "150952",
+        "waarheen": "Bennebroek",
+        "remarks": "Kanariestr 29 bv"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "132251",
+        "gezinshoofd": "echtg Leurink, Burksen, Helena C",
+        "year_of_birth": 3,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "150952",
+        "waarheen": "zie gezin 1",
+        "remarks": "zie gezin 1"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "120953",
+        "gezinshoofd": "Leurink, Johannes B H",
+        "year_of_birth": 3,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "140276",
+        "waarheen": "Zwanenplein 8 hs",
+        "remarks": "Bennebroek"
+      },
+      {
+        "record_no": 4,
+        "datum_registration": "210966",
+        "gezinshoofd": "van Maanen, Johannes J",
+        "year_of_birth": 4,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "040872",
+        "waarheen": "Wilnis",
+        "remarks": "Tuinatr 157 I"
+      },
+      {
+        "record_no": 5,
+        "datum_registration": "210966",
+        "gezinshoofd": "van Horssen, Lambertus G",
+        "year_of_birth": 4,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "020218",
+        "waarheen": "Sneeuwbalstraat 27",
+        "remarks": "Stoombootweg 44 hs"
+      },
+      {
+        "record_no": 6,
+        "datum_registration": "210966",
+        "gezinshoofd": "de Wit, Emma M",
+        "year_of_birth": 4,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "240878",
+        "waarheen": "Buitendraaierij 29",
+        "remarks": ""
+      },
+      {
+        "record_no": 7,
+        "datum_registration": "070684",
+        "gezinshoofd": "Keisers, Jan A",
+        "year_of_birth": 6,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "060287",
+        "waarheen": "Pluvierplein 13 I",
+        "remarks": ""
+      },
+      {
+        "record_no": 8,
+        "datum_registration": "070684",
+        "gezinshoofd": "Estella, Maria M",
+        "year_of_birth": 6,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "060287",
+        "waarheen": "Pluvierplein 13 I",
+        "remarks": ""
+      },
+      {
+        "record_no": 9,
+        "datum_registration": "280187",
+        "gezinshoofd": "Vossen, Josephina C H",
+        "year_of_birth": 33,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "080289",
+        "waarheen": "Overslaghof 167",
+        "remarks": ""
+      },
+      {
+        "record_no": 10,
+        "datum_registration": "280389",
+        "gezinshoofd": "Nouzi, Mohamed",
+        "year_of_birth": 61,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 9,
+        "datum": "090259",
+        "inwonenden": "Slinger, Gerrit",
+        "year_of_birth": 35,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "230459",
+        "waarheen": "Frederikspln 23 hs",
+        "remarks": "Meeuwenlaan 141 I"
+      },
+      {
+        "volg_nr": 8,
+        "datum": "070684",
+        "inwonenden": "Estella, Maria M",
+        "year_of_birth": 64,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "zoz reg 9",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 7,
+        "datum": "160688",
+        "inwonenden": "Ansen, Louise E M",
+        "year_of_birth": 65,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "181188",
+        "waarheen": "Vow",
+        "remarks": ""
+      }
+    ],
+    "footer_notes": "Vern. bij Besch. B & Wt Noord Nr. 11 dd. 28.11.1983+"
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 1259,
+    "total_cost_usd": 0.008226
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00057001166.jpg"
+}

@@ -1,0 +1,389 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00271000372",
+  "validated_json": {
+    "header": {
+      "street": "Valeriusstraat",
+      "house_number": "43",
+      "codenummer": 1883,
+      "buurtletter": "AK",
+      "stemdistrict_nr": "54-304"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "",
+        "gezinshoofd": "Mollema, Eric",
+        "year_of_birth": 44,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "202266",
+        "waarheen": "3e Oosterparkstr 193",
+        "remarks": "Illeg krt 1 gezin 3"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "",
+        "gezinshoofd": "Vermolen, Johanna M T A",
+        "year_of_birth": 16,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "160861",
+        "waarheen": "Bantammerstr. 13-1",
+        "remarks": "Leiden"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "",
+        "gezinshoofd": "Giangiulio, Gabriele V",
+        "year_of_birth": 41,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "091068",
+        "waarheen": "It",
+        "remarks": "Marnixstr 401 hs"
+      },
+      {
+        "record_no": 4,
+        "datum_registration": "",
+        "gezinshoofd": "Lansbergen, Petrus A G",
+        "year_of_birth": 35,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "200767",
+        "waarheen": "V. V. Serooskerkenpln 12 II",
+        "remarks": "Meijel"
+      },
+      {
+        "record_no": 5,
+        "datum_registration": "",
+        "gezinshoofd": "Groothoff Schröder, Theodorus J",
+        "year_of_birth": 30,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "270967",
+        "waarheen": "B. v. Leeuwennln 75 IV",
+        "remarks": "Vossiusstr. 47 II"
+      },
+      {
+        "record_no": 6,
+        "datum_registration": "",
+        "gezinshoofd": "Tillema, Annelies",
+        "year_of_birth": 35,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "zie 5 regels lager",
+        "remarks": "Stadhouderskade 28 II"
+      },
+      {
+        "record_no": 7,
+        "datum_registration": "",
+        "gezinshoofd": "Bonemeijer, Margaretha M M",
+        "year_of_birth": 57,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "020571",
+        "waarheen": "Wouwermanstr 27 II",
+        "remarks": ""
+      },
+      {
+        "record_no": 8,
+        "datum_registration": "",
+        "gezinshoofd": "van der Werfhorst, Jan C T",
+        "year_of_birth": 45,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "250766",
+        "waarheen": "Mesdagstr. 38 I",
+        "remarks": "Almelo"
+      },
+      {
+        "record_no": 9,
+        "datum_registration": "",
+        "gezinshoofd": "Jacob, Franciska H",
+        "year_of_birth": 42,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "Eijsden",
+        "remarks": "Valeriuspl 9"
+      },
+      {
+        "record_no": 10,
+        "datum_registration": "",
+        "gezinshoofd": "Dekker, Jacobus T",
+        "year_of_birth": 40,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "260273",
+        "waarheen": "Nachtwachtlaan 181",
+        "remarks": "Hillegom"
+      },
+      {
+        "record_no": 11,
+        "datum_registration": "",
+        "gezinshoofd": "echtg. de Bruijn, Tillema, Annelies",
+        "year_of_birth": 35,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "021268",
+        "waarheen": "Langswater 743",
+        "remarks": "zie 5 regels hoger"
+      },
+      {
+        "record_no": 12,
+        "datum_registration": "",
+        "gezinshoofd": "Söhne, Rudolf E",
+        "year_of_birth": 40,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "200471",
+        "waarheen": "Purmerend",
+        "remarks": "v. Woustr. 85 III"
+      },
+      {
+        "record_no": 13,
+        "datum_registration": "",
+        "gezinshoofd": "Rominger, Gilbert",
+        "year_of_birth": 46,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "010569",
+        "waarheen": "Hm",
+        "remarks": "Bazel Zwit"
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "240769",
+        "inwonenden": "Rouma, Lambertus I O M",
+        "year_of_birth": 35,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "060971",
+        "waarheen": "Kinkerstr. 56 II",
+        "remarks": "Beethovenstr 67 IV"
+      },
+      {
+        "volg_nr": 2,
+        "datum": "200670",
+        "inwonenden": "Rau, Peter W",
+        "year_of_birth": 47,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "200270",
+        "waarheen": "It",
+        "remarks": "Somerlustpad 8 hs"
+      },
+      {
+        "volg_nr": 3,
+        "datum": "200681",
+        "inwonenden": "Mollema, Hendrik",
+        "year_of_birth": 44,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "Gv",
+        "remarks": "Gouda"
+      },
+      {
+        "volg_nr": 4,
+        "datum": "280972",
+        "inwonenden": "Brands, Cornelia P M",
+        "year_of_birth": 47,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "040171",
+        "waarheen": "Sarphatistr. 25 I",
+        "remarks": "Maastricht"
+      },
+      {
+        "volg_nr": 5,
+        "datum": "240973",
+        "inwonenden": "Beerens, Godefridus M M",
+        "year_of_birth": 50,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "050274",
+        "waarheen": "Marnixkade 74 A III",
+        "remarks": "Amstelveenseweg 7 hs"
+      },
+      {
+        "volg_nr": 6,
+        "datum": "240974",
+        "inwonenden": "Hilbrands, Wjada A J",
+        "year_of_birth": 52,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "210272",
+        "waarheen": "Oldebarneveldtstr 15 I",
+        "remarks": "Hm"
+      },
+      {
+        "volg_nr": 7,
+        "datum": "230971",
+        "inwonenden": "Cohen, Elizabeth",
+        "year_of_birth": 51,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "211273",
+        "waarheen": "Stadhouderskade 134",
+        "remarks": "Weesp"
+      },
+      {
+        "volg_nr": 8,
+        "datum": "170272",
+        "inwonenden": "Uhlenbroek, Saskia",
+        "year_of_birth": 52,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "240174",
+        "waarheen": "Lijndenstraat 38 I",
+        "remarks": "RT"
+      },
+      {
+        "volg_nr": 9,
+        "datum": "170272",
+        "inwonenden": "Lie Hap Po, Marcella",
+        "year_of_birth": 52,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "240174",
+        "waarheen": "Lijndenstraat 38 I",
+        "remarks": "Amstelveen"
+      },
+      {
+        "volg_nr": 10,
+        "datum": "190472",
+        "inwonenden": "Fakirmohamed, Haroon A K S",
+        "year_of_birth": 50,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "240174",
+        "waarheen": "Lijndenstraat 38 I",
+        "remarks": "Terschelling"
+      },
+      {
+        "volg_nr": 11,
+        "datum": "190472",
+        "inwonenden": "Luidenga, Piet G",
+        "year_of_birth": 50,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "240174",
+        "waarheen": "Lijndenstraat 38 I",
+        "remarks": "Terschelling"
+      },
+      {
+        "volg_nr": 12,
+        "datum": "240473",
+        "inwonenden": "Haexman, Maximiliaan R",
+        "year_of_birth": 50,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "240174",
+        "waarheen": "Lijndenstraat 38 I",
+        "remarks": "Trans. van Mierisstr."
+      },
+      {
+        "volg_nr": 13,
+        "datum": "240473",
+        "inwonenden": "Melis, Hendrika J",
+        "year_of_birth": 52,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "240174",
+        "waarheen": "Lijndenstraat 38 I",
+        "remarks": "Willemsparkweg 144 II"
+      },
+      {
+        "volg_nr": 14,
+        "datum": "260374",
+        "inwonenden": "Ulivieri, Claudio P",
+        "year_of_birth": 52,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "240174",
+        "waarheen": "Lijndenstraat 38 I",
+        "remarks": "Florence It"
+      },
+      {
+        "volg_nr": 15,
+        "datum": "170674",
+        "inwonenden": "Lippold, Manfred",
+        "year_of_birth": 53,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "240174",
+        "waarheen": "Lijndenstraat 38 I",
+        "remarks": "Wolfsberg Oos"
+      },
+      {
+        "volg_nr": 16,
+        "datum": "170674",
+        "inwonenden": "Pfyl, Paul",
+        "year_of_birth": 54,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "240174",
+        "waarheen": "Lijndenstraat 38 I",
+        "remarks": "Beethovenstr 97 II"
+      },
+      {
+        "volg_nr": 17,
+        "datum": "170674",
+        "inwonenden": "Bakker, Johannes",
+        "year_of_birth": 54,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "240174",
+        "waarheen": "Lijndenstraat 38 I",
+        "remarks": "Saxenburgerdwarsstr"
+      },
+      {
+        "volg_nr": 18,
+        "datum": "170674",
+        "inwonenden": "Bult, Heiko W J",
+        "year_of_birth": 54,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "240174",
+        "waarheen": "Lijndenstraat 38 I",
+        "remarks": "Culemborg"
+      },
+      {
+        "volg_nr": 19,
+        "datum": "170674",
+        "inwonenden": "Rietman, Annemarie",
+        "year_of_birth": 53,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "240174",
+        "waarheen": "Lijndenstraat 38 I",
+        "remarks": "Schwaz Oos"
+      },
+      {
+        "volg_nr": 20,
+        "datum": "090774",
+        "inwonenden": "Zopf, Josef",
+        "year_of_birth": 54,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "240178",
+        "waarheen": "Lekstraat 74 II",
+        "remarks": "Schwaz Oos"
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 3123,
+    "total_cost_usd": 0.017546
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00271000372.jpg"
+}

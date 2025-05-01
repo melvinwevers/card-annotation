@@ -1,0 +1,169 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00237000593",
+  "validated_json": {
+    "header": {
+      "street": "Meerhuizenstraat",
+      "house_number": "4",
+      "codenummer": 1146,
+      "buurtletter": "AR",
+      "stemdistrict_nr": "06-327"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "30336",
+        "gezinshoofd": "Beuk,Cornelis H",
+        "year_of_birth": 0,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "011171",
+        "waarheen": "Gendringen",
+        "remarks": "Weesperzijde 290 bv"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "251171",
+        "gezinshoofd": "Banninga,Geertruida K",
+        "year_of_birth": 40,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "270674",
+        "waarheen": "Delfzijl",
+        "remarks": "Uithoornstr. 46 III"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "",
+        "gezinshoofd": "(Vaags)",
+        "year_of_birth": 0,
+        "M": 0,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      },
+      {
+        "record_no": 4,
+        "datum_registration": "100724",
+        "gezinshoofd": "Sanders,Christina (Hope)",
+        "year_of_birth": 34,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "060560",
+        "inwonenden": "Beuk,Rudolf J",
+        "year_of_birth": 38,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "Bickenrode D1",
+        "remarks": "zo gezin 1"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "30761",
+        "inwonenden": "Beuk,Cornelis H",
+        "year_of_birth": 0,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "Vechtrstr 80 II",
+        "remarks": "zoz.gezin 1"
+      },
+      {
+        "volg_nr": 3,
+        "datum": "311062",
+        "inwonenden": "Beuk,Rudolf J",
+        "year_of_birth": 38,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "Breda",
+        "remarks": "Bickenrode D1"
+      },
+      {
+        "volg_nr": 4,
+        "datum": "240264",
+        "inwonenden": "Beuk,Rudolf J",
+        "year_of_birth": 38,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "Johannesburg Zuid Afr",
+        "remarks": "Breda"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "050567",
+        "inwonenden": "Beuk,Rudolf J",
+        "year_of_birth": 38,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "Can",
+        "remarks": "Johannesburg(ZAf)"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "190268",
+        "inwonenden": "Beuk,Rudolf J",
+        "year_of_birth": 38,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "Schaesberg",
+        "remarks": "Toronto Can"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "190970",
+        "inwonenden": "Beuk,Rudolf J",
+        "year_of_birth": 38,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "Gendringen",
+        "remarks": "Kerkrade"
+      },
+      {
+        "volg_nr": 2,
+        "datum": "030773",
+        "inwonenden": "Hoogedoorn,Gijsbertus",
+        "year_of_birth": 35,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 4,
+        "datum": "100724",
+        "inwonenden": "van Spaendonk,Adrianus CB",
+        "year_of_birth": 35,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "250674",
+        "waarheen": "Delfzijl",
+        "remarks": ""
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 1183,
+    "total_cost_usd": 0.007846
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00237000593.jpg"
+}

@@ -1,0 +1,103 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00130000803",
+  "validated_json": {
+    "header": {
+      "street": "Ruyschstraat",
+      "house_number": "119",
+      "codenummer": 1577,
+      "buurtletter": "W",
+      "stemdistrict_nr": "04-139"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "290332",
+        "gezinshoofd": "Konings, Petrus G",
+        "year_of_birth": 89,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "171063",
+        "waarheen": "Naar 119 I",
+        "remarks": "Bataviastr 73 III"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "251163",
+        "gezinshoofd": "Hajema, Steven",
+        "year_of_birth": 38,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "280266",
+        "waarheen": "2e J vd Heijdenstr",
+        "remarks": "Kinkerstr 164 II"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "090366",
+        "gezinshoofd": "van Dijck, Barend",
+        "year_of_birth": 37,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "V Brakelstr 38 II",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "240450",
+        "inwonenden": "Hagedoorn, Harm",
+        "year_of_birth": 26,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "011053",
+        "waarheen": "Kerkstr 219 I+II",
+        "remarks": "Hoogeveen"
+      },
+      {
+        "volg_nr": 2,
+        "datum": "310563",
+        "inwonenden": "Fajralbe, Maria F P",
+        "year_of_birth": 15,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "zie 1. regel lager",
+        "remarks": "e Oosterp str 179"
+      },
+      {
+        "volg_nr": 2,
+        "datum": "080464",
+        "inwonenden": "Schepis, Stellario",
+        "year_of_birth": 51,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "180266",
+        "waarheen": "Amstelveen",
+        "remarks": "Beukenpln 24 I"
+      },
+      {
+        "volg_nr": 3,
+        "datum": "090985",
+        "inwonenden": "Bartels, Gerrit U",
+        "year_of_birth": 61,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "abusief (zie 118 II)",
+        "remarks": ""
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 715,
+    "total_cost_usd": 0.005506
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00130000803.jpg"
+}

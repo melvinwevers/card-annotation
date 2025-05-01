@@ -1,0 +1,36 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00027000769",
+  "validated_json": {
+    "header": {
+      "street": "August Allebéplein",
+      "house_number": "",
+      "codenummer": 2260,
+      "buurtletter": "HG 7",
+      "stemdistrict_nr": "01-632"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "",
+        "gezinshoofd": "Bioscoop",
+        "year_of_birth": null,
+        "M": null,
+        "V": null,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 148,
+    "total_cost_usd": 0.002671
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00027000769.jpg"
+}

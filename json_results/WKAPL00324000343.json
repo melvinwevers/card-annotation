@@ -1,0 +1,48 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00324000343",
+  "validated_json": {
+    "header": {
+      "street": "Zandstraat",
+      "house_number": "2",
+      "codenummer": 0,
+      "buurtletter": "C",
+      "stemdistrict_nr": "15-008"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "",
+        "gezinshoofd": "Werkplaats",
+        "year_of_birth": null,
+        "M": 0,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": "In gebruik bij 12 I Bedrijfsruimte"
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 2,
+        "datum": "20.1.81",
+        "inwonenden": "Duvekot, Jan C",
+        "year_of_birth": 42,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "100382",
+        "waarheen": "Herengracht 312 I achter",
+        "remarks": ""
+      }
+    ],
+    "footer_notes": "Gesloopt Besch. B & Wt Nr. 350 d.d. 24/9/1982 Staat B & Wt Nr. 227 dd. 7.1.1981"
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 291,
+    "total_cost_usd": 0.003386
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00324000343.jpg"
+}

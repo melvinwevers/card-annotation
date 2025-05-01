@@ -1,0 +1,36 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00299000985",
+  "validated_json": {
+    "header": {
+      "street": "Zeeburgerpad",
+      "house_number": "",
+      "codenummer": 2096,
+      "buurtletter": "A",
+      "stemdistrict_nr": ""
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "",
+        "gezinshoofd": "Bedrijfsruimte",
+        "year_of_birth": null,
+        "M": 0,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [],
+    "footer_notes": "Besch. B&Wt. nr 296 dd 15nov84"
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 160,
+    "total_cost_usd": 0.002731
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00299000985.jpg"
+}

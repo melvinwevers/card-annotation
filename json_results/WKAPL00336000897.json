@@ -1,0 +1,125 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00336000897",
+  "validated_json": {
+    "header": {
+      "street": "Van Oldenbarneveldtstraat",
+      "house_number": "112",
+      "codenummer": 110,
+      "buurtletter": "",
+      "stemdistrict_nr": "02-473"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "",
+        "gezinshoofd": "Wed. Everts, Köhler, Elisabeth C.C.",
+        "year_of_birth": 90,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "100956",
+        "waarheen": "vReigersb. str 11 I",
+        "remarks": ""
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "221056",
+        "gezinshoofd": "van den Heuvel, Gerardus",
+        "year_of_birth": 4,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "ahuisef",
+        "remarks": "3eHdeGrootstr 12 III"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "221056",
+        "gezinshoofd": "Broerse, Gerrit",
+        "year_of_birth": 17,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "60663",
+        "waarheen": "Westzaan",
+        "remarks": "van 112 hs"
+      },
+      {
+        "record_no": 4,
+        "datum_registration": "251163",
+        "gezinshoofd": "Plankman, Josephus C.I.",
+        "year_of_birth": 35,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "K.S. Hasselaanstr 91",
+        "remarks": "ze Kattenb dw str11"
+      },
+      {
+        "record_no": 5,
+        "datum_registration": "60656",
+        "gezinshoofd": "wed. Krop, Sikkens, Anna",
+        "year_of_birth": 80,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "280175",
+        "waarheen": "overleden",
+        "remarks": "volgen veldstr. 110 II"
+      },
+      {
+        "record_no": 6,
+        "datum_registration": "7",
+        "gezinshoofd": "Krop, Karel J.",
+        "year_of_birth": null,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "V. Oldenbarneveldtstr 110 II",
+        "remarks": "zie 112"
+      },
+      {
+        "record_no": 7,
+        "datum_registration": "121078",
+        "gezinshoofd": "van Tienen, Rudolf",
+        "year_of_birth": null,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "260750",
+        "inwonenden": "Albrecht, Jacoba C.",
+        "year_of_birth": 8,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "dp110573",
+        "waarheen": "de Lairessestr 35hs",
+        "remarks": "v. Breestr. 82 huis"
+      },
+      {
+        "volg_nr": 1,
+        "datum": "31254",
+        "inwonenden": "Verzijlberg, Willem C.",
+        "year_of_birth": 30,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "110956",
+        "waarheen": "Elandstr. 197hs",
+        "remarks": "van 110 II"
+      }
+    ],
+    "footer_notes": "$samengevoegd met 112 $staat B & Wt 29.12.1978+"
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 927,
+    "total_cost_usd": 0.006566
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00336000897.jpg"
+}

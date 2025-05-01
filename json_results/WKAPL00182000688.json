@@ -1,0 +1,136 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00182000688",
+  "validated_json": {
+    "header": {
+      "street": "1e Constantijn Huygensstraat",
+      "house_number": "",
+      "codenummer": 320,
+      "buurtletter": "SH",
+      "stemdistrict_nr": "03-502"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "91150",
+        "gezinshoofd": "Heidenrijk, Martina H",
+        "year_of_birth": 86,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "090364",
+        "waarheen": "overleden",
+        "remarks": "Sluistr 3 III"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "91125",
+        "gezinshoofd": "Lesturgeon, Antoinetta W",
+        "year_of_birth": 93,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "011275",
+        "waarheen": "Noord-Hollandstraat1",
+        "remarks": "oz regel 1"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "10726",
+        "gezinshoofd": "Smolders, Petrus J",
+        "year_of_birth": 51,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "080927",
+        "waarheen": "Overtoom 464 hs",
+        "remarks": "Vinkeveen c a"
+      },
+      {
+        "record_no": 4,
+        "datum_registration": "020580",
+        "gezinshoofd": "Mullens, Maria S",
+        "year_of_birth": 51,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "Johannes Verhulststr 119 hs",
+        "remarks": ""
+      },
+      {
+        "record_no": 5,
+        "datum_registration": "50128",
+        "gezinshoofd": "Aernaudts, Elisabeth C M",
+        "year_of_birth": 55,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "Kinkerstr 2 III",
+        "remarks": ""
+      },
+      {
+        "record_no": 6,
+        "datum_registration": "060787",
+        "gezinshoofd": "Groot, Albert E",
+        "year_of_birth": 49,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "241188",
+        "waarheen": "Vow",
+        "remarks": ""
+      },
+      {
+        "record_no": 7,
+        "datum_registration": "050488",
+        "gezinshoofd": "Timmers, Wouter",
+        "year_of_birth": 64,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "091150",
+        "inwonenden": "Lesturgeon, Antoinetta W",
+        "year_of_birth": 93,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "zoz-gezin-2",
+        "remarks": "Sluistr 3 III"
+      },
+      {
+        "volg_nr": 3,
+        "datum": "060277",
+        "inwonenden": "Mullens, Maria S",
+        "year_of_birth": 51,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "zoz-gezin-4",
+        "remarks": "Haarl meer"
+      },
+      {
+        "volg_nr": 4,
+        "datum": "040280",
+        "inwonenden": "Aernaudts, Elisabeth C M",
+        "year_of_birth": 55,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "",
+        "waarheen": "zoz gezin 5",
+        "remarks": "Dronten"
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 957,
+    "total_cost_usd": 0.006716
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00182000688.jpg"
+}

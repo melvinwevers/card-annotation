@@ -1,0 +1,59 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00147000926",
+  "validated_json": {
+    "header": {
+      "street": "Orteliusstraat",
+      "house_number": "",
+      "codenummer": 1323,
+      "buurtletter": "SW",
+      "stemdistrict_nr": "01-586"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "130539",
+        "gezinshoofd": "Geesink, Hendrik G F",
+        "year_of_birth": 6,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "180879",
+        "waarheen": "Amstelveen",
+        "remarks": "Wenslauerstr 73 I"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "210920",
+        "gezinshoofd": "Westers, Johannes",
+        "year_of_birth": 48,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "020687",
+        "waarheen": "Purmerend",
+        "remarks": "Amstelveen"
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "240358",
+        "inwonenden": "Geesink, Everardus",
+        "year_of_birth": 17,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "210959",
+        "waarheen": "Tuinstr. 68 III",
+        "remarks": "Kattenb-achterstr 10"
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 358,
+    "total_cost_usd": 0.003721
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00147000926.jpg"
+}

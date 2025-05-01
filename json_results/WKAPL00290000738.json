@@ -1,0 +1,92 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00290000738",
+  "validated_json": {
+    "header": {
+      "street": "Wamelstraat",
+      "house_number": "59",
+      "codenummer": 4577,
+      "buurtletter": "DF",
+      "stemdistrict_nr": "6"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "050683",
+        "gezinshoofd": "Gardener, Kathleen R",
+        "year_of_birth": 20,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "050783",
+        "waarheen": "Warmondstr 59 I",
+        "remarks": ""
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "280683",
+        "gezinshoofd": "van der Kerff, Johannes",
+        "year_of_birth": 8,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "270384",
+        "waarheen": "Boeninlaan 22",
+        "remarks": ""
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "280683",
+        "gezinshoofd": "Mathezing, Maria S P",
+        "year_of_birth": 9,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "270384",
+        "waarheen": "Boeninlaan 22",
+        "remarks": ""
+      },
+      {
+        "record_no": 4,
+        "datum_registration": "290885",
+        "gezinshoofd": "Ho Meau-Long, Henri R",
+        "year_of_birth": 33,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "081286",
+        "waarheen": "Uithoorn",
+        "remarks": ""
+      },
+      {
+        "record_no": 5,
+        "datum_registration": "501037",
+        "gezinshoofd": "de Koning, Harijkus L",
+        "year_of_birth": 62,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 4,
+        "datum": "200186",
+        "inwonenden": "Engelen, Monica",
+        "year_of_birth": 64,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "081286",
+        "waarheen": "Uithoorn",
+        "remarks": ""
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 586,
+    "total_cost_usd": 0.004861
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00290000738.jpg"
+}

@@ -1,0 +1,47 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00069000456",
+  "validated_json": {
+    "header": {
+      "street": "NIEUWERSLUISHOF",
+      "house_number": "",
+      "codenummer": 3530,
+      "buurtletter": "DF",
+      "stemdistrict_nr": "1"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "090877",
+        "gezinshoofd": "Brekelmans, Gregorius P",
+        "year_of_birth": 42,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "060680",
+        "waarheen": "Zst",
+        "remarks": ""
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "090877",
+        "gezinshoofd": "echtg Brekelmans, Cremers, Anna M",
+        "year_of_birth": 42,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "060680",
+        "waarheen": "Zst",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 252,
+    "total_cost_usd": 0.003191
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00069000456.jpg"
+}

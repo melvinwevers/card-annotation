@@ -1,0 +1,125 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00105000952",
+  "validated_json": {
+    "header": {
+      "street": "IJperveldstraat",
+      "house_number": "",
+      "codenummer": 3009,
+      "buurtletter": "NC",
+      "stemdistrict_nr": "03-870"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "500666",
+        "gezinshoofd": "den Daas,Jan",
+        "year_of_birth": 41,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "130268",
+        "waarheen": "Aalsmeer",
+        "remarks": "Haarlemmer"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "184868",
+        "gezinshoofd": "Kranenborg,Martina J",
+        "year_of_birth": 28,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "190974",
+        "waarheen": "Bennebroek",
+        "remarks": "Amsteldake 127 hs"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "011272",
+        "gezinshoofd": "Langerak,Gerrit",
+        "year_of_birth": 38,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "081277",
+        "waarheen": "IJperveldstraat 151",
+        "remarks": ""
+      },
+      {
+        "record_no": 4,
+        "datum_registration": "011272",
+        "gezinshoofd": "wed Poelman,Kroonstuiver,Margaretha A J",
+        "year_of_birth": 11,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "050984",
+        "waarheen": "Zst",
+        "remarks": "Heerenveen"
+      },
+      {
+        "record_no": 5,
+        "datum_registration": "011184",
+        "gezinshoofd": "Joustra,Wiecher A",
+        "year_of_birth": 50,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "011085",
+        "waarheen": "Grootbrittannië",
+        "remarks": ""
+      },
+      {
+        "record_no": 6,
+        "datum_registration": "090186",
+        "gezinshoofd": "Goebert,Nicolaas L J",
+        "year_of_birth": 27,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "181186",
+        "waarheen": "Lijnbaansgracht 160 II",
+        "remarks": ""
+      },
+      {
+        "record_no": 7,
+        "datum_registration": "020588",
+        "gezinshoofd": "Venderbosch,Ernst J A",
+        "year_of_birth": 21,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "2310572",
+        "inwonenden": "Kuijlaars,Antonius H",
+        "year_of_birth": 43,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "080972",
+        "waarheen": "Haarlemmermeer",
+        "remarks": "Landsmeer"
+      },
+      {
+        "volg_nr": 2,
+        "datum": "250674",
+        "inwonenden": "Langerak,Gerrit",
+        "year_of_birth": 38,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "zoz-gezin 3",
+        "remarks": "Seacliff Park Aus"
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 883,
+    "total_cost_usd": 0.006346
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00105000952.jpg"
+}

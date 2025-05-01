@@ -1,0 +1,202 @@
+{
+  "checked": "no",
+  "filename": "WKAPL00227000559",
+  "validated_json": {
+    "header": {
+      "street": "Lutmastraat",
+      "house_number": "172",
+      "codenummer": 1082,
+      "buurtletter": "AG 1",
+      "stemdistrict_nr": "02-277"
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum_registration": "300839",
+        "gezinshoofd": "Lemmens, Cornelis",
+        "year_of_birth": 1904,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "160667",
+        "waarheen": "Talmastr 43 I",
+        "remarks": "Veerstr. 49 hs"
+      },
+      {
+        "record_no": 2,
+        "datum_registration": "200667",
+        "gezinshoofd": "Trommel, Marinus",
+        "year_of_birth": 1956,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "291207",
+        "waarheen": "Griftstr 46 III",
+        "remarks": "Vaartstraat 55 I"
+      },
+      {
+        "record_no": 3,
+        "datum_registration": "200375",
+        "gezinshoofd": "Oulad Ali, Bekkay",
+        "year_of_birth": 1945,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "",
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": "300839",
+        "inwonenden": "Lemmens, Willem",
+        "year_of_birth": 1930,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "zn202158",
+        "waarheen": "Kinkerstr. 43 II a",
+        "remarks": "zoa-gezin-1"
+      },
+      {
+        "volg_nr": 2,
+        "datum": "110162",
+        "inwonenden": "Veer, Willem N",
+        "year_of_birth": 1943,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "210965",
+        "waarheen": "Blankenstr 69 hs",
+        "remarks": "Paramaribo(Sur)"
+      },
+      {
+        "volg_nr": 3,
+        "datum": "121263",
+        "inwonenden": "Boere, Gerhardus C",
+        "year_of_birth": 1942,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "160667",
+        "waarheen": "Talmastr 43 I",
+        "remarks": "Zutphen"
+      },
+      {
+        "volg_nr": 4,
+        "datum": "201265",
+        "inwonenden": "Verhave, Jan P",
+        "year_of_birth": 1942,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "190966",
+        "waarheen": "Javapls 36 hs",
+        "remarks": "Brederodestr. 40III"
+      },
+      {
+        "volg_nr": 5,
+        "datum": "110467",
+        "inwonenden": "Martijn, Hendrik C",
+        "year_of_birth": 1941,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "160667",
+        "waarheen": "Talmastr 43 I",
+        "remarks": "Mauvestr 2 III"
+      },
+      {
+        "volg_nr": 6,
+        "datum": "291267",
+        "inwonenden": "Boere, Gerhardus C",
+        "year_of_birth": 1942,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "xx Rh. Feithstr13III",
+        "waarheen": "Talmastr 43 I",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 7,
+        "datum": "240968",
+        "inwonenden": "Marques, Irma E",
+        "year_of_birth": 1950,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "280470",
+        "waarheen": "J. v. Lennepstr 126 hs",
+        "remarks": "Aruba NA"
+      },
+      {
+        "volg_nr": 8,
+        "datum": "050169",
+        "inwonenden": "Vuurboom, Jan",
+        "year_of_birth": 1949,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "260170",
+        "waarheen": "Stadhouderskd 90 II",
+        "remarks": "Esd"
+      },
+      {
+        "volg_nr": 9,
+        "datum": "010470",
+        "inwonenden": "Overbosch, Evert G",
+        "year_of_birth": 1951,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "010590",
+        "waarheen": "Roombpstr 8.II",
+        "remarks": "Linnaeusparkw124hs."
+      },
+      {
+        "volg_nr": 10,
+        "datum": "010470",
+        "inwonenden": "Verbaken, Helena J. M",
+        "year_of_birth": 1952,
+        "M": 0,
+        "V": 1,
+        "datum_vertrek": "220591",
+        "waarheen": "G. Donust 7 D hs",
+        "remarks": "JVerhulststr 52"
+      },
+      {
+        "volg_nr": 11,
+        "datum": "010470",
+        "inwonenden": "Split, Pieter",
+        "year_of_birth": 1953,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "010590",
+        "waarheen": "Amstelveenseweg 158",
+        "remarks": "Ede Gld"
+      },
+      {
+        "volg_nr": 12,
+        "datum": "290976",
+        "inwonenden": "Ezzay, Mohamed",
+        "year_of_birth": 1956,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "130477",
+        "waarheen": "Dirk Bonstraat 231",
+        "remarks": "Marokko"
+      },
+      {
+        "volg_nr": 13,
+        "datum": "191181",
+        "inwonenden": "Zeriouh, Abdelkarim",
+        "year_of_birth": 1958,
+        "M": 1,
+        "V": 0,
+        "datum_vertrek": "nf",
+        "waarheen": "",
+        "remarks": "Aklim Mar"
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "tokens": {
+    "input": 1545,
+    "output": 1567,
+    "total_cost_usd": 0.009766
+  },
+  "finish_reason": "stop",
+  "image_url": "../processed_images/WKAPL00227000559.jpg"
+}
