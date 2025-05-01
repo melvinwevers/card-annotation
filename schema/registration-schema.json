@@ -36,8 +36,24 @@
                 "datum_registration": { "type": "string" },
                 "gezinshoofd": { "type": "string" },
                 "year_of_birth": { "type": "integer" },
-                "M": { "type": "integer" },
-                "V": { "type": "integer" },
+                "M": {
+                "oneOf": [
+                  { "type": "integer" },
+                  {
+                    "type": "string",
+                    "pattern": "^-?$"
+                  }
+                ]
+              },
+              "V": {
+                "oneOf": [
+                  { "type": "integer" },
+                  {
+                    "type": "string",
+                    "pattern": "^-?$"
+                  }
+                ]
+              },
                 "datum_vertrek": { "type": "string" },
                 "waarheen": { "type": "string" },
                 "remarks": { "type": "string" }
@@ -54,8 +70,24 @@
                 "datum": { "type": "string" },
                 "inwonenden": { "type": "string" },
                 "year_of_birth": { "type": "integer" },
-                "M": { "type": "integer" },
-                "V": { "type": "integer" },
+                "M": {
+                "oneOf": [
+                  { "type": "integer" },
+                  {
+                    "type": "string",
+                    "pattern": "^-?$"
+                  }
+                ]
+              },
+              "V": {
+                "oneOf": [
+                  { "type": "integer" },
+                  {
+                    "type": "string",
+                    "pattern": "^-?$"
+                  }
+                ]
+              },
                 "datum_vertrek": { "type": "string" },
                 "waarheen": { "type": "string" },
                 "remarks": { "type": "string" }
