@@ -1,10 +1,10 @@
 {
-  "checked": "no",
+  "checked": "yes",
   "filename": "WKAPL00003000751",
   "validated_json": {
     "header": {
       "street": "Dintelstraat",
-      "house_number": "89",
+      "house_number": "89 III hoog",
       "codenummer": 380,
       "buurtletter": "AR 3",
       "stemdistrict_nr": "01-358"
@@ -14,7 +14,7 @@
         "record_no": 1,
         "datum_registration": "090334",
         "gezinshoofd": "Blankenstein, Barend",
-        "year_of_birth": 1901,
+        "year_of_birth": 01,
         "M": 1,
         "V": 0,
         "datum_vertrek": "150352",
@@ -23,20 +23,20 @@
       },
       {
         "record_no": 2,
-        "datum_registration": "090334",
-        "gezinshoofd": "echtg Blankenstein, Snijders, Carolina P E",
-        "year_of_birth": 1904,
+        "datum_registration": "",
+        "gezinshoofd": "echtg Blankenstein, Snijders, Carolina F E",
+        "year_of_birth": 04,
         "M": 0,
         "V": 1,
         "datum_vertrek": "",
-        "waarheen": "",
-        "remarks": "zie gezin 1"
+        "waarheen": "zie gezin 4",
+        "remarks": ""
       },
       {
         "record_no": 3,
         "datum_registration": "090552",
         "gezinshoofd": "Blankenstein, Barend",
-        "year_of_birth": 1901,
+        "year_of_birth": 01,
         "M": 1,
         "V": 0,
         "datum_vertrek": "180374",
@@ -45,9 +45,9 @@
       },
       {
         "record_no": 4,
-        "datum_registration": "090552",
+        "datum_registration": "",
         "gezinshoofd": "wed Blankenstein, Snijders, Carolina P E",
-        "year_of_birth": 1904,
+        "year_of_birth": 04,
         "M": 0,
         "V": 1,
         "datum_vertrek": "",
@@ -60,9 +60,9 @@
         "volg_nr": 5,
         "datum": "120280",
         "inwonenden": "Beek, Pieter",
-        "year_of_birth": 1904,
+        "year_of_birth": 04,
         "M": 1,
-        "V": 0,
+        "V": -,
         "datum_vertrek": "230389",
         "waarheen": "Hugo de Grootkade 20",
         "remarks": ""

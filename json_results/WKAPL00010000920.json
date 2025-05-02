@@ -1,10 +1,10 @@
 {
-  "checked": "no",
+  "checked": "yes",
   "filename": "WKAPL00010000920",
   "validated_json": {
     "header": {
       "street": "Egeldonk",
-      "house_number": "",
+      "house_number": "509A",
       "codenummer": 2639,
       "buurtletter": "DC1",
       "stemdistrict_nr": ""
@@ -15,8 +15,8 @@
         "datum_registration": "",
         "gezinshoofd": "Tabarki, Mohamed",
         "year_of_birth": 39,
-        "M": 1,
-        "V": 0,
+        "M": 2,
+        "V": 1,
         "datum_vertrek": "131078",
         "waarheen": "Zoetermeer",
         "remarks": ""
@@ -25,20 +25,20 @@
         "record_no": 2,
         "datum_registration": "131178",
         "gezinshoofd": "van Tellingen, Erik",
-        "year_of_birth": 52,
+        "year_of_birth": 57,
         "M": 1,
-        "V": 0,
-        "datum_vertrek": "170884",
+        "V": "",
+        "datum_vertrek": "170882",
         "waarheen": "Purmerend",
         "remarks": ""
       },
       {
         "record_no": 3,
-        "datum_registration": "",
+        "datum_registration": "230185",
         "gezinshoofd": "Romanov, Julia K",
         "year_of_birth": 57,
-        "M": 0,
-        "V": 1,
+        "M": "",
+        "V": "",
         "datum_vertrek": "280486",
         "waarheen": "Vow",
         "remarks": ""
@@ -47,20 +47,20 @@
         "record_no": 4,
         "datum_registration": "",
         "gezinshoofd": "Timmermans, Teddy P",
-        "year_of_birth": 50,
-        "M": 1,
-        "V": 0,
+        "year_of_birth": 57,
+        "M": "",
+        "V": "",
         "datum_vertrek": "150389",
         "waarheen": "Dennenrode 804",
         "remarks": ""
       },
       {
         "record_no": 5,
-        "datum_registration": "",
+        "datum_registration": "160289",
         "gezinshoofd": "Exmann, Gemma M",
         "year_of_birth": 46,
-        "M": 0,
-        "V": 1,
+        "M": "",
+        "V": "",
         "datum_vertrek": "",
         "waarheen": "",
         "remarks": ""
@@ -74,7 +74,7 @@
         "year_of_birth": 58,
         "M": 0,
         "V": 1,
-        "datum_vertrek": "170884",
+        "datum_vertrek": "170882",
         "waarheen": "Purmerend",
         "remarks": ""
       }

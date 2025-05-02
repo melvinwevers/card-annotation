@@ -1,11 +1,11 @@
 {
-  "checked": "no",
+  "checked": "yes",
   "filename": "WKAPL00007000049",
   "validated_json": {
     "header": {
       "street": "Dusartstraat",
-      "house_number": "11 hoog",
-      "codenummer": 429,
+      "house_number": " 2 II hoog",
+      "codenummer": 0429,
       "buurtletter": "AD I",
       "stemdistrict_nr": "02-267"
     },
@@ -14,7 +14,7 @@
         "record_no": 1,
         "datum_registration": "210750",
         "gezinshoofd": "Vleugel, Wilhelm F",
-        "year_of_birth": 1888,
+        "year_of_birth": 88,
         "M": 1,
         "V": 0,
         "datum_vertrek": "02156",
@@ -23,21 +23,21 @@
       },
       {
         "record_no": 2,
-        "datum_registration": "210750",
+        "datum_registration": "",
         "gezinshoofd": "wed. Vleugel, van Dijk, Cornelia",
         "year_of_birth": 1888,
         "M": 0,
         "V": 1,
-        "datum_vertrek": "020379",
+        "datum_vertrek": "070379",
         "waarheen": "Dusartstr 14 hs",
-        "remarks": "zie-gezin 1"
+        "remarks": "zie gezin 1"
       },
       {
         "record_no": 3,
         "datum_registration": "300179",
-        "gezinshoofd": "Schagen-Burant, Jacobs, Louise G",
-        "year_of_birth": 1939,
-        "M": 0,
+        "gezinshoofd": "Jacobs, Louise G",
+        "year_of_birth": 39,
+        "M": -,
         "V": 1,
         "datum_vertrek": "",
         "waarheen": "",
@@ -49,21 +49,21 @@
         "volg_nr": 2,
         "datum": "010664",
         "inwonenden": "Vleugel, Wilhelmina",
-        "year_of_birth": 1922,
+        "year_of_birth": 12,
         "M": 0,
         "V": 1,
         "datum_vertrek": "050365",
-        "waarheen": "res Ennedyn 531",
+        "waarheen": "Pres Kennedyln 531",
         "remarks": "Gv"
       },
       {
         "volg_nr": 2,
         "datum": "040174",
         "inwonenden": "Jacobs, Hendrika M",
-        "year_of_birth": 1942,
+        "year_of_birth": 42,
         "M": 0,
         "V": 1,
-        "datum_vertrek": "500179",
+        "datum_vertrek": "300179",
         "waarheen": "Dusartstr III",
         "remarks": ""
       }

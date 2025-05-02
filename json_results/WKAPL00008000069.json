@@ -1,10 +1,10 @@
 {
-  "checked": "no",
+  "checked": "yes",
   "filename": "WKAPL00008000069",
   "validated_json": {
     "header": {
       "street": "Echtenstein",
-      "house_number": "",
+      "house_number": "16",
       "codenummer": 2637,
       "buurtletter": "Dc1",
       "stemdistrict_nr": ""
@@ -14,19 +14,19 @@
         "record_no": 1,
         "datum_registration": "240474",
         "gezinshoofd": "van Ingen, Frans",
-        "year_of_birth": 0,
+        "year_of_birth": 01,
         "M": 1,
-        "V": 0,
+        "V": -,
         "datum_vertrek": "070974",
         "waarheen": "overleden",
         "remarks": "Alkmaar"
       },
       {
         "record_no": 2,
-        "datum_registration": "240474",
+        "datum_registration": "",
         "gezinshoofd": "wed van Ingen, van der Wel, Marianne M A",
-        "year_of_birth": 4,
-        "M": 0,
+        "year_of_birth": 04,
+        "M": -,
         "V": 1,
         "datum_vertrek": "250975",
         "waarheen": "Obdam",
@@ -38,18 +38,18 @@
         "gezinshoofd": "de Vries, Pieter A",
         "year_of_birth": 45,
         "M": 1,
-        "V": 0,
+        "V": -,
         "datum_vertrek": "030382",
-        "waarheen": "Wittenbachstr 72 I Gv",
-        "remarks": ""
+        "waarheen": "Wittenbachstr 72 I",
+        "remarks": "Gv"
       },
       {
         "record_no": 4,
-        "datum_registration": "270175",
+        "datum_registration": "",
         "gezinshoofd": "Heyde, Willy R",
         "year_of_birth": 60,
-        "M": 1,
-        "V": 0,
+        "M": -,
+        "V": 1,
         "datum_vertrek": "040583",
         "waarheen": "Hlm",
         "remarks": ""
@@ -59,8 +59,8 @@
         "datum_registration": "310183",
         "gezinshoofd": "Imamdi, Mohamedgaliel",
         "year_of_birth": 43,
-        "M": 1,
-        "V": 0,
+        "M": "",
+        "V": "",
         "datum_vertrek": "",
         "waarheen": "",
         "remarks": ""
@@ -72,8 +72,8 @@
         "datum": "100282",
         "inwonenden": "Heyde, Willy R",
         "year_of_birth": 60,
-        "M": 1,
-        "V": 0,
+        "M": -,
+        "V": 1,
         "datum_vertrek": "",
         "waarheen": "zoz gezin 5",
         "remarks": ""

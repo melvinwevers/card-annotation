@@ -1,5 +1,5 @@
 {
-  "checked": "no",
+  "checked": "yes",
   "filename": "WKAPL00007000429",
   "validated_json": {
     "header": {
@@ -26,8 +26,8 @@
         "datum_registration": "030270",
         "gezinshoofd": "Laagland, Simon J M",
         "year_of_birth": 50,
-        "M": 1,
-        "V": 0,
+        "M": 2,
+        "V": 1,
         "datum_vertrek": "",
         "waarheen": "",
         "remarks": ""
@@ -39,43 +39,43 @@
         "datum": "150270",
         "inwonenden": "Bonsma, Hannie D",
         "year_of_birth": 43,
-        "M": 0,
+        "M": -,
         "V": 1,
         "datum_vertrek": "010371",
         "waarheen": "HermRobbersstr 3 hs",
         "remarks": "Gron"
       },
       {
-        "volg_nr": 2,
+        "volg_nr": 1,
         "datum": "250171",
         "inwonenden": "den Heijer, Petronella M",
         "year_of_birth": 49,
-        "M": 0,
+        "M": -,
         "V": 1,
         "datum_vertrek": "240271",
         "waarheen": "Olympiakade 17/18",
         "remarks": "Olympiakd 17-18"
       },
       {
-        "volg_nr": 3,
+        "volg_nr": 1,
         "datum": "160371",
         "inwonenden": "Jacobs, Joannes T A",
         "year_of_birth": 46,
         "M": 1,
-        "V": 0,
+        "V": "",
         "datum_vertrek": "130172",
         "waarheen": "Vrolikstraat 208 I",
         "remarks": "Ehv"
       },
       {
-        "volg_nr": 4,
+        "volg_nr": 1,
         "datum": "020572",
         "inwonenden": "van Riemsdijk, Dirk J",
         "year_of_birth": 23,
         "M": 1,
-        "V": 0,
+        "V": -,
         "datum_vertrek": "291272",
-        "waarheen": "Vridzicht 60",
+        "waarheen": "Vrijzicht 60",
         "remarks": "Langswater 162"
       },
       {
@@ -86,7 +86,7 @@
         "M": 0,
         "V": 1,
         "datum_vertrek": "020277",
-        "waarheen": "Kerkstr,172 hs",
+        "waarheen": "Kerkstr,177 hs",
         "remarks": "Amstelveen"
       }
     ],

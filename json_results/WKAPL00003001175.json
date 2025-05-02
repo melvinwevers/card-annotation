@@ -1,10 +1,10 @@
 {
-  "checked": "no",
+  "checked": "yes",
   "filename": "WKAPL00003001175",
   "validated_json": {
     "header": {
       "street": "Dirk van Hasseltsteeg",
-      "house_number": "I hoog nummer 60",
+      "house_number": "58",
       "codenummer": 383,
       "buurtletter": "H",
       "stemdistrict_nr": "07-005"

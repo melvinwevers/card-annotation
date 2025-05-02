@@ -1,12 +1,12 @@
 {
-  "checked": "no",
+  "checked": "yes",
   "filename": "WKAPL00001000053",
   "validated_json": {
     "header": {
       "street": "Dekschuitstraat",
-      "house_number": "",
+      "house_number": "81",
       "codenummer": 2545,
-      "buurtletter": "BC",
+      "buurtletter": "BC I",
       "stemdistrict_nr": "09-835"
     },
     "main_entries": [
@@ -15,19 +15,19 @@
         "datum_registration": "030266",
         "gezinshoofd": "Bachot, August M J",
         "year_of_birth": 32,
-        "M": 1,
-        "V": 0,
-        "datum_vertrek": "3151971",
+        "M": 3,
+        "V": 3,
+        "datum_vertrek": "151171",
         "waarheen": "Aus",
         "remarks": "Antwerpen (Be)"
       },
       {
         "record_no": 2,
-        "datum_registration": "100273",
+        "datum_registration": "100272",
         "gezinshoofd": "van der Pad, Hessel",
-        "year_of_birth": 43,
-        "M": 1,
-        "V": 0,
+        "year_of_birth": 46,
+        "M": 3,
+        "V": 1,
         "datum_vertrek": "130973",
         "waarheen": "Gv",
         "remarks": "Gv"
@@ -37,9 +37,9 @@
         "datum_registration": "161173",
         "gezinshoofd": "Koeiman, Melvyn E",
         "year_of_birth": 44,
-        "M": 1,
-        "V": 0,
-        "datum_vertrek": "010727",
+        "M": 2,
+        "V": 1,
+        "datum_vertrek": "010777",
         "waarheen": "Zeevaart 106",
         "remarks": "Weesp"
       },
@@ -49,18 +49,18 @@
         "gezinshoofd": "van Straten, Jacob",
         "year_of_birth": 20,
         "M": 1,
-        "V": 0,
-        "datum_vertrek": "240288",
-        "waarheen": "overleden",
-        "remarks": "(lv)"
+        "V": -,
+        "datum_vertrek": "240281",
+        "waarheen": "overleden (lv)",
+        "remarks": ""
       },
       {
         "record_no": 5,
         "datum_registration": "150781",
         "gezinshoofd": "van Beijnhem, Alphonso E",
         "year_of_birth": 48,
-        "M": 1,
-        "V": 0,
+        "M": 2,
+        "V": 2,
         "datum_vertrek": "280285",
         "waarheen": "Johannes van der Waalstraat 55 hs",
         "remarks": ""
@@ -70,19 +70,19 @@
         "datum_registration": "100485",
         "gezinshoofd": "Willems, Johannes",
         "year_of_birth": 53,
-        "M": 1,
-        "V": 0,
+        "M": "",
+        "V": "",
         "datum_vertrek": "230387",
-        "waarheen": "overleden",
-        "remarks": "(lv)"
+        "waarheen": "overleden (lv)",
+        "remarks": ""
       },
       {
         "record_no": 7,
         "datum_registration": "290487",
         "gezinshoofd": "Arikan, Hamza",
         "year_of_birth": 63,
-        "M": 1,
-        "V": 0,
+        "M": "",
+        "V": "",
         "datum_vertrek": "",
         "waarheen": "",
         "remarks": ""
@@ -92,8 +92,8 @@
         "datum_registration": "290487",
         "gezinshoofd": "Kokulu, Günay",
         "year_of_birth": 66,
-        "M": 0,
-        "V": 1,
+        "M": "",
+        "V": "",
         "datum_vertrek": "",
         "waarheen": "",
         "remarks": ""
@@ -106,18 +106,29 @@
         "inwonenden": "Martina, Herbert J",
         "year_of_birth": 48,
         "M": 1,
-        "V": 0,
-        "datum_vertrek": "140627",
+        "V": 1,
+        "datum_vertrek": "140677",
         "waarheen": "Avenhorn",
         "remarks": "Curacao NA"
+      },
+      {
+        "volg_nr": 3,
+        "datum": "120276",
+        "inwonenden": "Plooijer, Aafje",
+        "year_of_birth": 27,
+        "M": "",
+        "V": 1,
+        "datum_vertrek": "201080",
+        "waarheen": "overleden",
+        "remarks": ""
       },
       {
         "volg_nr": 5,
         "datum": "030583",
         "inwonenden": "van Beijnhem, Sander",
         "year_of_birth": 62,
-        "M": 1,
-        "V": 0,
+        "M": "",
+        "V": "",
         "datum_vertrek": "110184",
         "waarheen": "Almere",
         "remarks": ""

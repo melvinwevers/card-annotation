@@ -1,4 +1,5 @@
-{
+{ 
+  "checked": "yes",
   "filename": "WKAPL00002000908",
   "validated_json": {
     "header": {
@@ -12,7 +13,7 @@
       {
         "record_no": 1,
         "datum_registration": "",
-        "gezinshoofd": "Magazijn Amsterdamse Coöperatieve Inkoopvereniging \"Ons Belang\" kantoor",
+        "gezinshoofd": "Magazijn Amsterdamse Coöperatieve Inkoopvereniging \"Ons Belang\", kantoor",
         "year_of_birth": null,
         "M": null,
         "V": null,
@@ -44,7 +45,7 @@
       }
     ],
     "follow_up_entries": [],
-    "footer_notes": ""
+    "footer_notes": "29"
   },
   "error": null,
   "tokens": {
