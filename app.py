@@ -6,6 +6,9 @@ import portalocker
 from google.oauth2 import service_account
 from google.cloud import storage
 
+# Ensure Streamlit version supports rerun (>=1.27.0)
+# If deploying on Streamlit Cloud, add `streamlit>=1.27.0` to requirements.txt
+
 # Load GCS credentials from Streamlit secrets or fallback to local key
 try:
     gcs_conf = dict(st.secrets["connections"]["gcs"])
@@ -40,11 +43,8 @@ def clean_json_text(raw: str) -> str:
 # List available JSONs not yet corrected and not locked
 def list_jsons():
     try:
-        # list raw JSON blobs
         raw_blobs = client.list_blobs(bucket, prefix="jsons/")
         raw_paths = [os.path.basename(b.name) for b in raw_blobs if b.name.endswith(".json")]
-
-        # list corrected JSON blobs
         corr_blobs = client.list_blobs(bucket, prefix="corrected/")
         corr_files = {os.path.basename(b.name) for b in corr_blobs if b.name.endswith(".json")}
 
@@ -172,7 +172,13 @@ with st.form('edit_form'):
             st.success('Saved corrected record to GCS.')
             lock.release()
             os.remove(lock_path)
-            st.experimental_rerun()
+            # Rerun the app to refresh file list
+            if hasattr(st, 'rerun'):
+                st.rerun()
+            elif hasattr(st, 'experimental_rerun'):
+                st.experimental_rerun()
+            else:
+                st.warning('Upgrade Streamlit to >=1.27.0 to enable rerun functionality.')
         except Exception as e:
             st.error(f'Error saving corrected JSON: {e}')
             lock.release()
