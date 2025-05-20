@@ -29,20 +29,24 @@ os.makedirs(dir_locks, exist_ok=True)
 
 # GCS configuration (set in Streamlit secrets)
 GCS_BUCKET = st.secrets["GCS_BUCKET"]
-# Prepare service account credentials for ADC
+# Prepare service account credentials and instantiate GCS client
 import tempfile, os
+from google.oauth2 import service_account
+# Load secret, which may be dict or JSON string
 sa_json = st.secrets.get("GCP_SERVICE_ACCOUNT_KEY")
-# secrets.toml can store JSON keys as a table or a string
 if isinstance(sa_json, dict):
     sa_str = json.dumps(sa_json)
 else:
     sa_str = sa_json
-# Write key to a temp file and point SDK to it
-tf = tempfile.NamedTemporaryFile(mode="w+", delete=False, suffix=".json")
-tf.write(sa_str)
-tf.flush()
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = tf.name
-# Initialize client using Application Default Credentials
+# Write to temporary JSON key file
+key_file = tempfile.NamedTemporaryFile(mode="w+", delete=False, suffix=".json")
+key_file.write(sa_str)
+key_file.flush()
+# Create credentials directly from key file
+credentials = service_account.Credentials.from_service_account_file(key_file.name)
+# Instantiate client with explicit credentials and project
+client = storage.Client(credentials=credentials, project=credentials.project_id)
+bucket = client.bucket(GCS_BUCKET)
 client = storage.Client()
 bucket = client.bucket(GCS_BUCKET)
 
