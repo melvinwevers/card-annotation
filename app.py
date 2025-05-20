@@ -29,8 +29,21 @@ os.makedirs(dir_locks, exist_ok=True)
 
 # GCS configuration (set in Streamlit secrets)
 GCS_BUCKET = st.secrets["GCS_BUCKET"]
-service_account_info = json.loads(st.secrets["GCP_SERVICE_ACCOUNT_KEY"])
-client = storage.Client.from_service_account_info(service_account_info)
+# Prepare service account credentials for ADC
+import tempfile, os
+sa_json = st.secrets.get("GCP_SERVICE_ACCOUNT_KEY")
+# secrets.toml can store JSON keys as a table or a string
+if isinstance(sa_json, dict):
+    sa_str = json.dumps(sa_json)
+else:
+    sa_str = sa_json
+# Write key to a temp file and point SDK to it
+tf = tempfile.NamedTemporaryFile(mode="w+", delete=False, suffix=".json")
+ tf.write(sa_str)
+ tf.flush()
+ os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = tf.name
+# Initialize client using Application Default Credentials
+client = storage.Client()
 bucket = client.bucket(GCS_BUCKET)
 
 # Utility: clean raw JSON text
