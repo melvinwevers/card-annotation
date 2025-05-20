@@ -1,3 +1,5 @@
 streamlit
 google-cloud-storage
 portalocker
+gcsfs
+st-files-connection
