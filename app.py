@@ -16,11 +16,8 @@ except Exception:
 GCS_BUCKET = gcs_conf.get("GCS_BUCKET", "card_annotation")
 
 # Construct GCS file system
-fs = gcsfs.GCSFileSystem(
-    token=gcs_conf,
-    cache_timeout=0,
-    skip_instance_cache=True
-)
+fs = gcsfs.GCSFileSystem(token=gcs_conf)
+
 
 # Page configuration
 st.set_page_config(page_title="JSON Validator", layout="wide")
@@ -36,6 +33,8 @@ def clean_json_text(raw: str) -> str:
     return t
 
 # List available JSONs not yet corrected and not locked
+from datetime import timezone
+
 def list_jsons():
     try:
         raw_paths = [os.path.basename(p) for p in fs.glob(f"{GCS_BUCKET}/jsons/*.json")]
@@ -49,11 +48,18 @@ def list_jsons():
             lock_file = os.path.join(LOCK_DIR, fname + '.lock')
             if os.path.exists(lock_file):
                 continue
+            # Ensure the modification time is timezone-aware
+            info = fs.info(f"{GCS_BUCKET}/jsons/{fname}")
+            updated_time = info.get('updated')
+            if updated_time and updated_time.tzinfo is None:
+                updated_time = updated_time.replace(tzinfo=timezone.utc)
+            # You can now safely perform datetime operations with updated_time
             avail.append(fname)
         return avail
     except Exception as e:
         st.error(f"Error listing JSON files: {e}")
         return []
+
 
 
 
