@@ -16,7 +16,11 @@ except Exception:
 GCS_BUCKET = gcs_conf.get("GCS_BUCKET", "card_annotation")
 
 # Construct GCS file system
-fs = gcsfs.GCSFileSystem(token=gcs_conf)
+fs = gcsfs.GCSFileSystem(
+    token=gcs_conf,
+    cache_timeout=0,
+    skip_instance_cache=True
+)
 
 # Page configuration
 st.set_page_config(page_title="JSON Validator", layout="wide")
