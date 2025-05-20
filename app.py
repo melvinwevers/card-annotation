@@ -34,15 +34,12 @@ def clean_json_text(raw: str) -> str:
 # List available JSONs not yet corrected and not locked
 def list_jsons():
     try:
-        raw_paths = [f['name'] for f in fs.find(f"{GCS_BUCKET}/jsons") if f['name'].endswith(".json")]
-        raw_files = [os.path.basename(p) for p in raw_paths if p.endswith(".json")]
-
-        corr_paths = [f['name'] for f in fs.find(f"{GCS_BUCKET}/corrected") if f['name'].endswith(".json")]
-
-        corr_files = {os.path.basename(p) for p in corr_paths if p.endswith(".json")}
+        raw_paths = [os.path.basename(p) for p in fs.find(f"{GCS_BUCKET}/jsons") if p.endswith(".json")]
+        corr_paths = [os.path.basename(p) for p in fs.find(f"{GCS_BUCKET}/corrected") if p.endswith(".json")]
+        corr_files = set(corr_paths)
 
         avail = []
-        for fname in sorted(raw_files):
+        for fname in sorted(raw_paths):
             if fname in corr_files:
                 continue
             lock_file = os.path.join(LOCK_DIR, fname + '.lock')
@@ -53,6 +50,7 @@ def list_jsons():
     except Exception as e:
         st.error(f"Error listing JSON files: {e}")
         return []
+
 
 # Select JSON file
 if 'idx' not in st.session_state:
