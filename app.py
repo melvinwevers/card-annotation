@@ -37,8 +37,11 @@ from datetime import timezone
 
 def list_jsons():
     try:
-        raw_paths = [os.path.basename(p) for p in fs.glob(f"{GCS_BUCKET}/jsons/*.json")]
-        corr_paths = [os.path.basename(p) for p in fs.glob(f"{GCS_BUCKET}/corrected/*.json")]
+        raw = fs.ls(f"{GCS_BUCKET}/jsons", detail=False)
+        raw_paths = [os.path.basename(p) for p in raw if p.endswith('.json')]
+
+        corr = fs.ls(f"{GCS_BUCKET}/corrected", detail=False)
+        corr_paths = [os.path.basename(p) for p in corr if p.endswith('.json')]
         corr_files = set(corr_paths)
 
         avail = []
