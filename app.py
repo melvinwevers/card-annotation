@@ -3,7 +3,6 @@ import re
 import json
 import streamlit as st
 import portalocker
-import gcsfs
 from google.oauth2 import service_account
 from google.cloud import storage
 
@@ -17,11 +16,12 @@ except Exception:
 
 GCS_BUCKET = gcs_conf.get("GCS_BUCKET", "card_annotation")
 
-# Construct GCS file system
-fs = gcsfs.GCSFileSystem(token=gcs_conf)
+# Initialize Google Cloud Storage client
+def get_gcs_client(conf):
+    creds = service_account.Credentials.from_service_account_info(conf)
+    return storage.Client(credentials=creds, project=conf.get("project_id"))
 
-creds = service_account.Credentials.from_service_account_info(gcs_conf)
-client = storage.Client(credentials=creds, project=gcs_conf["project_id"])
+client = get_gcs_client(gcs_conf)
 bucket = client.bucket(GCS_BUCKET)
 
 # Page configuration
@@ -33,35 +33,33 @@ os.makedirs(LOCK_DIR, exist_ok=True)
 
 # Utility: clean raw JSON
 def clean_json_text(raw: str) -> str:
-    t = re.sub(r'(:\s*)-(\s*[\,\}])', r'\1null\2', raw)
-    t = re.sub(r'(:\s*)(0\d+)(\s*[\,\}])', r'\1"\2"\3', t)
+    t = re.sub(r'(:\s*)-(\s*[,\}])', r'\1null\2', raw)
+    t = re.sub(r'(:\s*)(0\d+)(\s*[,\}])', r'\1"\2"\3', t)
     return t
 
 # List available JSONs not yet corrected and not locked
-from datetime import timezone
-
 def list_jsons():
     try:
-        raw = client.list_blobs(bucket, prefix="jsons/")
-        raw_paths = [os.path.basename(b.name) for b in raw if b.name.endswith(".json")]  # :contentReference[oaicite:0]{index=0}
+        # list raw JSON blobs
+        raw_blobs = client.list_blobs(bucket, prefix="jsons/")
+        raw_paths = [os.path.basename(b.name) for b in raw_blobs if b.name.endswith(".json")]
 
-        corr = client.list_blobs(bucket, prefix="corrected/")
-        corr_files = {os.path.basename(b.name) for b in corr if b.name.endswith(".json")}
+        # list corrected JSON blobs
+        corr_blobs = client.list_blobs(bucket, prefix="corrected/")
+        corr_files = {os.path.basename(b.name) for b in corr_blobs if b.name.endswith(".json")}
 
         avail = []
         for fname in sorted(raw_paths):
-            if fname in corr_files: continue
-            lock = os.path.join(LOCK_DIR, fname + ".lock")
-            if os.path.exists(lock): continue
+            if fname in corr_files:
+                continue
+            lock_file = os.path.join(LOCK_DIR, fname + '.lock')
+            if os.path.exists(lock_file):
+                continue
             avail.append(fname)
         return avail
-
     except Exception as e:
         st.error(f"Error listing JSON files: {e}")
         return []
-
-
-
 
 # Select JSON file
 if 'idx' not in st.session_state:
@@ -93,8 +91,8 @@ except portalocker.exceptions.LockException:
 
 # Load and clean JSON
 try:
-    with fs.open(f"{GCS_BUCKET}/jsons/{current}", "r") as f:
-        raw = f.read()
+    blob = bucket.blob(f"jsons/{current}")
+    raw = blob.download_as_text()
     data = json.loads(clean_json_text(raw))
 except Exception as e:
     st.error(f'Error loading JSON: {e}')
@@ -108,15 +106,13 @@ with st.sidebar:
     img_base = data.get('image_filename') or os.path.splitext(current)[0]
     found = False
     for ext in ['.jpg', '.jpeg', '.png', '.tif']:
-        path = f"{GCS_BUCKET}/images/{img_base}{ext}"
-        try:
-            with fs.open(path, "rb") as img_file:
-                img_bytes = img_file.read()
-            st.image(img_bytes, caption=f'{img_base}{ext}', use_container_width = True)
+        path = f"images/{img_base}{ext}"
+        blob = bucket.blob(path)
+        if blob.exists():
+            img_bytes = blob.download_as_bytes()
+            st.image(img_bytes, caption=f'{img_base}{ext}', use_container_width=True)
             found = True
             break
-        except Exception:
-            continue
     if not found:
         st.warning(f'Image not found for {img_base}')
 
@@ -171,8 +167,8 @@ with st.form('edit_form'):
     if st.form_submit_button('Save corrections'):
         data['validated_json'] = updated
         try:
-            with fs.open(f"{GCS_BUCKET}/corrected/{current}", "w") as f:
-                f.write(json.dumps(data, ensure_ascii=False, indent=2))
+            blob = bucket.blob(f"corrected/{current}")
+            blob.upload_from_string(json.dumps(data, ensure_ascii=False, indent=2), content_type='application/json')
             st.success('Saved corrected record to GCS.')
             lock.release()
             os.remove(lock_path)
