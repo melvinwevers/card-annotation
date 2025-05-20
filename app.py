@@ -39,9 +39,9 @@ else:
     sa_str = sa_json
 # Write key to a temp file and point SDK to it
 tf = tempfile.NamedTemporaryFile(mode="w+", delete=False, suffix=".json")
- tf.write(sa_str)
- tf.flush()
- os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = tf.name
+tf.write(sa_str)
+tf.flush()
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = tf.name
 # Initialize client using Application Default Credentials
 client = storage.Client()
 bucket = client.bucket(GCS_BUCKET)
