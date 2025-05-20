@@ -34,10 +34,11 @@ def clean_json_text(raw: str) -> str:
 # List available JSONs not yet corrected and not locked
 def list_jsons():
     try:
-        raw_paths = fs.ls(f"{GCS_BUCKET}/jsons")
+        raw_paths = [f['name'] for f in fs.find(f"{GCS_BUCKET}/jsons") if f['name'].endswith(".json")]
         raw_files = [os.path.basename(p) for p in raw_paths if p.endswith(".json")]
 
-        corr_paths = fs.ls(f"{GCS_BUCKET}/corrected")
+        corr_paths = [f['name'] for f in fs.find(f"{GCS_BUCKET}/corrected") if f['name'].endswith(".json")]
+
         corr_files = {os.path.basename(p) for p in corr_paths if p.endswith(".json")}
 
         avail = []
