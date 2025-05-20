@@ -4,6 +4,8 @@ import json
 import streamlit as st
 import portalocker
 import gcsfs
+from google.oauth2 import service_account
+from google.cloud import storage
 
 # Load GCS credentials from Streamlit secrets or fallback to local key
 try:
@@ -18,6 +20,9 @@ GCS_BUCKET = gcs_conf.get("GCS_BUCKET", "card_annotation")
 # Construct GCS file system
 fs = gcsfs.GCSFileSystem(token=gcs_conf)
 
+creds = service_account.Credentials.from_service_account_info(gcs_conf)
+client = storage.Client(credentials=creds, project=gcs_conf["project_id"])
+bucket = client.bucket(GCS_BUCKET)
 
 # Page configuration
 st.set_page_config(page_title="JSON Validator", layout="wide")
@@ -37,28 +42,20 @@ from datetime import timezone
 
 def list_jsons():
     try:
-        raw = fs.ls(f"{GCS_BUCKET}/jsons", detail=False)
-        raw_paths = [os.path.basename(p) for p in raw if p.endswith('.json')]
+        raw = client.list_blobs(bucket, prefix="jsons/")
+        raw_paths = [os.path.basename(b.name) for b in raw if b.name.endswith(".json")]  # :contentReference[oaicite:0]{index=0}
 
-        corr = fs.ls(f"{GCS_BUCKET}/corrected", detail=False)
-        corr_paths = [os.path.basename(p) for p in corr if p.endswith('.json')]
-        corr_files = set(corr_paths)
+        corr = client.list_blobs(bucket, prefix="corrected/")
+        corr_files = {os.path.basename(b.name) for b in corr if b.name.endswith(".json")}
 
         avail = []
         for fname in sorted(raw_paths):
-            if fname in corr_files:
-                continue
-            lock_file = os.path.join(LOCK_DIR, fname + '.lock')
-            if os.path.exists(lock_file):
-                continue
-            # Ensure the modification time is timezone-aware
-            info = fs.info(f"{GCS_BUCKET}/jsons/{fname}")
-            updated_time = info.get('updated')
-            if updated_time and updated_time.tzinfo is None:
-                updated_time = updated_time.replace(tzinfo=timezone.utc)
-            # You can now safely perform datetime operations with updated_time
+            if fname in corr_files: continue
+            lock = os.path.join(LOCK_DIR, fname + ".lock")
+            if os.path.exists(lock): continue
             avail.append(fname)
         return avail
+
     except Exception as e:
         st.error(f"Error listing JSON files: {e}")
         return []
