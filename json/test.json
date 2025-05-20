@@ -1,0 +1,11 @@
+{
+    "$schema": "../schema.json",
+    "record_id": "test001",
+    "_url": "https://drive.google.com/uc?export=view&id=xyz123",
+    "validated": true,
+    "validated_json": {
+      "main_entries": [
+        { "date": "191203", "address": "Herengracht 7" }
+      ]
+    }
+  }
