@@ -9,7 +9,29 @@ from datetime import datetime, timedelta
 import hashlib
 
 # Page configuration - MUST BE FIRST
-st.set_page_config(page_title="JSON Validator", layout="wide")
+st.set_page_config(page_title="JSON Validator", layout="wide", initial_sidebar_state="expanded")
+
+# Custom CSS to make sidebar wider by default
+st.markdown("""
+    <style>
+        /* Default sidebar width */
+        section[data-testid="stSidebar"] {
+            width: 500px !important; /* Increase from default ~300px */
+        }
+        
+        /* Adjust main content area to accommodate wider sidebar */
+        .main .block-container {
+            max-width: calc(100% - 520px) !important;
+            padding-left: 1rem !important;
+            padding-right: 1rem !important;
+        }
+        
+        /* Make sidebar content use full width */
+        section[data-testid="stSidebar"] > div:first-child {
+            width: 500px !important;
+        }
+    </style>
+""", unsafe_allow_html=True)
 
 # Ensure Streamlit version supports rerun (>=1.27.0)
 # If deploying on Streamlit Cloud, add `streamlit>=1.27.0` to requirements.txt
