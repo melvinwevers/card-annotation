@@ -1,0 +1,3 @@
+[server]
+# The path to the script that should be run by streamlit
+scriptPath = "main.py" 
