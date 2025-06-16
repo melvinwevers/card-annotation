@@ -99,11 +99,8 @@ def main() -> None:
 
     # ─── Save & Finalise ───────────────────────────────────────────────
     if updated is not None:
-        if st.session_state.validation_errors:
-            st.error("⚠️ Please fix validation errors before saving.")
-        else:
-            # proceed to save and finalize
-            data["validated_json"] = updated
+        # proceed to save and finalize - validation is handled in render_edit_form
+        data["validated_json"] = updated
         try:
             save_corrected_json(current, data)
             st.success("✅ Record finalised and moved to corrected/")
@@ -111,6 +108,7 @@ def main() -> None:
             st.session_state.finalized_files.add(current)
             
             # clear file list cache so the finalized file disappears
+            from gcs_utils import get_gcs_file_lists
             get_gcs_file_lists.clear()
             st.session_state.validation_errors.clear()
 

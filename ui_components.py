@@ -170,13 +170,13 @@ def render_edit_form(validated_data: Dict) -> Optional[Dict]:
                     if key.endswith("_needs review"):
                         continue
                     cols = st.columns((3, 1))
-                    val = create_field_input(
-                        section, key, orig, cols[0], section_schema.get(key)
-                    )
                     needs_review = cols[1].checkbox(
                         "needs review",
                         key=f"{section}.{key}_needs review",
                         value=content.get(f"{key}_needs review", False),
+                    )
+                    val = create_field_input(
+                        section, key, orig, cols[0], section_schema.get(key), unsure=needs_review
                     )
                     updated[section][key] = val
                     updated[section][f"{key}_needs review"] = needs_review
@@ -191,17 +191,18 @@ def render_edit_form(validated_data: Dict) -> Optional[Dict]:
                         if key.endswith("_needs review"):
                             continue
                         cols = st.columns((3, 1))
+                        needs_review = cols[1].checkbox(
+                            "needs review",
+                            key=f"{section}[{idx}].{key}_needs review",
+                            value=entry.get(f"{key}_needs review", False),
+                        )
                         val = create_field_input(
                             f"{section}[{idx}]",
                             key,
                             orig,
                             cols[0],
                             section_schema.get(key),
-                        )
-                        needs_review = cols[1].checkbox(
-                            "needs review",
-                            key=f"{section}[{idx}].{key}_needs review",
-                            value=entry.get(f"{key}_needs review", False),
+                            unsure=needs_review
                         )
                         temp[key] = val
                         temp[f"{key}_needs review"] = needs_review
@@ -210,28 +211,39 @@ def render_edit_form(validated_data: Dict) -> Optional[Dict]:
             # Scalar subsection
             else:
                 cols = st.columns((3, 1))
-                inp = cols[0].text_input(section, value=str(content), key=section)
                 needs_review = cols[1].checkbox("needs review", key=f"{section}_needs review")
+                inp = cols[0].text_input(section, value=str(content), key=section)
                 updated[section] = type_convert(inp, content)
                 updated[f"{section}_needs review"] = needs_review
 
+        # ─── Check if any fields are under review ─────────────────────────
+        has_fields_under_review = _check_if_has_fields_under_review(updated)
+
         # ─── Validation summary & save button ────────────────────────────
         if st.session_state.validation_errors:
-            st.error(
-                f"⚠️ {len(st.session_state.validation_errors)} validation error"
-                f"{'s' if len(st.session_state.validation_errors) != 1 else ''} – "
-                "please fix before saving."
-            )
+            if has_fields_under_review:
+                st.warning(
+                    f"⚠️ {len(st.session_state.validation_errors)} validation error"
+                    f"{'s' if len(st.session_state.validation_errors) != 1 else ''} found, "
+                    "but allowing save because some fields are marked for review."
+                )
+            else:
+                st.error(
+                    f"⚠️ {len(st.session_state.validation_errors)} validation error"
+                    f"{'s' if len(st.session_state.validation_errors) != 1 else ''} – "
+                    "please fix before saving or mark fields as 'needs review'."
+                )
 
         # Single submit button – clicking triggers a form rerun
         save_clicked = st.form_submit_button("💾 Save corrections")
 
     # After the *with* block so we can safely return a value or abort
     if save_clicked:
-        if st.session_state.validation_errors:
-            # Validation failed → stay on the same record, keep the lock
+        # Allow saving if no validation errors OR if there are fields under review
+        if st.session_state.validation_errors and not has_fields_under_review:
+            # Validation failed and no fields marked for review → stay on the same record
             return None
-        # All clear → return finalised payload
+        # All clear OR has fields under review → return finalised payload
         return updated
     
     # Scroll to top and focus first input only after navigating
@@ -251,3 +263,24 @@ def render_edit_form(validated_data: Dict) -> Optional[Dict]:
 
     # Nothing to persist this turn
     return None
+
+
+def _check_if_has_fields_under_review(updated_data: Dict) -> bool:
+    """Check if any fields in the updated data are marked as needing review"""
+    for section_key, section_value in updated_data.items():
+        if section_key.endswith("_needs review") and section_value:
+            return True
+        
+        if isinstance(section_value, dict):
+            for key, value in section_value.items():
+                if key.endswith("_needs review") and value:
+                    return True
+        
+        elif isinstance(section_value, list):
+            for entry in section_value:
+                if isinstance(entry, dict):
+                    for key, value in entry.items():
+                        if key.endswith("_needs review") and value:
+                            return True
+    
+    return False
