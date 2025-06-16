@@ -1,7 +1,10 @@
 import os
+import json
+import getpass
 import streamlit as st
 import portalocker
 from typing import Any
+from datetime import datetime
 
 from config import PAGE_CONFIG, LOCK_DIR, apply_custom_css
 from file_ops import load_json_from_gcs, save_corrected_json, list_available_jsons
@@ -13,6 +16,29 @@ from ui_components import (
 )
 
 st.set_page_config(**PAGE_CONFIG)
+
+
+def create_lock_with_user_info(lock_path: str, filename: str, user: str = None) -> portalocker.Lock:
+    """Create a lock file with user information"""
+    if user is None:
+        user = st.session_state.get("username", getpass.getuser())
+    
+    lock_data = {
+        "user": user,
+        "filename": filename,
+        "locked_at": datetime.now().isoformat(),
+        "session_id": st.session_state.get("session_id", "unknown")
+    }
+    
+    # Create the lock file with user info
+    lock = portalocker.Lock(lock_path, "w", timeout=0)
+    lock.acquire()
+    
+    # Write user info to the lock file
+    with open(lock_path, 'w') as f:
+        json.dump(lock_data, f, indent=2)
+    
+    return lock
 
 
 def release_lock():
@@ -37,7 +63,56 @@ if hasattr(st, "on_event"):
 def main() -> None:
     apply_custom_css()
     os.makedirs(LOCK_DIR, exist_ok=True)
+    
+    # Initialize session ID for user tracking
+    if "session_id" not in st.session_state:
+        st.session_state.session_id = datetime.now().strftime("%Y%m%d_%H%M%S") + "_" + getpass.getuser()
 
+    # ─── Page Navigation ─────────────────────────────────────────────────
+    # Initialize page state
+    if "page" not in st.session_state:
+        st.session_state.page = "dashboard"
+    
+    # Compact navigation in sidebar
+    with st.sidebar:
+        # Username in a single line with change button
+        if "username" not in st.session_state:
+            username = st.text_input("👤 Username", value=getpass.getuser(), label_visibility="collapsed")
+            if username:
+                st.session_state.username = username
+                st.rerun()
+        else:
+            col1, col2 = st.columns([3, 1])
+            with col1:
+                st.markdown(f"👤 **{st.session_state.username}**")
+            with col2:
+                if st.button("Change", use_container_width=True):
+                    st.session_state.pop("username")
+                    st.rerun()
+        
+        # Navigation buttons in a single row
+        col1, col2 = st.columns(2)
+        with col1:
+            if st.button("📊 Dashboard", use_container_width=True, 
+                        type="primary" if st.session_state.page == "dashboard" else "secondary"):
+                st.session_state.page = "dashboard"
+                st.rerun()
+        with col2:
+            if st.button("📝 Editor", use_container_width=True,
+                        type="primary" if st.session_state.page == "editor" else "secondary"):
+                st.session_state.page = "editor"
+                st.rerun()
+        
+        st.markdown("---")
+    
+    # Route to appropriate page
+    if st.session_state.page == "dashboard":
+        from dashboard import render_dashboard
+        render_dashboard()
+        return
+    
+    # Continue with editor logic (existing functionality)
+    
     # ─── Defensive lock cleanup ─────────────────────────────────────────
     locked_file = st.session_state.get("locked_file")
     if locked_file and not os.path.exists(os.path.join(LOCK_DIR, locked_file + ".lock")):
@@ -70,8 +145,7 @@ def main() -> None:
     lock_path = os.path.join(LOCK_DIR, current + ".lock")
     if "lock" not in st.session_state or st.session_state.get("locked_file") != current:
         try:
-            lock = portalocker.Lock(lock_path, "w", timeout=0)
-            lock.acquire()
+            lock = create_lock_with_user_info(lock_path, current)
             st.session_state["lock"] = lock
             st.session_state["locked_file"] = current
         except portalocker.exceptions.LockException:
@@ -84,11 +158,13 @@ def main() -> None:
     data, error = load_json_from_gcs(current)
     if error:
         st.error(f"Error loading JSON: {error}")
-        release_lock()
         st.stop()
 
+    # ─── Main layout ──────────────────────────────────────────────────
+    # Image in sidebar
     render_image_sidebar(data)
-
+    
+    # Main content area
     validated = data.get("validated_json") or {}
     if not validated:
         st.info(f"⏭️ Skipping '{current}' - No validated_json section to edit.")
@@ -113,39 +189,10 @@ def main() -> None:
     updated = render_edit_form(validated)
 
     # ─── Save & Finalise ───────────────────────────────────────────────
-    if updated is not None:
-        # proceed to save and finalize - validation is handled in render_edit_form
-        data["validated_json"] = updated
-        try:
-            save_corrected_json(current, data)
-            st.success("✅ Record finalised and moved to corrected/")
-
-            st.session_state.finalized_files.add(current)
-            
-            # clear file list cache so the finalized file disappears
-            from gcs_utils import get_gcs_file_lists
-            get_gcs_file_lists.clear()
-            st.session_state.validation_errors.clear()
-
-            # release lock
-            release_lock()
-
-            remaining = list_available_jsons()
-            if remaining:
-                try:
-                    st.session_state.idx = min(st.session_state.idx + 1, len(remaining) - 1)
-                    st.session_state.just_navigated = True
-                except:
-                    st.session_state.idx = 0
-                st.session_state.pop("current_file", None)
-                st.rerun()
-            else:
-                st.success("🎉 All records validated — great job!")
-                st.stop()
-        except Exception as e:
-            st.error(f"Error saving corrected JSON: {e}")
-            release_lock()
-            st.stop()
+    if updated:
+        save_corrected_json(data, updated)
+        st.success("✅ Changes saved!")
+        st.rerun()
 
 
 if __name__ == "__main__":

@@ -1,3 +1,4 @@
+import os
 import json
 import streamlit as st
 from google.oauth2 import service_account
@@ -11,15 +12,26 @@ def load_gcs_config() -> dict:
         conf = dict(st.secrets["connections"]["gcs"])
         conf["private_key"] = conf["private_key"].replace("\\n", "\n")
     except Exception:
-        with open("key.json") as f:
-            conf = json.load(f)
+        try:
+            with open("key.json") as f:
+                conf = json.load(f)
+        except Exception as e:
+            st.error(f"Failed to load GCS credentials: {e}")
+            return {}
     return conf
 
 @st.cache_resource
 def get_gcs_client() -> storage.Client:
     conf = load_gcs_config()
-    creds = service_account.Credentials.from_service_account_info(conf)
-    return storage.Client(credentials=creds, project=conf.get("project_id"))
+    if not conf:
+        raise ValueError("No GCS credentials available")
+    
+    try:
+        creds = service_account.Credentials.from_service_account_info(conf)
+        return storage.Client(credentials=creds, project=conf.get("project_id"))
+    except Exception as e:
+        st.error(f"Failed to initialize GCS client: {e}")
+        raise
 
 def get_bucket() -> storage.Bucket:
     client = get_gcs_client()
