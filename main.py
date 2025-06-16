@@ -91,9 +91,24 @@ def main() -> None:
 
     validated = data.get("validated_json") or {}
     if not validated:
-        st.warning("No validated_json section to edit.")
+        st.info(f"⏭️ Skipping '{current}' - No validated_json section to edit.")
         release_lock()
-        st.stop()
+        
+        # Auto-skip to next available record
+        remaining = list_available_jsons()
+        if remaining:
+            try:
+                # Find current position and move to next
+                current_idx = remaining.index(current) if current in remaining else st.session_state.idx
+                st.session_state.idx = min(current_idx + 1, len(remaining) - 1)
+                st.session_state.just_navigated = True
+            except:
+                st.session_state.idx = min(st.session_state.idx + 1, len(remaining) - 1) if remaining else 0
+            st.session_state.pop("current_file", None)
+            st.rerun()
+        else:
+            st.success("🎉 All processable records completed!")
+            st.stop()
 
     updated = render_edit_form(validated)
 
