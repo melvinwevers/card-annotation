@@ -2,3 +2,7 @@ data/
 json_results/
 schema/
 .streamlit/secrets.toml
+.DS_Store
+__pycache__/
+*.pyc
+key.json
