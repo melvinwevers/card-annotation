@@ -39,12 +39,14 @@ def create_field_input(
     field_key = f"{section}.{key}"
     #field_key = key
 
+    # Use description as label if available, otherwise use the key
+    label = schema.get("description", key) if schema else key
+
     inp = col.text_input(
-        field_key,
+        label,
         value=str(value),
         key=field_key,
         placeholder=schema.get("placeholder", "") if schema else None,
-        help=schema.get("description", "") if schema else None,
     )
 
     # Live value - regardless of original type

@@ -12,7 +12,7 @@ FIELD_SCHEMAS = {
     "header": {
         "street": {
             "type": FieldType.STRING.value,
-            "description": "Street name",
+            "description": "Straat",
             "autocomplete": [
                 "Elisabeth Wolffstraat", "Saenredamstraat", "Spanderswoudstraat", 
                 "Haarlemmerdijk", "Vossiusstraat", "Stierstraat", "Burgemeester Fockstraat"
@@ -23,25 +23,25 @@ FIELD_SCHEMAS = {
         "house_number": {
             "type": FieldType.STRING.value,
             "pattern": r"^\d+[A-Za-z]?(\s+\d+)?(\s+(I{1,3}|IV|V))?(\s+(hs|huis|bg|boven|beneden|voor|achter))?(\s+(hoog|laag))?$",
-            "description": "House number with optional floor/position",
+            "description": "Huisnummer",
             "placeholder": "60 III hoog"
         },
         "codenummer": {
             "type": FieldType.STRING.value,
             "pattern": r"^\d{4}$",
-            "description": "4-digit code number",
+            "description": "Codenummer (4 cijfers)",
             "placeholder": "0465"
         },
         "buurtletter": {
             "type": FieldType.STRING.value,
             "pattern": r"^(|[A-Z]{2}\s*[A-Z]*\s*\d*)$",
-            "description": "Neighborhood code",
+            "description": "Buurtletter (Twee karakters + cijfers)",
             "placeholder": "SO I"
         },
         "stemdistrict_nr": {
             "type": FieldType.STRING.value,
             "pattern": r"^(|\d{2}\s*-\s*\d{3})$",
-            "description": "Voting district number",
+            "description": "Stemdistrict Nr.",
             "placeholder": "02-485"
         }
     },
@@ -50,18 +50,18 @@ FIELD_SCHEMAS = {
             "type": FieldType.INT.value,
             "min": 1,
             "max": 999,
-            "description": "Record number"
+            "description": "Record nummer"
         },
         "datum_registration": {
             "type": FieldType.STRING.value,
             "pattern": r"^(\d{6})?$",
-            "description": "Registration date (DDMMYY)",
+            "description": "Registratie Datum (DDMMYY)",
             "placeholder": "160636"
         },
         "gezinshoofd": {
             "type": FieldType.STRING.value,
             "pattern": r"^[a-zA-ZÀ-ÿ\s\-',\.]+,\s*[a-zA-ZÀ-ÿ\s\-'\.]+$",
-            "description": "Head of household (Last name, First name)",
+            "description": "Gezinshoofd (Last name, First name)",
             "placeholder": "Keijzer, Tonko",
             "min_length": 3,
             "max_length": 100
@@ -69,36 +69,36 @@ FIELD_SCHEMAS = {
         "year_of_birth": {
             "type": FieldType.STRING.value,
             "pattern": r"^\d{2}$",
-            "description": "Year of birth (YY)",
+            "description": "Jaar (Geboortejaar) (YY)",
             "placeholder": "94"
         },
         "M": {
             "type": FieldType.STRING.value,
             "pattern": r"^(|\d+|/|-)$",
-            "description": "Number of males or slash, or empty",
+            "description": "Aantal mannen (M) (Cijfers, Slash, Dash of leeg)",
             "placeholder": "1"
         },
         "V": {
             "type": FieldType.STRING.value,
             "pattern": r"^(|\d+|/|-)$",
-            "description": "Number of females or slash, or empty",
+            "description": "Aantal vrouwen (V) (Cijfers, Slash, Dash of leeg)",
             "placeholder": "1"
         },
         "datum_vertrek": {
             "type": FieldType.STRING.value,
             "pattern": r"^(\d{6})?$",
-            "description": "Departure date (DDMMYY)",
+            "description": "Verhuisdatum (Datum) (DDMMYY)",
             "placeholder": "090659"
         },
         "waarheen": {
             "type": FieldType.STRING.value,
-            "description": "Destination address",
+            "description": "Waarheen",
             "min_length": 0,
             "max_length": 200
         },
         "remarks": {
             "type": FieldType.STRING.value,
-            "description": "Additional remarks",
+            "description": "Opmerkingen",
             "max_length": 200
         }
     },
@@ -107,18 +107,18 @@ FIELD_SCHEMAS = {
             "type": FieldType.INT.value,
             "min": 1,
             "max": 999,
-            "description": "Follow-up number"
+            "description": "Volgnr."
         },
         "datum": {
             "type": FieldType.STRING.value,
             "pattern": r"^(\d{6})?$",
-            "description": "Date (DDMMYY)",
+            "description": "Datum (Inschrijfdatum) (DDMMYY)",
             "placeholder": "211070"
         },
         "inwonenden": {
             "type": FieldType.STRING.value,
             "pattern": r"^[a-zA-ZÀ-ÿ\s\-',\.]+,\s*[a-zA-ZÀ-ÿ\s\-'\.]+$",
-            "description": "Resident name (Last name, First name Middle)",
+            "description": "Inwonenden (Last name, First name Middle)",
             "placeholder": "Aantjes, Robert M",
             "min_length": 3,
             "max_length": 100
@@ -126,41 +126,41 @@ FIELD_SCHEMAS = {
         "year_of_birth": {
             "type": FieldType.STRING.value,
             "pattern": r"^\d{2}$",
-            "description": "Year of birth (YY)",
+            "description": "Jaar (Geboortejaar) (YY)",
             "placeholder": "47"
         },
         "M": {
             "type": FieldType.STRING.value,
             "pattern": r"^(|\d+|/|-)$",
-            "description": "Number of males or slash, or empty",
+            "description": "Aantal mannen (M) (Cijfers, Slash, Dash of leeg",
             "placeholder": "1"
         },
         "V": {
             "type": FieldType.STRING.value,
             "pattern": r"^(|\d+|/|-)$",
-            "description": "Number of females or slash, or empty",
+            "description": "Aantal vrouwen (V) (Cijfers, Slash, Dash of leeg",
             "placeholder": "1"
         },
         "datum_vertrek": {
             "type": FieldType.STRING.value,
             "pattern": r"^(\d{6})?$",
-            "description": "Departure date (DDMMYY)",
+            "description": "Verhuisdatum (DDMMYY)",
             "placeholder": "260371"
         },
         "waarheen": {
             "type": FieldType.STRING.value,
-            "description": "Destination or reference",
+            "description": "Waarheen",
             "max_length": 200
         },
         "remarks": {
             "type": FieldType.STRING.value,
-            "description": "Additional remarks",
+            "description": "Opmerkingen",
             "max_length": 200
         }
     },
     "footer_notes": {
         "type": FieldType.STRING.value,
-        "description": "Footer notes or additional information",
+        "description": "Aantekeningen",
         "max_length": 500
     }
 }
