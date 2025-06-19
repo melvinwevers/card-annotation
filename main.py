@@ -75,19 +75,33 @@ def main() -> None:
     
     # Compact navigation in sidebar
     with st.sidebar:
-        # Username in a single line with change button
+        # Username handling with proper state management
         if "username" not in st.session_state:
-            username = st.text_input("👤 Username", value=getpass.getuser(), label_visibility="collapsed")
-            if username:
-                st.session_state.username = username
-                st.rerun()
+            st.session_state.username = getpass.getuser()
+        
+        # Username input/display with change functionality
+        if st.session_state.get("changing_username", False):
+            # Show input field for changing username
+            new_username = st.text_input("👤 Enter new username", value=st.session_state.username, key="new_username_input")
+            col1, col2 = st.columns([1, 1])
+            with col1:
+                if st.button("✅ Save", use_container_width=True):
+                    if new_username and new_username.strip():
+                        st.session_state.username = new_username.strip()
+                        st.session_state.changing_username = False
+                        st.rerun()
+            with col2:
+                if st.button("❌ Cancel", use_container_width=True):
+                    st.session_state.changing_username = False
+                    st.rerun()
         else:
+            # Show current username with change button
             col1, col2 = st.columns([3, 1])
             with col1:
                 st.markdown(f"👤 **{st.session_state.username}**")
             with col2:
                 if st.button("Change", use_container_width=True):
-                    st.session_state.pop("username")
+                    st.session_state.changing_username = True
                     st.rerun()
         
         # Navigation buttons in a single row
