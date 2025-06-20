@@ -36,7 +36,9 @@ def create_field_input(
 ) -> Any:
     """Render a single text input with inline validation and return the
     type‑converted value."""
-    field_key = f"{section}.{key}"
+    # Include current file name in the key to prevent cross-record value persistence
+    current_file = st.session_state.get("current_file", "unknown")
+    field_key = f"{current_file}.{section}.{key}"
     #field_key = key
 
     # Use description as label if available, otherwise use the key
@@ -148,6 +150,20 @@ def render_image_sidebar(data: Dict) -> None:
 # Main edit form
 # ──────────────────────────────────────────────────────────────────────────────
 
+def _clear_form_state():
+    """Clear form state when navigating to a new record to prevent value persistence"""
+    current_file = st.session_state.get("current_file", "unknown")
+    if current_file:
+        # Clear any session state keys that start with the current file name
+        keys_to_remove = []
+        for key in st.session_state.keys():
+            if isinstance(key, str) and key.startswith(f"{current_file}."):
+                keys_to_remove.append(key)
+        
+        for key in keys_to_remove:
+            st.session_state.pop(key, None)
+
+
 def render_edit_form(validated_data: Dict) -> Optional[Dict]:
     """Render the editable form and return a corrected payload only when the
     user presses **Save corrections** *and* no validation errors remain. On
@@ -156,6 +172,10 @@ def render_edit_form(validated_data: Dict) -> Optional[Dict]:
 
     # Clear any stale errors from previous record / rerun
     st.session_state.validation_errors.clear()
+    
+    # Clear form state when navigating to a new record
+    if st.session_state.get("just_navigated", False):
+        _clear_form_state()
 
     with st.form("edit_form", clear_on_submit=False):
         updated: Dict = {}
@@ -172,9 +192,10 @@ def render_edit_form(validated_data: Dict) -> Optional[Dict]:
                     if key.endswith("_needs review"):
                         continue
                     cols = st.columns((3, 1))
+                    current_file = st.session_state.get("current_file", "unknown")
                     needs_review = cols[1].checkbox(
                         "needs review",
-                        key=f"{section}.{key}_needs review",
+                        key=f"{current_file}.{section}.{key}_needs review",
                         value=content.get(f"{key}_needs review", False),
                     )
                     val = create_field_input(
@@ -193,9 +214,10 @@ def render_edit_form(validated_data: Dict) -> Optional[Dict]:
                         if key.endswith("_needs review"):
                             continue
                         cols = st.columns((3, 1))
+                        current_file = st.session_state.get("current_file", "unknown")
                         needs_review = cols[1].checkbox(
                             "needs review",
-                            key=f"{section}[{idx}].{key}_needs review",
+                            key=f"{current_file}.{section}[{idx}].{key}_needs review",
                             value=entry.get(f"{key}_needs review", False),
                         )
                         val = create_field_input(
@@ -213,8 +235,9 @@ def render_edit_form(validated_data: Dict) -> Optional[Dict]:
             # Scalar subsection
             else:
                 cols = st.columns((3, 1))
-                needs_review = cols[1].checkbox("needs review", key=f"{section}_needs review")
-                inp = cols[0].text_input(section, value=str(content), key=section)
+                current_file = st.session_state.get("current_file", "unknown")
+                needs_review = cols[1].checkbox("needs review", key=f"{current_file}.{section}_needs review")
+                inp = cols[0].text_input(section, value=str(content), key=f"{current_file}.{section}")
                 updated[section] = type_convert(inp, content)
                 updated[f"{section}_needs review"] = needs_review
 
