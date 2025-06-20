@@ -47,10 +47,10 @@ FIELD_SCHEMAS = {
     },
     "main_entries": {
         "record_no": {
-            "type": FieldType.INT.value,
-            "min": 1,
-            "max": 999,
-            "description": "Record nummer"
+            "type": FieldType.STRING.value,
+            "pattern": r"^(|\d{1,3})$",
+            "description": "Record nummer (Optional, 1-999)",
+            "placeholder": "1"
         },
         "datum_registration": {
             "type": FieldType.STRING.value,
@@ -60,16 +60,15 @@ FIELD_SCHEMAS = {
         },
         "gezinshoofd": {
             "type": FieldType.STRING.value,
-            "pattern": r"^[a-zA-ZÀ-ÿ\u0100-\u017F\u0180-\u024F\u0300-\u036F\u1E00-\u1EFF\u2C60-\u2C7F\uA720-\uA7FF\s\-',\.]+,\s*[a-zA-ZÀ-ÿ\u0100-\u017F\u0180-\u024F\u0300-\u036F\u1E00-\u1EFF\u2C60-\u2C7F\uA720-\uA7FF\s\-'\.]+$",
-            "description": "Gezinshoofd (Last name, First name)",
+            "pattern": r"^([a-zA-ZÀ-ÿ\u0100-\u017F\u0180-\u024F\u0300-\u036F\u1E00-\u1EFF\u2C60-\u2C7F\uA720-\uA7FF\s\-',\.]+,\s*[a-zA-ZÀ-ÿ\u0100-\u017F\u0180-\u024F\u0300-\u036F\u1E00-\u1EFF\u2C60-\u2C7F\uA720-\uA7FF\s\-'\.]+)?$",
+            "description": "Gezinshoofd (Last name, First name) - Optional",
             "placeholder": "Keijzer, Tonko",
-            "min_length": 3,
             "max_length": 100
         },
         "year_of_birth": {
             "type": FieldType.STRING.value,
-            "pattern": r"^\d{2}$",
-            "description": "Jaar (Geboortejaar) (YY)",
+            "pattern": r"^(|\d{2})$",
+            "description": "Jaar (Geboortejaar) (YY) - Optional",
             "placeholder": "94"
         },
         "M": {
@@ -117,16 +116,15 @@ FIELD_SCHEMAS = {
         },
         "inwonenden": {
             "type": FieldType.STRING.value,
-            "pattern": r"^[a-zA-ZÀ-ÿ\u0100-\u017F\u0180-\u024F\u0300-\u036F\u1E00-\u1EFF\u2C60-\u2C7F\uA720-\uA7FF\s\-',\.]+,\s*[a-zA-ZÀ-ÿ\u0100-\u017F\u0180-\u024F\u0300-\u036F\u1E00-\u1EFF\u2C60-\u2C7F\uA720-\uA7FF\s\-'\.]+$",
-            "description": "Inwonenden (Last name, First name Middle)",
+            "pattern": r"^([a-zA-ZÀ-ÿ\u0100-\u017F\u0180-\u024F\u0300-\u036F\u1E00-\u1EFF\u2C60-\u2C7F\uA720-\uA7FF\s\-',\.]+,\s*[a-zA-ZÀ-ÿ\u0100-\u017F\u0180-\u024F\u0300-\u036F\u1E00-\u1EFF\u2C60-\u2C7F\uA720-\uA7FF\s\-'\.]+)?$",
+            "description": "Inwonenden (Last name, First name Middle) - Optional",
             "placeholder": "Aantjes, Robert M",
-            "min_length": 3,
             "max_length": 100
         },
         "year_of_birth": {
             "type": FieldType.STRING.value,
-            "pattern": r"^\d{2}$",
-            "description": "Jaar (Geboortejaar) (YY)",
+            "pattern": r"^(|\d{2})$",
+            "description": "Jaar (Geboortejaar) (YY) - Optional",
             "placeholder": "47"
         },
         "M": {
