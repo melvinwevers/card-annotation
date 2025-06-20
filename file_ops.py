@@ -54,6 +54,10 @@ def load_image_from_gcs(base: str):
 
 
 def save_corrected_json(filename: str, data: dict):
-    bucket = get_bucket()
-    blob = bucket.blob(f"corrected/{filename}")
-    blob.upload_from_string(json.dumps(data, ensure_ascii=False, indent=2), content_type='application/json')
+    try:
+        bucket = get_bucket()
+        blob = bucket.blob(f"corrected/{filename}")
+        json_string = json.dumps(data, ensure_ascii=False, indent=2)
+        blob.upload_from_string(json_string, content_type='application/json')
+    except Exception as e:
+        raise Exception(f"Failed to save corrected JSON to GCS: {str(e)}")

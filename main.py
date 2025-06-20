@@ -204,9 +204,15 @@ def main() -> None:
 
     # ─── Save & Finalise ───────────────────────────────────────────────
     if updated:
-        save_corrected_json(data, updated)
-        st.success("✅ Changes saved!")
-        st.rerun()
+        try:
+            # Update the data with the corrected validated_json
+            data["validated_json"] = updated
+            save_corrected_json(current, data)
+            st.success("✅ Changes saved!")
+            st.rerun()
+        except Exception as e:
+            st.error(f"❌ Error saving changes: {str(e)}")
+            st.error("Please try again or contact support if the problem persists.")
 
 
 if __name__ == "__main__":
