@@ -60,7 +60,7 @@ FIELD_SCHEMAS = {
         },
         "gezinshoofd": {
             "type": FieldType.STRING.value,
-            "pattern": r"^[a-zA-ZÀ-ÿ\s\-',\.]+,\s*[a-zA-ZÀ-ÿ\s\-'\.]+$",
+            "pattern": r"^[a-zA-ZÀ-ÿ\u0100-\u017F\u0180-\u024F\u0300-\u036F\u1E00-\u1EFF\u2C60-\u2C7F\uA720-\uA7FF\s\-',\.]+,\s*[a-zA-ZÀ-ÿ\u0100-\u017F\u0180-\u024F\u0300-\u036F\u1E00-\u1EFF\u2C60-\u2C7F\uA720-\uA7FF\s\-'\.]+$",
             "description": "Gezinshoofd (Last name, First name)",
             "placeholder": "Keijzer, Tonko",
             "min_length": 3,
@@ -104,10 +104,10 @@ FIELD_SCHEMAS = {
     },
     "follow_up_entries": {
         "volg_nr": {
-            "type": FieldType.INT.value,
-            "min": 1,
-            "max": 999,
-            "description": "Volgnr."
+            "type": FieldType.STRING.value,
+            "pattern": r"^(|\d{1,3})$",
+            "description": "Volgnr. (Optional, 1-999)",
+            "placeholder": "1"
         },
         "datum": {
             "type": FieldType.STRING.value,
@@ -117,7 +117,7 @@ FIELD_SCHEMAS = {
         },
         "inwonenden": {
             "type": FieldType.STRING.value,
-            "pattern": r"^[a-zA-ZÀ-ÿ\s\-',\.]+,\s*[a-zA-ZÀ-ÿ\s\-'\.]+$",
+            "pattern": r"^[a-zA-ZÀ-ÿ\u0100-\u017F\u0180-\u024F\u0300-\u036F\u1E00-\u1EFF\u2C60-\u2C7F\uA720-\uA7FF\s\-',\.]+,\s*[a-zA-ZÀ-ÿ\u0100-\u017F\u0180-\u024F\u0300-\u036F\u1E00-\u1EFF\u2C60-\u2C7F\uA720-\uA7FF\s\-'\.]+$",
             "description": "Inwonenden (Last name, First name Middle)",
             "placeholder": "Aantjes, Robert M",
             "min_length": 3,

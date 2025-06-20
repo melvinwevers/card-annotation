@@ -12,11 +12,15 @@ def type_convert(val: str, original: Any) -> Any:
     if isinstance(original, bool):
         return val.lower() in ('true', '1', 'yes')
     if isinstance(original, int):
+        if not val.strip():  # Handle empty strings for integer fields
+            return None
         try:
             return int(val)
         except ValueError:
             return None
     if isinstance(original, float):
+        if not val.strip():  # Handle empty strings for float fields
+            return None
         try:
             return float(val)
         except ValueError:
