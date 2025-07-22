@@ -22,14 +22,30 @@ def list_available_jsons() -> list[str]:
     raw, corr = get_gcs_file_lists()
     available = []
     for f in sorted(raw):
-        # skip anything that is already in the corrected folder
-        if f in corr:
-            continue
         # skip anything that is currently locked
         if os.path.exists(os.path.join(LOCK_DIR, f + ".lock")):
             continue
         available.append(f)
     return available
+
+
+def is_file_corrected(filename: str) -> bool:
+    """Check if a file has been corrected (exists in corrected folder)"""
+    try:
+        _, corr = get_gcs_file_lists()
+        return filename in corr
+    except Exception:
+        return False
+
+
+def get_file_status(filename: str) -> str:
+    """Get the status of a file (uncorrected, corrected, or locked)"""
+    if os.path.exists(os.path.join(LOCK_DIR, filename + ".lock")):
+        return "locked"
+    elif is_file_corrected(filename):
+        return "corrected" 
+    else:
+        return "uncorrected"
 
 
 @st.cache_data(ttl=300)
@@ -61,3 +77,34 @@ def save_corrected_json(filename: str, data: dict):
         blob.upload_from_string(json_string, content_type='application/json')
     except Exception as e:
         raise Exception(f"Failed to save corrected JSON to GCS: {str(e)}")
+
+
+def load_corrected_json(filename: str):
+    """Load corrected version of a file from GCS"""
+    try:
+        bucket = get_bucket()
+        blob = bucket.blob(f"corrected/{filename}")
+        if blob.exists():
+            raw = blob.download_as_text()
+            from utils import clean_json_text
+            return json.loads(clean_json_text(raw))
+        return None
+    except Exception as e:
+        st.error(f"Error loading corrected JSON {filename}: {e}")
+        return None
+
+
+def compare_json_versions(filename: str):
+    """Compare original and corrected versions of a file"""
+    original, _ = load_json_from_gcs(filename)
+    corrected = load_corrected_json(filename)
+    
+    if not original or not corrected:
+        return None
+        
+    return {
+        'filename': filename,
+        'original': original,
+        'corrected': corrected,
+        'has_changes': original != corrected
+    }

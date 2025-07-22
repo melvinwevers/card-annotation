@@ -13,6 +13,7 @@ from file_ops import (
     list_available_jsons,
     load_json_from_gcs,
     load_image_from_gcs,
+    get_file_status,
 )
 
 __all__ = [
@@ -129,7 +130,17 @@ def render_navigation() -> str:
     current = files[st.session_state.idx]
     st.session_state.current_file = current  # keep in sync for the next run
 
+    # Show file status
+    status = get_file_status(current)
+    status_emoji = {"uncorrected": "📝", "corrected": "✅", "locked": "🔒"}
+    status_color = {"uncorrected": "", "corrected": ":green", "locked": ":orange"}
+    
     st.title(f"Record {st.session_state.idx + 1}/{len(files)}: {current}")
+    st.markdown(f"{status_emoji.get(status, '')} **Status**: {status_color.get(status, '')}{status.title()}")
+    
+    if status == "corrected":
+        st.info("ℹ️ This file has been corrected but can be re-edited if needed")
+    
     return current
 
 

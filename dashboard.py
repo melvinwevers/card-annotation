@@ -17,7 +17,7 @@ from pathlib import Path
 from config import LOCK_DIR
 try:
     from gcs_utils import get_gcs_file_lists, get_gcs_client, get_bucket
-    from file_ops import list_available_jsons
+    from file_ops import list_available_jsons, compare_json_versions, is_file_corrected
     GCS_AVAILABLE = True
 except Exception as e:
     GCS_AVAILABLE = False
@@ -43,11 +43,13 @@ def get_dashboard_metrics() -> Dict:
         if os.path.exists(LOCK_DIR):
             lock_files = [f for f in os.listdir(LOCK_DIR) if f.endswith('.lock')]
         
-        # Calculate metrics
+        # Calculate metrics - now corrected files don't reduce the pool
         total_raw = len(raw_files)
         total_corrected = len(corrected_files)
         in_progress = len(lock_files)
-        unvalidated = total_raw - total_corrected - in_progress
+        # Uncorrected = files that exist in raw but not in corrected, minus locked files
+        uncorrected_files = set(raw_files) - corrected_files
+        unvalidated = len(uncorrected_files) - in_progress
         
         # Calculate completion percentage
         if total_raw > 0:
@@ -395,6 +397,80 @@ def render_activity_section(lock_details: List[Dict]):
         st.metric("Average Lock Duration", f"{avg_duration:.1f}h")
 
 
+def render_comparison_analytics():
+    """Render comparison analytics section"""
+    st.subheader("📊 Comparison Analytics")
+    
+    if not GCS_AVAILABLE:
+        st.info("GCS connection required for comparison analytics")
+        return
+        
+    try:
+        raw_files, corrected_files = get_gcs_file_lists()
+        
+        # Get files that have both original and corrected versions
+        comparable_files = [f for f in raw_files if f in corrected_files]
+        
+        if not comparable_files:
+            st.info("No files available for comparison yet. Complete some corrections to enable analytics.")
+            return
+            
+        st.metric("Files Available for Comparison", len(comparable_files))
+        
+        # Sample comparison for demonstration
+        if st.button("🔍 Analyze Sample Corrections", use_container_width=True):
+            with st.spinner("Analyzing corrections..."):
+                sample_size = min(10, len(comparable_files))
+                sample_files = comparable_files[:sample_size]
+                
+                changes_detected = 0
+                for filename in sample_files:
+                    comparison = compare_json_versions(filename)
+                    if comparison and comparison.get('has_changes'):
+                        changes_detected += 1
+                
+                col1, col2 = st.columns(2)
+                with col1:
+                    st.metric("Sample Size", sample_size)
+                with col2:
+                    st.metric("Files with Changes", changes_detected)
+                    
+                if changes_detected > 0:
+                    change_rate = (changes_detected / sample_size) * 100
+                    st.success(f"✅ Change rate: {change_rate:.1f}% of sampled files had corrections")
+                else:
+                    st.info("No changes detected in sample - original data may already be accurate")
+        
+        # File picker for detailed comparison
+        st.markdown("### 🔍 Detailed File Comparison")
+        selected_file = st.selectbox(
+            "Select a file to compare:",
+            comparable_files,
+            key="comparison_file_selector"
+        )
+        
+        if st.button(f"Compare {selected_file}", use_container_width=True):
+            comparison = compare_json_versions(selected_file)
+            if comparison:
+                if comparison['has_changes']:
+                    st.success("✅ Changes detected between original and corrected versions")
+                    
+                    col1, col2 = st.columns(2)
+                    with col1:
+                        st.markdown("**Original Version:**")
+                        st.json(comparison['original'])
+                    with col2:
+                        st.markdown("**Corrected Version:**")
+                        st.json(comparison['corrected'])
+                else:
+                    st.info("ℹ️ No differences found between versions")
+            else:
+                st.error("Failed to load comparison data")
+                
+    except Exception as e:
+        st.error(f"Error in comparison analytics: {e}")
+
+
 def render_dashboard():
     """Main dashboard rendering function"""
     st.title("📊 JSON Validator Dashboard")
@@ -436,4 +512,9 @@ def render_dashboard():
     lock_details = get_lock_details()
     
     # Render activity section with detailed information
-    render_activity_section(lock_details) 
+    render_activity_section(lock_details)
+    
+    st.markdown("---")
+    
+    # Render comparison analytics section
+    render_comparison_analytics() 
