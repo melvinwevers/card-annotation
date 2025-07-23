@@ -2,20 +2,8 @@ import os
 import json
 import streamlit as st
 import portalocker
-from gcs_utils import get_gcs_client, get_bucket
+from gcs_utils import get_bucket, get_gcs_file_lists
 from config import LOCK_DIR, IMAGE_EXTENSIONS
-
-@st.cache_data(ttl=60)
-def get_gcs_file_lists() -> tuple[list[str], set]:
-    try:
-        client = get_gcs_client()
-        bucket = get_bucket()
-        raw = [os.path.basename(b.name) for b in client.list_blobs(bucket, prefix="jsons/") if b.name.endswith(".json")]
-        corr = {os.path.basename(b.name) for b in client.list_blobs(bucket, prefix="corrected/") if b.name.endswith(".json")}
-        return raw, corr
-    except Exception as e:
-        st.error(f"Error listing JSON files: {e}")
-        return [], set()
 
 
 def list_available_jsons() -> list[str]:

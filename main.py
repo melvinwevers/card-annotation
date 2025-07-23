@@ -27,18 +27,32 @@ def create_lock_with_user_info(lock_path: str, filename: str, user: str = None) 
         "user": user,
         "filename": filename,
         "locked_at": datetime.now().isoformat(),
-        "session_id": st.session_state.get("session_id", "unknown")
+        "session_id": st.session_state.get("session_id", "unknown"),
+        "pid": os.getpid()  # Add process ID for stale lock detection
     }
     
-    # Create the lock file with user info
+    # Create and acquire the lock first
     lock = portalocker.Lock(lock_path, "w", timeout=0)
-    lock.acquire()
-    
-    # Write user info to the lock file
-    with open(lock_path, 'w') as f:
-        json.dump(lock_data, f, indent=2)
-    
-    return lock
+    try:
+        lock.acquire()
+        
+        # Write user info to the lock file using the file handle
+        with open(lock_path, 'w') as f:
+            json.dump(lock_data, f, indent=2)
+        
+        return lock
+    except Exception as e:
+        # If anything fails, clean up
+        try:
+            lock.release()
+        except:
+            pass
+        if os.path.exists(lock_path):
+            try:
+                os.remove(lock_path)
+            except:
+                pass
+        raise e
 
 
 def release_lock():
@@ -46,13 +60,74 @@ def release_lock():
     lock = st.session_state.get("lock")
     locked_file = st.session_state.get("locked_file")
     if lock and locked_file:
+        lock_path = os.path.join(LOCK_DIR, locked_file + ".lock")
+        
+        # Try to release the lock object first
+        lock_released = False
         try:
             lock.release()
-            os.remove(os.path.join(LOCK_DIR, locked_file + ".lock"))
-        except Exception:
-            pass
+            lock_released = True
+        except Exception as e:
+            st.warning(f"Failed to release lock object: {e}")
+        
+        # Always try to remove the lock file, even if lock.release() failed
+        try:
+            if os.path.exists(lock_path):
+                os.remove(lock_path)
+        except Exception as e:
+            st.error(f"Failed to remove lock file {lock_path}: {e}")
+        
+        # Always clear session state
         st.session_state.pop("lock", None)
         st.session_state.pop("locked_file", None)
+        
+        # Only show messages for problems, not routine operations
+        if not lock_released:
+            st.warning("⚠️ Lock file removed but lock object may not have been properly released")
+
+
+def cleanup_stale_locks():
+    """Clean up stale locks from crashed or timed-out sessions"""
+    if not os.path.exists(LOCK_DIR):
+        return []
+    
+    stale_locks = []
+    current_time = datetime.now()
+    
+    for lock_file in os.listdir(LOCK_DIR):
+        if not lock_file.endswith(".lock"):
+            continue
+            
+        lock_path = os.path.join(LOCK_DIR, lock_file)
+        try:
+            # Try to read lock info
+            with open(lock_path, 'r') as f:
+                lock_data = json.load(f)
+            
+            # Check if lock is stale (older than 2 hours)
+            locked_at = datetime.fromisoformat(lock_data.get('locked_at', ''))
+            if (current_time - locked_at).total_seconds() > 7200:  # 2 hours
+                os.remove(lock_path)
+                stale_locks.append({
+                    'file': lock_file.replace('.lock', ''),
+                    'user': lock_data.get('user', 'unknown'),
+                    'locked_at': locked_at
+                })
+                
+        except Exception as e:
+            # If we can't read the lock file, it's probably corrupted - remove it
+            try:
+                os.remove(lock_path)
+                stale_locks.append({
+                    'file': lock_file.replace('.lock', ''),
+                    'user': 'unknown',
+                    'locked_at': 'corrupted',
+                    'error': str(e)
+                })
+            except:
+                pass
+    
+    return stale_locks
 
 
 # Register shutdown cleanup if supported (Streamlit >= 1.28)
@@ -63,6 +138,14 @@ if hasattr(st, "on_event"):
 def main() -> None:
     apply_custom_css()
     os.makedirs(LOCK_DIR, exist_ok=True)
+    
+    # Clean up stale locks on startup
+    try:
+        stale_locks = cleanup_stale_locks()
+        if stale_locks:
+            st.info(f"🧹 Cleaned up {len(stale_locks)} stale lock(s)")
+    except Exception as e:
+        st.warning(f"Failed to cleanup stale locks: {e}")
     
     # Initialize session ID for user tracking
     if "session_id" not in st.session_state:
@@ -146,12 +229,24 @@ def main() -> None:
     st.session_state.current_file = current
 
     if prev_locked and prev_locked != current:
-        try:
-            if prev_lock_obj:
+        # Release old lock more carefully
+        old_lock_path = os.path.join(LOCK_DIR, prev_locked + ".lock")
+        
+        # Try to release lock object
+        if prev_lock_obj:
+            try:
                 prev_lock_obj.release()
-            os.remove(os.path.join(LOCK_DIR, prev_locked + ".lock"))
-        except Exception:
-            pass
+            except Exception as e:
+                st.warning(f"Failed to release lock object for {prev_locked}: {e}")
+        
+        # Always try to remove lock file
+        try:
+            if os.path.exists(old_lock_path):
+                os.remove(old_lock_path)
+        except Exception as e:
+            st.error(f"Failed to remove lock file for {prev_locked}: {e}")
+        
+        # Clear session state
         st.session_state.pop("lock", None)
         st.session_state.pop("locked_file", None)
 
@@ -163,10 +258,47 @@ def main() -> None:
             st.session_state["lock"] = lock
             st.session_state["locked_file"] = current
         except portalocker.exceptions.LockException:
-            st.warning("⚠️ This record is being edited by someone else.")
+            # Check if it's our own stale lock
+            if os.path.exists(lock_path):
+                try:
+                    with open(lock_path, 'r') as f:
+                        lock_data = json.load(f)
+                    current_session = st.session_state.get("session_id", "unknown")
+                    lock_session = lock_data.get("session_id", "unknown")
+                    
+                    if lock_session == current_session:
+                        # It's our own stale lock - remove it and retry
+                        os.remove(lock_path)
+                        lock = create_lock_with_user_info(lock_path, current)
+                        st.session_state["lock"] = lock
+                        st.session_state["locked_file"] = current
+                        st.info(f"🔄 Recovered from stale lock for {current}")
+                    else:
+                        # Show who has the lock
+                        st.warning(f"⚠️ This record is being edited by {lock_data.get('user', 'someone else')} since {lock_data.get('locked_at', 'unknown time')}")
+                        st.stop()
+                except Exception as e:
+                    st.error(f"Failed to read lock information: {e}")
+                    st.stop()
+            else:
+                st.warning("⚠️ This record is being edited by someone else.")
+                st.stop()
+        except Exception as e:
+            st.error(f"Failed to acquire lock for {current}: {e}")
             st.stop()
     else:
         lock = st.session_state["lock"]
+        
+        # Verify we still have the lock
+        if not os.path.exists(lock_path):
+            st.warning("🔓 Lock file was removed externally - reacquiring lock")
+            try:
+                lock = create_lock_with_user_info(lock_path, current)
+                st.session_state["lock"] = lock
+                st.session_state["locked_file"] = current
+            except Exception as e:
+                st.error(f"Failed to reacquire lock: {e}")
+                st.stop()
 
     # ─── Load JSON and show UI ─────────────────────────────────────────
     data, error = load_json_from_gcs(current)
@@ -220,14 +352,22 @@ def main() -> None:
             # Auto-skip to next available record
             remaining = list_available_jsons()
             if remaining:
-                try:
-                    # Find current position and move to next
-                    current_idx = remaining.index(current) if current in remaining else st.session_state.idx
-                    st.session_state.idx = min(current_idx + 1, len(remaining) - 1)
-                    st.session_state.just_navigated = True
-                except:
-                    st.session_state.idx = min(st.session_state.idx + 1, len(remaining) - 1) if remaining else 0
+                # Clear current_file first to prevent it from being re-added to the list
                 st.session_state.pop("current_file", None)
+                
+                # Find the next file alphabetically after the current one
+                current_idx = -1
+                for i, fname in enumerate(sorted(remaining)):
+                    if fname > current:
+                        current_idx = i
+                        break
+                
+                # If no file found after current, go to first file
+                if current_idx == -1:
+                    current_idx = 0
+                    
+                st.session_state.idx = current_idx
+                st.session_state.just_navigated = True
                 st.rerun()
             else:
                 st.success("🎉 All processable records completed!")

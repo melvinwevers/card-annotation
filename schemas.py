@@ -8,6 +8,13 @@ class FieldType(Enum):
     FLOAT = "float"
     ENUM = "enum"
     
+# Priority fields for focused validation - focus mainly on main entries
+PRIORITY_FIELDS = {
+    'header': ['street', 'house_number'],
+    'main_entries': ['gezinshoofd', 'datum_registration', 'datum_vertrek', 'year_of_birth'], 
+    'follow_up_entries': []  # No priority fields for follow-up entries
+}
+
 FIELD_SCHEMAS = {
     "header": {
         "street": {
@@ -22,9 +29,10 @@ FIELD_SCHEMAS = {
         },
         "house_number": {
             "type": FieldType.STRING.value,
-            "pattern": r"^\d+[A-Za-z]?(\s+\d+)?(\s+(I{1,3}|IV|V))?(\s+(hs|huis|bg|boven|beneden|voor|achter))?(\s+(hoog|laag))?$",
             "description": "Huisnummer",
-            "placeholder": "60 III hoog"
+            "placeholder": "18 huis hoek Wibautstraat",
+            "min_length": 1,
+            "max_length": 100
         },
         "codenummer": {
             "type": FieldType.STRING.value,
