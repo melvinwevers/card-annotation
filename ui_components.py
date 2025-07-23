@@ -366,6 +366,10 @@ def render_edit_form(validated_data: Dict) -> Optional[Dict]:
 
         # ─── Dynamic field generation ────────────────────────────────────
         for section, content in validated_data.items():
+            # Skip follow_up_entries section but preserve the data
+            if section == "follow_up_entries":
+                updated[section] = content  # Preserve original data unchanged
+                continue
             # Better section headers with visual separators and counts
             section_title = section.replace("_", " ").title()
             priority_fields = PRIORITY_FIELDS.get(section, [])

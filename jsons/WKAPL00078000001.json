@@ -1,0 +1,428 @@
+{
+  "filename": "WKAPL00078000001.jp2",
+  "extracted_json": {
+    "header": {
+      "street": "Prinsengracht",
+      "house_number": "",
+      "codenummer": 1452,
+      "buurtletter": "RR",
+      "stemdistrict_nr": ""
+    },
+    "main_entries": [
+      {
+        "record_no": 1,
+        "datum": null,
+        "inwonenden/gezinshoofd": "de Kwastneiet, Marianne",
+        "year_of_birth": "56",
+        "M": "",
+        "V": "1",
+        "datum_vertrek": 170381,
+        "waarheen": "G. Anthoniszstr. 54 II",
+        "remarks": "zie OWK Prinsengr 241 II"
+      },
+      {
+        "record_no": 2,
+        "datum": null,
+        "inwonenden/gezinshoofd": "Schreur, Evert",
+        "year_of_birth": "53",
+        "M": "1",
+        "V": "",
+        "datum_vertrek": 181272,
+        "waarheen": "Nieuwe Leliestr. 33",
+        "remarks": "zie OWK Prinsengr 241 II"
+      },
+      {
+        "record_no": 3,
+        "datum": null,
+        "inwonenden/gezinshoofd": "van der Valk, Arnoldus J J",
+        "year_of_birth": "51",
+        "M": "1",
+        "V": "",
+        "datum_vertrek": 200880,
+        "waarheen": "Brederodestr. 112 III Ah",
+        "remarks": "zie OWK Prinsengr 241 II"
+      },
+      {
+        "record_no": 4,
+        "datum": null,
+        "inwonenden/gezinshoofd": "Schoffelmeer, Paulus M J",
+        "year_of_birth": "56",
+        "M": "1",
+        "V": "",
+        "datum_vertrek": 191080,
+        "waarheen": "Sloterveer 701",
+        "remarks": "zie OWK Prinsengr 241 II"
+      },
+      {
+        "record_no": 5,
+        "datum": null,
+        "inwonenden/gezinshoofd": "van de Vijver, Frans J M",
+        "year_of_birth": "54",
+        "M": "1",
+        "V": "",
+        "datum_vertrek": 200880,
+        "waarheen": "Team 241",
+        "remarks": "zie OWK Prinsengr 241 II"
+      },
+      {
+        "record_no": 6,
+        "datum": null,
+        "inwonenden/gezinshoofd": "Weelen, Peter P J",
+        "year_of_birth": "54",
+        "M": "1",
+        "V": "",
+        "datum_vertrek": 200880,
+        "waarheen": "Vrolikstraat 294 II",
+        "remarks": "zie OWK Prinsengr 241 II"
+      },
+      {
+        "record_no": 7,
+        "datum": null,
+        "inwonenden/gezinshoofd": "Jonker, Franciscus G M",
+        "year_of_birth": "53",
+        "M": "1",
+        "V": "",
+        "datum_vertrek": 200880,
+        "waarheen": "Lindencrgcht 254 II",
+        "remarks": "zie OWK Prinsengr 241 II"
+      },
+      {
+        "record_no": 8,
+        "datum": null,
+        "inwonenden/gezinshoofd": "Janssen, Wim",
+        "year_of_birth": "54",
+        "M": "1",
+        "V": "",
+        "datum_vertrek": 200880,
+        "waarheen": "Dr v Campens 88",
+        "remarks": "zie OWK Prinsengr 241 II"
+      },
+      {
+        "record_no": 9,
+        "datum": null,
+        "inwonenden/gezinshoofd": "Hoogester, Henri J A",
+        "year_of_birth": "46",
+        "M": "1",
+        "V": "",
+        "datum_vertrek": 200880,
+        "waarheen": "Oudesachns 18 I",
+        "remarks": "zie OWK Prinsengr 241 II"
+      },
+      {
+        "record_no": 10,
+        "datum": null,
+        "inwonenden/gezinshoofd": "Kruishoop, Johan Chr W",
+        "year_of_birth": "53",
+        "M": "1",
+        "V": "",
+        "datum_vertrek": 200880,
+        "waarheen": "Prinsengracht 24 II",
+        "remarks": "zie OWK Prinsengr 241 II"
+      },
+      {
+        "record_no": 11,
+        "datum": null,
+        "inwonenden/gezinshoofd": "van Dijk, Johannes W",
+        "year_of_birth": "52",
+        "M": "1",
+        "V": "",
+        "datum_vertrek": 200880,
+        "waarheen": "Van Walbeackstr. 19 II",
+        "remarks": "zie OWK Prinsengr 241 II"
+      },
+      {
+        "record_no": 12,
+        "datum": null,
+        "inwonenden/gezinshoofd": "Aries, Martina J",
+        "year_of_birth": "54",
+        "M": "",
+        "V": "1",
+        "datum_vertrek": 200880,
+        "waarheen": "Lindencrgcht 254 II",
+        "remarks": "zie OWK Prinsengr 241 II"
+      },
+      {
+        "record_no": 13,
+        "datum": null,
+        "inwonenden/gezinshoofd": "Duivenvoorde, Maria Y B P",
+        "year_of_birth": "53",
+        "M": "",
+        "V": "1",
+        "datum_vertrek": 200880,
+        "waarheen": "Prinsengracht 24 II",
+        "remarks": "zie OWK Prinsengr 241 II"
+      },
+      {
+        "record_no": 14,
+        "datum": null,
+        "inwonenden/gezinshoofd": "Engelen, Roeland A",
+        "year_of_birth": "54",
+        "M": "1",
+        "V": "",
+        "datum_vertrek": 301179,
+        "waarheen": "2e Weteringwarsstr 9",
+        "remarks": "zie OWK Prinsengr 241 II"
+      },
+      {
+        "record_no": 15,
+        "datum": null,
+        "inwonenden/gezinshoofd": "Groot, Dirk J",
+        "year_of_birth": "53",
+        "M": "1",
+        "V": "",
+        "datum_vertrek": 280328,
+        "waarheen": "Palmstraat 96 I",
+        "remarks": "zie OWK Prinsengr 241 II"
+      },
+      {
+        "record_no": 16,
+        "datum": null,
+        "inwonenden/gezinshoofd": "Koenraads, Johanna M",
+        "year_of_birth": "55",
+        "M": "",
+        "V": "1",
+        "datum_vertrek": 200880,
+        "waarheen": "Brederodestr. 112 III Ah",
+        "remarks": "zie OWK Prinsengr 241 II"
+      },
+      {
+        "record_no": 17,
+        "datum": null,
+        "inwonenden/gezinshoofd": "Hunfeld, Maria E M",
+        "year_of_birth": "52",
+        "M": "",
+        "V": "1",
+        "datum_vertrek": 100378,
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": 1,
+        "datum": 220378,
+        "inwonenden/gezinshoofd": "Borst, Margaretha J",
+        "year_of_birth": "57",
+        "M": "",
+        "V": "1",
+        "datum_vertrek": 140882,
+        "waarheen": "Rt",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 2,
+        "datum": 250578,
+        "inwonenden/gezinshoofd": "Ploegmakers, Jacobus A F J",
+        "year_of_birth": "54",
+        "M": "1",
+        "V": "",
+        "datum_vertrek": 171279,
+        "waarheen": "Amstelveenseweg 75 II",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 3,
+        "datum": 260678,
+        "inwonenden/gezinshoofd": "Keogh, Patrick P J",
+        "year_of_birth": "54",
+        "M": "1",
+        "V": "",
+        "datum_vertrek": 250278,
+        "waarheen": "Vondelstraat 86 hs",
+        "remarks": "Kopenhagen Den"
+      },
+      {
+        "volg_nr": 4,
+        "datum": 291278,
+        "inwonenden/gezinshoofd": "Stuitens, Jeroen J M",
+        "year_of_birth": "57",
+        "M": "1",
+        "V": "",
+        "datum_vertrek": 290878,
+        "waarheen": "Den oostkade 194",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 5,
+        "datum": 291278,
+        "inwonenden/gezinshoofd": "Finneurd, Kai",
+        "year_of_birth": "57",
+        "M": "1",
+        "V": "",
+        "datum_vertrek": 171279,
+        "waarheen": "Amstelveenseweg 75 II",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 6,
+        "datum": 290479,
+        "inwonenden/gezinshoofd": "Leeghe-Ruijseers, Sijsses, Euwke",
+        "year_of_birth": "57",
+        "M": "1",
+        "V": "",
+        "datum_vertrek": 200880,
+        "waarheen": "V. Ostadestr. 232 I achter",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 7,
+        "datum": 290479,
+        "inwonenden/gezinshoofd": "Verdonk, Cornelis J",
+        "year_of_birth": "57",
+        "M": "1",
+        "V": "",
+        "datum_vertrek": 290328,
+        "waarheen": "Willemsparkweg 124 I+III",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 8,
+        "datum": 280480,
+        "inwonenden/gezinshoofd": "Tesfalem, Yeman",
+        "year_of_birth": "57",
+        "M": "1",
+        "V": "",
+        "datum_vertrek": 280480,
+        "waarheen": "Zilverberg 24",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 9,
+        "datum": 290479,
+        "inwonenden/gezinshoofd": "Jonker, Franciscus G M",
+        "year_of_birth": "57",
+        "M": "1",
+        "V": "",
+        "datum_vertrek": 140981,
+        "waarheen": "Kuipersstr 37 I voor",
+        "remarks": "basis"
+      },
+      {
+        "volg_nr": 10,
+        "datum": 290479,
+        "inwonenden/gezinshoofd": "Gihaux, Bernard C",
+        "year_of_birth": "57",
+        "M": "1",
+        "V": "",
+        "datum_vertrek": 290479,
+        "waarheen": "Heiloo",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 11,
+        "datum": 280580,
+        "inwonenden/gezinshoofd": "Cohen, Martin P",
+        "year_of_birth": "57",
+        "M": "1",
+        "V": "",
+        "datum_vertrek": 280580,
+        "waarheen": "Van Ostadestr 232 I achter",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 12,
+        "datum": 280580,
+        "inwonenden/gezinshoofd": "Staal, Peter",
+        "year_of_birth": "57",
+        "M": "1",
+        "V": "",
+        "datum_vertrek": 280580,
+        "waarheen": "Kanaalstraat 182 III",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 13,
+        "datum": 280580,
+        "inwonenden/gezinshoofd": "den Drijver, Anne H M",
+        "year_of_birth": "57",
+        "M": "",
+        "V": "1",
+        "datum_vertrek": 280580,
+        "waarheen": "Kanaalstraat 182 III",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 14,
+        "datum": 270181,
+        "inwonenden/gezinshoofd": "van Rossum, Guido",
+        "year_of_birth": "57",
+        "M": "1",
+        "V": "",
+        "datum_vertrek": 270181,
+        "waarheen": "Conradstraat 19",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 15,
+        "datum": 200881,
+        "inwonenden/gezinshoofd": "de Vries, Angelique P",
+        "year_of_birth": "57",
+        "M": "",
+        "V": "1",
+        "datum_vertrek": 200881,
+        "waarheen": "Zandvoort",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 16,
+        "datum": 200881,
+        "inwonenden/gezinshoofd": "Boering, Annette S",
+        "year_of_birth": "59",
+        "M": "",
+        "V": "1",
+        "datum_vertrek": 141282,
+        "waarheen": "Tuinstrat 197 hs",
+        "remarks": "Haarl meer"
+      },
+      {
+        "volg_nr": 17,
+        "datum": 110881,
+        "inwonenden/gezinshoofd": "Joppe, Peter C",
+        "year_of_birth": "57",
+        "M": "1",
+        "V": "",
+        "datum_vertrek": 200881,
+        "waarheen": "Brederodestraat 106 II",
+        "remarks": ""
+      },
+      {
+        "volg_nr": 18,
+        "datum": 110881,
+        "inwonenden/gezinshoofd": "Weightman, Susan J",
+        "year_of_birth": "57",
+        "M": "",
+        "V": "1",
+        "datum_vertrek": 200881,
+        "waarheen": "Van Beuningensstr 147",
+        "remarks": "Canterbury GB"
+      },
+      {
+        "volg_nr": 19,
+        "datum": 100282,
+        "inwonenden/gezinshoofd": "Cats, Eduard M",
+        "year_of_birth": "59",
+        "M": "1",
+        "V": "",
+        "datum_vertrek": 291082,
+        "waarheen": "Ruyschstrat 122 I G",
+        "remarks": ""
+      }
+    ],
+    "footer_notes": "Aantekeningen Voor gele WK'n A-Z zie afgedane collectie Besch B & Wt. Nr. 113 dd. 24-5-1977"
+  },
+  "error": null,
+  "tokens": {
+    "input": 1058,
+    "output": 3449,
+    "total_cost_usd": 0.0
+  },
+  "finish_reason": "stop",
+  "street_name": "Prinsengracht - Prinsengracht",
+  "image_info": {
+    "filename": "WKAPL00078000001.jp2",
+    "image_url": "https://stadsarchiefamsterdam.memorix.io/resources/records/media/dafbb729-95e8-9020-452a-b7716db67a2e/iiif/3/1600204/full/max/0/default.jpg",
+    "inventarisnummer": "78",
+    "streetname": "Prinsengracht - Prinsengracht",
+    "rubriekscode": "Woningkaarten"
+  }
+}

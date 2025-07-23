@@ -1,0 +1,691 @@
+"""
+JSON Validator - A Streamlit application for validating and correcting JSON records
+with image references from Google Cloud Storage.
+"""
+
+import os
+import re
+import json
+import unicodedata
+from datetime import datetime, timedelta
+from typing import Dict, List, Any, Optional, Union, Tuple
+from enum import Enum
+import hashlib
+
+import streamlit as st
+import portalocker
+from google.oauth2 import service_account
+from google.cloud import storage
+
+# ===========================
+# Configuration
+# ===========================
+
+# Page configuration - MUST BE FIRST
+st.set_page_config(
+    page_title="JSON Validator", 
+    layout="wide", 
+    initial_sidebar_state="expanded"
+)
+
+# Constants
+LOCK_DIR = 'data/locks'
+IMAGE_EXTENSIONS = ['.jpg', '.jpeg', '.png', '.tif']
+DEFAULT_SIDEBAR_WIDTH = 500
+
+# ===========================
+# Custom CSS
+# ===========================
+
+def apply_custom_css():
+    """Apply custom CSS for sidebar width"""
+    st.markdown(f"""
+        <style>
+            /* Default sidebar width */
+            section[data-testid="stSidebar"] {{
+                width: {DEFAULT_SIDEBAR_WIDTH}px !important;
+            }}
+            .main .block-container {{
+                max-width: calc(100% - {DEFAULT_SIDEBAR_WIDTH + 20}px) !important;
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }}
+            section[data-testid="stSidebar"] > div:first-child {{
+                width: {DEFAULT_SIDEBAR_WIDTH}px !important;
+            }}
+        </style>
+    """, unsafe_allow_html=True)
+
+# ===========================
+# Field Schemas
+# ===========================
+
+class FieldType(Enum):
+    """Enumeration of field types"""
+    STRING = "string"
+    INT = "int"
+    FLOAT = "float"
+    ENUM = "enum"
+
+# Field validation schemas
+FIELD_SCHEMAS = {
+    "header": {
+        "street": {
+            "type": FieldType.STRING.value,
+            "description": "Street name",
+            "autocomplete": [
+                "Elisabeth Wolffstraat", "Saenredamstraat", "Spanderswoudstraat", 
+                "Haarlemmerdijk", "Vossiusstraat", "Stierstraat", "Burgemeester Fockstraat"
+            ],
+            "min_length": 10,
+            "max_length": 100
+        },
+        "house_number": {
+            "type": FieldType.STRING.value,
+            "pattern": r"^\d+(\s*(?:[A-Za-z]+|\d+))?(\s*(?:I{1,3}|IV|V|hs|huis|bg|boven|beneden|voor|achter))?(\s*(?:hoog|laag))?$",
+            "description": "House number with optional floor/position",
+            "placeholder": "60 III hoog"
+        },
+        "codenummer": {
+            "type": FieldType.STRING.value,
+            "pattern": r"^\d{4}$",
+            "description": "4-digit code number",
+            "placeholder": "0465"
+        },
+        "buurtletter": {
+            "type": FieldType.STRING.value,
+            "pattern": r"^[A-Z]{2}\s*[A-Z]*$",
+            "description": "Neighborhood code",
+            "placeholder": "SO I"
+        },
+        "stemdistrict_nr": {
+            "type": FieldType.STRING.value,
+            "pattern": r"^\d{2}-\d{3}$",
+            "description": "Voting district number",
+            "placeholder": "02-485"
+        }
+    },
+    "main_entries": {
+        "record_no": {
+            "type": FieldType.INT.value,
+            "min": 1,
+            "max": 999,
+            "description": "Record number"
+        },
+        "datum_registration": {
+            "type": FieldType.STRING.value,
+            "pattern": r"^(\d{6})?$",
+            "description": "Registration date (DDMMYY)",
+            "placeholder": "160636"
+        },
+        "gezinshoofd": {
+            "type": FieldType.STRING.value,
+            "pattern": r"^[A-Za-z\s\-',\.]+,\s*[A-Za-z\s\-'\.]+$",
+            "description": "Head of household (Last name, First name)",
+            "placeholder": "Keijzer, Tonko",
+            "min_length": 3,
+            "max_length": 100
+        },
+        "year_of_birth": {
+            "type": FieldType.STRING.value,
+            "pattern": r"^\d{2}$",
+            "description": "Year of birth (YY)",
+            "placeholder": "94"
+        },
+        "M": {
+            "type": FieldType.STRING.value,
+            "pattern": r"^(|\d+|/)$",
+            "description": "Number of males or slash, or empty",
+            "placeholder": "1"
+        },
+        "V": {
+            "type": FieldType.STRING.value,
+            "pattern": r"^(|\d+|/)$",
+            "description": "Number of females or slash, or empty",
+            "placeholder": "1"
+        },
+        "datum_vertrek": {
+            "type": FieldType.STRING.value,
+            "pattern": r"^(\d{6})?$",
+            "description": "Departure date (DDMMYY)",
+            "placeholder": "090659"
+        },
+        "waarheen": {
+            "type": FieldType.STRING.value,
+            "description": "Destination address",
+            "min_length": 0,
+            "max_length": 200
+        },
+        "remarks": {
+            "type": FieldType.STRING.value,
+            "description": "Additional remarks",
+            "max_length": 200
+        }
+    },
+    "follow_up_entries": {
+        "volg_nr": {
+            "type": FieldType.INT.value,
+            "min": 1,
+            "max": 999,
+            "description": "Follow-up number"
+        },
+        "datum": {
+            "type": FieldType.STRING.value,
+            "pattern": r"^(\d{6})?$",
+            "description": "Date (DDMMYY)",
+            "placeholder": "211070"
+        },
+        "inwonenden": {
+            "type": FieldType.STRING.value,
+            "pattern": r"^[A-Za-z\s\-',\.]+,\s*[A-Za-z\s\-'\.]+(\s*[A-Z]\.?)*$",
+            "description": "Resident name (Last name, First name Middle)",
+            "placeholder": "Aantjes, Robert M",
+            "min_length": 3,
+            "max_length": 100
+        },
+        "year_of_birth": {
+            "type": FieldType.STRING.value,
+            "pattern": r"^\d{2}$",
+            "description": "Year of birth (YY)",
+            "placeholder": "47"
+        },
+        "M": {
+            "type": FieldType.STRING.value,
+            "pattern": r"^(|\d+|/)$",
+            "description": "Number of males or slash, or empty",
+            "placeholder": "1"
+        },
+        "V": {
+            "type": FieldType.STRING.value,
+            "pattern": r"^(|\d+|/)$",
+            "description": "Number of females or slash, or empty",
+            "placeholder": "1"
+        },
+        "datum_vertrek": {
+            "type": FieldType.STRING.value,
+            "pattern": r"^(\d{6})?$",
+            "description": "Departure date (DDMMYY)",
+            "placeholder": "260371"
+        },
+        "waarheen": {
+            "type": FieldType.STRING.value,
+            "description": "Destination or reference",
+            "max_length": 200
+        },
+        "remarks": {
+            "type": FieldType.STRING.value,
+            "description": "Additional remarks",
+            "max_length": 200
+        }
+    },
+    "footer_notes": {
+        "type": FieldType.STRING.value,
+        "description": "Footer notes or additional information",
+        "max_length": 500
+    }
+}
+
+# ===========================
+# Google Cloud Storage Setup
+# ===========================
+
+@st.cache_data(ttl=3600)
+def load_gcs_config() -> Dict[str, Any]:
+    """Load GCS configuration from Streamlit secrets or local file"""
+    try:
+        gcs_conf = dict(st.secrets["connections"]["gcs"])
+        gcs_conf["private_key"] = gcs_conf["private_key"].replace("\\n", "\n")
+    except Exception:
+        with open("key.json") as f:
+            gcs_conf = json.load(f)
+    return gcs_conf
+
+@st.cache_resource
+def get_gcs_client() -> storage.Client:
+    """Get cached GCS client"""
+    conf = load_gcs_config()
+    creds = service_account.Credentials.from_service_account_info(conf)
+    return storage.Client(credentials=creds, project=conf.get("project_id"))
+
+def get_bucket() -> storage.Bucket:
+    """Get GCS bucket"""
+    client = get_gcs_client()
+    conf = load_gcs_config()
+    bucket_name = conf.get("GCS_BUCKET", "card_annotation")
+    return client.bucket(bucket_name)
+
+# ===========================
+# Utility Functions
+# ===========================
+
+def clean_json_text(raw: str) -> str:
+    """Clean raw JSON text by fixing common issues"""
+    # Replace lone hyphens with null
+    cleaned = re.sub(r'(:\s*)-(\s*[,\}])', r'\1null\2', raw)
+    # Quote numeric strings starting with 0
+    cleaned = re.sub(r'(:\s*)(0\d+)(\s*[,\}])', r'\1"\2"\3', cleaned)
+    return cleaned
+
+def type_convert(val: str, original: Any) -> Any:
+    """Convert string value to appropriate type based on original value"""
+    if isinstance(original, bool):
+        return val.lower() in ('true', '1', 'yes')
+    elif isinstance(original, int):
+        try:
+            return int(val)
+        except ValueError:
+            return None
+    elif isinstance(original, float):
+        try:
+            return float(val)
+        except ValueError:
+            return val
+    elif original is None:
+        low = val.strip().lower()
+        return None if low in ('', 'null', 'none') else val
+    return val
+
+# ===========================
+# Validation Functions
+# ===========================
+
+def validate_field(value: str, schema: Dict[str, Any]) -> Tuple[bool, Optional[str]]:
+    """Validate a field value against its schema"""
+    # Check required fields
+    if not value and schema.get("required", False):
+        return False, "This field is required"
+    
+    field_type = schema.get("type", FieldType.STRING.value)
+    
+    # String validation
+    if field_type == FieldType.STRING.value:
+        if "pattern" in schema:
+            norm_value = unicodedata.normalize("NFC", value)
+            if not re.fullmatch(schema["pattern"], norm_value):
+                return False, f"Invalid format. Expected: {schema.get('description')}"
+        
+        if "min_length" in schema and len(value) < schema["min_length"]:
+            return False, f"Minimum length is {schema['min_length']} characters"
+        
+        if "max_length" in schema and len(value) > schema["max_length"]:
+            return False, f"Maximum length is {schema['max_length']} characters"
+    
+    # Float validation
+    elif field_type == FieldType.FLOAT.value:
+        try:
+            num = float(value)
+            if "min" in schema and num < schema["min"]:
+                return False, f"Minimum value is {schema['min']}"
+            if "max" in schema and num > schema["max"]:
+                return False, f"Maximum value is {schema['max']}"
+        except ValueError:
+            return False, "Must be a valid number"
+    
+    # Integer validation
+    elif field_type == FieldType.INT.value:
+        try:
+            num = int(value)
+            if "min" in schema and num < schema["min"]:
+                return False, f"Minimum value is {schema['min']}"
+            if "max" in schema and num > schema["max"]:
+                return False, f"Maximum value is {schema['max']}"
+        except ValueError:
+            return False, "Must be a valid integer"
+    
+    # Enum validation
+    elif field_type == FieldType.ENUM.value:
+        if value not in schema.get("options", []):
+            return False, "Please select a valid option"
+    
+    return True, None
+
+# ===========================
+# File Management Functions
+# ===========================
+
+@st.cache_data(ttl=60)
+def get_gcs_file_lists() -> Tuple[List[str], set]:
+    """Get lists of raw and corrected files from GCS"""
+    try:
+        client = get_gcs_client()
+        bucket = get_bucket()
+        
+        # Get raw JSON files
+        raw_blobs = list(client.list_blobs(bucket, prefix="jsons/"))
+        raw_paths = [os.path.basename(b.name) for b in raw_blobs if b.name.endswith(".json")]
+        
+        # Get corrected files
+        corr_blobs = list(client.list_blobs(bucket, prefix="corrected/"))
+        corr_files = {os.path.basename(b.name) for b in corr_blobs if b.name.endswith(".json")}
+        
+        return raw_paths, corr_files
+    except Exception as e:
+        st.error(f"Error listing JSON files: {e}")
+        return [], set()
+
+def list_available_jsons() -> List[str]:
+    """List available JSON files that haven't been corrected or locked"""
+    raw_paths, corr_files = get_gcs_file_lists()
+    
+    available = []
+    for fname in sorted(raw_paths):
+        # Skip if already corrected
+        if fname in corr_files:
+            continue
+        
+        # Skip if locked
+        lock_file = os.path.join(LOCK_DIR, fname + '.lock')
+        if os.path.exists(lock_file):
+            continue
+        
+        available.append(fname)
+    
+    return available
+
+@st.cache_data(ttl=300)  # Cache for 5 minutes
+def load_json_from_gcs(filename: str) -> Tuple[Optional[Dict], Optional[str]]:
+    """Load and cache JSON content from GCS"""
+    try:
+        bucket = get_bucket()
+        blob = bucket.blob(f"jsons/{filename}")
+        raw = blob.download_as_text()
+        cleaned = clean_json_text(raw)
+        data = json.loads(cleaned)
+        return data, None
+    except Exception as e:
+        return None, str(e)
+
+@st.cache_data(ttl=600)  # Cache for 10 minutes
+def load_image_from_gcs(img_base: str) -> Tuple[Optional[bytes], Optional[str]]:
+    """Load and cache image from GCS"""
+    bucket = get_bucket()
+    
+    for ext in IMAGE_EXTENSIONS:
+        path = f"images/{img_base}{ext}"
+        blob = bucket.blob(path)
+        if blob.exists():
+            img_bytes = blob.download_as_bytes()
+            return img_bytes, f'{img_base}{ext}'
+    
+    return None, None
+
+def save_corrected_json(filename: str, data: Dict) -> None:
+    """Save corrected JSON to GCS"""
+    bucket = get_bucket()
+    blob = bucket.blob(f"corrected/{filename}")
+    blob.upload_from_string(
+        json.dumps(data, ensure_ascii=False, indent=2), 
+        content_type='application/json'
+    )
+
+# ===========================
+# UI Components
+# ===========================
+
+def create_field_input(
+    section: str, 
+    key: str, 
+    value: Any, 
+    col: st.columns, 
+    schema: Optional[Dict] = None
+) -> str:
+    """Create an input field with validation"""
+    field_key = f'{section}.{key}'
+    
+    if not schema:
+        return col.text_input(field_key, value=str(value))
+    
+    # Enum field
+    if schema.get("type") == FieldType.ENUM.value and "options" in schema:
+        options = schema["options"]
+        current_idx = options.index(str(value)) if str(value) in options else 0
+        return col.selectbox(
+            field_key, 
+            options=options, 
+            index=current_idx, 
+            help=schema.get("description", "")
+        )
+    
+    # Text field with autocomplete suggestions
+    if "autocomplete" in schema:
+        suggestions = schema["autocomplete"]
+        placeholder = schema.get("placeholder", "")
+        matching = [s for s in suggestions if str(value).lower() in s.lower()]
+        
+        if matching and col.checkbox(f"Show suggestions for {key}", key=f"suggest_{field_key}"):
+            col.info(f"Suggestions: {', '.join(matching[:5])}")
+    
+    # Regular text input
+    placeholder = schema.get("placeholder", "")
+    inp = col.text_input(
+        field_key, 
+        value=str(value), 
+        placeholder=placeholder, 
+        help=schema.get("description", "")
+    )
+    
+    # Validate input
+    valid, err = validate_field(inp, schema)
+    if not valid:
+        col.error(err)
+        st.session_state.validation_errors[field_key] = err
+    else:
+        st.session_state.validation_errors.pop(field_key, None)
+    
+    return inp
+
+def render_navigation() -> str:
+    """Render navigation controls and return current filename"""
+    files = list_available_jsons()
+    
+    if not files:
+        st.warning('No unprocessed records available.')
+        st.stop()
+    
+    # Navigation buttons
+    col_prev, col_next = st.columns(2)
+    
+    if col_prev.button('Previous') and st.session_state.idx > 0:
+        st.session_state.idx -= 1
+        st.session_state.validation_errors = {}
+    
+    if col_next.button('Next') and st.session_state.idx < len(files) - 1:
+        st.session_state.idx += 1
+        st.session_state.validation_errors = {}
+    
+    current = files[st.session_state.idx]
+    st.title(f"Record {st.session_state.idx + 1}/{len(files)}: {current}")
+    
+    return current
+
+def render_image_sidebar(data: Dict) -> None:
+    """Render image in sidebar"""
+    with st.sidebar:
+        st.header('Image Reference')
+        img_base = data.get('image_filename') or os.path.splitext(st.session_state.current_file)[0]
+        
+        img_bytes, img_name = load_image_from_gcs(img_base)
+        if img_bytes:
+            st.image(img_bytes, caption=img_name, use_container_width=True)
+        else:
+            st.warning(f'Image not found for {img_base}')
+
+def render_edit_form(validated_data: Dict) -> Dict:
+    """Render the main edit form and return updated data"""
+    with st.form('edit_form'):
+        updated = {}
+        st.session_state.validation_errors.clear()
+        
+        for section, content in validated_data.items():
+            st.subheader(section.replace('_', ' ').title())
+            section_schema = FIELD_SCHEMAS.get(section, {})
+            
+            # Handle dictionary sections
+            if isinstance(content, dict):
+                updated[section] = {}
+                for key, orig in content.items():
+                    if key.endswith('_needs review'):
+                        continue
+                    
+                    cols = st.columns((3, 1))
+                    inp = create_field_input(section, key, orig, cols[0], section_schema.get(key))
+                    needs review = cols[1].checkbox(
+                        'needs review', 
+                        key=f'{section}.{key}_needs review', 
+                        value=content.get(f'{key}_needs review', False)
+                    )
+                    
+                    updated[section][key] = type_convert(inp, orig)
+                    updated[section][f'{key}_needs review'] = needs review
+            
+            # Handle list sections
+            elif isinstance(content, list):
+                updated[section] = []
+                for idx, entry in enumerate(content, start=1):
+                    st.markdown(f"**{section.title()} #{idx}**")
+                    temp = {}
+                    
+                    for key, orig in entry.items():
+                        if key.endswith('_needs review'):
+                            continue
+                        
+                        cols = st.columns((3, 1))
+                        inp = create_field_input(
+                            f"{section}[{idx}]", 
+                            key, 
+                            orig, 
+                            cols[0], 
+                            section_schema.get(key)
+                        )
+                        needs review = cols[1].checkbox(
+                            'needs review', 
+                            key=f'{section}[{idx}].{key}_needs review', 
+                            value=entry.get(f'{key}_needs review', False)
+                        )
+                        
+                        temp[key] = type_convert(inp, orig)
+                        temp[f'{key}_needs review'] = needs review
+                    
+                    updated[section].append(temp)
+            
+            # Handle simple values
+            else:
+                cols = st.columns((3, 1))
+                inp = cols[0].text_input(section, value=str(content))
+                needs review = cols[1].checkbox('needs review', key=f'{section}_needs review')
+                updated[section] = type_convert(inp, content)
+                updated[f'{section}_needs review'] = needs review
+        
+        # Show validation summary
+        if st.session_state.validation_errors:
+            st.error(f"⚠️ There are {len(st.session_state.validation_errors)} validation errors. Please fix them before saving.")
+        
+        save_disabled = len(st.session_state.validation_errors) > 0
+        
+        if st.form_submit_button('Save corrections', disabled=save_disabled):
+            return updated
+        
+        return None
+
+# ===========================
+# Main Application
+# ===========================
+
+def main():
+    """Main application entry point"""
+    # Apply custom CSS
+    apply_custom_css()
+    
+    # Ensure lock directory exists
+    os.makedirs(LOCK_DIR, exist_ok=True)
+    
+    # Initialize session state
+    if 'idx' not in st.session_state:
+        st.session_state.idx = 0
+    
+    if 'validation_errors' not in st.session_state:
+        st.session_state.validation_errors = {}
+    
+    # Add refresh button
+    col1, col2, col3 = st.columns([1, 1, 2])
+    with col3:
+        if st.button('🔄 Refresh File List'):
+            get_gcs_file_lists.clear()
+            st.rerun()
+    
+    # Render navigation and get current file
+    current = render_navigation()
+    st.session_state.current_file = current
+    
+    # Lock current file
+    lock_path = os.path.join(LOCK_DIR, current + '.lock')
+    try:
+        lock = portalocker.Lock(lock_path, 'w', timeout=0)
+        lock.acquire()
+        st.session_state['lock'] = lock
+    except portalocker.exceptions.LockException:
+        st.warning('This record is being edited by someone else.')
+        st.stop()
+    
+    # Load JSON data
+    data, error = load_json_from_gcs(current)
+    if error:
+        st.error(f'Error loading JSON: {error}')
+        lock.release()
+        os.remove(lock_path)
+        st.stop()
+    
+    # Render image in sidebar
+    render_image_sidebar(data)
+    
+    # Get validated JSON section
+    validated = data.get('validated_json') if isinstance(data.get('validated_json'), dict) else {}
+    if not validated:
+        st.warning('No validated_json section; nothing to edit.')
+        lock.release()
+        os.remove(lock_path)
+        st.stop()
+    
+    # Render edit form
+    updated_data = render_edit_form(validated)
+    
+    # Handle form submission
+    if updated_data is not None:
+        data['validated_json'] = updated_data
+        try:
+            save_corrected_json(current, data)
+            st.success('Saved corrected record to GCS.')
+            
+            # Clear caches
+            get_gcs_file_lists.clear()
+            load_json_from_gcs.clear()
+            st.session_state.validation_errors.clear()
+            
+            # Release lock
+            lock.release()
+            os.remove(lock_path)
+            
+            # Rerun the app
+            if hasattr(st, 'rerun'):
+                st.rerun()
+            elif hasattr(st, 'experimental_rerun'):
+                st.experimental_rerun()
+            else:
+                st.warning('Upgrade Streamlit to >=1.27.0 to enable rerun functionality.')
+        
+        except Exception as e:
+            st.error(f'Error saving corrected JSON: {e}')
+            lock.release()
+            os.remove(lock_path)
+    
+    # Performance monitoring (development only)
+    if st.secrets.get("debug", False):
+        with st.expander("Cache Statistics"):
+            st.write("Cache hits can significantly improve performance.")
+            st.write("- File list cache: 1 minute TTL")
+            st.write("- JSON content cache: 5 minutes TTL")
+            st.write("- Image cache: 10 minutes TTL")
+            st.write("- GCS client: Persistent resource cache")
+
+if __name__ == "__main__":
+    main()

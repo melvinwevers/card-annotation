@@ -1,7 +1,0 @@
-{
-  "checked": "no",
-  "filename": "WKAPL00100001400",
-  "validated_json": null,
-  "error": "process_image_gpt4o.<locals>.call_gpt4o() got an unexpected keyword argument 'max_tokens'",
-  "image_url": "../processed_images/WKAPL00100001400.jpg"
-}
