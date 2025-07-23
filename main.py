@@ -311,9 +311,9 @@ def main() -> None:
     render_image_sidebar(data)
     
     # Main content area
-    validated = data.get("validated_json") or {}
+    validated = data.get("validated_json") or data.get("extracted_json") or {}
     if not validated:
-        st.info(f"⏭️ Skipping '{current}' - No validated_json section to edit.")
+        st.info(f"⏭️ Skipping '{current}' - No validated_json or extracted_json section to edit.")
         release_lock()
         
         # Auto-skip to next available record
@@ -337,8 +337,11 @@ def main() -> None:
     # ─── Save & Finalise ───────────────────────────────────────────────
     if updated:
         try:
-            # Update the data with the corrected validated_json
+            # Update the data with the corrected validated_json (standardize field name)
             data["validated_json"] = updated
+            # Remove extracted_json if it exists to avoid confusion
+            if "extracted_json" in data:
+                del data["extracted_json"]
             save_corrected_json(current, data)
             st.success("✅ Changes saved!")
             
