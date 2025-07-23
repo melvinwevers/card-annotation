@@ -7,7 +7,7 @@ PAGE_CONFIG = {
 }
 
 LOCK_DIR = "data/locks"
-IMAGE_EXTENSIONS = ['.jpg', '.jpeg', '.png', '.tif']
+IMAGE_EXTENSIONS = ['.jpg', '.jpeg', '.png', '.tif', '.jp2']
 DEFAULT_SIDEBAR_WIDTH = 500
 
 def apply_custom_css():
