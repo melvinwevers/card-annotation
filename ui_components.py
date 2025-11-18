@@ -24,20 +24,6 @@ __all__ = [
 ]
 
 # ──────────────────────────────────────────────────────────────────────────────
-# Helper functions
-# ──────────────────────────────────────────────────────────────────────────────
-
-def is_entry_empty(entry: Dict) -> bool:
-    """Check if an entry is completely empty (all fields are None, empty string, or whitespace)"""
-    for key, value in entry.items():
-        if key.endswith("_needs review"):
-            continue
-        # Consider entry non-empty if any field has meaningful content
-        if value is not None and str(value).strip():
-            return False
-    return True
-
-# ──────────────────────────────────────────────────────────────────────────────
 # Field‑level helpers
 # ──────────────────────────────────────────────────────────────────────────────
 
@@ -237,7 +223,7 @@ def render_image_sidebar(data: Dict) -> None:
                 
                 st.image(
                     img_bytes, 
-                    caption=f"📄 {img_name} ({zoom_level})", 
+https://console.cloud.google.com/storage/browser/_details/card_annotation/jsons/WKAPL00078000001.json?inv=1&invt=Ab3gdA&project=bmgn-376509                    caption=f"📄 {img_name} ({zoom_level})", 
                     use_container_width=False,
                     width=int(480 * zoom_factor)  # Fixed base width for sidebar
                 )
@@ -366,10 +352,6 @@ def render_edit_form(validated_data: Dict) -> Optional[Dict]:
 
         # ─── Dynamic field generation ────────────────────────────────────
         for section, content in validated_data.items():
-            # Skip follow_up_entries section but preserve the data
-            if section == "follow_up_entries":
-                updated[section] = content  # Preserve original data unchanged
-                continue
             # Better section headers with visual separators and counts
             section_title = section.replace("_", " ").title()
             priority_fields = PRIORITY_FIELDS.get(section, [])
@@ -379,10 +361,8 @@ def render_edit_form(validated_data: Dict) -> Optional[Dict]:
                 total_fields = len([k for k in content.keys() if not k.endswith("_needs review")])
                 priority_count = len([k for k in content.keys() if k in priority_fields])
             elif isinstance(content, list):
-                # Count only non-empty entries
-                non_empty_count = len([entry for entry in content if not is_entry_empty(entry)]) if content else 0
-                total_fields = non_empty_count
-                priority_count = non_empty_count  # For lists, all entries are considered
+                total_fields = len(content) if content else 0
+                priority_count = total_fields  # For lists, all entries are considered
             else:
                 total_fields = 1
                 priority_count = 1
@@ -396,17 +376,13 @@ def render_edit_form(validated_data: Dict) -> Optional[Dict]:
             # Add person name to main entries header
             header_text = f"### 📋 {section_title} {field_info}"
             if section == "main_entries" and isinstance(content, list) and content:
-                # Try to get the name from the first non-empty entry
-                non_empty_entries = [entry for entry in content if not is_entry_empty(entry)]
-                if non_empty_entries:
-                    first_entry = non_empty_entries[0]
-                    # Try both possible field names for backwards compatibility
-                    person_name = (first_entry.get('gezinshoofd', '') or 
-                                 first_entry.get('inwonenden/gezinshoofd', '')).strip()
-                    if person_name:
-                        # Extract just the name part (before comma if present)
-                        display_name = person_name.split(',')[0].strip() if ',' in person_name else person_name
-                        header_text = f"### 👤 {section_title}: **{display_name}** {field_info}"
+                # Try to get the name from the first entry
+                first_entry = content[0]
+                person_name = first_entry.get('gezinshoofd', '').strip()
+                if person_name:
+                    # Extract just the name part (before comma if present)
+                    display_name = person_name.split(',')[0].strip() if ',' in person_name else person_name
+                    header_text = f"### 👤 {section_title}: **{display_name}** {field_info}"
             
             st.markdown(header_text)
             st.markdown("---")
@@ -417,30 +393,18 @@ def render_edit_form(validated_data: Dict) -> Optional[Dict]:
             if isinstance(content, dict):
                 updated[section] = {}
                 
-                # Ensure all schema fields are included, even if missing from content
-                all_fields = set(section_schema.keys())
-                content_fields = set(k for k in content.keys() if not k.endswith("_needs review"))
-                missing_fields = all_fields - content_fields
-                
-                # Add missing fields with empty string values
-                full_content = content.copy()
-                for field in missing_fields:
-                    full_content[field] = ""  # Use empty string instead of None/null
-                
                 # Separate priority and non-priority fields
                 priority_fields = PRIORITY_FIELDS.get(section, [])
                 priority_items = []
                 other_items = []
                 
-                for key, orig in full_content.items():
+                for key, orig in content.items():
                     if key.endswith("_needs review"):
                         continue
-                    # Convert None/null values to empty string for UI display
-                    display_value = "" if orig is None else orig
                     if key in priority_fields:
-                        priority_items.append((key, display_value))
+                        priority_items.append((key, orig))
                     else:
-                        other_items.append((key, display_value))
+                        other_items.append((key, orig))
                 
                 # Render priority fields first with better layout
                 for key, orig in priority_items:
@@ -456,7 +420,7 @@ def render_edit_form(validated_data: Dict) -> Optional[Dict]:
                             field_schema['priority_marker'] = True
                         
                         needs_review = cols[1].checkbox(
-                            "🔍",
+                            "🔍 Review",
                             key=f"{current_file}.{section}.{key}_needs review",
                             value=content.get(f"{key}_needs review", False),
                             help="Mark this field if it needs manual review"
@@ -479,12 +443,11 @@ def render_edit_form(validated_data: Dict) -> Optional[Dict]:
                             cols = st.columns((3, 1, 0.2))
                             current_file = st.session_state.get("current_file", "unknown")
                             needs_review = cols[1].checkbox(
-                                "🔍",
+                                "🔍 Review",
                                 key=f"{current_file}.{section}.{key}_needs review",
                                 value=content.get(f"{key}_needs review", False),
                                 help="Mark this field if it needs manual review"
                             )
-                            
                             val = create_field_input(
                                 section, key, orig, cols[0], section_schema.get(key), unsure=needs_review
                             )
@@ -500,27 +463,13 @@ def render_edit_form(validated_data: Dict) -> Optional[Dict]:
             # List‑like subsection
             elif isinstance(content, list):
                 updated[section] = []
-                
-                # Filter out completely empty entries
-                non_empty_entries = [entry for entry in content if not is_entry_empty(entry)]
-                
-                for idx, entry in enumerate(non_empty_entries, start=1):
+                for idx, entry in enumerate(content, start=1):
                     # Better entry headers with person names
-                    # Convert plural section names to singular for individual entries
-                    if section == "main_entries":
-                        singular_section = "Main Entry"
-                    elif section == "follow_up_entries":
-                        singular_section = "Follow-up Entry"
-                    else:
-                        singular_section = section.title().rstrip('s')
-                    
-                    entry_title = f"📝 {singular_section} #{idx}"
+                    entry_title = f"📝 {section.title().rstrip('s')} #{idx}"
                     
                     # Add person name to entry title if available
                     if section == "main_entries":
-                        # Try both possible field names for backwards compatibility
-                        person_name = (entry.get('gezinshoofd', '') or 
-                                     entry.get('inwonenden/gezinshoofd', '')).strip()
+                        person_name = entry.get('gezinshoofd', '').strip()
                         if person_name:
                             # Show full name in entry header
                             entry_title = f"👤 **Main Entry #{idx}: {person_name}**"
@@ -532,30 +481,18 @@ def render_edit_form(validated_data: Dict) -> Optional[Dict]:
                     with st.expander(entry_title, expanded=True):
                         temp: Dict = {}
                         
-                        # Ensure all schema fields are included, even if missing from entry
-                        all_fields = set(section_schema.keys())
-                        entry_fields = set(k for k in entry.keys() if not k.endswith("_needs review"))
-                        missing_fields = all_fields - entry_fields
-                        
-                        # Add missing fields with empty string values
-                        full_entry = entry.copy()
-                        for field in missing_fields:
-                            full_entry[field] = ""  # Use empty string instead of None/null
-                        
                         # Separate priority and non-priority fields
                         priority_fields = PRIORITY_FIELDS.get(section, [])
                         priority_items = []
                         other_items = []
                         
-                        for key, orig in full_entry.items():
+                        for key, orig in entry.items():
                             if key.endswith("_needs review"):
                                 continue
-                            # Convert None/null values to empty string for UI display
-                            display_value = "" if orig is None else orig
                             if key in priority_fields:
-                                priority_items.append((key, display_value))
+                                priority_items.append((key, orig))
                             else:
-                                other_items.append((key, display_value))
+                                other_items.append((key, orig))
                         
                         # Render priority fields first
                         for key, orig in priority_items:
@@ -570,7 +507,7 @@ def render_edit_form(validated_data: Dict) -> Optional[Dict]:
                                     field_schema['priority_marker'] = True
                                 
                                 needs_review = cols[1].checkbox(
-                                    "🔍",
+                                    "🔍 Review",
                                     key=f"{current_file}.{section}[{idx}].{key}_needs review",
                                     value=entry.get(f"{key}_needs review", False),
                                     help="Mark this field if it needs manual review"
@@ -596,12 +533,11 @@ def render_edit_form(validated_data: Dict) -> Optional[Dict]:
                                     cols = st.columns((3, 1, 0.2))
                                     current_file = st.session_state.get("current_file", "unknown")
                                     needs_review = cols[1].checkbox(
-                                        "🔍",
+                                        "🔍 Review",
                                         key=f"{current_file}.{section}[{idx}].{key}_needs review",
                                         value=entry.get(f"{key}_needs review", False),
                                         help="Mark this field if it needs manual review"
                                     )
-                                    
                                     val = create_field_input(
                                         f"{section}[{idx}]",
                                         key,
