@@ -8,6 +8,7 @@ from datetime import datetime
 
 from config import PAGE_CONFIG, LOCK_DIR, apply_custom_css
 from file_ops import load_json_from_gcs, save_corrected_json, list_available_jsons
+from utils import clean_none_values
 from gcs_utils import get_gcs_file_lists
 from ui_components import (
     render_navigation,
@@ -104,9 +105,9 @@ def cleanup_stale_locks():
             with open(lock_path, 'r') as f:
                 lock_data = json.load(f)
             
-            # Check if lock is stale (older than 2 hours)
+            # Check if lock is stale (older than 30 minutes)
             locked_at = datetime.fromisoformat(lock_data.get('locked_at', ''))
-            if (current_time - locked_at).total_seconds() > 7200:  # 2 hours
+            if (current_time - locked_at).total_seconds() > 1800:  # 30 minutes
                 os.remove(lock_path)
                 stale_locks.append({
                     'file': lock_file.replace('.lock', ''),
@@ -312,6 +313,8 @@ def main() -> None:
     
     # Main content area
     validated = data.get("validated_json") or data.get("extracted_json") or {}
+    # Clean up "none" values that the model may have entered
+    validated = clean_none_values(validated)
     if not validated:
         st.info(f"⏭️ Skipping '{current}' - No validated_json or extracted_json section to edit.")
         release_lock()

@@ -1,0 +1,64 @@
+{
+  "filename": "WKAPL00197000004",
+  "extracted_json": {
+    "header": {
+      "street": "Gouden Leeuw",
+      "house_number": "848",
+      "codenummer": 2866,
+      "buurtletter": "DC2"
+    },
+    "main_entries": [
+      {
+        "record_no": "0001",
+        "datum": "290875",
+        "gezinshoofd": "de Vries, Alfred L",
+        "year_of_birth": "47",
+        "M": "",
+        "V": "",
+        "datum_vertrek": "260686",
+        "waarheen": "Laren",
+        "remarks": "Midwoud"
+      },
+      {
+        "record_no": "0002",
+        "datum": "270187",
+        "gezinshoofd": "Eikens, Herman",
+        "year_of_birth": "42",
+        "M": "",
+        "V": "",
+        "datum_vertrek": null,
+        "waarheen": "",
+        "remarks": ""
+      },
+      {
+        "record_no": "0003",
+        "datum": null,
+        "gezinshoofd": "Rajkovic, Neva",
+        "year_of_birth": "57",
+        "M": "",
+        "V": "",
+        "datum_vertrek": null,
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": "0001",
+        "datum": "270187",
+        "inwonenden": "Rajković, Neva",
+        "year_of_birth": "57",
+        "M": "",
+        "V": "",
+        "datum_vertrek": null,
+        "waarheen": "zoz gezin 3",
+        "remarks": ""
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "validation_warnings": null,
+  "model_used": "gpt-4o",
+  "extraction_method": "three_segment"
+}

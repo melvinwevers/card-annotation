@@ -1,19 +1,12 @@
-import unicodedata
-import re
 from enum import Enum
+
 
 class FieldType(Enum):
     STRING = "string"
     INT = "int"
     FLOAT = "float"
     ENUM = "enum"
-    
-# Priority fields for focused validation - focus mainly on main entries
-PRIORITY_FIELDS = {
-    'header': ['street', 'house_number'],
-    'main_entries': ['gezinshoofd', 'datum_registration', 'datum_vertrek', 'year_of_birth'], 
-    'follow_up_entries': []  # No priority fields for follow-up entries
-}
+
 
 FIELD_SCHEMAS = {
     "header": {
@@ -71,16 +64,6 @@ FIELD_SCHEMAS = {
             "pattern": r"^(|\d{2})$",
             "description": "Jaar (Geboortejaar) (YY) - Optional"
         },
-        "M": {
-            "type": FieldType.STRING.value,
-            "pattern": r"^(|\d+|/|-)$",
-            "description": "Aantal mannen (M) (Cijfers, Slash, Dash of leeg)",
-        },
-        "V": {
-            "type": FieldType.STRING.value,
-            "pattern": r"^(|\d+|/|-)$",
-            "description": "Aantal vrouwen (V) (Cijfers, Slash, Dash of leeg)",
-        },
         "datum_vertrek": {
             "type": FieldType.STRING.value,
             "pattern": r"^(\d{6})?$",
@@ -120,16 +103,6 @@ FIELD_SCHEMAS = {
             "pattern": r"^(|\d{2})$",
             "description": "Jaar (Geboortejaar) (YY) - Optional",
         },
-        "M": {
-            "type": FieldType.STRING.value,
-            "pattern": r"^(|\d+|/|-)$",
-            "description": "Aantal mannen (M) (Cijfers, Slash, Dash of leeg",
-        },
-        "V": {
-            "type": FieldType.STRING.value,
-            "pattern": r"^(|\d+|/|-)$",
-            "description": "Aantal vrouwen (V) (Cijfers, Slash, Dash of leeg",
-        },
         "datum_vertrek": {
             "type": FieldType.STRING.value,
             "pattern": r"^(\d{6})?$",
@@ -145,10 +118,5 @@ FIELD_SCHEMAS = {
             "description": "Opmerkingen",
             "max_length": 200
         }
-    },
-    "footer_notes": {
-        "type": FieldType.STRING.value,
-        "description": "Aantekeningen",
-        "max_length": 500
     }
 }

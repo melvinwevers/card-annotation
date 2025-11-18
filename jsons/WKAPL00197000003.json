@@ -1,0 +1,30 @@
+{
+  "filename": "WKAPL00197000003",
+  "extracted_json": {
+    "header": {
+      "street": "Gouden Leeuw",
+      "house_number": "847",
+      "codenummer": 2866,
+      "buurtletter": "DC2"
+    },
+    "main_entries": [
+      {
+        "record_no": "0001",
+        "datum": "070275",
+        "gezinshoofd": "Noortman, Margaretha J H",
+        "year_of_birth": "19",
+        "M": "-",
+        "V": "1",
+        "datum_vertrek": null,
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [],
+    "footer_notes": ""
+  },
+  "error": null,
+  "validation_warnings": null,
+  "model_used": "gpt-4o",
+  "extraction_method": "three_segment"
+}

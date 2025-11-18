@@ -1,0 +1,75 @@
+{
+  "filename": "WKAPL00197000001",
+  "extracted_json": {
+    "header": {
+      "street": "Gouden Leeuw",
+      "house_number": "845",
+      "codenummer": 2866,
+      "buurtletter": "DC 2"
+    },
+    "main_entries": [
+      {
+        "record_no": "0001",
+        "datum": "231275",
+        "gezinshoofd": "Scholten, Johannes",
+        "year_of_birth": "19",
+        "M": "2",
+        "V": "1",
+        "datum_vertrek": "020180",
+        "waarheen": "Klieverink 615",
+        "remarks": "Diemen"
+      },
+      {
+        "record_no": "0002",
+        "datum": "070581",
+        "gezinshoofd": "Scholten, Antonius J",
+        "year_of_birth": "58",
+        "M": "1",
+        "V": "1",
+        "datum_vertrek": "250681",
+        "waarheen": "3e Oosterparkstraat 14 III",
+        "remarks": ""
+      },
+      {
+        "record_no": "0003",
+        "datum": "290981",
+        "gezinshoofd": "Scholten, Johannes",
+        "year_of_birth": "19",
+        "M": "2",
+        "V": "1",
+        "datum_vertrek": null,
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": "0001",
+        "datum": "200880",
+        "inwonenden": "Scherpbier, Hildegarda G.",
+        "year_of_birth": "58",
+        "M": "1",
+        "V": "",
+        "datum_vertrek": "250382",
+        "waarheen": "Ruysdaelstraat 41",
+        "remarks": "Nmg"
+      },
+      {
+        "volg_nr": "0002",
+        "datum": "150681",
+        "inwonenden": "Kwakernaak, Judith M.",
+        "year_of_birth": "60",
+        "M": "",
+        "V": "1",
+        "datum_vertrek": "060781",
+        "waarheen": "Hofmeyrstr. 9 I",
+        "remarks": "Capelle a/d IJssel"
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "validation_warnings": null,
+  "model_used": "gpt-4o",
+  "extraction_method": "three_segment"
+}

@@ -1,0 +1,64 @@
+{
+  "filename": "WKAPL00197000002",
+  "extracted_json": {
+    "header": {
+      "street": "Gouden Leeuw",
+      "house_number": "846",
+      "codenummer": 2866,
+      "buurtletter": "DC2"
+    },
+    "main_entries": [
+      {
+        "record_no": "0001",
+        "datum": "240175",
+        "gezinshoofd": "van Amstel, Johannes",
+        "year_of_birth": "50",
+        "M": "",
+        "V": "",
+        "datum_vertrek": "080883",
+        "waarheen": "Haarlemmermeer",
+        "remarks": "Amstelveen"
+      },
+      {
+        "record_no": "0002",
+        "datum": null,
+        "gezinshoofd": "In gebruik bij J.M. van Boheemen (woont in Son)",
+        "year_of_birth": null,
+        "M": "",
+        "V": "",
+        "datum_vertrek": null,
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "follow_up_entries": [
+      {
+        "volg_nr": null,
+        "datum": "050687",
+        "inwonenden": "Konings, Jan P",
+        "year_of_birth": "65",
+        "M": "",
+        "V": "",
+        "datum_vertrek": null,
+        "waarheen": "",
+        "remarks": ""
+      },
+      {
+        "volg_nr": null,
+        "datum": "310388",
+        "inwonenden": "Koning, Menno J",
+        "year_of_birth": "66",
+        "M": "",
+        "V": "",
+        "datum_vertrek": null,
+        "waarheen": "",
+        "remarks": ""
+      }
+    ],
+    "footer_notes": ""
+  },
+  "error": null,
+  "validation_warnings": null,
+  "model_used": "gpt-4o",
+  "extraction_method": "three_segment"
+}

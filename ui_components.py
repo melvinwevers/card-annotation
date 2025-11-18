@@ -1,20 +1,39 @@
-import os
 import base64
-import streamlit.components.v1 as components
+import os
 from typing import Any, Dict, List, Optional
 
-import streamlit as st
 import portalocker  # lock reference still needed elsewhere
+import streamlit as st
+import streamlit.components.v1 as components
 
 from config import LOCK_DIR
-from schemas import FIELD_SCHEMAS, FieldType, PRIORITY_FIELDS
-from utils import type_convert, validate_field
 from file_ops import (
-    list_available_jsons,
-    load_json_from_gcs,
-    load_image_from_gcs,
     get_file_status,
+    list_available_jsons,
+    load_image_from_gcs,
+    load_json_from_gcs,
 )
+from schemas import FIELD_SCHEMAS, FieldType
+from utils import type_convert, validate_field, validate_entry_dates
+
+
+def format_filename_for_display(filename: str) -> str:
+    """
+    Format filename for display by removing leading zeros from numeric parts.
+
+    Example: WKAPL00197000001.json -> WKAPL197000001.json
+    """
+    import re
+
+    def remove_leading_zeros(match):
+        num = match.group(0)
+        # Keep at least one digit (handle edge case of all zeros)
+        return num.lstrip("0") or "0"
+
+    # Process each numeric sequence independently
+    formatted = re.sub(r"\d+", remove_leading_zeros, filename)
+    return formatted
+
 
 __all__ = [
     "create_field_input",
@@ -27,44 +46,48 @@ __all__ = [
 # Field‑level helpers
 # ──────────────────────────────────────────────────────────────────────────────
 
+
 def create_field_input(
     section: str,
     key: str,
     value: Any,
     col,
     schema: Optional[Dict] = None,
-    unsure: bool = False,
 ) -> Any:
     """Render a single text input with inline validation and return the
     type‑converted value."""
     # Include current file name in the key to prevent cross-record value persistence
     current_file = st.session_state.get("current_file", "unknown")
     field_key = f"{current_file}.{section}.{key}"
-    #field_key = key
+    # field_key = key
 
     # Use description as label if available, otherwise use the key
-    base_label = schema.get("description", key) if schema else key
-    
-    # Add priority indicator for priority fields
-    is_priority = key in PRIORITY_FIELDS.get(section, [])
-    show_priority_marker = schema.get('priority_marker', False) if schema else False
-    
-    if is_priority and show_priority_marker:
-        label = f"⭐ {base_label}"
-    elif is_priority:
-        label = f"🎯 {base_label}"
-    else:
-        label = base_label
+    label = schema.get("description", key) if schema else key
+
+    # Convert value to string and handle special cases
+    str_value = str(value)
+
+    # For record_no and volg_nr fields, strip leading zeros for display
+    # (but keep them for other fields like dates)
+    if key in ("record_no", "volg_nr") and str_value.isdigit() and len(str_value) > 1:
+        str_value = str_value.lstrip('0') or '0'
 
     inp = col.text_input(
         label,
-        value=str(value),
+        value=str_value,
         key=field_key,
         placeholder=schema.get("placeholder", "") if schema else None,
     )
 
     # Live value - regardless of original type
     val_now = st.session_state.get(field_key, inp)
+
+    # For record_no and volg_nr fields, also strip leading zeros from the actual value
+    # This includes handling whitespace and ensuring we strip even single leading zeros
+    if key in ("record_no", "volg_nr") and isinstance(val_now, str):
+        val_now = val_now.strip()  # Remove whitespace first
+        if val_now.isdigit() and len(val_now) > 1:
+            val_now = val_now.lstrip('0') or '0'
 
     # Placeholder for an eventual error message
     error_container = col.empty()
@@ -73,11 +96,7 @@ def create_field_input(
         valid, err = validate_field(val_now, schema, key, section)
         if not valid:
             error_container.error(err)
-            if not unsure:
-                # only count as blocking if not marked "unsure"
-                st.session_state.validation_errors[field_key] = err
-            else:
-                st.session_state.validation_errors.pop(field_key, None)
+            st.session_state.validation_errors[field_key] = err
         else:
             # Remove any existing validation error and clear the container
             st.session_state.validation_errors.pop(field_key, None)
@@ -89,6 +108,7 @@ def create_field_input(
 # ──────────────────────────────────────────────────────────────────────────────
 # Navigation + sidebar helpers
 # ──────────────────────────────────────────────────────────────────────────────
+
 
 def _ensure_current_record_visible(files: List[str]) -> List[str]:
     """Guarantee that the file currently being edited is present in *files*.
@@ -131,42 +151,50 @@ def render_navigation() -> str:
 
     # ─── Enhanced navigation buttons ───────────────────────────────────────
     col_prev, col_info, col_next = st.columns([1, 2, 1])
-    
+
     with col_prev:
         prev_disabled = st.session_state.idx == 0
-        if st.button(
-            "⬅️ Previous", 
-            key="prev_button", 
-            use_container_width=True,
-            disabled=prev_disabled,
-            help="Go to previous record (Ctrl+←)"
-        ) and not prev_disabled:
+        if (
+            st.button(
+                "⬅️ Previous",
+                key="prev_button",
+                use_container_width=True,
+                disabled=prev_disabled,
+                help="Go to previous record (Ctrl+←)",
+            )
+            and not prev_disabled
+        ):
             st.session_state.idx -= 1
             st.session_state.validation_errors.clear()
-    
+
     with col_info:
         # Enhanced progress indicator with statistics
         progress = (st.session_state.idx + 1) / len(files)
         completed_files = st.session_state.get("finalized_files", set())
         completion_rate = len(completed_files) / max(1, len(files))
-        
+
         st.progress(progress, text=f"Record {st.session_state.idx + 1} of {len(files)}")
-        
+
         # Show completion statistics
         if completed_files:
-            st.caption(f"✅ {len(completed_files)} completed ({completion_rate:.0%} done)")
+            st.caption(
+                f"✅ {len(completed_files)} completed ({completion_rate:.0%} done)"
+            )
         else:
             st.caption("📊 Session starting...")
-    
+
     with col_next:
         next_disabled = st.session_state.idx >= len(files) - 1
-        if st.button(
-            "Next ➡️", 
-            key="next_button", 
-            use_container_width=True,
-            disabled=next_disabled,
-            help="Go to next record (Ctrl+→)"
-        ) and not next_disabled:
+        if (
+            st.button(
+                "Next ➡️",
+                key="next_button",
+                use_container_width=True,
+                disabled=next_disabled,
+                help="Go to next record (Ctrl+→)",
+            )
+            and not next_disabled
+        ):
             st.session_state.idx += 1
             st.session_state.validation_errors.clear()
 
@@ -177,77 +205,89 @@ def render_navigation() -> str:
     status = get_file_status(current)
     status_emoji = {"uncorrected": "📝", "corrected": "✅", "locked": "🔒"}
     status_color = {"uncorrected": "", "corrected": ":green", "locked": ":orange"}
-    
-    st.title(f"Record {st.session_state.idx + 1}/{len(files)}: {current}")
-    st.markdown(f"{status_emoji.get(status, '')} **Status**: {status_color.get(status, '')}{status.title()}")
-    
+
+    # Format filename for display (remove leading zeros)
+    display_name = format_filename_for_display(current)
+    st.title(f"Record {st.session_state.idx + 1}/{len(files)}: {display_name}")
+    st.markdown(
+        f"{status_emoji.get(status, '')} **Status**: "
+        f"{status_color.get(status, '')}{status.title()}"
+    )
+
     if status == "corrected":
         st.info("ℹ️ This file has been corrected but can be re-edited if needed")
-    
+
     return current
 
 
 def render_image_sidebar(data: Dict) -> None:
     with st.sidebar:
         st.header("📸 Image Reference")
-        img_base = data.get("image_filename") or os.path.splitext(
-            st.session_state.current_file
-        )[0]
+        img_base = (
+            data.get("image_filename")
+            or os.path.splitext(st.session_state.current_file)[0]
+        )
         img_bytes, img_name = load_image_from_gcs(img_base)
         if img_bytes:
             # Add zoom controls with more options
             zoom_level = st.select_slider(
-                "🔍 Zoom Level", 
+                "🔍 Zoom Level",
                 options=["50%", "75%", "100%", "125%", "150%", "200%", "250%"],
                 value="100%",
                 key="image_zoom",
-                help="Adjust image size for better viewing"
+                help="Adjust image size for better viewing",
             )
-            
+
             # Display image with zoom - use container width for consistent sizing
             zoom_factor = int(zoom_level.rstrip("%")) / 100
-            
+
             # Create a container with specific styling for image zoom
             if zoom_factor != 1.0:
-                st.markdown(f"""
+                st.markdown(
+                    f"""
                 <div style="
-                    overflow: auto; 
-                    max-height: 600px; 
-                    border: 1px solid var(--border-color, #ddd); 
+                    overflow: auto;
+                    max-height: 600px;
+                    border: 1px solid var(--border-color, #ddd);
                     border-radius: 8px;
                     padding: 10px;
                     background: var(--background-color, white);
                     box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
                 ">
-                """, unsafe_allow_html=True)
-                
-                st.image(
-                    img_bytes, 
-https://console.cloud.google.com/storage/browser/_details/card_annotation/jsons/WKAPL00078000001.json?inv=1&invt=Ab3gdA&project=bmgn-376509                    caption=f"📄 {img_name} ({zoom_level})", 
-                    use_container_width=False,
-                    width=int(480 * zoom_factor)  # Fixed base width for sidebar
+                """,
+                    unsafe_allow_html=True,
                 )
-                
+
+                st.image(
+                    img_bytes,
+                    caption=f"📄 {img_name} ({zoom_level})",
+                    use_container_width=False,
+                    width=int(480 * zoom_factor),  # Fixed base width for sidebar
+                )
+
                 st.markdown("</div>", unsafe_allow_html=True)
             else:
-                st.image(
-                    img_bytes, 
-                    caption=f"📄 {img_name}", 
-                    use_container_width=True
-                )
-            
+                st.image(img_bytes, caption=f"📄 {img_name}", use_container_width=True)
+
             # Image info
             st.caption(f"File: {img_name}")
-            
+
             # Quick image actions
             col1, col2 = st.columns(2)
             with col1:
-                if st.button("🔄 Refresh", help="Reload image", use_container_width=True):
+                if st.button(
+                    "🔄 Refresh", help="Reload image", use_container_width=True
+                ):
                     st.cache_data.clear()
                     st.rerun()
             with col2:
                 # Download button would go here if needed
-                st.button("🔍 Enhance", help="Coming soon", disabled=True, use_container_width=True)
+                st.button(
+                    "🔍 Enhance",
+                    help="Coming soon",
+                    disabled=True,
+                    use_container_width=True,
+                )
         else:
             st.error(f"📷 Image not found for {img_base}")
             st.info("Check if the image file exists in the GCS bucket")
@@ -256,6 +296,7 @@ https://console.cloud.google.com/storage/browser/_details/card_annotation/jsons/
 # ──────────────────────────────────────────────────────────────────────────────
 # Main edit form
 # ──────────────────────────────────────────────────────────────────────────────
+
 
 def _clear_form_state():
     """Clear form state when navigating to a new record to prevent value persistence"""
@@ -266,9 +307,16 @@ def _clear_form_state():
         for key in st.session_state.keys():
             if isinstance(key, str) and key.startswith(f"{current_file}."):
                 keys_to_remove.append(key)
-        
+
         for key in keys_to_remove:
             st.session_state.pop(key, None)
+
+        # Also clear deleted entries tracking for previous file
+        prev_file = st.session_state.get("previous_file")
+        if prev_file:
+            for key in list(st.session_state.keys()):
+                if isinstance(key, str) and key.startswith(f"{prev_file}.deleted_"):
+                    st.session_state.pop(key, None)
 
 
 def render_edit_form(validated_data: Dict) -> Optional[Dict]:
@@ -279,28 +327,28 @@ def render_edit_form(validated_data: Dict) -> Optional[Dict]:
 
     # Clear any stale errors from previous record / rerun
     st.session_state.validation_errors.clear()
-    
+
     # Clear form state when navigating to a new record
     if st.session_state.get("just_navigated", False):
         _clear_form_state()
 
     # Enhanced header with stats and options
     col1, col2, col3 = st.columns([2, 1, 1])
-    
+
     with col1:
-        show_all_fields = st.checkbox("Show all fields", value=False, key="show_all_fields")
-    
+        st.write("")  # Placeholder for layout consistency
+
     with col2:
         # Toggleable keyboard shortcuts hint
         show_shortcuts = st.button("⌨️ Shortcuts", help="Toggle keyboard shortcuts help")
-        
+
         # Toggle shortcuts visibility
         if show_shortcuts:
             if st.session_state.get("show_shortcuts_panel", False):
                 st.session_state.show_shortcuts_panel = False
             else:
                 st.session_state.show_shortcuts_panel = True
-    
+
     with col3:
         # Quick validation status with more detail
         if st.session_state.validation_errors:
@@ -308,286 +356,226 @@ def render_edit_form(validated_data: Dict) -> Optional[Dict]:
             st.error(f"❌ {error_count} error{'s' if error_count != 1 else ''}")
         else:
             st.success("✅ Valid")
-    
+
     # Show shortcuts panel if toggled on
     if st.session_state.get("show_shortcuts_panel", False):
-        st.info("""
+        st.info(
+            """
         **⌨️ Keyboard Shortcuts:**
-        - `Ctrl + S`: Save changes
-        - `Ctrl + →`: Next record  
-        - `Ctrl + ←`: Previous record
+        - `Enter`: Save/validate current field
         - `Tab`: Move to next field
-        """)
-    
+        - `Ctrl + S`: Save all changes and move to next record
+        - `Ctrl + →`: Next record
+        - `Ctrl + ←`: Previous record
+        """
+        )
+
     # Better info styling with expandable tips
     info_col, tips_col = st.columns([3, 1])
-    
+
     with info_col:
-        if not show_all_fields:
-            st.info("🎯 **Priority Fields Only**: Showing only the most important fields - focus on **Main Entries** (person name, registration/departure dates, year of birth) and basic header info. Toggle above to see all fields.")
-        else:
-            st.info("📋 **All Fields**: Showing all available fields. Priority fields are marked with ⭐")
-    
+        st.write("")  # Placeholder for layout consistency
+
     with tips_col:
         with st.expander("💡 Annotation Tips"):
-            st.markdown("""
+            st.markdown(
+                """
             **Quick Tips:**
             - Use `Tab` to move between fields
-            - Mark unclear fields for review
             - Date format: DDMMYY (e.g., 160636)
             - Names: Last, First (e.g., Keijzer, Tonko)
             - Leave empty if illegible
-            """)
-            
+            """
+            )
+
             # Quick reference for common patterns
-            st.markdown("""
+            st.markdown(
+                """
             **Common Patterns:**
             - House numbers: 18, 18a, 18 II, 18 huis
             - Dates: 6 digits DDMMYY
             - Years: 2 digits YY (94 = 1894)
-            """)
-    
+            """
+            )
+
+    # Initialize deletion tracking
+    current_file = st.session_state.get("current_file", "unknown")
+
     with st.form("edit_form", clear_on_submit=False):
         updated: Dict = {}
 
         # ─── Dynamic field generation ────────────────────────────────────
         for section, content in validated_data.items():
-            # Better section headers with visual separators and counts
+            # Skip footer_notes - preserve but don't display
+            if section == "footer_notes":
+                updated[section] = content
+                continue
+
+            # Better section headers with visual separators
             section_title = section.replace("_", " ").title()
-            priority_fields = PRIORITY_FIELDS.get(section, [])
-            
-            # Count fields to show
-            if isinstance(content, dict):
-                total_fields = len([k for k in content.keys() if not k.endswith("_needs review")])
-                priority_count = len([k for k in content.keys() if k in priority_fields])
-            elif isinstance(content, list):
-                total_fields = len(content) if content else 0
-                priority_count = total_fields  # For lists, all entries are considered
-            else:
-                total_fields = 1
-                priority_count = 1
-            
-            # Show field count info and person name for main entries
-            if show_all_fields:
-                field_info = f"({priority_count} priority, {total_fields} total)"
-            else:
-                field_info = f"({priority_count} priority fields)"
-            
-            # Add person name to main entries header
-            header_text = f"### 📋 {section_title} {field_info}"
-            if section == "main_entries" and isinstance(content, list) and content:
-                # Try to get the name from the first entry
-                first_entry = content[0]
-                person_name = first_entry.get('gezinshoofd', '').strip()
-                if person_name:
-                    # Extract just the name part (before comma if present)
-                    display_name = person_name.split(',')[0].strip() if ',' in person_name else person_name
-                    header_text = f"### 👤 {section_title}: **{display_name}** {field_info}"
-            
+            header_text = f"### 📋 {section_title}"
+
             st.markdown(header_text)
             st.markdown("---")
-            
+
             section_schema = FIELD_SCHEMAS.get(section, {})
 
             # Dict‑like subsection
             if isinstance(content, dict):
                 updated[section] = {}
-                
-                # Separate priority and non-priority fields
-                priority_fields = PRIORITY_FIELDS.get(section, [])
-                priority_items = []
-                other_items = []
-                
+
                 for key, orig in content.items():
                     if key.endswith("_needs review"):
                         continue
-                    if key in priority_fields:
-                        priority_items.append((key, orig))
-                    else:
-                        other_items.append((key, orig))
-                
-                # Render priority fields first with better layout
-                for key, orig in priority_items:
-                    # Use container for better spacing
+                    # Skip M/V fields - preserve them but don't show in form
+                    if key in ("M", "V"):
+                        updated[section][key] = orig
+                        continue
                     with st.container():
-                        cols = st.columns((3, 1, 0.2))  # Added small space column
-                        current_file = st.session_state.get("current_file", "unknown")
-                        
-                        # Add star for priority fields when showing all fields
                         field_schema = section_schema.get(key, {})
-                        if show_all_fields:
-                            field_schema = field_schema.copy() if field_schema else {}
-                            field_schema['priority_marker'] = True
-                        
-                        needs_review = cols[1].checkbox(
-                            "🔍 Review",
-                            key=f"{current_file}.{section}.{key}_needs review",
-                            value=content.get(f"{key}_needs review", False),
-                            help="Mark this field if it needs manual review"
-                        )
-                        
+
                         val = create_field_input(
-                            section, key, orig, cols[0], field_schema, unsure=needs_review
+                            section,
+                            key,
+                            orig,
+                            st,
+                            field_schema,
                         )
                         updated[section][key] = val
-                        updated[section][f"{key}_needs review"] = needs_review
-                        
-                        # Add small vertical space
-                        st.write("")
-                
-                # Render non-priority fields only if showing all fields
-                if show_all_fields and other_items:
-                    st.markdown("**📄 Additional Fields**")
-                    for key, orig in other_items:
-                        with st.container():
-                            cols = st.columns((3, 1, 0.2))
-                            current_file = st.session_state.get("current_file", "unknown")
-                            needs_review = cols[1].checkbox(
-                                "🔍 Review",
-                                key=f"{current_file}.{section}.{key}_needs review",
-                                value=content.get(f"{key}_needs review", False),
-                                help="Mark this field if it needs manual review"
-                            )
-                            val = create_field_input(
-                                section, key, orig, cols[0], section_schema.get(key), unsure=needs_review
-                            )
-                            updated[section][key] = val
-                            updated[section][f"{key}_needs review"] = needs_review
-                            st.write("")
-                else:
-                    # Still include non-priority fields in updated dict with original values
-                    for key, orig in other_items:
-                        updated[section][key] = orig
-                        updated[section][f"{key}_needs review"] = content.get(f"{key}_needs review", False)
 
             # List‑like subsection
             elif isinstance(content, list):
                 updated[section] = []
+
+                # Get deleted entries tracking
+                deleted_key = f"{current_file}.deleted_{section}"
+                if deleted_key not in st.session_state:
+                    st.session_state[deleted_key] = set()
+
+                # Track pending deletion confirmation
+                pending_confirm_key = f"{current_file}.pending_confirm_{section}"
+                if pending_confirm_key not in st.session_state:
+                    st.session_state[pending_confirm_key] = None
+
                 for idx, entry in enumerate(content, start=1):
+                    # Skip if this entry is marked for deletion
+                    if idx in st.session_state[deleted_key]:
+                        continue
+
                     # Better entry headers with person names
                     entry_title = f"📝 {section.title().rstrip('s')} #{idx}"
-                    
+
                     # Add person name to entry title if available
                     if section == "main_entries":
-                        person_name = entry.get('gezinshoofd', '').strip()
+                        person_name = entry.get("gezinshoofd", "").strip()
                         if person_name:
                             # Show full name in entry header
                             entry_title = f"👤 **Main Entry #{idx}: {person_name}**"
                     elif section == "follow_up_entries":
-                        person_name = entry.get('inwonenden', '').strip()
+                        person_name = entry.get("inwonenden", "").strip()
                         if person_name:
                             entry_title = f"👥 **Follow-up #{idx}: {person_name}**"
-                    
+
                     with st.expander(entry_title, expanded=True):
                         temp: Dict = {}
-                        
-                        # Separate priority and non-priority fields
-                        priority_fields = PRIORITY_FIELDS.get(section, [])
-                        priority_items = []
-                        other_items = []
-                        
+
                         for key, orig in entry.items():
                             if key.endswith("_needs review"):
                                 continue
-                            if key in priority_fields:
-                                priority_items.append((key, orig))
-                            else:
-                                other_items.append((key, orig))
-                        
-                        # Render priority fields first
-                        for key, orig in priority_items:
+                            # Skip M/V fields - preserve them but don't show in form
+                            if key in ("M", "V"):
+                                temp[key] = orig
+                                continue
                             with st.container():
-                                cols = st.columns((3, 1, 0.2))
-                                current_file = st.session_state.get("current_file", "unknown")
-                                
-                                # Add star for priority fields when showing all fields
                                 field_schema = section_schema.get(key, {})
-                                if show_all_fields:
-                                    field_schema = field_schema.copy() if field_schema else {}
-                                    field_schema['priority_marker'] = True
-                                
-                                needs_review = cols[1].checkbox(
-                                    "🔍 Review",
-                                    key=f"{current_file}.{section}[{idx}].{key}_needs review",
-                                    value=entry.get(f"{key}_needs review", False),
-                                    help="Mark this field if it needs manual review"
-                                )
-                                
+
                                 val = create_field_input(
                                     f"{section}[{idx}]",
                                     key,
                                     orig,
-                                    cols[0],
+                                    st,
                                     field_schema,
-                                    unsure=needs_review
                                 )
                                 temp[key] = val
-                                temp[f"{key}_needs review"] = needs_review
-                                st.write("")
-                        
-                        # Render non-priority fields only if showing all fields
-                        if show_all_fields and other_items:
-                            st.markdown("**📄 Additional Fields**")
-                            for key, orig in other_items:
-                                with st.container():
-                                    cols = st.columns((3, 1, 0.2))
-                                    current_file = st.session_state.get("current_file", "unknown")
-                                    needs_review = cols[1].checkbox(
-                                        "🔍 Review",
-                                        key=f"{current_file}.{section}[{idx}].{key}_needs review",
-                                        value=entry.get(f"{key}_needs review", False),
-                                        help="Mark this field if it needs manual review"
-                                    )
-                                    val = create_field_input(
-                                        f"{section}[{idx}]",
-                                        key,
-                                        orig,
-                                        cols[0],
-                                        section_schema.get(key),
-                                        unsure=needs_review
-                                    )
-                                    temp[key] = val
-                                    temp[f"{key}_needs review"] = needs_review
-                                    st.write("")
+
+                        # Validate entry dates (departure must be after registration)
+                        date_valid, date_error = validate_entry_dates(temp, section)
+                        if not date_valid:
+                            error_key = f"{current_file}.{section}[{idx}].date_comparison"
+                            st.error(date_error)
+                            st.session_state.validation_errors[error_key] = date_error
                         else:
-                            # Still include non-priority fields with original values
-                            for key, orig in other_items:
-                                temp[key] = orig
-                                temp[f"{key}_needs review"] = entry.get(f"{key}_needs review", False)
-                    
-                    updated[section].append(temp)
+                            # Clear any existing date comparison error for this entry
+                            error_key = f"{current_file}.{section}[{idx}].date_comparison"
+                            st.session_state.validation_errors.pop(error_key, None)
+
+                        updated[section].append(temp)
+
+                        # Add delete button at the bottom of the expander
+                        st.markdown("---")
+
+                        # Check if this entry is pending confirmation
+                        is_pending_confirm = st.session_state[pending_confirm_key] == idx
+
+                        if is_pending_confirm:
+                            # Show confirmation buttons
+                            conf_col1, conf_col2, conf_col3 = st.columns([3, 1, 1])
+                            with conf_col1:
+                                st.warning(f"⚠️ Delete this entry?")
+                            with conf_col2:
+                                confirm_yes = st.form_submit_button(
+                                    "✓ Yes",
+                                    help="Confirm deletion",
+                                    use_container_width=True,
+                                )
+                            with conf_col3:
+                                confirm_no = st.form_submit_button(
+                                    "✗ No",
+                                    help="Cancel deletion",
+                                    use_container_width=True,
+                                )
+
+                            # Handle confirmation outside the columns
+                            if confirm_yes:
+                                st.session_state[deleted_key].add(idx)
+                                st.session_state[pending_confirm_key] = None
+                                st.rerun()
+                            elif confirm_no:
+                                st.session_state[pending_confirm_key] = None
+                                st.rerun()
+                        else:
+                            # Show delete button
+                            _, delete_col2 = st.columns([5, 1])
+                            with delete_col2:
+                                # Use unique label including section name to avoid duplicate key errors
+                                delete_clicked = st.form_submit_button(
+                                    f"🗑️ Del {section[:4]}{idx}",
+                                    help=f"Delete this entry",
+                                    use_container_width=True,
+                                )
+
+                            if delete_clicked:
+                                # Set pending confirmation
+                                st.session_state[pending_confirm_key] = idx
+                                st.rerun()
 
             # Scalar subsection
             else:
-                cols = st.columns((3, 1))
-                current_file = st.session_state.get("current_file", "unknown")
-                needs_review = cols[1].checkbox("needs review", key=f"{current_file}.{section}_needs review")
-                inp = cols[0].text_input(section, value=str(content), key=f"{current_file}.{section}")
+                inp = st.text_input(
+                    section, value=str(content), key=f"{current_file}.{section}"
+                )
                 updated[section] = type_convert(inp, content)
-                updated[f"{section}_needs review"] = needs_review
-
-        # ─── Check if any fields are under review ─────────────────────────
-        has_fields_under_review = _check_if_has_fields_under_review(updated)
 
         # ─── Validation summary & save button ────────────────────────────
         col1, col2 = st.columns([3, 1])
-        
+
         with col1:
             if st.session_state.validation_errors:
-                if has_fields_under_review:
-                    st.warning(
-                        f"⚠️ {len(st.session_state.validation_errors)} validation error"
-                        f"{'s' if len(st.session_state.validation_errors) != 1 else ''} found, "
-                        "but allowing save because some fields are marked for review."
-                    )
-                else:
-                    st.error(
-                        f"⚠️ {len(st.session_state.validation_errors)} validation error"
-                        f"{'s' if len(st.session_state.validation_errors) != 1 else ''} – "
-                        "please fix before saving or mark fields as 'needs review'."
-                    )
-            elif has_fields_under_review:
-                st.info("🔍 Some fields marked for review - data will be saved with review flags")
+                st.error(
+                    f"⚠️ {len(st.session_state.validation_errors)} validation error"
+                    f"{'s' if len(st.session_state.validation_errors) != 1 else ''} – "
+                    "please fix before saving."
+                )
             else:
                 st.success("✅ All fields validated - ready to save!")
 
@@ -597,88 +585,82 @@ def render_edit_form(validated_data: Dict) -> Optional[Dict]:
                 "💾 Save & Next",
                 use_container_width=True,
                 help="Save changes and move to next record (Ctrl+S)",
-                type="primary"
+                type="primary",
             )
-            
+
         # Quick data summary for review
-        if show_all_fields or st.session_state.validation_errors:
-            with st.expander("📊 Data Summary", expanded=len(st.session_state.validation_errors) > 0):
-                summary_col1, summary_col2 = st.columns(2)
-                
-                with summary_col1:
-                    # Show key data points
-                    st.markdown("**Key Information:**")
-                    for section, content in updated.items():
-                        if section in ['header', 'main_entries'] and isinstance(content, dict):
-                            for key, value in content.items():
-                                if key in PRIORITY_FIELDS.get(section, []) and value and not key.endswith('_needs review'):
-                                    st.text(f"• {key.replace('_', ' ').title()}: {value}")
-                        elif section == 'main_entries' and isinstance(content, list):
-                            for idx, entry in enumerate(content, 1):
-                                name = entry.get('gezinshoofd', '')
-                                if name:
-                                    st.text(f"• Person #{idx}: {name}")
-                
-                with summary_col2:
-                    # Show review flags and errors
-                    review_count = sum(1 for section in updated.values() 
-                                     for key, value in (section.items() if isinstance(section, dict) else [])
-                                     if key.endswith('_needs review') and value)
-                    
-                    if review_count > 0:
-                        st.markdown(f"**🔍 Fields for Review:** {review_count}")
-                    
-                    if st.session_state.validation_errors:
-                        st.markdown("**❌ Validation Errors:**")
-                        for error in list(st.session_state.validation_errors.values())[:3]:  # Show first 3
-                            st.text(f"• {error}")
-                        if len(st.session_state.validation_errors) > 3:
-                            st.text(f"• ... and {len(st.session_state.validation_errors) - 3} more")
+        with st.expander(
+            "📊 Data Summary", expanded=len(st.session_state.validation_errors) > 0
+        ):
+            summary_col1, summary_col2 = st.columns(2)
+
+            with summary_col1:
+                # Show key data points
+                st.markdown("**Key Information:**")
+                if isinstance(updated.get("header"), dict):
+                    header = updated["header"]
+                    for key, value in header.items():
+                        if value and not key.endswith("_needs review"):
+                            st.text(f"• {key.replace('_', ' ').title()}: {value}")
+                if isinstance(updated.get("main_entries"), list):
+                    for idx, entry in enumerate(updated["main_entries"], 1):
+                        name = entry.get("gezinshoofd", "")
+                        if name:
+                            st.text(f"• Person #{idx}: {name}")
+
+            with summary_col2:
+                # Show errors
+                if st.session_state.validation_errors:
+                    st.markdown("**❌ Validation Errors:**")
+                    errors = list(st.session_state.validation_errors.values())
+                    for error in errors[:3]:
+                        st.text(f"• {error}")
+                    if len(errors) > 3:
+                        st.text(f"• ... and {len(errors) - 3} more")
 
     # After the *with* block so we can safely return a value or abort
     if save_clicked:
-        # Allow saving if no validation errors OR if there are fields under review
-        if st.session_state.validation_errors and not has_fields_under_review:
-            # Validation failed and no fields marked for review → stay on the same record
+        # Only allow saving if no validation errors
+        if st.session_state.validation_errors:
+            # Validation failed → stay on the same record
             return None
-        # All clear OR has fields under review → return finalised payload
+        # All clear → return finalised payload
         return updated
-    
+
     # Scroll to top and focus first input only after navigating
     if st.session_state.get("just_navigated", False):
-        st.markdown("""
+        # Use multiple methods to ensure scroll happens
+        st.markdown(
+            """
             <script>
-            window.onload = function() {
-                window.scrollTo(0, 0);
+            // Immediate scroll
+            window.scrollTo({top: 0, left: 0, behavior: 'instant'});
+            document.documentElement.scrollTop = 0;
+            document.body.scrollTop = 0;
+
+            // Also scroll after a short delay to handle dynamic content
+            setTimeout(function() {
+                window.scrollTo({top: 0, left: 0, behavior: 'instant'});
+                document.documentElement.scrollTop = 0;
+                document.body.scrollTop = 0;
+
+                // Focus first input field
                 const firstInput = document.querySelector('input[type="text"], textarea, select');
                 if (firstInput) {
                     firstInput.focus();
+                    firstInput.scrollIntoView({behavior: 'instant', block: 'center'});
                 }
-            }
+            }, 100);
+
+            // Backup scroll on DOMContentLoaded
+            document.addEventListener('DOMContentLoaded', function() {
+                window.scrollTo({top: 0, left: 0, behavior: 'instant'});
+            });
             </script>
-        """, unsafe_allow_html=True)
+        """,
+            unsafe_allow_html=True,
+        )
         st.session_state.just_navigated = False
 
     # Nothing to persist this turn
     return None
-
-
-def _check_if_has_fields_under_review(updated_data: Dict) -> bool:
-    """Check if any fields in the updated data are marked as needing review"""
-    for section_key, section_value in updated_data.items():
-        if section_key.endswith("_needs review") and section_value:
-            return True
-        
-        if isinstance(section_value, dict):
-            for key, value in section_value.items():
-                if key.endswith("_needs review") and value:
-                    return True
-        
-        elif isinstance(section_value, list):
-            for entry in section_value:
-                if isinstance(entry, dict):
-                    for key, value in entry.items():
-                        if key.endswith("_needs review") and value:
-                            return True
-    
-    return False

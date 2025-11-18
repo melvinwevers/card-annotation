@@ -1,7 +1,6 @@
 import os
 import json
 import streamlit as st
-import portalocker
 from gcs_utils import get_bucket, get_gcs_file_lists
 from config import LOCK_DIR, IMAGE_EXTENSIONS
 
@@ -12,6 +11,9 @@ def list_available_jsons() -> list[str]:
     for f in sorted(raw):
         # skip anything that is currently locked
         if os.path.exists(os.path.join(LOCK_DIR, f + ".lock")):
+            continue
+        # skip anything that has been corrected
+        if f in corr:
             continue
         available.append(f)
     return available
@@ -31,7 +33,7 @@ def get_file_status(filename: str) -> str:
     if os.path.exists(os.path.join(LOCK_DIR, filename + ".lock")):
         return "locked"
     elif is_file_corrected(filename):
-        return "corrected" 
+        return "corrected"
     else:
         return "uncorrected"
 
@@ -46,6 +48,7 @@ def load_json_from_gcs(filename: str):
         return data, None
     except Exception as e:
         return None, str(e)
+
 
 @st.cache_data(ttl=600)
 def load_image_from_gcs(base: str):
@@ -86,10 +89,10 @@ def compare_json_versions(filename: str):
     """Compare original and corrected versions of a file"""
     original, _ = load_json_from_gcs(filename)
     corrected = load_corrected_json(filename)
-    
+
     if not original or not corrected:
         return None
-        
+
     return {
         'filename': filename,
         'original': original,

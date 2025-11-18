@@ -41,18 +41,16 @@ def apply_custom_css():
                 :root {{
                     --border-color: #404040;
                     --background-color: rgba(255,255,255,0.02);
-                    --priority-bg: rgba(255, 107, 107, 0.1);
                     --error-bg: rgba(255, 68, 68, 0.1);
                     --success-bg: rgba(76, 175, 80, 0.1);
                     --text-color: #ffffff;
                 }}
             }}
-            
+
             @media (prefers-color-scheme: light) {{
                 :root {{
                     --border-color: #e6e6e6;
                     --background-color: #fafafa;
-                    --priority-bg: #fff5f5;
                     --error-bg: #ffebee;
                     --success-bg: #f1f8e9;
                     --text-color: #000000;
@@ -71,13 +69,6 @@ def apply_custom_css():
                 transform: translateY(-1px);
                 box-shadow: 0 2px 4px rgba(0,0,0,0.2);
                 border-color: var(--primary-color, #ff4b4b);
-            }}
-            
-            /* Priority field highlighting - theme aware */
-            .priority-field {{
-                border-left: 3px solid #ff6b6b;
-                padding-left: 10px;
-                background-color: var(--priority-bg);
             }}
             
             /* Error field highlighting - theme aware */
@@ -135,7 +126,28 @@ def apply_custom_css():
             
             /* Column spacing improvements */
             .element-container {{
-                margin-bottom: 0.5rem;
+                margin-bottom: 0.1rem;
+            }}
+
+            /* Reduce spacing between form fields */
+            .stTextInput {{
+                margin-bottom: 0rem;
+            }}
+
+            /* Reduce spacing in form containers */
+            .stForm .element-container {{
+                margin-bottom: 0rem;
+            }}
+
+            /* Tighter spacing for text input labels */
+            .stTextInput > label {{
+                margin-bottom: 0.1rem !important;
+                padding-bottom: 0 !important;
+            }}
+
+            /* Reduce padding inside text inputs */
+            .stTextInput > div {{
+                margin-bottom: 0.2rem !important;
             }}
             
             /* Sidebar improvements */
@@ -145,13 +157,31 @@ def apply_custom_css():
         </style>
         
         <script>
-            // Keyboard shortcuts handler
+            // Keyboard shortcuts handler - use capture phase to catch events early
             document.addEventListener('keydown', function(e) {{
-                // Only handle shortcuts if not in an input field
+                // Handle Enter key in input fields - just save/validate, don't move
+                if ((e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') && e.key === 'Enter') {{
+                    // Stop form submission
+                    e.preventDefault();
+                    e.stopPropagation();
+                    e.stopImmediatePropagation();
+
+                    // Just blur to trigger validation/save
+                    e.target.blur();
+
+                    // Re-focus the same field after a brief moment
+                    setTimeout(() => {{
+                        e.target.focus();
+                    }}, 50);
+
+                    return false;
+                }}
+
+                // Only handle other shortcuts if not in an input field
                 if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {{
                     return;
                 }}
-                
+
                 // Ctrl+S: Save (prevent default browser save)
                 if (e.ctrlKey && e.key === 's') {{
                     e.preventDefault();
@@ -161,11 +191,11 @@ def apply_custom_css():
                         console.log('Save shortcut triggered');
                     }}
                 }}
-                
+
                 // Ctrl+Left: Previous
                 if (e.ctrlKey && e.key === 'ArrowLeft') {{
                     e.preventDefault();
-                    const prevButton = Array.from(document.querySelectorAll('button')).find(btn => 
+                    const prevButton = Array.from(document.querySelectorAll('button')).find(btn =>
                         btn.textContent.includes('Previous') || btn.textContent.includes('⬅️')
                     );
                     if (prevButton && !prevButton.disabled) {{
@@ -173,11 +203,11 @@ def apply_custom_css():
                         console.log('Previous shortcut triggered');
                     }}
                 }}
-                
-                // Ctrl+Right: Next  
+
+                // Ctrl+Right: Next
                 if (e.ctrlKey && e.key === 'ArrowRight') {{
                     e.preventDefault();
-                    const nextButton = Array.from(document.querySelectorAll('button')).find(btn => 
+                    const nextButton = Array.from(document.querySelectorAll('button')).find(btn =>
                         btn.textContent.includes('Next') || btn.textContent.includes('➡️')
                     );
                     if (nextButton && !nextButton.disabled) {{
@@ -185,7 +215,7 @@ def apply_custom_css():
                         console.log('Next shortcut triggered');
                     }}
                 }}
-            }});
+            }}, true);  // Use capture phase to intercept Enter key before form submission
             
             // Theme detection and CSS variable updates
             function updateTheme() {{
