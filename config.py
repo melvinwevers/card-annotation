@@ -10,6 +10,11 @@ LOCK_DIR = "data/locks"
 IMAGE_EXTENSIONS = ['.jpg', '.jpeg', '.png', '.tif', '.jp2']
 DEFAULT_SIDEBAR_WIDTH = 500
 
+# Cache TTL settings (in seconds)
+CACHE_TTL_SHORT = 300  # 5 minutes - for frequently changing data
+CACHE_TTL_MEDIUM = 600  # 10 minutes - for moderately stable data
+CACHE_TTL_LONG = 3600  # 1 hour - for rarely changing data
+
 def apply_custom_css():
     """Apply custom CSS for sidebar width and improved styling - dark mode compatible"""
     st.markdown(f"""

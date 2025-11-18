@@ -18,6 +18,63 @@ from ui_components import (
 
 st.set_page_config(**PAGE_CONFIG)
 
+SESSION_DATA_DIR = "data/sessions"
+
+def load_session_progress(username: str) -> set:
+    """Load finalized files for a user session"""
+    os.makedirs(SESSION_DATA_DIR, exist_ok=True)
+    session_file = os.path.join(SESSION_DATA_DIR, f"{username}_progress.json")
+
+    if os.path.exists(session_file):
+        try:
+            with open(session_file, 'r') as f:
+                data = json.load(f)
+                return set(data.get("finalized_files", []))
+        except Exception:
+            return set()
+    return set()
+
+
+def save_session_progress(username: str, finalized_files: set):
+    """Save finalized files for a user session"""
+    os.makedirs(SESSION_DATA_DIR, exist_ok=True)
+    session_file = os.path.join(SESSION_DATA_DIR, f"{username}_progress.json")
+
+    try:
+        with open(session_file, 'w') as f:
+            json.dump({
+                "finalized_files": list(finalized_files),
+                "last_updated": datetime.now().isoformat()
+            }, f, indent=2)
+    except Exception as e:
+        st.warning(f"Could not save session progress: {e}")
+
+
+def auto_skip_to_next(current: str):
+    """Navigate to next available record after current file"""
+    remaining = list_available_jsons()
+    if remaining:
+        # Clear current_file to prevent re-addition
+        st.session_state.pop("current_file", None)
+
+        # Find next file alphabetically after current
+        current_idx = -1
+        for i, fname in enumerate(sorted(remaining)):
+            if fname > current:
+                current_idx = i
+                break
+
+        # If no file found after current, go to first
+        if current_idx == -1:
+            current_idx = 0
+
+        st.session_state.idx = current_idx
+        st.session_state.just_navigated = True
+        st.rerun()
+    else:
+        st.success("🎉 All processable records completed!")
+        st.stop()
+
 
 def create_lock_with_user_info(lock_path: str, filename: str, user: str = None) -> portalocker.Lock:
     """Create a lock file with user information"""
@@ -220,7 +277,11 @@ def main() -> None:
     # ─── Initialise session state ──────────────────────────────────────
     st.session_state.setdefault("idx", 0)
     st.session_state.setdefault("validation_errors", {})
-    st.session_state.setdefault("finalized_files", set())
+
+    # Load session progress from disk (persistent across browser sessions)
+    if "finalized_files" not in st.session_state:
+        username = st.session_state.get("username", getpass.getuser())
+        st.session_state.finalized_files = load_session_progress(username)
 
     # ─── Navigation (release old lock first if changed) ────────────────
     prev_locked: str | None = st.session_state.get("locked_file")
@@ -318,22 +379,7 @@ def main() -> None:
     if not validated:
         st.info(f"⏭️ Skipping '{current}' - No validated_json or extracted_json section to edit.")
         release_lock()
-        
-        # Auto-skip to next available record
-        remaining = list_available_jsons()
-        if remaining:
-            try:
-                # Find current position and move to next
-                current_idx = remaining.index(current) if current in remaining else st.session_state.idx
-                st.session_state.idx = min(current_idx + 1, len(remaining) - 1)
-                st.session_state.just_navigated = True
-            except:
-                st.session_state.idx = min(st.session_state.idx + 1, len(remaining) - 1) if remaining else 0
-            st.session_state.pop("current_file", None)
-            st.rerun()
-        else:
-            st.success("🎉 All processable records completed!")
-            st.stop()
+        auto_skip_to_next(current)
 
     updated = render_edit_form(validated)
 
@@ -350,34 +396,15 @@ def main() -> None:
             
             # Clear cache to ensure file lists are updated
             get_gcs_file_lists.clear()
-            
-            # Add to finalized files and move to next record
+
+            # Add to finalized files and save progress to disk
             st.session_state.finalized_files.add(current)
+            username = st.session_state.get("username", getpass.getuser())
+            save_session_progress(username, st.session_state.finalized_files)
             release_lock()
-            
+
             # Auto-skip to next available record
-            remaining = list_available_jsons()
-            if remaining:
-                # Clear current_file first to prevent it from being re-added to the list
-                st.session_state.pop("current_file", None)
-                
-                # Find the next file alphabetically after the current one
-                current_idx = -1
-                for i, fname in enumerate(sorted(remaining)):
-                    if fname > current:
-                        current_idx = i
-                        break
-                
-                # If no file found after current, go to first file
-                if current_idx == -1:
-                    current_idx = 0
-                    
-                st.session_state.idx = current_idx
-                st.session_state.just_navigated = True
-                st.rerun()
-            else:
-                st.success("🎉 All processable records completed!")
-                st.stop()
+            auto_skip_to_next(current)
                 
         except Exception as e:
             st.error(f"❌ Error saving changes: {str(e)}")

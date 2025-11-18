@@ -2,7 +2,7 @@ import os
 import json
 import streamlit as st
 from gcs_utils import get_bucket, get_gcs_file_lists
-from config import LOCK_DIR, IMAGE_EXTENSIONS
+from config import LOCK_DIR, IMAGE_EXTENSIONS, CACHE_TTL_SHORT, CACHE_TTL_MEDIUM
 
 
 def list_available_jsons() -> list[str]:
@@ -38,7 +38,7 @@ def get_file_status(filename: str) -> str:
         return "uncorrected"
 
 
-@st.cache_data(ttl=300)
+@st.cache_data(ttl=CACHE_TTL_SHORT)  # 5 min - frequently accessed/updated
 def load_json_from_gcs(filename: str):
     try:
         bucket = get_bucket()
@@ -50,7 +50,7 @@ def load_json_from_gcs(filename: str):
         return None, str(e)
 
 
-@st.cache_data(ttl=600)
+@st.cache_data(ttl=CACHE_TTL_MEDIUM)  # 10 min - images rarely change
 def load_image_from_gcs(base: str):
     bucket = get_bucket()
     for ext in IMAGE_EXTENSIONS:

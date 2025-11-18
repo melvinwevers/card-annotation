@@ -6,3 +6,4 @@ schema/
 __pycache__/
 *.pyc
 key.json
+data/sessions/

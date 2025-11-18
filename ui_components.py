@@ -353,7 +353,17 @@ def render_edit_form(validated_data: Dict) -> Optional[Dict]:
         # Quick validation status with more detail
         if st.session_state.validation_errors:
             error_count = len(st.session_state.validation_errors)
-            st.error(f"❌ {error_count} error{'s' if error_count != 1 else ''}")
+            # Get first few field names with errors
+            error_fields = list(st.session_state.validation_errors.keys())[:3]
+            # Extract just the field name from keys like "main_entries_0_datum"
+            field_names = [k.split('_')[-1] for k in error_fields]
+            fields_preview = ', '.join(field_names)
+            if error_count > 3:
+                fields_preview += f" +{error_count - 3} more"
+            st.error(
+                f"❌ {error_count} error{'s' if error_count != 1 else ''}: "
+                f"{fields_preview}"
+            )
         else:
             st.success("✅ Valid")
 
@@ -633,29 +643,63 @@ def render_edit_form(validated_data: Dict) -> Optional[Dict]:
         st.markdown(
             """
             <script>
-            // Immediate scroll
-            window.scrollTo({top: 0, left: 0, behavior: 'instant'});
-            document.documentElement.scrollTop = 0;
-            document.body.scrollTop = 0;
+            (function() {
+                let scrollAttempts = 0;
+                const maxScrollAttempts = 20;
 
-            // Also scroll after a short delay to handle dynamic content
-            setTimeout(function() {
-                window.scrollTo({top: 0, left: 0, behavior: 'instant'});
-                document.documentElement.scrollTop = 0;
-                document.body.scrollTop = 0;
+                function forceScrollToTop() {
+                    // Scroll window
+                    window.scrollTo(0, 0);
 
-                // Focus first input field
-                const firstInput = document.querySelector('input[type="text"], textarea, select');
-                if (firstInput) {
-                    firstInput.focus();
-                    firstInput.scrollIntoView({behavior: 'instant', block: 'center'});
+                    // Scroll all scrollable elements
+                    document.documentElement.scrollTop = 0;
+                    document.body.scrollTop = 0;
+
+                    // Scroll all Streamlit containers
+                    const selectors = ['.main', '.stApp', '[data-testid="stAppViewContainer"]',
+                                      '.block-container', 'section.main', 'div.main'];
+                    selectors.forEach(selector => {
+                        const elements = document.querySelectorAll(selector);
+                        elements.forEach(el => {
+                            if (el && el.scrollTop !== undefined) {
+                                el.scrollTop = 0;
+                            }
+                        });
+                    });
+
+                    scrollAttempts++;
                 }
-            }, 100);
 
-            // Backup scroll on DOMContentLoaded
-            document.addEventListener('DOMContentLoaded', function() {
-                window.scrollTo({top: 0, left: 0, behavior: 'instant'});
-            });
+                // Immediate scroll
+                forceScrollToTop();
+
+                // Keep scrolling until we're sure we're at top or max attempts
+                const scrollInterval = setInterval(function() {
+                    forceScrollToTop();
+
+                    // Check if we're at top
+                    const isAtTop = window.pageYOffset === 0 &&
+                                   document.documentElement.scrollTop === 0 &&
+                                   document.body.scrollTop === 0;
+
+                    if (isAtTop || scrollAttempts >= maxScrollAttempts) {
+                        clearInterval(scrollInterval);
+
+                        // Focus first input after we're done scrolling
+                        setTimeout(function() {
+                            const firstInput = document.querySelector('input[type="text"], textarea, select');
+                            if (firstInput) {
+                                firstInput.focus({preventScroll: true});
+                            }
+                        }, 100);
+                    }
+                }, 50);
+
+                // Stop after 1 second regardless
+                setTimeout(function() {
+                    clearInterval(scrollInterval);
+                }, 1000);
+            })();
             </script>
         """,
             unsafe_allow_html=True,

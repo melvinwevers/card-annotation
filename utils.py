@@ -79,7 +79,17 @@ def parse_date_ddmmyy(date_str: str) -> tuple[bool, int]:
     """
     Parse a date in DDMMYY format and return (is_valid, comparable_value).
     Returns a comparable integer value for date comparison.
-    Format: DDMMYY (e.g., "010175" = January 1, 1975)
+
+    Format: DDMMYY (e.g., "010175" = January 1, 75)
+
+    Note: For historical Dutch population registry data:
+    - datum (arrival): could be 1870s-1980s (century ambiguous, not resolved)
+    - datum_vertrek (departure): 1940-1989
+    - We don't interpret century, just validate format (DDMMYY) and enable
+      relative date comparison (arrival before departure)
+
+    Returns: (is_valid, comparable_value_as_YYMMDD_integer)
+    Example: "231275" returns (True, 751223) for Dec 23, 75
     """
     if not date_str or not isinstance(date_str, str):
         return False, 0
@@ -97,11 +107,10 @@ def parse_date_ddmmyy(date_str: str) -> tuple[bool, int]:
         if not (1 <= day <= 31 and 1 <= month <= 12):
             return False, 0
 
-        # Assume dates < 30 are 2000s, >= 30 are 1900s
-        full_year = 1900 + year if year >= 30 else 2000 + year
-
-        # Create comparable value: YYYYMMDD
-        comparable = full_year * 10000 + month * 100 + day
+        # Create comparable value using YYMMDD format (not YYYYMMDD)
+        # This allows comparing dates relatively without century interpretation
+        # Format: YYMMDD as integer (e.g., 751223 for "231275")
+        comparable = year * 10000 + month * 100 + day
         return True, comparable
     except (ValueError, IndexError):
         return False, 0

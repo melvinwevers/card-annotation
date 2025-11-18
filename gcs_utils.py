@@ -4,9 +4,10 @@ import streamlit as st
 from google.oauth2 import service_account
 from google.cloud import storage
 from typing import Dict, List, Any, Optional, Union, Tuple
+from config import CACHE_TTL_SHORT, CACHE_TTL_LONG
 
 
-@st.cache_data(ttl=3600)
+@st.cache_data(ttl=CACHE_TTL_LONG)  # 1 hour - config rarely changes
 def load_gcs_config() -> dict:
     try:
         conf = dict(st.secrets["connections"]["gcs"])
@@ -39,7 +40,7 @@ def get_bucket() -> storage.Bucket:
     name = conf.get("GCS_BUCKET", "card_annotation")
     return client.bucket(name)
 
-@st.cache_data(ttl=60)
+@st.cache_data(ttl=CACHE_TTL_SHORT)  # 5 min - file lists change often
 def get_gcs_file_lists() -> Tuple[List[str], set]:
     """Get lists of raw and corrected files from GCS"""
     try:
