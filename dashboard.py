@@ -32,23 +32,25 @@ def get_dashboard_metrics() -> Dict:
             'unvalidated': 0,
             'in_progress': 0,
             'corrected': 0,
+            'flagged': 0,
             'completion_rate': 0
         }
     
     try:
-        raw_files, corrected_files = get_gcs_file_lists()
-        
+        raw_files, corrected_files, flagged_files = get_gcs_file_lists()
+
         # Get lock files to determine in-progress records
         lock_files = []
         if os.path.exists(LOCK_DIR):
             lock_files = [f for f in os.listdir(LOCK_DIR) if f.endswith('.lock')]
-        
+
         # Calculate metrics - now corrected files don't reduce the pool
         total_raw = len(raw_files)
         total_corrected = len(corrected_files)
+        total_flagged = len(flagged_files)
         in_progress = len(lock_files)
-        # Uncorrected = files that exist in raw but not in corrected, minus locked files
-        uncorrected_files = set(raw_files) - corrected_files
+        # Uncorrected = files that exist in raw but not in corrected or flagged, minus locked files
+        uncorrected_files = set(raw_files) - corrected_files - flagged_files
         unvalidated = len(uncorrected_files) - in_progress
         
         # Calculate completion percentage
@@ -62,6 +64,7 @@ def get_dashboard_metrics() -> Dict:
             'unvalidated': max(0, unvalidated),  # Ensure non-negative
             'in_progress': in_progress,
             'corrected': total_corrected,
+            'flagged': total_flagged,
             'completion_rate': completion_rate
         }
     except Exception as e:
@@ -71,6 +74,7 @@ def get_dashboard_metrics() -> Dict:
             'unvalidated': 0,
             'in_progress': 0,
             'corrected': 0,
+            'flagged': 0,
             'completion_rate': 0
         }
 
@@ -173,29 +177,29 @@ def get_throughput_data():
 
 def render_metrics_cards(metrics: Dict):
     """Render the main metrics cards"""
-    col1, col2, col3, col4 = st.columns(4)
-    
+    col1, col2, col3, col4, col5 = st.columns(5)
+
     with col1:
         st.metric(
             label="📋 Total Records",
             value=metrics['total_records'],
             help="Total number of JSON records to process"
         )
-    
+
     with col2:
         st.metric(
             label="⏳ Unvalidated",
             value=metrics['unvalidated'],
             help="Records waiting for validation"
         )
-    
+
     with col3:
         st.metric(
             label="🔄 In Progress",
             value=metrics['in_progress'],
             help="Records currently being edited"
         )
-    
+
     with col4:
         st.metric(
             label="✅ Corrected",
@@ -203,26 +207,34 @@ def render_metrics_cards(metrics: Dict):
             help="Records completed and saved"
         )
 
+    with col5:
+        st.metric(
+            label="🚩 Flagged",
+            value=metrics['flagged'],
+            help="Records flagged for review"
+        )
+
 
 def render_progress_chart(metrics: Dict):
     """Render progress pie chart"""
     if not PLOTLY_AVAILABLE:
         return
-        
+
     # Create pie chart data
-    labels = ['Unvalidated', 'In Progress', 'Corrected']
+    labels = ['Unvalidated', 'In Progress', 'Corrected', 'Flagged']
     values = [
         metrics['unvalidated'],
         metrics['in_progress'],
-        metrics['corrected']
+        metrics['corrected'],
+        metrics['flagged']
     ]
-    
+
     # Create pie chart
     fig = go.Figure(data=[go.Pie(
         labels=labels,
         values=values,
         hole=.3,
-        marker_colors=['#ff9999', '#66b3ff', '#99ff99']
+        marker_colors=['#ff9999', '#66b3ff', '#99ff99', '#ffcc66']
     )])
     
     fig.update_layout(
@@ -404,10 +416,10 @@ def render_comparison_analytics():
     if not GCS_AVAILABLE:
         st.info("GCS connection required for comparison analytics")
         return
-        
+
     try:
-        raw_files, corrected_files = get_gcs_file_lists()
-        
+        raw_files, corrected_files, flagged_files = get_gcs_file_lists()
+
         # Get files that have both original and corrected versions
         comparable_files = [f for f in raw_files if f in corrected_files]
         
