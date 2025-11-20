@@ -297,6 +297,35 @@ def render_image_sidebar(data: Dict) -> None:
 # ──────────────────────────────────────────────────────────────────────────────
 
 
+def _create_empty_entry_template(section: str) -> Dict:
+    """Create an empty entry template for the given section"""
+    if section == "main_entries":
+        return {
+            "record_no": "",
+            "datum": "",
+            "gezinshoofd": "",
+            "year_of_birth": "",
+            "datum_vertrek": "",
+            "waarheen": "",
+            "remarks": "",
+            "M": "",  # Preserve M/V fields
+            "V": ""
+        }
+    elif section == "follow_up_entries":
+        return {
+            "volg_nr": "",
+            "datum": "",
+            "inwonenden": "",
+            "year_of_birth": "",
+            "datum_vertrek": "",
+            "waarheen": "",
+            "remarks": "",
+            "M": "",  # Preserve M/V fields
+            "V": ""
+        }
+    return {}
+
+
 def _clear_form_state():
     """Clear form state when navigating to a new record to prevent value persistence"""
     current_file = st.session_state.get("current_file", "unknown")
@@ -310,11 +339,12 @@ def _clear_form_state():
         for key in keys_to_remove:
             st.session_state.pop(key, None)
 
-        # Also clear deleted entries tracking for previous file
+        # Also clear deleted and added entries tracking for previous file
         prev_file = st.session_state.get("previous_file")
         if prev_file:
             for key in list(st.session_state.keys()):
-                if isinstance(key, str) and key.startswith(f"{prev_file}.deleted_"):
+                if isinstance(key, str) and (key.startswith(f"{prev_file}.deleted_") or
+                                            key.startswith(f"{prev_file}.added_")):
                     st.session_state.pop(key, None)
 
 
@@ -466,7 +496,15 @@ def render_edit_form(validated_data: Dict) -> Optional[tuple[str, Dict]]:
                 if pending_confirm_key not in st.session_state:
                     st.session_state[pending_confirm_key] = None
 
-                for idx, entry in enumerate(content, start=1):
+                # Track newly added entries
+                added_entries_key = f"{current_file}.added_{section}"
+                if added_entries_key not in st.session_state:
+                    st.session_state[added_entries_key] = []
+
+                # Combine original entries with newly added ones
+                all_entries = list(content) + st.session_state[added_entries_key]
+
+                for idx, entry in enumerate(all_entries, start=1):
                     # Skip if this entry is marked for deletion
                     if idx in st.session_state[deleted_key]:
                         continue
@@ -583,6 +621,25 @@ def render_edit_form(validated_data: Dict) -> Optional[tuple[str, Dict]]:
                                 # Set pending confirmation
                                 st.session_state[pending_confirm_key] = idx
                                 st.rerun()
+
+                # Add "Add Entry" button after all entries
+                st.markdown("---")
+                _, add_col = st.columns([5, 1])
+                with add_col:
+                    # Use unique label including section name to avoid duplicate key errors
+                    button_label = f"➕ Add {section[:4]}"
+                    add_clicked = st.form_submit_button(
+                        button_label,
+                        help=f"Add new {section.rstrip('s').replace('_', ' ')}",
+                        use_container_width=True,
+                        type="secondary"
+                    )
+
+                if add_clicked:
+                    # Add a new empty entry to the list
+                    new_entry = _create_empty_entry_template(section)
+                    st.session_state[added_entries_key].append(new_entry)
+                    st.rerun()
 
             # Scalar subsection
             else:
