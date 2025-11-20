@@ -1,5 +1,6 @@
 import os
 import json
+import random
 import streamlit as st
 from gcs_utils import get_bucket, get_gcs_file_lists
 from config import LOCK_DIR, IMAGE_EXTENSIONS, CACHE_TTL_SHORT, CACHE_TTL_MEDIUM
@@ -8,7 +9,7 @@ from config import LOCK_DIR, IMAGE_EXTENSIONS, CACHE_TTL_SHORT, CACHE_TTL_MEDIUM
 def list_available_jsons() -> list[str]:
     raw, corr = get_gcs_file_lists()
     available = []
-    for f in sorted(raw):
+    for f in raw:
         # skip anything that is currently locked
         if os.path.exists(os.path.join(LOCK_DIR, f + ".lock")):
             continue
@@ -16,6 +17,12 @@ def list_available_jsons() -> list[str]:
         if f in corr:
             continue
         available.append(f)
+
+    # Shuffle randomly, but use session-consistent seed to prevent reordering on rerun
+    if "file_list_seed" not in st.session_state:
+        st.session_state.file_list_seed = random.randint(0, 1000000)
+
+    random.Random(st.session_state.file_list_seed).shuffle(available)
     return available
 
 

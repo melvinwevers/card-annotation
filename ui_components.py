@@ -1,10 +1,8 @@
-import base64
 import os
 from typing import Any, Dict, List, Optional
 
 import portalocker  # lock reference still needed elsewhere
 import streamlit as st
-import streamlit.components.v1 as components
 
 from config import LOCK_DIR
 from file_ops import (
@@ -118,10 +116,10 @@ def _ensure_current_record_visible(files: List[str]) -> List[str]:
     `list_available_jsons`)."""
     current = st.session_state.get("current_file")
     if current and current not in files:
-        # Insert in correct alphabetical position to maintain ordering
+        # Add current file to the end of the list (maintain random ordering)
         files_copy = files[:]
         files_copy.append(current)
-        files = sorted(files_copy)
+        files = files_copy
     return files
 
 
@@ -229,40 +227,40 @@ def render_image_sidebar(data: Dict) -> None:
         )
         img_bytes, img_name = load_image_from_gcs(img_base)
         if img_bytes:
-            # Add zoom controls with more options
-            zoom_level = st.select_slider(
+            # Simple zoom slider
+            zoom_level = st.slider(
                 "🔍 Zoom Level",
-                options=["50%", "75%", "100%", "125%", "150%", "200%", "250%"],
-                value="100%",
+                min_value=50,
+                max_value=300,
+                value=100,
+                step=25,
                 key="image_zoom",
-                help="Adjust image size for better viewing",
+                help="Zoom in/out - use mouse or trackpad to scroll when zoomed",
             )
 
-            # Display image with zoom - use container width for consistent sizing
-            zoom_factor = int(zoom_level.rstrip("%")) / 100
+            zoom_factor = zoom_level / 100
 
-            # Create a container with specific styling for image zoom
+            # Display image in scrollable container when zoomed
             if zoom_factor != 1.0:
                 st.markdown(
-                    f"""
-                <div style="
-                    overflow: auto;
-                    max-height: 600px;
-                    border: 1px solid var(--border-color, #ddd);
-                    border-radius: 8px;
-                    padding: 10px;
-                    background: var(--background-color, white);
-                    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
-                ">
-                """,
+                    """
+                    <div style="
+                        overflow: auto;
+                        max-height: 70vh;
+                        border: 2px solid var(--border-color, #ddd);
+                        border-radius: 8px;
+                        padding: 8px;
+                        background: var(--background-color, #fafafa);
+                    ">
+                    """,
                     unsafe_allow_html=True,
                 )
 
                 st.image(
                     img_bytes,
-                    caption=f"📄 {img_name} ({zoom_level})",
+                    caption=f"📄 {img_name} ({zoom_level}%) - Scroll to pan",
                     use_container_width=False,
-                    width=int(480 * zoom_factor),  # Fixed base width for sidebar
+                    width=int(460 * zoom_factor),
                 )
 
                 st.markdown("</div>", unsafe_allow_html=True)

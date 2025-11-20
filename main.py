@@ -57,18 +57,9 @@ def auto_skip_to_next(current: str):
         # Clear current_file to prevent re-addition
         st.session_state.pop("current_file", None)
 
-        # Find next file alphabetically after current
-        current_idx = -1
-        for i, fname in enumerate(sorted(remaining)):
-            if fname > current:
-                current_idx = i
-                break
-
-        # If no file found after current, go to first
-        if current_idx == -1:
-            current_idx = 0
-
-        st.session_state.idx = current_idx
+        # Simply go to the first file in the random list
+        # (since files are already shuffled, this gives random progression)
+        st.session_state.idx = 0
         st.session_state.just_navigated = True
         st.rerun()
     else:
