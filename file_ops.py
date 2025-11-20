@@ -1,13 +1,14 @@
 import os
 import json
 import random
+from datetime import datetime
 import streamlit as st
 from gcs_utils import get_bucket, get_gcs_file_lists
 from config import LOCK_DIR, IMAGE_EXTENSIONS, CACHE_TTL_SHORT, CACHE_TTL_MEDIUM
 
 
 def list_available_jsons() -> list[str]:
-    raw, corr = get_gcs_file_lists()
+    raw, corr, flagged = get_gcs_file_lists()
     available = []
     for f in raw:
         # skip anything that is currently locked
@@ -15,6 +16,9 @@ def list_available_jsons() -> list[str]:
             continue
         # skip anything that has been corrected
         if f in corr:
+            continue
+        # skip anything that has been flagged for review
+        if f in flagged:
             continue
         available.append(f)
 
@@ -29,16 +33,27 @@ def list_available_jsons() -> list[str]:
 def is_file_corrected(filename: str) -> bool:
     """Check if a file has been corrected (exists in corrected folder)"""
     try:
-        _, corr = get_gcs_file_lists()
+        _, corr, _ = get_gcs_file_lists()
         return filename in corr
     except Exception:
         return False
 
 
+def is_file_flagged(filename: str) -> bool:
+    """Check if a file has been flagged for review"""
+    try:
+        _, _, flagged = get_gcs_file_lists()
+        return filename in flagged
+    except Exception:
+        return False
+
+
 def get_file_status(filename: str) -> str:
-    """Get the status of a file (uncorrected, corrected, or locked)"""
+    """Get the status of a file (uncorrected, corrected, flagged, or locked)"""
     if os.path.exists(os.path.join(LOCK_DIR, filename + ".lock")):
         return "locked"
+    elif is_file_flagged(filename):
+        return "flagged"
     elif is_file_corrected(filename):
         return "corrected"
     else:
@@ -75,6 +90,27 @@ def save_corrected_json(filename: str, data: dict):
         blob.upload_from_string(json_string, content_type='application/json')
     except Exception as e:
         raise Exception(f"Failed to save corrected JSON to GCS: {str(e)}")
+
+
+def save_flagged_json(filename: str, data: dict, reason: str = ""):
+    """Save a flagged file to the flagged_for_review folder"""
+    try:
+        bucket = get_bucket()
+
+        # Add flag metadata to the data
+        flagged_data = data.copy()
+        if "flag_metadata" not in flagged_data:
+            flagged_data["flag_metadata"] = {}
+
+        flagged_data["flag_metadata"]["flagged_at"] = datetime.now().isoformat()
+        flagged_data["flag_metadata"]["flagged_by"] = st.session_state.get("username", "unknown")
+        flagged_data["flag_metadata"]["reason"] = reason
+
+        blob = bucket.blob(f"flagged_for_review/{filename}")
+        json_string = json.dumps(flagged_data, ensure_ascii=False, indent=2)
+        blob.upload_from_string(json_string, content_type='application/json')
+    except Exception as e:
+        raise Exception(f"Failed to save flagged JSON to GCS: {str(e)}")
 
 
 def load_corrected_json(filename: str):

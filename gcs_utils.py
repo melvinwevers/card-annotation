@@ -41,21 +41,25 @@ def get_bucket() -> storage.Bucket:
     return client.bucket(name)
 
 @st.cache_data(ttl=CACHE_TTL_SHORT)  # 5 min - file lists change often
-def get_gcs_file_lists() -> Tuple[List[str], set]:
-    """Get lists of raw and corrected files from GCS"""
+def get_gcs_file_lists() -> Tuple[List[str], set, set]:
+    """Get lists of raw, corrected, and flagged files from GCS"""
     try:
         client = get_gcs_client()
         bucket = get_bucket()
-        
+
         # Get raw JSON files
         raw_blobs = list(client.list_blobs(bucket, prefix="jsons/"))
         raw_paths = [os.path.basename(b.name) for b in raw_blobs if b.name.endswith(".json")]
-        
+
         # Get corrected files
         corr_blobs = list(client.list_blobs(bucket, prefix="corrected/"))
         corr_files = {os.path.basename(b.name) for b in corr_blobs if b.name.endswith(".json")}
-        
-        return raw_paths, corr_files
+
+        # Get flagged files
+        flagged_blobs = list(client.list_blobs(bucket, prefix="flagged_for_review/"))
+        flagged_files = {os.path.basename(b.name) for b in flagged_blobs if b.name.endswith(".json")}
+
+        return raw_paths, corr_files, flagged_files
     except Exception as e:
         st.error(f"Error listing JSON files: {e}")
-        return [], set()
+        return [], set(), set()

@@ -7,7 +7,12 @@ from typing import Any
 from datetime import datetime
 
 from config import PAGE_CONFIG, LOCK_DIR, apply_custom_css
-from file_ops import load_json_from_gcs, save_corrected_json, list_available_jsons
+from file_ops import (
+    load_json_from_gcs,
+    save_corrected_json,
+    save_flagged_json,
+    list_available_jsons,
+)
 from utils import clean_none_values
 from gcs_utils import get_gcs_file_lists
 from ui_components import (
@@ -401,33 +406,54 @@ def main() -> None:
         release_lock()
         auto_skip_to_next(current)
 
-    updated = render_edit_form(validated)
+    result = render_edit_form(validated)
 
-    # ─── Save & Finalise ───────────────────────────────────────────────
-    if updated:
+    # ─── Handle Save or Flag actions ────────────────────────────────────
+    if result:
+        action, updated = result
+
         try:
-            # Update the data with the corrected validated_json (standardize field name)
-            data["validated_json"] = updated
-            # Remove extracted_json if it exists to avoid confusion
-            if "extracted_json" in data:
-                del data["extracted_json"]
-            save_corrected_json(current, data)
-            st.success("✅ Changes saved!")
-            
-            # Clear cache to ensure file lists are updated
-            get_gcs_file_lists.clear()
+            if action == "flag":
+                # Flag for review
+                save_flagged_json(current, data, reason="Flagged by user during annotation")
+                st.success("🚩 Record flagged for review!")
 
-            # Add to finalized files and save progress to disk
-            st.session_state.finalized_files.add(current)
-            username = st.session_state.get("username", "appuser")
-            save_session_progress(username, st.session_state.finalized_files)
-            release_lock()
+                # Clear cache to ensure file lists are updated
+                get_gcs_file_lists.clear()
 
-            # Auto-skip to next available record
-            auto_skip_to_next(current)
-                
+                # Add to finalized files (flagged files are also "processed")
+                st.session_state.finalized_files.add(current)
+                username = st.session_state.get("username", "appuser")
+                save_session_progress(username, st.session_state.finalized_files)
+                release_lock()
+
+                # Auto-skip to next available record
+                auto_skip_to_next(current)
+
+            elif action == "save":
+                # Save corrected data
+                # Update the data with the corrected validated_json (standardize field name)
+                data["validated_json"] = updated
+                # Remove extracted_json if it exists to avoid confusion
+                if "extracted_json" in data:
+                    del data["extracted_json"]
+                save_corrected_json(current, data)
+                st.success("✅ Changes saved!")
+
+                # Clear cache to ensure file lists are updated
+                get_gcs_file_lists.clear()
+
+                # Add to finalized files and save progress to disk
+                st.session_state.finalized_files.add(current)
+                username = st.session_state.get("username", "appuser")
+                save_session_progress(username, st.session_state.finalized_files)
+                release_lock()
+
+                # Auto-skip to next available record
+                auto_skip_to_next(current)
+
         except Exception as e:
-            st.error(f"❌ Error saving changes: {str(e)}")
+            st.error(f"❌ Error processing record: {str(e)}")
             st.error("Please try again or contact support if the problem persists.")
 
 

@@ -10,6 +10,7 @@ from file_ops import (
     list_available_jsons,
     load_image_from_gcs,
     load_json_from_gcs,
+    save_flagged_json,
 )
 from schemas import FIELD_SCHEMAS, FieldType
 from utils import type_convert, validate_field, validate_entry_dates
@@ -317,7 +318,7 @@ def _clear_form_state():
                     st.session_state.pop(key, None)
 
 
-def render_edit_form(validated_data: Dict) -> Optional[Dict]:
+def render_edit_form(validated_data: Dict) -> Optional[tuple[str, Dict]]:
     """Render the editable form and return a corrected payload only when the
     user presses **Save corrections** *and* no validation errors remain. On
     validation failure the function returns None and the user stays on the same
@@ -621,6 +622,21 @@ def render_edit_form(validated_data: Dict) -> Optional[Dict]:
                 type="primary",
             )
 
+        # ─── Flag for Review button ──────────────────────────────────────
+        st.markdown("---")
+        flag_col1, flag_col2 = st.columns([3, 1])
+
+        with flag_col1:
+            st.markdown("**Can't process this record?** Flag it for later review.")
+
+        with flag_col2:
+            flag_clicked = st.form_submit_button(
+                "🚩 Flag for Review",
+                use_container_width=True,
+                help="Flag this record for review and skip to next",
+                type="secondary",
+            )
+
         # Quick data summary for review
         with st.expander(
             "📊 Data Summary", expanded=len(st.session_state.validation_errors) > 0
@@ -660,6 +676,10 @@ def render_edit_form(validated_data: Dict) -> Optional[Dict]:
                         st.text(f"• ... and {len(warnings) - 3} more")
 
     # After the *with* block so we can safely return a value or abort
+    if flag_clicked:
+        # Return special flag action
+        return ("flag", updated)
+
     if save_clicked:
         # Only block on validation errors, not warnings
         if st.session_state.validation_errors:
@@ -669,7 +689,7 @@ def render_edit_form(validated_data: Dict) -> Optional[Dict]:
         if "validation_warnings" in st.session_state:
             st.session_state.validation_warnings = {}
         # All clear → return finalised payload
-        return updated
+        return ("save", updated)
 
     # Scroll to top and focus first input only after navigating
     if st.session_state.get("just_navigated", False):
