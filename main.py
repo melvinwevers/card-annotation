@@ -70,7 +70,7 @@ def auto_skip_to_next(current: str):
 def create_lock_with_user_info(lock_path: str, filename: str, user: str = None) -> portalocker.Lock:
     """Create a lock file with user information"""
     if user is None:
-        user = st.session_state.get("username", getpass.getuser())
+        user = st.session_state.get("username", "appuser")
     
     lock_data = {
         "user": user,
@@ -196,32 +196,60 @@ def main() -> None:
     except Exception as e:
         st.warning(f"Failed to cleanup stale locks: {e}")
     
+    # ─── Username Setup (Required) ──────────────────────────────────────
+    # Initialize username with default value
+    if "username" not in st.session_state:
+        st.session_state.username = "appuser"
+
+    # Force username entry screen if still using default
+    if st.session_state.username == "appuser":
+        st.title("👤 Welcome to Card Annotation")
+        st.markdown("### Please enter your username to continue")
+        st.markdown("---")
+
+        username_input = st.text_input(
+            "Username",
+            value="appuser",
+            key="username_entry",
+            help="Enter a unique username to identify your work",
+            placeholder="Enter your username"
+        )
+
+        col1, col2, col3 = st.columns([1, 1, 1])
+        with col2:
+            if st.button("✅ Start Annotating", use_container_width=True, type="primary"):
+                if username_input and username_input.strip() and username_input.strip() != "appuser":
+                    st.session_state.username = username_input.strip()
+                    st.rerun()
+                else:
+                    st.error("⚠️ Please enter a unique username (cannot be 'appuser')")
+
+        st.stop()
+
     # Initialize session ID for user tracking
     if "session_id" not in st.session_state:
-        st.session_state.session_id = datetime.now().strftime("%Y%m%d_%H%M%S") + "_" + getpass.getuser()
+        st.session_state.session_id = datetime.now().strftime("%Y%m%d_%H%M%S") + "_" + st.session_state.username
 
     # ─── Page Navigation ─────────────────────────────────────────────────
     # Initialize page state
     if "page" not in st.session_state:
         st.session_state.page = "dashboard"
-    
+
     # Compact navigation in sidebar
     with st.sidebar:
-        # Username handling with proper state management
-        if "username" not in st.session_state:
-            st.session_state.username = getpass.getuser()
-        
-        # Username input/display with change functionality
+        # Username display with change functionality
         if st.session_state.get("changing_username", False):
             # Show input field for changing username
             new_username = st.text_input("👤 Enter new username", value=st.session_state.username, key="new_username_input")
             col1, col2 = st.columns([1, 1])
             with col1:
                 if st.button("✅ Save", use_container_width=True):
-                    if new_username and new_username.strip():
+                    if new_username and new_username.strip() and new_username.strip() != "appuser":
                         st.session_state.username = new_username.strip()
                         st.session_state.changing_username = False
                         st.rerun()
+                    else:
+                        st.error("⚠️ Username cannot be empty or 'appuser'")
             with col2:
                 if st.button("❌ Cancel", use_container_width=True):
                     st.session_state.changing_username = False
@@ -268,10 +296,11 @@ def main() -> None:
     # ─── Initialise session state ──────────────────────────────────────
     st.session_state.setdefault("idx", 0)
     st.session_state.setdefault("validation_errors", {})
+    st.session_state.setdefault("validation_warnings", {})
 
     # Load session progress from disk (persistent across browser sessions)
     if "finalized_files" not in st.session_state:
-        username = st.session_state.get("username", getpass.getuser())
+        username = st.session_state.get("username", "appuser")
         st.session_state.finalized_files = load_session_progress(username)
 
     # ─── Navigation (release old lock first if changed) ────────────────
@@ -390,7 +419,7 @@ def main() -> None:
 
             # Add to finalized files and save progress to disk
             st.session_state.finalized_files.add(current)
-            username = st.session_state.get("username", getpass.getuser())
+            username = st.session_state.get("username", "appuser")
             save_session_progress(username, st.session_state.finalized_files)
             release_lock()
 

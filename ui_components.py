@@ -507,8 +507,10 @@ def render_edit_form(validated_data: Dict) -> Optional[Dict]:
                                 temp[key] = val
 
                         # Validate entry dates (departure must be after registration)
-                        date_valid, date_error = validate_entry_dates(temp, section)
-                        if not date_valid:
+                        date_valid, date_error, date_warning = validate_entry_dates(temp, section)
+
+                        # Handle blocking errors
+                        if not date_valid and date_error:
                             error_key = f"{current_file}.{section}[{idx}].date_comparison"
                             st.error(date_error)
                             st.session_state.validation_errors[error_key] = date_error
@@ -516,6 +518,20 @@ def render_edit_form(validated_data: Dict) -> Optional[Dict]:
                             # Clear any existing date comparison error for this entry
                             error_key = f"{current_file}.{section}[{idx}].date_comparison"
                             st.session_state.validation_errors.pop(error_key, None)
+
+                        # Handle non-blocking warnings
+                        if date_warning:
+                            warning_key = f"{current_file}.{section}[{idx}].date_warning"
+                            st.warning(date_warning)
+                            # Store warnings separately from errors
+                            if "validation_warnings" not in st.session_state:
+                                st.session_state.validation_warnings = {}
+                            st.session_state.validation_warnings[warning_key] = date_warning
+                        else:
+                            # Clear any existing warning for this entry
+                            if "validation_warnings" in st.session_state:
+                                warning_key = f"{current_file}.{section}[{idx}].date_warning"
+                                st.session_state.validation_warnings.pop(warning_key, None)
 
                         updated[section].append(temp)
 
@@ -578,11 +594,20 @@ def render_edit_form(validated_data: Dict) -> Optional[Dict]:
         col1, col2 = st.columns([3, 1])
 
         with col1:
-            if st.session_state.validation_errors:
+            has_errors = bool(st.session_state.validation_errors)
+            has_warnings = bool(st.session_state.get("validation_warnings", {}))
+
+            if has_errors:
                 st.error(
-                    f"⚠️ {len(st.session_state.validation_errors)} validation error"
+                    f"❌ {len(st.session_state.validation_errors)} validation error"
                     f"{'s' if len(st.session_state.validation_errors) != 1 else ''} – "
                     "please fix before saving."
+                )
+            elif has_warnings:
+                st.warning(
+                    f"⚠️ {len(st.session_state.validation_warnings)} warning"
+                    f"{'s' if len(st.session_state.validation_warnings) != 1 else ''} – "
+                    "you can still save if the data is correct."
                 )
             else:
                 st.success("✅ All fields validated - ready to save!")
@@ -617,7 +642,7 @@ def render_edit_form(validated_data: Dict) -> Optional[Dict]:
                             st.text(f"• Person #{idx}: {name}")
 
             with summary_col2:
-                # Show errors
+                # Show errors and warnings
                 if st.session_state.validation_errors:
                     st.markdown("**❌ Validation Errors:**")
                     errors = list(st.session_state.validation_errors.values())
@@ -626,12 +651,23 @@ def render_edit_form(validated_data: Dict) -> Optional[Dict]:
                     if len(errors) > 3:
                         st.text(f"• ... and {len(errors) - 3} more")
 
+                if st.session_state.get("validation_warnings", {}):
+                    st.markdown("**⚠️ Warnings (non-blocking):**")
+                    warnings = list(st.session_state.validation_warnings.values())
+                    for warning in warnings[:3]:
+                        st.text(f"• {warning}")
+                    if len(warnings) > 3:
+                        st.text(f"• ... and {len(warnings) - 3} more")
+
     # After the *with* block so we can safely return a value or abort
     if save_clicked:
-        # Only allow saving if no validation errors
+        # Only block on validation errors, not warnings
         if st.session_state.validation_errors:
             # Validation failed → stay on the same record
             return None
+        # Clear warnings on successful save
+        if "validation_warnings" in st.session_state:
+            st.session_state.validation_warnings = {}
         # All clear → return finalised payload
         return updated
 

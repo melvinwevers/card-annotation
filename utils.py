@@ -189,7 +189,7 @@ def validate_field(
     return True, None
 
 
-def validate_entry_dates(entry: Dict, section: str) -> tuple[bool, str]:
+def validate_entry_dates(entry: Dict, section: str) -> tuple[bool, str, str]:
     """
     Validate that departure date is later than registration date in an entry.
 
@@ -198,7 +198,9 @@ def validate_entry_dates(entry: Dict, section: str) -> tuple[bool, str]:
         section: Section name ("main_entries" or "follow_up_entries")
 
     Returns:
-        (is_valid, error_message)
+        (is_valid, error_message, warning_message)
+        - error_message: blocking errors that prevent saving
+        - warning_message: non-blocking warnings that allow saving
     """
     # Determine which date fields to check based on section
     if section == "main_entries":
@@ -208,25 +210,38 @@ def validate_entry_dates(entry: Dict, section: str) -> tuple[bool, str]:
         reg_field = "datum"
         dep_field = "datum_vertrek"
     else:
-        return True, None
+        return True, None, None
 
     reg_date = entry.get(reg_field, "").strip()
     dep_date = entry.get(dep_field, "").strip()
 
-    # If either date is empty, skip validation
-    if not reg_date or not dep_date:
-        return True, None
+    # For follow-up entries, allow missing arrival date with departure date
+    # This is a common pattern in historical records
+    if section == "follow_up_entries" and not reg_date and dep_date:
+        return True, None, None
 
-    # Parse both dates
+    # If both dates are empty, skip validation
+    if not reg_date and not dep_date:
+        return True, None, None
+
+    # If only departure date is missing (for main entries), that's okay
+    if not dep_date:
+        return True, None, None
+
+    # If only arrival date is missing for main entries, warn
+    if not reg_date and section == "main_entries":
+        return True, None, "⚠️ Arrival date missing but departure date present"
+
+    # Parse both dates if both exist
     reg_valid, reg_value = parse_date_ddmmyy(reg_date)
     dep_valid, dep_value = parse_date_ddmmyy(dep_date)
 
     # If either date is invalid format, the field validation will catch it
     if not reg_valid or not dep_valid:
-        return True, None
+        return True, None, None
 
-    # Check if departure is later than registration
+    # Check if departure is later than registration - this is a WARNING, not an error
     if dep_value <= reg_value:
-        return False, f"Departure date ({dep_date}) must be later than registration date ({reg_date})"
+        return True, None, f"⚠️ Departure date ({dep_date}) should be later than arrival date ({reg_date})"
 
-    return True, None
+    return True, None, None
