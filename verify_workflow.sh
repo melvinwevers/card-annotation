@@ -3,7 +3,7 @@
 # This checks if the save workflow is working correctly
 
 echo "=================================================="
-echo "Card Annotation Workflow Verification"
+echo "Cards of House Annotation Tool - Workflow Verification"
 echo "=================================================="
 echo ""
 

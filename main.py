@@ -208,7 +208,7 @@ def main() -> None:
 
     # Force username entry screen if still using default
     if st.session_state.username == "appuser":
-        st.title("👤 Welcome to Card Annotation")
+        st.title("👤 Welcome to Cards of House Annotation Tool")
         st.markdown("### Please enter your username to continue")
         st.markdown("---")
 

@@ -1,6 +1,6 @@
-# Card Annotation Tool
+# Cards of House Annotation Tool
 
-A Streamlit-based web application for collaborative annotation and validation of card data. The application supports multiple users working simultaneously on different records, with built-in file locking mechanisms to prevent concurrent edits of the same record.
+A Streamlit-based web application for collaborative annotation and validation of Dutch historical population registry card data. The application supports multiple users working simultaneously on different records, with built-in file locking mechanisms to prevent concurrent edits of the same record.
 
 ## Features
 
