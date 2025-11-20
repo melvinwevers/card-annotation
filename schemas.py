@@ -48,10 +48,10 @@ FIELD_SCHEMAS = {
             "pattern": r"^(|\d{1,3})$",
             "description": "Record nummer (Optional, 1-999)"
         },
-        "datum_registration": {
+        "datum": {
             "type": FieldType.STRING.value,
             "pattern": r"^(\d{6})?$",
-            "description": "Registratie Datum (DDMMYY)"
+            "description": "Inschrijfdatum (DDMMYY)"
         },
         "gezinshoofd": {
             "type": FieldType.STRING.value,
