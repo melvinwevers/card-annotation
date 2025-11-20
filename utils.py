@@ -204,15 +204,15 @@ def validate_entry_dates(entry: Dict, section: str) -> tuple[bool, str, str]:
     """
     # Determine which date fields to check based on section
     if section == "main_entries":
-        reg_field = "datum_registration"
+        # Try both field names (datum_registration is schema, datum is actual data)
+        reg_date = entry.get("datum_registration", "").strip() or entry.get("datum", "").strip()
         dep_field = "datum_vertrek"
     elif section == "follow_up_entries":
-        reg_field = "datum"
+        reg_date = entry.get("datum", "").strip()
         dep_field = "datum_vertrek"
     else:
         return True, None, None
 
-    reg_date = entry.get(reg_field, "").strip()
     dep_date = entry.get(dep_field, "").strip()
 
     # For follow-up entries, allow missing arrival date with departure date
