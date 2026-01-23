@@ -486,8 +486,8 @@ def render_edit_form(validated_data: Dict) -> Optional[tuple[str, Dict]]:
                 for key, orig in content.items():
                     if key.endswith("_needs review"):
                         continue
-                    # Skip M/V fields - preserve them but don't show in form
-                    if key in ("M", "V"):
+                    # Skip M/V and record_no fields - preserve them but don't show in form
+                    if key in ("M", "V", "record_no"):
                         updated[section][key] = orig
                         continue
                     with st.container():
@@ -549,8 +549,8 @@ def render_edit_form(validated_data: Dict) -> Optional[tuple[str, Dict]]:
                         for key, orig in entry.items():
                             if key.endswith("_needs review"):
                                 continue
-                            # Skip M/V fields - preserve them but don't show in form
-                            if key in ("M", "V"):
+                            # Skip M/V and record_no fields - preserve them but don't show in form
+                            if key in ("M", "V", "record_no"):
                                 temp[key] = orig
                                 continue
                             with st.container():
