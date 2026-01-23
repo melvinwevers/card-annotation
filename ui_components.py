@@ -226,7 +226,13 @@ def render_image_sidebar(data: Dict) -> None:
             data.get("image_filename")
             or os.path.splitext(st.session_state.current_file)[0]
         )
-        img_bytes, img_name = load_image_from_gcs(img_base)
+
+        try:
+            img_bytes, img_name = load_image_from_gcs(img_base)
+        except Exception as e:
+            st.error(f"❌ Failed to load image: {str(e)}")
+            img_bytes, img_name = None, None
+
         if img_bytes:
             # Simple zoom slider
             zoom_level = st.slider(
@@ -288,8 +294,14 @@ def render_image_sidebar(data: Dict) -> None:
                     use_container_width=True,
                 )
         else:
-            st.error(f"📷 Image not found for {img_base}")
-            st.info("Check if the image file exists in the GCS bucket")
+            st.error(f"📷 Image not available: {img_base}")
+            st.info(
+                "The image file may be:\n"
+                "- Missing from GCS bucket\n"
+                "- Corrupted or truncated\n"
+                "- Not a valid image format\n\n"
+                "You can still edit the JSON data below."
+            )
 
 
 # ──────────────────────────────────────────────────────────────────────────────

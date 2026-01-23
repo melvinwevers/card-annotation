@@ -2,6 +2,8 @@ import os
 import json
 import random
 from datetime import datetime
+from io import BytesIO
+from PIL import Image
 import streamlit as st
 from gcs_utils import get_bucket, get_gcs_file_lists
 from config import LOCK_DIR, IMAGE_EXTENSIONS, CACHE_TTL_SHORT, CACHE_TTL_MEDIUM
@@ -74,11 +76,32 @@ def load_json_from_gcs(filename: str):
 
 @st.cache_data(ttl=CACHE_TTL_MEDIUM)  # 10 min - images rarely change
 def load_image_from_gcs(base: str):
+    """Load and validate image from GCS, returning bytes and filename"""
     bucket = get_bucket()
     for ext in IMAGE_EXTENSIONS:
         blob = bucket.blob(f"images/{base}{ext}")
         if blob.exists():
-            return blob.download_as_bytes(), f"{base}{ext}"
+            try:
+                # Download image bytes
+                img_bytes = blob.download_as_bytes()
+
+                # Validate image can be opened and is not corrupted
+                try:
+                    img = Image.open(BytesIO(img_bytes))
+                    img.verify()  # Verify it's a valid image
+                    # Re-open after verify (verify() invalidates the image object)
+                    img = Image.open(BytesIO(img_bytes))
+                    img.load()  # Actually decode the image to catch truncation errors
+                    return img_bytes, f"{base}{ext}"
+                except Exception as img_error:
+                    # Image is corrupted or truncated
+                    st.warning(f"⚠️ Image {base}{ext} appears to be corrupted: {str(img_error)}")
+                    return None, None
+
+            except Exception as download_error:
+                st.warning(f"⚠️ Failed to download image {base}{ext}: {str(download_error)}")
+                continue
+
     return None, None
 
 
