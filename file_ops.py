@@ -75,8 +75,17 @@ def load_json_from_gcs(filename: str):
 
 
 @st.cache_data(ttl=CACHE_TTL_MEDIUM)  # 10 min - images rarely change
-def load_image_from_gcs(base: str):
-    """Load and validate image from GCS, returning bytes and filename"""
+def load_image_from_gcs(base: str, crop_top_section: bool = True):
+    """
+    Load and validate image from GCS, returning bytes and filename.
+
+    Args:
+        base: Base filename (without extension)
+        crop_top_section: If True, crop to top ~50% (header + main entries region)
+
+    Returns:
+        Tuple of (image_bytes, filename) or (None, None) if not found/corrupted
+    """
     bucket = get_bucket()
     for ext in IMAGE_EXTENSIONS:
         blob = bucket.blob(f"images/{base}{ext}")
@@ -92,6 +101,22 @@ def load_image_from_gcs(base: str):
                     # Re-open after verify (verify() invalidates the image object)
                     img = Image.open(BytesIO(img_bytes))
                     img.load()  # Actually decode the image to catch truncation errors
+
+                    # Crop to header + main entries section (top ~50% of image)
+                    if crop_top_section:
+                        # Re-open one more time for cropping
+                        img = Image.open(BytesIO(img_bytes))
+                        w, h = img.size
+                        # Crop from top (0%) to ~50% height (covers header + main entries)
+                        # Using same boundaries as housing_cards_ml extraction script
+                        crop_bottom = int(h * 0.50)  # Top 50% of image
+                        img_cropped = img.crop((0, 0, w, crop_bottom))
+
+                        # Convert cropped image back to bytes
+                        output_buffer = BytesIO()
+                        img_cropped.save(output_buffer, format=img.format or 'JPEG', quality=95)
+                        img_bytes = output_buffer.getvalue()
+
                     return img_bytes, f"{base}{ext}"
                 except Exception as img_error:
                     # Image is corrupted or truncated

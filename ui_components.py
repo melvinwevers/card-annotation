@@ -452,13 +452,21 @@ def render_edit_form(validated_data: Dict) -> Optional[tuple[str, Dict]]:
     # Initialize deletion tracking
     current_file = st.session_state.get("current_file", "unknown")
 
+    # Info box about focused annotation
+    st.info(
+        "ℹ️ **Focused Annotation Mode**: This tool focuses on the **header** and "
+        "**main entries** sections only (top portion of the card). Follow-up entries "
+        "are preserved but not displayed for editing."
+    )
+
     with st.form("edit_form", clear_on_submit=False):
         updated: Dict = {}
 
         # ─── Dynamic field generation ────────────────────────────────────
         for section, content in validated_data.items():
-            # Skip footer_notes - preserve but don't display
-            if section == "footer_notes":
+            # Skip footer_notes and follow_up_entries - preserve but don't display
+            # (focusing on header + main_entries only, top ~50% of card)
+            if section in ("footer_notes", "follow_up_entries"):
                 updated[section] = content
                 continue
 
