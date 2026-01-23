@@ -55,8 +55,8 @@ FIELD_SCHEMAS = {
         },
         "gezinshoofd": {
             "type": FieldType.STRING.value,
-            "pattern": r"^([a-zA-ZÀ-ÿ\u0100-\u017F\u0180-\u024F\u0300-\u036F\u1E00-\u1EFF\u2C60-\u2C7F\uA720-\uA7FF\s\-',\.\(\)]+)?$",
-            "description": "Gezinshoofd (e.g., 'Scholten, Johannes' or 'sportzaal')",
+            "pattern": r"^([a-zA-Z0-9À-ÿ\u0100-\u017F\u0180-\u024F\u0300-\u036F\u1E00-\u1EFF\u2C60-\u2C7F\uA720-\uA7FF\s\-',\.\(\)]+)?$",
+            "description": "Gezinshoofd (e.g., 'Scholten, Johannes' or 'sportzaal' or 'In gebruik bij 287 ohs')",
             "max_length": 100
         },
         "year_of_birth": {
@@ -94,8 +94,8 @@ FIELD_SCHEMAS = {
         },
         "inwonenden": {
             "type": FieldType.STRING.value,
-            "pattern": r"^([a-zA-ZÀ-ÿ\u0100-\u017F\u0180-\u024F\u0300-\u036F\u1E00-\u1EFF\u2C60-\u2C7F\uA720-\uA7FF\s\-',\.\(\)]+)?$",
-            "description": "Inwonenden (e.g., 'Scholten, Johannes' or other)",
+            "pattern": r"^([a-zA-Z0-9À-ÿ\u0100-\u017F\u0180-\u024F\u0300-\u036F\u1E00-\u1EFF\u2C60-\u2C7F\uA720-\uA7FF\s\-',\.\(\)]+)?$",
+            "description": "Inwonenden (e.g., 'Scholten, Johannes' or 'In gebruik bij 287 ohs')",
             "max_length": 100
         },
         "year_of_birth": {
