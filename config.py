@@ -21,12 +21,33 @@ def apply_custom_css():
         <style>
             /* Resizable sidebar with default width */
             section[data-testid=\"stSidebar\"] {{
-                width: {DEFAULT_SIDEBAR_WIDTH}px !important;
+                width: {DEFAULT_SIDEBAR_WIDTH}px;
                 min-width: 300px;
                 max-width: 800px;
-                resize: horizontal;
-                overflow: auto;
+                position: relative;
             }}
+
+            /* Resize handle on the right edge of sidebar */
+            .sidebar-resize-handle {{
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 8px;
+                height: 100%;
+                cursor: ew-resize;
+                background: transparent;
+                z-index: 9999;
+                transition: background 0.2s;
+            }}
+
+            .sidebar-resize-handle:hover {{
+                background: rgba(255, 75, 75, 0.3);
+            }}
+
+            .sidebar-resize-handle.dragging {{
+                background: rgba(255, 75, 75, 0.5);
+            }}
+
             .main .block-container {{
                 padding-left: 1rem !important;
                 padding-right: 1rem !important;
@@ -246,5 +267,55 @@ def apply_custom_css():
             if (window.matchMedia) {{
                 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateTheme);
             }}
+
+            // Sidebar resizing functionality
+            function initSidebarResize() {{
+                const sidebar = document.querySelector('section[data-testid="stSidebar"]');
+                if (!sidebar || sidebar.querySelector('.sidebar-resize-handle')) return;
+
+                // Create resize handle
+                const handle = document.createElement('div');
+                handle.className = 'sidebar-resize-handle';
+                sidebar.appendChild(handle);
+
+                let isResizing = false;
+                let startX = 0;
+                let startWidth = 0;
+
+                handle.addEventListener('mousedown', (e) => {{
+                    isResizing = true;
+                    startX = e.clientX;
+                    startWidth = sidebar.offsetWidth;
+                    handle.classList.add('dragging');
+                    document.body.style.cursor = 'ew-resize';
+                    document.body.style.userSelect = 'none';
+                    e.preventDefault();
+                }});
+
+                document.addEventListener('mousemove', (e) => {{
+                    if (!isResizing) return;
+
+                    const newWidth = startWidth + (e.clientX - startX);
+                    const minWidth = 300;
+                    const maxWidth = 800;
+
+                    if (newWidth >= minWidth && newWidth <= maxWidth) {{
+                        sidebar.style.width = newWidth + 'px';
+                    }}
+                }});
+
+                document.addEventListener('mouseup', () => {{
+                    if (isResizing) {{
+                        isResizing = false;
+                        handle.classList.remove('dragging');
+                        document.body.style.cursor = '';
+                        document.body.style.userSelect = '';
+                    }}
+                }});
+            }}
+
+            // Initialize sidebar resize on load and after Streamlit reruns
+            initSidebarResize();
+            setInterval(initSidebarResize, 1000);
         </script>
     """, unsafe_allow_html=True)
