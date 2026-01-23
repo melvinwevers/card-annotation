@@ -278,21 +278,11 @@ def render_image_sidebar(data: Dict) -> None:
             st.caption(f"File: {img_name}")
 
             # Quick image actions
-            col1, col2 = st.columns(2)
-            with col1:
-                if st.button(
-                    "🔄 Refresh", help="Reload image", use_container_width=True
-                ):
-                    st.cache_data.clear()
-                    st.rerun()
-            with col2:
-                # Download button would go here if needed
-                st.button(
-                    "🔍 Enhance",
-                    help="Coming soon",
-                    disabled=True,
-                    use_container_width=True,
-                )
+            if st.button(
+                "🔄 Refresh", help="Reload image", use_container_width=True
+            ):
+                st.cache_data.clear()
+                st.rerun()
         else:
             st.error(f"📷 Image not available: {img_base}")
             st.info(
