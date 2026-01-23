@@ -19,17 +19,20 @@ def apply_custom_css():
     """Apply custom CSS for sidebar width and improved styling - dark mode compatible"""
     st.markdown(f"""
         <style>
-            /* Sidebar width */
+            /* Resizable sidebar with default width */
             section[data-testid=\"stSidebar\"] {{
                 width: {DEFAULT_SIDEBAR_WIDTH}px !important;
+                min-width: 300px;
+                max-width: 800px;
+                resize: horizontal;
+                overflow: auto;
             }}
             .main .block-container {{
-                max-width: calc(100% - {DEFAULT_SIDEBAR_WIDTH + 20}px) !important;
                 padding-left: 1rem !important;
                 padding-right: 1rem !important;
             }}
             section[data-testid=\"stSidebar\"] > div:first-child {{
-                width: {DEFAULT_SIDEBAR_WIDTH}px !important;
+                width: 100% !important;
             }}
             
             /* Form styling improvements - theme aware */
