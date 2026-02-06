@@ -33,8 +33,7 @@ FIELD_SCHEMAS = {
         },
         "buurtletter": {
             "type": FieldType.STRING.value,
-            "pattern": r"^(|[A-Z]{2}\s*[A-Z]*\s*\d*)$",
-            "description": "Buurtletter (Twee karakters + cijfers)"
+            "description": "Buurtletter"
         },
         "stemdistrict_nr": {
             "type": FieldType.STRING.value,
