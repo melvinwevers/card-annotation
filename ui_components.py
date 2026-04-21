@@ -473,13 +473,22 @@ def render_edit_form(validated_data: Dict) -> Optional[tuple[str, Dict]]:
             if isinstance(content, dict):
                 updated[section] = {}
 
+                # Preserve hidden/internal fields from JSON
                 for key, orig in content.items():
-                    if key.endswith("_needs review"):
-                        continue
-                    # Skip M/V and record_no fields - preserve them but don't show in form
-                    if key in ("M", "V", "record_no"):
+                    if key.endswith("_needs review") or key in ("M", "V", "record_no"):
                         updated[section][key] = orig
+
+                # Render all schema-defined fields, falling back to "" if absent in JSON
+                keys_to_render = list(section_schema.keys()) if section_schema else list(content.keys())
+                # Also render any JSON keys not in schema (excluding internal ones)
+                for key in content:
+                    if key not in keys_to_render and not key.endswith("_needs review") and key not in ("M", "V", "record_no"):
+                        keys_to_render.append(key)
+
+                for key in keys_to_render:
+                    if key in ("M", "V", "record_no"):
                         continue
+                    orig = content.get(key, "")
                     with st.container():
                         field_schema = section_schema.get(key, {})
 
